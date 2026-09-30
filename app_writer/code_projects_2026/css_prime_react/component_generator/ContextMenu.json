@@ -1,0 +1,121 @@
+{
+  "name": "ContextMenu",
+  "import": "ContextMenu",
+  "category": "Menu",
+  "metadata": {
+    "description": "Right-click context menu",
+    "usageExamples": [
+      "const cm = useRef(null); <ContextMenuWrapper model={items} ref={cm} />; <div onContextMenu={(e) => cm.current.show(e)}>Right click</div>",
+      "<ContextMenuWrapper model={menuItems} ref={contextMenuRef} />"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "model",
+        "type": "MenuItem[]",
+        "optional": false,
+        "description": "Menu items",
+        "helpText": "Array of menu item objects",
+        "dataTypes": ["MenuItem[] - {label, icon, command, url, items, separator}"],
+        "examples": ["[{label: 'Copy', icon: 'pi pi-copy', command: () => {}}]"]
+      },
+      {
+        "name": "global",
+        "type": "boolean",
+        "optional": true,
+        "description": "Global mode",
+        "helpText": "Attaches to document (shows on any right-click)",
+        "dataTypes": ["boolean"],
+        "examples": ["true", "false"]
+      },
+      {
+        "name": "appendTo",
+        "type": "'self' | HTMLElement | null",
+        "optional": true,
+        "description": "Append target",
+        "helpText": "Element to append menu to",
+        "dataTypes": ["'self'", "HTMLElement", "null"],
+        "examples": ["'self'", "document.body"]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes",
+        "helpText": "Supports PrimeFlex utility classes",
+        "examples": ["'custom-context-menu'"]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles",
+        "helpText": "Standard React inline styles",
+        "examples": ["{ width: '12rem' }"]
+      }
+    ],
+    "children": null
+  },
+  "eventHandlers": {
+    "standard": [
+      {
+        "name": "onShow",
+        "type": "() => void",
+        "description": "Callback when menu is shown"
+      },
+      {
+        "name": "onHide",
+        "type": "() => void",
+        "description": "Callback when menu is hidden"
+      }
+    ],
+    "simplified": [],
+    "validation": [],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "description": "Called when component mounts"
+      },
+      {
+        "name": "onUnmount",
+        "type": "() => void",
+        "description": "Called when component unmounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [
+      "show - Method to display context menu at event position",
+      "hide - Method to hide context menu"
+    ],
+    "patterns": [
+      "Use ref to access menu methods",
+      "Call show(event) with mouse event for positioning",
+      "Menu items have their own command callbacks"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": [],
+    "childrenDescription": "This component does not accept children - items defined via model prop",
+    "hasChildren": false,
+    "examples": []
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "const cm = useRef(null); <ContextMenuWrapper model={[{label: 'Copy', command: () => {}}]} ref={cm} />; <div onContextMenu={(e) => cm.current.show(e)}>Right click</div>",
+    "withStyling": "<ContextMenuWrapper model={items} ref={contextMenuRef} className=\"custom-context-menu\" />",
+    "withEvents": "<ContextMenuWrapper model={items} ref={cm} onShow={() => console.log('shown')} onHide={() => console.log('hidden')} />",
+    "withRedux": "<ContextMenuWrapper model={[{label: 'Delete', command: () => dispatch(deleteItem())}]} ref={cm} />",
+    "withValidation": "N/A",
+    "withChildren": "N/A"
+  }
+}

@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: ems-recruitment-portal
+  r2dbc:
+    url: r2dbc:mysql://localhost:3306/ems_recruitment_portal
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:password}
+  data:
+    r2dbc:
+      repositories:
+        enabled: true
+
+server:
+  port: 8081
+
+jwt:
+  secret: ${JWT_SECRET:your-secret-key-change-in-production}
+  expiration: 86400000
+
+# Security settings - all features disabled by default
+# Uncomment and configure as needed
+app:
+  security:
+    csrf:
+      enabled: false
+    cors:
+      enabled: true
+      allowed-origins:
+        - "http://localhost:5173"
+      allowed-methods:
+        - GET
+        - POST
+        - PUT
+        - DELETE
+        - OPTIONS
+      allowed-headers:
+        - "*"
+      allow-credentials: true
+      max-age: 3600
+    https:
+      enabled: false
+      redirect-http: false
+      https-port: 8443
+
+logging:
+  level:
+    root: INFO
+    com.example: DEBUG

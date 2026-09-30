@@ -1,0 +1,306 @@
+{
+  "layerType": "query",
+  "description": "Custom query definitions",
+  "version": "2.4.0",
+  "queries": {
+    "User": [
+      {
+        "name": "listUser",
+        "description": "List all User records",
+        "returnType": "UserOutputDTO",
+        "select": [
+          "e.user_id",
+          "e.username",
+          "e.encrypted_password",
+          "e.email",
+          "e.first_name",
+          "e.last_name",
+          "e.phone",
+          "e.role",
+          "e.created_at",
+          "e.updated_at"
+        ],
+        "from": "user e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          {
+            "column": "e.user_id",
+            "direction": "ASC"
+          }
+        ],
+        "parameters": []
+      }
+    ],
+    "Category": [
+      {
+        "name": "listCategory",
+        "description": "List all Category records",
+        "returnType": "CategoryOutputDTO",
+        "select": [
+          "e.category_id",
+          "e.category_name",
+          "e.description",
+          "e.image_url",
+          "e.parent_category_id",
+          "e.created_at",
+          "e.updated_at"
+        ],
+        "from": "category e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          {
+            "column": "e.category_id",
+            "direction": "ASC"
+          }
+        ],
+        "parameters": []
+      }
+    ],
+    "Product": [
+      {
+        "name": "listProduct",
+        "description": "List all Product records",
+        "returnType": "ProductOutputDTO",
+        "select": [
+          "e.product_id",
+          "e.product_name",
+          "e.description",
+          "e.price",
+          "e.stock_quantity",
+          "e.image_url",
+          "e.sku",
+          "e.is_active",
+          "e.category_id",
+          "e.created_at",
+          "e.updated_at"
+        ],
+        "from": "product e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          {
+            "column": "e.product_id",
+            "direction": "ASC"
+          }
+        ],
+        "parameters": []
+      }
+    ],
+    "Cart": [
+      {
+        "name": "listCart",
+        "description": "List all Cart records",
+        "returnType": "CartOutputDTO",
+        "select": [
+          "e.cart_id",
+          "e.user_id",
+          "e.total_amount",
+          "e.item_count",
+          "e.created_at",
+          "e.updated_at"
+        ],
+        "from": "cart e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          {
+            "column": "e.cart_id",
+            "direction": "ASC"
+          }
+        ],
+        "parameters": []
+      }
+    ],
+    "CartItem": [
+      {
+        "name": "listCartItem",
+        "description": "List all CartItem records",
+        "returnType": "CartItemOutputDTO",
+        "select": [
+          "e.cart_item_id",
+          "e.cart_id",
+          "e.product_id",
+          "e.quantity",
+          "e.unit_price",
+          "e.subtotal",
+          "e.created_at",
+          "e.updated_at"
+        ],
+        "from": "cart_item e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          {
+            "column": "e.cart_item_id",
+            "direction": "ASC"
+          }
+        ],
+        "parameters": []
+      }
+    ],
+    "Address": [
+      {
+        "name": "listAddress",
+        "description": "List all Address records",
+        "returnType": "AddressOutputDTO",
+        "select": [
+          "e.address_id",
+          "e.user_id",
+          "e.address_line1",
+          "e.address_line2",
+          "e.city",
+          "e.state",
+          "e.postal_code",
+          "e.country",
+          "e.is_default",
+          "e.created_at",
+          "e.updated_at"
+        ],
+        "from": "address e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          {
+            "column": "e.address_id",
+            "direction": "ASC"
+          }
+        ],
+        "parameters": []
+      }
+    ],
+    "Order": [
+      {
+        "name": "listOrder",
+        "description": "List all Order records",
+        "returnType": "OrderOutputDTO",
+        "select": [
+          "e.order_id",
+          "e.user_id",
+          "e.order_date",
+          "e.status",
+          "e.total_amount",
+          "e.shipping_address_id",
+          "e.tracking_number",
+          "e.notes",
+          "e.created_at",
+          "e.updated_at"
+        ],
+        "from": "order e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          {
+            "column": "e.order_id",
+            "direction": "ASC"
+          }
+        ],
+        "parameters": []
+      }
+    ],
+    "OrderItem": [
+      {
+        "name": "listOrderItem",
+        "description": "List all OrderItem records",
+        "returnType": "OrderItemOutputDTO",
+        "select": [
+          "e.order_item_id",
+          "e.order_id",
+          "e.product_id",
+          "e.quantity",
+          "e.unit_price",
+          "e.subtotal",
+          "e.created_at",
+          "e.updated_at"
+        ],
+        "from": "order_item e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          {
+            "column": "e.order_item_id",
+            "direction": "ASC"
+          }
+        ],
+        "parameters": []
+      }
+    ],
+    "Payment": [
+      {
+        "name": "listPayment",
+        "description": "List all Payment records",
+        "returnType": "PaymentOutputDTO",
+        "select": [
+          "e.payment_id",
+          "e.order_id",
+          "e.payment_method",
+          "e.amount",
+          "e.payment_date",
+          "e.transaction_id",
+          "e.status",
+          "e.created_at",
+          "e.updated_at"
+        ],
+        "from": "payment e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          {
+            "column": "e.payment_id",
+            "direction": "ASC"
+          }
+        ],
+        "parameters": []
+      }
+    ],
+    "Review": [
+      {
+        "name": "listReview",
+        "description": "List all Review records",
+        "returnType": "ReviewOutputDTO",
+        "select": [
+          "e.review_id",
+          "e.user_id",
+          "e.product_id",
+          "e.rating",
+          "e.title",
+          "e.comment",
+          "e.review_date",
+          "e.created_at",
+          "e.updated_at"
+        ],
+        "from": "review e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          {
+            "column": "e.review_id",
+            "direction": "ASC"
+          }
+        ],
+        "parameters": []
+      }
+    ]
+  }
+}

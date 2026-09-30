@@ -1,0 +1,3378 @@
+{
+  "layerType": "dto",
+  "description": "DTO layer configuration - controls Data Transfer Object generation with validation",
+  "dtos": [
+    {
+      "entityName": "StudentProfile",
+      "dtoType": "Input",
+      "className": "StudentProfileInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "resumeurl",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "skills",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "educationlevel",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "StudentProfile",
+      "dtoType": "Output",
+      "className": "StudentProfileOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "studentProfileId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "resumeurl",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "skills",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "educationlevel",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "StudentProfile",
+      "dtoType": "Filter",
+      "className": "StudentProfileFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "resumeurl",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "skills",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "educationlevel",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "EmployerProfile",
+      "dtoType": "Input",
+      "className": "EmployerProfileInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "companyname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "industry",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "website",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "logourl",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "contactemail",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "EmployerProfile",
+      "dtoType": "Output",
+      "className": "EmployerProfileOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "employerProfileId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "companyname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "industry",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "website",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "logourl",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "contactemail",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "EmployerProfile",
+      "dtoType": "Filter",
+      "className": "EmployerProfileFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "companyname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "industry",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "website",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "logourl",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "contactemail",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "TrainerProfile",
+      "dtoType": "Input",
+      "className": "TrainerProfileInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "specialization",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "certifications",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "hourlyrate",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "TrainerProfile",
+      "dtoType": "Output",
+      "className": "TrainerProfileOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "trainerProfileId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "specialization",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "certifications",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "hourlyrate",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "TrainerProfile",
+      "dtoType": "Filter",
+      "className": "TrainerProfileFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "specialization",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "certifications",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "hourlyrate",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "JobPosting",
+      "dtoType": "Input",
+      "className": "JobPostingInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "location",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "salarymin",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "salarymax",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "jobtype",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "isactive",
+          "javaType": "Boolean",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "JobPosting",
+      "dtoType": "Output",
+      "className": "JobPostingOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "jobPostingId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "location",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "salarymin",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "salarymax",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "jobtype",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "isactive",
+          "javaType": "Boolean",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "JobPosting",
+      "dtoType": "Filter",
+      "className": "JobPostingFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "location",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "salarymin",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "salarymax",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "jobtype",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "isactive",
+          "javaType": "Boolean",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "TrainingProgram",
+      "dtoType": "Input",
+      "className": "TrainingProgramInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "durationdays",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "price",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "isactive",
+          "javaType": "Boolean",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "TrainingProgram",
+      "dtoType": "Output",
+      "className": "TrainingProgramOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "trainingProgramId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "durationdays",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "price",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "isactive",
+          "javaType": "Boolean",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "TrainingProgram",
+      "dtoType": "Filter",
+      "className": "TrainingProgramFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "durationdays",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "price",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "isactive",
+          "javaType": "Boolean",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "JobApplication",
+      "dtoType": "Input",
+      "className": "JobApplicationInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "status",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "coverletter",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "appliedat",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "JobApplication",
+      "dtoType": "Output",
+      "className": "JobApplicationOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "jobApplicationId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "status",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "coverletter",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "appliedat",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "JobApplication",
+      "dtoType": "Filter",
+      "className": "JobApplicationFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "status",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "coverletter",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "appliedat",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "TrainingEnrollment",
+      "dtoType": "Input",
+      "className": "TrainingEnrollmentInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "status",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "progress",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "enrolledat",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "TrainingEnrollment",
+      "dtoType": "Output",
+      "className": "TrainingEnrollmentOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "trainingEnrollmentId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "status",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "progress",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "enrolledat",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "TrainingEnrollment",
+      "dtoType": "Filter",
+      "className": "TrainingEnrollmentFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "status",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "progress",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "enrolledat",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "UserProfile",
+      "dtoType": "Input",
+      "className": "UserProfileInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "firstname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "lastname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "email",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "phone",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "bio",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "UserProfile",
+      "dtoType": "Output",
+      "className": "UserProfileOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "userProfileId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "firstname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "lastname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "email",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "phone",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "bio",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "UserProfile",
+      "dtoType": "Filter",
+      "className": "UserProfileFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "firstname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "lastname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "email",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "phone",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "bio",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "EducationLevel",
+      "dtoType": "Input",
+      "className": "EducationLevelInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "name",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "EducationLevel",
+      "dtoType": "Output",
+      "className": "EducationLevelOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "educationLevelId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "name",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "EducationLevel",
+      "dtoType": "Filter",
+      "className": "EducationLevelFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "name",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "FieldOfStudy",
+      "dtoType": "Input",
+      "className": "FieldOfStudyInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "name",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "FieldOfStudy",
+      "dtoType": "Output",
+      "className": "FieldOfStudyOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "fieldOfStudyId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "name",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "FieldOfStudy",
+      "dtoType": "Filter",
+      "className": "FieldOfStudyFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "name",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "Institution",
+      "dtoType": "Input",
+      "className": "InstitutionInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "name",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "country",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "website",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "Institution",
+      "dtoType": "Output",
+      "className": "InstitutionOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "institutionId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "name",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "country",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "website",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "Institution",
+      "dtoType": "Filter",
+      "className": "InstitutionFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "name",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "country",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "website",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "UserEducation",
+      "dtoType": "Input",
+      "className": "UserEducationInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "institutionname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "degree",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "fieldofstudy",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "startdate",
+          "javaType": "LocalDate",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "enddate",
+          "javaType": "LocalDate",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "grade",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "UserEducation",
+      "dtoType": "Output",
+      "className": "UserEducationOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "userEducationId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "institutionname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "degree",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "fieldofstudy",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "startdate",
+          "javaType": "LocalDate",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "enddate",
+          "javaType": "LocalDate",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "grade",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "UserEducation",
+      "dtoType": "Filter",
+      "className": "UserEducationFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "institutionname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "degree",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "fieldofstudy",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "startdate",
+          "javaType": "LocalDate",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "enddate",
+          "javaType": "LocalDate",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "grade",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "Industry",
+      "dtoType": "Input",
+      "className": "IndustryInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "name",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "Industry",
+      "dtoType": "Output",
+      "className": "IndustryOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "industryId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "name",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "Industry",
+      "dtoType": "Filter",
+      "className": "IndustryFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "name",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "JobTitle",
+      "dtoType": "Input",
+      "className": "JobTitleInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "name",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "JobTitle",
+      "dtoType": "Output",
+      "className": "JobTitleOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "jobTitleId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "name",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "JobTitle",
+      "dtoType": "Filter",
+      "className": "JobTitleFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "name",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "UserWorkExperience",
+      "dtoType": "Input",
+      "className": "UserWorkExperienceInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "companyname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "jobtitle",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "industry",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "location",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "startdate",
+          "javaType": "LocalDate",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "enddate",
+          "javaType": "LocalDate",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "iscurrent",
+          "javaType": "Boolean",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "UserWorkExperience",
+      "dtoType": "Output",
+      "className": "UserWorkExperienceOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "userWorkExperienceId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "companyname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "jobtitle",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "industry",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "location",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "startdate",
+          "javaType": "LocalDate",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "enddate",
+          "javaType": "LocalDate",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "iscurrent",
+          "javaType": "Boolean",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "UserWorkExperience",
+      "dtoType": "Filter",
+      "className": "UserWorkExperienceFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "companyname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "jobtitle",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "industry",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "location",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "startdate",
+          "javaType": "LocalDate",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "enddate",
+          "javaType": "LocalDate",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "iscurrent",
+          "javaType": "Boolean",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "SkillCategory",
+      "dtoType": "Input",
+      "className": "SkillCategoryInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "name",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "SkillCategory",
+      "dtoType": "Output",
+      "className": "SkillCategoryOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "skillCategoryId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "name",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "SkillCategory",
+      "dtoType": "Filter",
+      "className": "SkillCategoryFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "name",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "Skill",
+      "dtoType": "Input",
+      "className": "SkillInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "name",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "category",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "Skill",
+      "dtoType": "Output",
+      "className": "SkillOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "skillId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "name",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "category",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "Skill",
+      "dtoType": "Filter",
+      "className": "SkillFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "name",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "category",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "UserSkill",
+      "dtoType": "Input",
+      "className": "UserSkillInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "skillname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "proficiencylevel",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "yearsofexperience",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "UserSkill",
+      "dtoType": "Output",
+      "className": "UserSkillOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "userSkillId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "skillname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "proficiencylevel",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "yearsofexperience",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "UserSkill",
+      "dtoType": "Filter",
+      "className": "UserSkillFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "skillname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "proficiencylevel",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "yearsofexperience",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "TrainingModule",
+      "dtoType": "Input",
+      "className": "TrainingModuleInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "moduleorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "durationminutes",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "contenturl",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "TrainingModule",
+      "dtoType": "Output",
+      "className": "TrainingModuleOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "trainingModuleId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "moduleorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "durationminutes",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "contenturl",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "TrainingModule",
+      "dtoType": "Filter",
+      "className": "TrainingModuleFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "moduleorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "durationminutes",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "contenturl",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "ModuleProgress",
+      "dtoType": "Input",
+      "className": "ModuleProgressInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "status",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "completedat",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "progresspercent",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "ModuleProgress",
+      "dtoType": "Output",
+      "className": "ModuleProgressOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "moduleProgressId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "status",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "completedat",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "progresspercent",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "ModuleProgress",
+      "dtoType": "Filter",
+      "className": "ModuleProgressFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "status",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "completedat",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "progresspercent",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "TrainingExam",
+      "dtoType": "Input",
+      "className": "TrainingExamInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "passingscore",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "maxscore",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "timelimitminutes",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "maxattempts",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "TrainingExam",
+      "dtoType": "Output",
+      "className": "TrainingExamOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "trainingExamId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "passingscore",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "maxscore",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "timelimitminutes",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "maxattempts",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "TrainingExam",
+      "dtoType": "Filter",
+      "className": "TrainingExamFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "passingscore",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "maxscore",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "timelimitminutes",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "maxattempts",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "ExamAttempt",
+      "dtoType": "Input",
+      "className": "ExamAttemptInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "score",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "passed",
+          "javaType": "Boolean",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "startedat",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "completedat",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "attemptnumber",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "ExamAttempt",
+      "dtoType": "Output",
+      "className": "ExamAttemptOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "examAttemptId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "score",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "passed",
+          "javaType": "Boolean",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "startedat",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "completedat",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "attemptnumber",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "ExamAttempt",
+      "dtoType": "Filter",
+      "className": "ExamAttemptFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "score",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "passed",
+          "javaType": "Boolean",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "startedat",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "completedat",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "attemptnumber",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "TrainingCertification",
+      "dtoType": "Input",
+      "className": "TrainingCertificationInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "certificatenumber",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "issuedat",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "expiresat",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "certificateurl",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "status",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "TrainingCertification",
+      "dtoType": "Output",
+      "className": "TrainingCertificationOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "trainingCertificationId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "certificatenumber",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "issuedat",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "expiresat",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "certificateurl",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "status",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "TrainingCertification",
+      "dtoType": "Filter",
+      "className": "TrainingCertificationFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "certificatenumber",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "issuedat",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "expiresat",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "certificateurl",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "status",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "CourseDocument",
+      "dtoType": "Input",
+      "className": "CourseDocumentInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "content",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "CourseDocument",
+      "dtoType": "Output",
+      "className": "CourseDocumentOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "courseDocumentId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "content",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "CourseDocument",
+      "dtoType": "Filter",
+      "className": "CourseDocumentFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "content",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "CourseVideo",
+      "dtoType": "Input",
+      "className": "CourseVideoInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "videourl",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "durationseconds",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "CourseVideo",
+      "dtoType": "Output",
+      "className": "CourseVideoOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "courseVideoId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "videourl",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "durationseconds",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "CourseVideo",
+      "dtoType": "Filter",
+      "className": "CourseVideoFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "videourl",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "durationseconds",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "CourseAudio",
+      "dtoType": "Input",
+      "className": "CourseAudioInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "audiourl",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "durationseconds",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "CourseAudio",
+      "dtoType": "Output",
+      "className": "CourseAudioOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "courseAudioId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "audiourl",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "durationseconds",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "CourseAudio",
+      "dtoType": "Filter",
+      "className": "CourseAudioFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "audiourl",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "durationseconds",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "CourseCodeLab",
+      "dtoType": "Input",
+      "className": "CourseCodeLabInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "language",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "startercode",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "solutioncode",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "instructions",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "CourseCodeLab",
+      "dtoType": "Output",
+      "className": "CourseCodeLabOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "courseCodeLabId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "language",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "startercode",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "solutioncode",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "instructions",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "CourseCodeLab",
+      "dtoType": "Filter",
+      "className": "CourseCodeLabFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "language",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "startercode",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "solutioncode",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "instructions",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "ExamQuestion",
+      "dtoType": "Input",
+      "className": "ExamQuestionInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "questiontext",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "questioncode",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "questiontype",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "points",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "ExamQuestion",
+      "dtoType": "Output",
+      "className": "ExamQuestionOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "examQuestionId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "questiontext",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "questioncode",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "questiontype",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "points",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "ExamQuestion",
+      "dtoType": "Filter",
+      "className": "ExamQuestionFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "questiontext",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "questioncode",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "questiontype",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "points",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "ExamAnswer",
+      "dtoType": "Input",
+      "className": "ExamAnswerInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "answertext",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "answercode",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "iscorrect",
+          "javaType": "Boolean",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "explanation",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "ExamAnswer",
+      "dtoType": "Output",
+      "className": "ExamAnswerOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "examAnswerId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "answertext",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "answercode",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "iscorrect",
+          "javaType": "Boolean",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "explanation",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "ExamAnswer",
+      "dtoType": "Filter",
+      "className": "ExamAnswerFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "answertext",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "answercode",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "iscorrect",
+          "javaType": "Boolean",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "explanation",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "CourseQuestion",
+      "dtoType": "Input",
+      "className": "CourseQuestionInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "questiontext",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "questioncode",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "CourseQuestion",
+      "dtoType": "Output",
+      "className": "CourseQuestionOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "courseQuestionId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "questiontext",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "questioncode",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "CourseQuestion",
+      "dtoType": "Filter",
+      "className": "CourseQuestionFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "questiontext",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "questioncode",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "CourseAnswer",
+      "dtoType": "Input",
+      "className": "CourseAnswerInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "answertext",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "answercode",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "isaccepted",
+          "javaType": "Boolean",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "upvotes",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "CourseAnswer",
+      "dtoType": "Output",
+      "className": "CourseAnswerOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "courseAnswerId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "answertext",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "answercode",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "isaccepted",
+          "javaType": "Boolean",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "upvotes",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "CourseAnswer",
+      "dtoType": "Filter",
+      "className": "CourseAnswerFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "answertext",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "answercode",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "isaccepted",
+          "javaType": "Boolean",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "upvotes",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "Company",
+      "dtoType": "Input",
+      "className": "CompanyInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "name",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "industry",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "website",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "Company",
+      "dtoType": "Output",
+      "className": "CompanyOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "companyId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "name",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "industry",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "website",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "Company",
+      "dtoType": "Filter",
+      "className": "CompanyFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "name",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "industry",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "website",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "Location",
+      "dtoType": "Input",
+      "className": "LocationInputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "city",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "state",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "country",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "Location",
+      "dtoType": "Output",
+      "className": "LocationOutputDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "locationId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "city",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "state",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "country",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ]
+    },
+    {
+      "entityName": "Location",
+      "dtoType": "Filter",
+      "className": "LocationFilterDTO",
+      "packageName": "com.jobportal.dto",
+      "fields": [
+        {
+          "fieldName": "city",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "state",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "country",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+/**
+ * AvatarGroupWrapper - Enhanced wrapper for PrimeReact AvatarGroup
+ * Category: Misc
+ * 
+ * Groups multiple avatars together for displaying team members or participants
+ * 
+ * This wrapper provides:
+ * - Simplified event handlers for Redux integration
+ * - Validation hooks
+ * - Lifecycle callbacks
+ * - Embedded component metadata for runtime introspection
+ */
+
+import React, { useEffect, useRef } from 'react';
+import { AvatarGroup } from 'primereact/avatargroup';
+
+// Component metadata embedded for runtime access
+export const AvatarGroupMetadata = {
+  "name": "AvatarGroup",
+  "import": "AvatarGroup",
+  "category": "Misc",
+  "metadata": {
+    "description": "Groups multiple avatars together for displaying team members or participants",
+    "usageExamples": [
+      "<AvatarGroupWrapper><Avatar label=\"U\" /><Avatar label=\"J\" /><Avatar label=\"A\" /></AvatarGroupWrapper>",
+      "<AvatarGroupWrapper><Avatar image=\"user1.jpg\" /><Avatar image=\"user2.jpg\" /><Avatar label=\"+3\" /></AvatarGroupWrapper>"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes for custom styling",
+        "helpText": "Supports PrimeFlex utility classes and custom CSS",
+        "examples": [
+          "'mb-3'"
+        ]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles object",
+        "helpText": "Standard React inline styles",
+        "examples": [
+          "{ marginBottom: '1rem' }"
+        ]
+      }
+    ],
+    "children": {
+      "type": "Avatar[]",
+      "required": true,
+      "description": "Avatar components to be grouped"
+    }
+  },
+  "eventHandlers": {
+    "standard": [],
+    "simplified": [],
+    "validation": [],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "optional": true,
+        "description": "Callback when component mounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [],
+    "patterns": []
+  },
+  "childComponentInfo": {
+    "allowedChildren": [
+      "Avatar"
+    ],
+    "childrenDescription": "Contains multiple Avatar components that are visually grouped together with overlapping layout.",
+    "hasChildren": true,
+    "examples": [
+      "<AvatarGroupWrapper><Avatar label=\"P\" shape=\"circle\" /><Avatar label=\"V\" shape=\"circle\" /><Avatar label=\"M\" shape=\"circle\" /></AvatarGroupWrapper>",
+      "<AvatarGroupWrapper><Avatar image=\"/user1.jpg\" /><Avatar image=\"/user2.jpg\" /><Avatar label=\"+5\" /></AvatarGroupWrapper>"
+    ]
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<AvatarGroupWrapper><Avatar label=\"U\" /><Avatar label=\"J\" /><Avatar label=\"A\" /></AvatarGroupWrapper>",
+    "withStyling": "<AvatarGroupWrapper className=\"mb-3\"><Avatar label=\"P\" size=\"large\" /><Avatar label=\"V\" size=\"large\" /><Avatar label=\"M\" size=\"large\" /></AvatarGroupWrapper>",
+    "withEvents": "N/A",
+    "withRedux": "<AvatarGroupWrapper>{users.map(user => <Avatar key={user.id} label={user.initials} />)}</AvatarGroupWrapper>",
+    "withValidation": "N/A",
+    "withChildren": "<AvatarGroupWrapper><Avatar image={user1.avatar} /><Avatar image={user2.avatar} /><Avatar image={user3.avatar} /><Avatar label=\"+2\" /></AvatarGroupWrapper>"
+  }
+};
+
+const AvatarGroupWrapper = (props) => {
+  const {
+    className, style, children, onMount,
+    ...restProps
+  } = props;
+
+  const componentRef = useRef(null);
+
+  // Lifecycle: onMount
+  useEffect(() => {
+    if (onMount) {
+      onMount();
+    }
+  }, []);
+
+  // Build props for underlying PrimeReact component
+  const primeReactProps = {
+    className,
+    style,
+    ref: componentRef,
+    ...restProps
+  };
+
+  return (
+    <AvatarGroup {...primeReactProps}>
+      {children}
+    </AvatarGroup>
+  );
+};
+
+AvatarGroupWrapper.displayName = 'AvatarGroupWrapper';
+
+export default AvatarGroupWrapper;

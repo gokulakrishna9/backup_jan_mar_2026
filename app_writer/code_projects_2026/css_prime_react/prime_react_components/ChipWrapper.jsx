@@ -1,0 +1,226 @@
+/**
+ * ChipWrapper - Enhanced wrapper for PrimeReact Chip
+ * Category: Misc
+ * 
+ * Compact element to represent an input, attribute, or action
+ * 
+ * This wrapper provides:
+ * - Simplified event handlers for Redux integration
+ * - Validation hooks
+ * - Lifecycle callbacks
+ * - Embedded component metadata for runtime introspection
+ */
+
+import React, { useEffect, useRef } from 'react';
+import { Chip } from 'primereact/chip';
+
+// Component metadata embedded for runtime access
+export const ChipMetadata = {
+  "name": "Chip",
+  "import": "Chip",
+  "category": "Misc",
+  "metadata": {
+    "description": "Compact element to represent an input, attribute, or action",
+    "usageExamples": [
+      "<ChipWrapper label=\"Action\" />",
+      "<ChipWrapper label=\"John Doe\" image=\"user.jpg\" removable onRemove={handleRemove} />"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "label",
+        "type": "string",
+        "optional": true,
+        "description": "Text to display",
+        "helpText": "Main content of the chip",
+        "dataTypes": [
+          "string"
+        ],
+        "examples": [
+          "'Action'",
+          "'John Doe'",
+          "'Tag'"
+        ]
+      },
+      {
+        "name": "icon",
+        "type": "string",
+        "optional": true,
+        "description": "Icon class",
+        "helpText": "PrimeIcons class name",
+        "dataTypes": [
+          "string (PrimeIcons class)"
+        ],
+        "examples": [
+          "'pi pi-user'",
+          "'pi pi-check'"
+        ]
+      },
+      {
+        "name": "image",
+        "type": "string",
+        "optional": true,
+        "description": "Image URL",
+        "helpText": "Avatar image for the chip",
+        "dataTypes": [
+          "string (URL)"
+        ],
+        "examples": [
+          "'user.jpg'",
+          "'/images/avatar.png'"
+        ]
+      },
+      {
+        "name": "removable",
+        "type": "boolean",
+        "optional": true,
+        "description": "Show remove icon",
+        "helpText": "Displays X button to remove chip",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "name": "removeIcon",
+        "type": "string",
+        "optional": true,
+        "description": "Custom remove icon",
+        "helpText": "PrimeIcons class for remove button",
+        "dataTypes": [
+          "string (PrimeIcons class)"
+        ],
+        "examples": [
+          "'pi pi-times'",
+          "'pi pi-times-circle'"
+        ]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes",
+        "helpText": "Supports PrimeFlex utility classes",
+        "examples": [
+          "'mr-2'",
+          "'mb-2'"
+        ]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles",
+        "helpText": "Standard React inline styles",
+        "examples": [
+          "{ marginRight: '0.5rem' }"
+        ]
+      }
+    ],
+    "children": null
+  },
+  "eventHandlers": {
+    "standard": [
+      {
+        "name": "onRemove",
+        "type": "(e: React.MouseEvent) => void",
+        "description": "Callback when remove icon is clicked"
+      }
+    ],
+    "simplified": [],
+    "validation": [],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "description": "Called when component mounts"
+      },
+      {
+        "name": "onUnmount",
+        "type": "() => void",
+        "description": "Called when component unmounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [
+      "handleRemove - Processes onRemove event"
+    ],
+    "patterns": [
+      "Check if event handler exists before calling"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": [],
+    "childrenDescription": "This component does not accept children",
+    "hasChildren": false,
+    "examples": []
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<ChipWrapper label=\"Action\" />",
+    "withStyling": "<ChipWrapper label=\"Tag\" icon=\"pi pi-tag\" className=\"mr-2\" />",
+    "withEvents": "<ChipWrapper label=\"John Doe\" removable onRemove={handleRemove} />",
+    "withRedux": "<ChipWrapper label={userName} removable onRemove={() => dispatch(removeUser(userId))} />",
+    "withValidation": "N/A",
+    "withChildren": "N/A"
+  }
+};
+
+const ChipWrapper = (props) => {
+  const {
+    label, icon, image, removable, removeIcon, className, style, onRemove, onMount, onUnmount,
+    ...restProps
+  } = props;
+
+  const componentRef = useRef(null);
+
+  // Lifecycle: onMount
+  useEffect(() => {
+    if (onMount) {
+      onMount();
+    }
+  }, []);
+
+  // Lifecycle: onUnmount
+  useEffect(() => {
+    return () => {
+      if (onUnmount) {
+        onUnmount();
+      }
+    };
+  }, []);
+
+  // Build props for underlying PrimeReact component
+  const primeReactProps = {
+    label,
+    icon,
+    image,
+    removable,
+    removeIcon,
+    className,
+    style,
+    onRemove,
+    ref: componentRef,
+    ...restProps
+  };
+
+  return (
+    <Chip {...primeReactProps} />
+  );
+};
+
+ChipWrapper.displayName = 'ChipWrapper';
+
+export default ChipWrapper;

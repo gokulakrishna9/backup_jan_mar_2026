@@ -1,0 +1,33 @@
+{
+  "name": "primereact-wrapper-components",
+  "version": "1.0.0",
+  "description": "Enhanced React wrapper components for PrimeReact with embedded metadata and simplified event handling",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "primereact",
+    "components",
+    "ui",
+    "wrapper",
+    "redux",
+    "metadata"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "primereact": "^10.0.0",
+    "primeicons": "^6.0.0"
+  },
+  "devDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "primereact": "^10.5.1",
+    "primeicons": "^6.0.1"
+  }
+}

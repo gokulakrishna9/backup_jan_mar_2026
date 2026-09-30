@@ -1,0 +1,81 @@
+<!-- AI Layer Maven Dependencies (auto-generated) -->
+<dependencies>
+    <!-- Spring AI Core Starter -->
+    <dependency>
+        <groupId>org.springframework.ai</groupId>
+        <artifactId>spring-ai-starter</artifactId>
+    </dependency>
+
+{% if has_openai %}
+    <!-- Spring AI OpenAI Starter (Req 2.34) -->
+    <dependency>
+        <groupId>org.springframework.ai</groupId>
+        <artifactId>spring-ai-openai-spring-boot-starter</artifactId>
+    </dependency>
+
+{% endif %}
+{% if has_ollama %}
+    <!-- Spring AI Ollama Starter (Req 2.34) -->
+    <dependency>
+        <groupId>org.springframework.ai</groupId>
+        <artifactId>spring-ai-ollama-spring-boot-starter</artifactId>
+    </dependency>
+
+{% endif %}
+{% if has_resilience %}
+    <!-- Resilience4j (Req 2.30) -->
+    <dependency>
+        <groupId>io.github.resilience4j</groupId>
+        <artifactId>resilience4j-spring-boot3</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>io.github.resilience4j</groupId>
+        <artifactId>resilience4j-reactor</artifactId>
+    </dependency>
+
+{% endif %}
+{% if has_tika %}
+    <!-- Apache Tika (Req 11.9) -->
+    <dependency>
+        <groupId>org.apache.tika</groupId>
+        <artifactId>tika-core</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.tika</groupId>
+        <artifactId>tika-parsers-standard-package</artifactId>
+    </dependency>
+
+{% endif %}
+{% if has_milvus %}
+    <!-- Milvus Java SDK (Req 8.10) -->
+    <dependency>
+        <groupId>io.milvus</groupId>
+        <artifactId>milvus-sdk-java</artifactId>
+    </dependency>
+
+{% endif %}
+{% if has_stdio_mcp %}
+    <!-- Spring AI MCP Client - stdio (Req 13.40) -->
+    <dependency>
+        <groupId>org.springframework.ai</groupId>
+        <artifactId>spring-ai-mcp-client-spring-boot-starter</artifactId>
+    </dependency>
+
+{% endif %}
+{% if has_sse_mcp %}
+    <!-- Spring AI MCP Client - SSE/WebFlux (Req 13.40) -->
+    <dependency>
+        <groupId>org.springframework.ai</groupId>
+        <artifactId>spring-ai-mcp-client-webflux-spring-boot-starter</artifactId>
+    </dependency>
+
+{% endif %}
+{% if has_prometheus %}
+    <!-- Micrometer Prometheus Registry (Req 15.5) -->
+    <dependency>
+        <groupId>io.micrometer</groupId>
+        <artifactId>micrometer-registry-prometheus</artifactId>
+    </dependency>
+
+{% endif %}
+</dependencies>

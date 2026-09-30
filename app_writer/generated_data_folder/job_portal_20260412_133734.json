@@ -1,0 +1,2350 @@
+{
+  "metadata": {
+    "generated_at": "2026-04-12T13:37:35.865990",
+    "total_records": 231,
+    "tables": {
+      "student_profile": 5,
+      "employer_profile": 5,
+      "trainer_profile": 5,
+      "job_posting": 5,
+      "training_program": 5,
+      "job_application": 5,
+      "training_enrollment": 5,
+      "user_profile": 5,
+      "education_level": 5,
+      "field_of_study": 5,
+      "institution": 5,
+      "user_education": 5,
+      "industry": 5,
+      "job_title": 5,
+      "user_work_experience": 5,
+      "skill_category": 5,
+      "skill": 5,
+      "user_skill": 5,
+      "training_module": 5,
+      "module_progress": 5,
+      "training_exam": 5,
+      "exam_attempt": 5,
+      "training_certification": 5,
+      "course_document": 5,
+      "course_video": 5,
+      "course_audio": 5,
+      "course_code_lab": 5,
+      "exam_question": 5,
+      "exam_answer": 5,
+      "course_question": 5,
+      "course_answer": 5,
+      "company": 5,
+      "location": 5,
+      "system_config": 5,
+      "auth_user": 2,
+      "user_role": 5,
+      "record_owner": 5,
+      "query_group": 2,
+      "query_group_query": 5,
+      "query_group_member": 5,
+      "query_group_record": 5,
+      "access_audit_log": 5,
+      "oauth2_provider": 2,
+      "oauth2_linked_account": 5,
+      "crud_activity_log": 5,
+      "deleted_record": 5,
+      "login_activity_log": 5,
+      "grant_activity_log": 5
+    }
+  },
+  "data": {
+    "student_profile": [
+      {
+        "studentProfileId": 1,
+        "resumeUrl": "https://flores-hartman.com/",
+        "skills": "Personal usually would report successful.",
+        "educationLevel": "Firm main simple.",
+        "createdAt": "2024-05-14T14:20:25.100578",
+        "updatedAt": "2024-09-26T19:28:01.149120"
+      },
+      {
+        "studentProfileId": 2,
+        "resumeUrl": "https://wright.com/",
+        "skills": "Use in part character until hotel.",
+        "educationLevel": "Good power interest resource pull.",
+        "createdAt": "2025-08-03T00:07:04.702996",
+        "updatedAt": "2026-01-29T00:41:57.265651"
+      },
+      {
+        "studentProfileId": 3,
+        "resumeUrl": "https://miller-castro.com/",
+        "skills": "Site police public.",
+        "educationLevel": "Order director young.",
+        "createdAt": "2024-12-22T06:39:37.477777",
+        "updatedAt": "2026-01-28T12:10:37.452129"
+      },
+      {
+        "studentProfileId": 4,
+        "resumeUrl": "https://www.carpenter.org/",
+        "skills": "Minute country treat almost could.",
+        "educationLevel": "Other be green onto attorney instead.",
+        "createdAt": "2025-06-21T12:37:19.984328",
+        "updatedAt": "2024-04-27T11:50:41.553915"
+      },
+      {
+        "studentProfileId": 5,
+        "resumeUrl": "https://ortiz-gilbert.com/",
+        "skills": "Statement house position.",
+        "educationLevel": "Paper realize through paper.",
+        "createdAt": "2025-10-25T06:02:49.956124",
+        "updatedAt": "2024-10-31T15:50:56.693168"
+      }
+    ],
+    "employer_profile": [
+      {
+        "employerProfileId": 1,
+        "companyName": "Travis Mcguire",
+        "industry": "Drop lose production to artist.",
+        "website": "http://woods.com/",
+        "logoUrl": null,
+        "description": "Political scene firm charge already. Condition pretty support again guy short. Talk national region realize than baby produce.\nShare away just good just feel want. Pass wait red continue among.",
+        "contactEmail": "matthewlewis@example.com",
+        "createdAt": "2026-03-10T17:58:31.569643",
+        "updatedAt": "2024-10-07T01:47:47.178101"
+      },
+      {
+        "employerProfileId": 2,
+        "companyName": "Seth Myers",
+        "industry": null,
+        "website": "http://proctor.com/",
+        "logoUrl": "https://werner-smith.info/",
+        "description": "Head board figure what fall true. Former leave lawyer us argue relationship father. Business strategy owner chance catch child adult.",
+        "contactEmail": "evanshenry@example.org",
+        "createdAt": "2024-07-13T00:52:04.027430",
+        "updatedAt": "2024-04-27T18:12:58.933588"
+      },
+      {
+        "employerProfileId": 3,
+        "companyName": "Vickie Morgan",
+        "industry": "Activity receive including while yard.",
+        "website": "https://wilson-thompson.com/",
+        "logoUrl": "http://fleming-campbell.info/",
+        "description": "Agency lot Congress five situation those. Per art wrong huge send. Report because political hit nor candidate body. Radio character dog power.",
+        "contactEmail": "whiteelizabeth@example.net",
+        "createdAt": "2025-02-19T20:11:25.229107",
+        "updatedAt": "2025-08-06T20:22:03.750215"
+      },
+      {
+        "employerProfileId": 4,
+        "companyName": "Diana Martinez",
+        "industry": "Note I dinner brother from.",
+        "website": "http://www.thompson.net/",
+        "logoUrl": "https://wilson-brandt.com/",
+        "description": "Visit usually really leave few sea notice. Center feeling enter thousand against into.\nIts service send per machine. State worker from worry. This method away.",
+        "contactEmail": "chelsea94@example.net",
+        "createdAt": "2025-11-08T10:23:29.020678",
+        "updatedAt": "2025-09-09T03:52:26.364437"
+      },
+      {
+        "employerProfileId": 5,
+        "companyName": "Emily Park",
+        "industry": "Individual task question know.",
+        "website": "http://murphy.com/",
+        "logoUrl": "http://lin-flores.biz/",
+        "description": "State form half. Month box say energy. Economic west story important effect economy hotel. Eat choose drop appear whole lot.",
+        "contactEmail": null,
+        "createdAt": "2024-10-06T09:10:30.521340",
+        "updatedAt": "2025-01-28T01:04:49.062846"
+      }
+    ],
+    "trainer_profile": [
+      {
+        "trainerProfileId": 1,
+        "specialization": null,
+        "certifications": "Receive trip happen senior away.",
+        "hourlyRate": 65362098916325.164,
+        "createdAt": "2025-09-03T04:26:30.941468",
+        "updatedAt": "2025-09-02T19:25:43.180421"
+      },
+      {
+        "trainerProfileId": 2,
+        "specialization": "Reflect street development role society.",
+        "certifications": "Until nation enter significant.",
+        "hourlyRate": 560204713361196.4,
+        "createdAt": "2024-05-04T08:16:08.589107",
+        "updatedAt": "2024-10-22T19:54:20.000227"
+      },
+      {
+        "trainerProfileId": 3,
+        "specialization": "Middle any sense skin section.",
+        "certifications": "Half worker brother.",
+        "hourlyRate": 449508725681754.06,
+        "createdAt": "2025-05-07T01:25:01.523411",
+        "updatedAt": "2024-06-24T16:14:06.208656"
+      },
+      {
+        "trainerProfileId": 4,
+        "specialization": "I almost student soldier buy.",
+        "certifications": "Within down total house despite rest.",
+        "hourlyRate": 336887237208619.0,
+        "createdAt": "2025-06-25T22:08:37.108829",
+        "updatedAt": "2024-06-18T23:02:15.817384"
+      },
+      {
+        "trainerProfileId": 5,
+        "specialization": "Contain lot director election red.",
+        "certifications": "Member discover civil fall brother without.",
+        "hourlyRate": 436829959204254.2,
+        "createdAt": "2024-11-11T10:44:34.319454",
+        "updatedAt": "2025-03-21T13:28:31.192867"
+      }
+    ],
+    "job_posting": [
+      {
+        "jobPostingId": 1,
+        "title": "Art sport world look now land",
+        "description": "Remember develop source partner so leader. Mrs environment once turn.\nCertainly election sound common site picture. Into particular only. Present others economic.\nIndeed glass young bag.",
+        "location": "Ready because detail.",
+        "salaryMin": null,
+        "salaryMax": 800504814023518.2,
+        "jobType": "Again land environmental break month crime.",
+        "isActive": false,
+        "createdAt": "2025-02-23T20:01:56.101005",
+        "updatedAt": "2024-07-08T19:47:32.749283"
+      },
+      {
+        "jobPostingId": 2,
+        "title": "Southern election involve see find",
+        "description": "Ten like contain with city get whom garden. Up mean detail account.\nLet own former defense rich oil report tend.\nExpert analysis then. Gas when focus face.",
+        "location": "Feeling walk miss set area.",
+        "salaryMin": 377469094542166.6,
+        "salaryMax": 381195426559863.25,
+        "jobType": "As benefit wonder.",
+        "isActive": false,
+        "createdAt": "2025-08-11T13:27:00.272797",
+        "updatedAt": "2024-09-14T20:21:18.119965"
+      },
+      {
+        "jobPostingId": 3,
+        "title": "What he majority character quickly themselves prevent defense",
+        "description": "Loss benefit of deep behavior thing agent. Unit pass left my reveal difficult alone fish. Contain child step ask even table with key.",
+        "location": "Expert school issue trial.",
+        "salaryMin": 60818649925985.516,
+        "salaryMax": 233107981375156.97,
+        "jobType": "Sure management campaign.",
+        "isActive": true,
+        "createdAt": "2025-05-30T05:20:55.914410",
+        "updatedAt": "2025-01-13T04:33:18.445062"
+      },
+      {
+        "jobPostingId": 4,
+        "title": "Hand big thank foot quickly debate letter",
+        "description": "Word billion medical everything. Data consider once remain range certain.\nCandidate great beyond population order space number knowledge. Owner teacher quickly road begin few property part.",
+        "location": "Apply subject wide.",
+        "salaryMin": 226188354937361.66,
+        "salaryMax": 198970189824104.75,
+        "jobType": "Wide choice old.",
+        "isActive": false,
+        "createdAt": "2026-04-08T05:03:53.555680",
+        "updatedAt": "2026-03-24T16:18:21.617458"
+      },
+      {
+        "jobPostingId": 5,
+        "title": "Top fall call attention discuss special",
+        "description": "Need on true director traditional weight bill. Perform medical agree. And accept price shoulder purpose.\nArticle provide spend yeah if dinner. Money none sell how.",
+        "location": "Purpose although bring act offer.",
+        "salaryMin": 971643901058543.4,
+        "salaryMax": 553514685466149.56,
+        "jobType": "Commercial TV similar.",
+        "isActive": true,
+        "createdAt": "2025-12-25T23:56:13.402135",
+        "updatedAt": "2025-02-21T09:10:55.417029"
+      }
+    ],
+    "training_program": [
+      {
+        "trainingProgramId": 1,
+        "title": "Performance always art story",
+        "description": "Tax agent art third. Care smile arrive threat. Operation quickly mouth position we final free. Near enter voice support.\nOn share such develop call too.",
+        "durationDays": 382,
+        "price": 914621518257220.2,
+        "isActive": true,
+        "createdAt": "2024-07-04T15:19:52.633861",
+        "updatedAt": "2025-01-28T11:55:17.251692"
+      },
+      {
+        "trainingProgramId": 2,
+        "title": "Security job idea fine north force",
+        "description": "Thought themselves model call feeling rather. Law life sort civil large purpose up choose. Admit remember before sea interview.",
+        "durationDays": 52,
+        "price": 492799811702317.8,
+        "isActive": false,
+        "createdAt": "2025-10-05T08:21:28.209759",
+        "updatedAt": "2026-01-03T20:03:11.944573"
+      },
+      {
+        "trainingProgramId": 3,
+        "title": "Across least art agreement officer entire",
+        "description": "Church prepare help none. Player trip why half.\nHotel size involve first. Choice practice about coach.\nRelate wind forward. If indicate note author. Out these they yeah throughout.",
+        "durationDays": 335,
+        "price": 184641434955749.12,
+        "isActive": false,
+        "createdAt": "2024-12-05T14:59:30.285177",
+        "updatedAt": "2024-09-21T15:26:15.715497"
+      },
+      {
+        "trainingProgramId": 4,
+        "title": "Well spring total affect reach both",
+        "description": "Entire response benefit garden relationship skill message. Act section anyone young continue sea. Nor also indeed resource seem.",
+        "durationDays": 653,
+        "price": 657536079995673.4,
+        "isActive": null,
+        "createdAt": "2024-08-08T15:37:53.187267",
+        "updatedAt": "2024-04-15T16:26:18.140010"
+      },
+      {
+        "trainingProgramId": 5,
+        "title": "Important spend same travel",
+        "description": "Seat large decision writer leader fund music. Offer than down region while. Entire leg smile house despite four style.\nCause draw not how church whether. Be until despite program since.",
+        "durationDays": 304,
+        "price": 298376141605501.9,
+        "isActive": true,
+        "createdAt": "2025-06-11T00:53:04.291212",
+        "updatedAt": "2024-09-09T10:49:33.978718"
+      }
+    ],
+    "job_application": [
+      {
+        "jobApplicationId": 1,
+        "status": "Heart field manage carry.",
+        "coverLetter": "Pretty medical significant feeling head evening.",
+        "appliedAt": "2025-05-12T00:45:43.151280",
+        "createdAt": "2025-06-27T20:19:29.188574",
+        "updatedAt": "2024-06-27T16:48:21.433404"
+      },
+      {
+        "jobApplicationId": 2,
+        "status": "Five south such war.",
+        "coverLetter": "Test according page almost member practice.",
+        "appliedAt": "2026-03-05T13:11:34.964103",
+        "createdAt": "2025-02-04T12:52:08.320987",
+        "updatedAt": "2024-08-10T17:53:46.952734"
+      },
+      {
+        "jobApplicationId": 3,
+        "status": null,
+        "coverLetter": "Image skill ten history improve threat.",
+        "appliedAt": "2024-11-20T06:12:53.566863",
+        "createdAt": "2024-11-18T21:16:18.262990",
+        "updatedAt": "2025-11-20T15:51:14.464240"
+      },
+      {
+        "jobApplicationId": 4,
+        "status": "Commercial north rock however concern treatment.",
+        "coverLetter": "From page world we site agreement.",
+        "appliedAt": "2026-02-19T08:15:04.429472",
+        "createdAt": "2024-08-21T08:56:24.111753",
+        "updatedAt": "2026-02-02T21:41:36.911185"
+      },
+      {
+        "jobApplicationId": 5,
+        "status": "Fight expert forward to stock or.",
+        "coverLetter": "Up ever brother human.",
+        "appliedAt": "2025-01-11T22:07:59.658961",
+        "createdAt": "2025-09-07T17:00:44.901722",
+        "updatedAt": "2025-06-11T17:27:13.056510"
+      }
+    ],
+    "training_enrollment": [
+      {
+        "trainingEnrollmentId": 1,
+        "status": "Discover perhaps decide possible determine.",
+        "progress": 582,
+        "enrolledAt": "2025-07-30T20:16:21.942261",
+        "createdAt": "2025-07-07T05:39:44.621596",
+        "updatedAt": "2024-10-26T10:49:38.715266"
+      },
+      {
+        "trainingEnrollmentId": 2,
+        "status": "Follow open age responsibility I.",
+        "progress": 289,
+        "enrolledAt": "2025-06-01T09:58:48.927459",
+        "createdAt": "2025-04-22T17:40:30.526109",
+        "updatedAt": "2024-07-04T23:38:32.293129"
+      },
+      {
+        "trainingEnrollmentId": 3,
+        "status": "Grow stand two claim look woman.",
+        "progress": 729,
+        "enrolledAt": "2026-03-01T04:33:45.957943",
+        "createdAt": "2025-05-21T22:36:31.221223",
+        "updatedAt": "2026-03-12T09:26:51.579897"
+      },
+      {
+        "trainingEnrollmentId": 4,
+        "status": "So radio time some.",
+        "progress": 395,
+        "enrolledAt": "2024-09-13T18:19:46.575928",
+        "createdAt": "2024-08-31T00:21:46.443720",
+        "updatedAt": "2024-10-10T17:44:25.316975"
+      },
+      {
+        "trainingEnrollmentId": 5,
+        "status": null,
+        "progress": 7,
+        "enrolledAt": "2025-05-20T22:57:39.977104",
+        "createdAt": "2024-11-07T21:42:49.786811",
+        "updatedAt": "2024-11-16T07:01:49.780841"
+      }
+    ],
+    "user_profile": [
+      {
+        "userProfileId": 1,
+        "firstName": "John",
+        "lastName": "Grant",
+        "email": "briandawson@example.org",
+        "phone": null,
+        "bio": "Reduce politics send they choose goal late. Degree account she toward hear.\nJust special wall ball at future hope. Suggest none both city job father. Watch guess piece direction quickly argue.",
+        "createdAt": "2025-07-14T06:17:47.217311",
+        "updatedAt": "2024-06-23T02:15:21.994503"
+      },
+      {
+        "userProfileId": 2,
+        "firstName": "Sarah",
+        "lastName": "Ali",
+        "email": "rhall@example.org",
+        "phone": "+1-201-649-3349",
+        "bio": "Physical dream green owner.\nFar doctor until heavy number also knowledge. Democrat cause in plan act career continue themselves. Yeah include room heavy sport purpose us.",
+        "createdAt": "2026-01-02T00:50:05.305360",
+        "updatedAt": "2025-08-26T13:54:26.070693"
+      },
+      {
+        "userProfileId": 3,
+        "firstName": "Alexis",
+        "lastName": "Jennings",
+        "email": "terrance55@example.com",
+        "phone": "770-375-3800x88912",
+        "bio": "Level much deep the read. Lot add right film theory future. Quickly field language per.\nRecord recognize middle industry bring.\nSpecific window town program. Bag behind cut.",
+        "createdAt": "2026-03-09T05:06:34.774662",
+        "updatedAt": "2024-10-12T01:00:09.976792"
+      },
+      {
+        "userProfileId": 4,
+        "firstName": "William",
+        "lastName": "Herring",
+        "email": "robertdecker@example.com",
+        "phone": "+1-213-213-7811x9533",
+        "bio": "Break friend first physical serious. Large short sure. Issue agent thus trouble mind leave rise.\nWho reach standard green off position start in. Force hope set environmental goal.",
+        "createdAt": "2025-07-19T09:47:36.619387",
+        "updatedAt": "2025-03-08T21:54:51.621332"
+      },
+      {
+        "userProfileId": 5,
+        "firstName": null,
+        "lastName": "Rogers",
+        "email": "alan25@example.net",
+        "phone": "4787285794",
+        "bio": "Notice inside school believe recognize car then. Foreign share thus soon. Dark child experience much relationship appear on.",
+        "createdAt": "2025-04-25T10:18:32.697840",
+        "updatedAt": "2025-11-08T10:42:30.071700"
+      }
+    ],
+    "education_level": [
+      {
+        "educationLevelId": 1,
+        "name": "Randy Gray",
+        "description": "Style health model work special program us. Hand though offer middle. Understand parent stage development low.\nParticipant fire support Democrat threat consider. Area outside anything culture.",
+        "sortOrder": 40,
+        "createdAt": "2026-03-19T08:04:28.690702",
+        "updatedAt": "2024-07-24T12:43:47.884952"
+      },
+      {
+        "educationLevelId": 2,
+        "name": "Elizabeth Flynn",
+        "description": "Discussion daughter item majority. Hotel gun feel meeting lose could already product. Adult building how anyone standard. Cut kind citizen trouble bit recent hope.",
+        "sortOrder": 950,
+        "createdAt": "2026-01-27T20:51:17.204543",
+        "updatedAt": "2024-06-25T05:24:52.397054"
+      },
+      {
+        "educationLevelId": 3,
+        "name": "Meredith Harris",
+        "description": "Citizen bad red name to soon give. Prove college one prove baby.\nSerious cultural air set word dinner. While civil whether course husband. Against choice board.",
+        "sortOrder": 212,
+        "createdAt": "2024-04-25T23:18:30.946615",
+        "updatedAt": "2026-01-04T19:26:11.117303"
+      },
+      {
+        "educationLevelId": 4,
+        "name": "Gina Harrison",
+        "description": "Nothing one tonight soon.\nModern sometimes image number share pay. Address really decision world threat. Eye group sell color general cold pretty.",
+        "sortOrder": 530,
+        "createdAt": "2024-06-29T00:18:41.741938",
+        "updatedAt": "2024-06-01T00:18:18.695138"
+      },
+      {
+        "educationLevelId": 5,
+        "name": "Martin Martin",
+        "description": "Southern new past spring. However behavior budget action guy attorney two fire. Hundred soon Democrat.",
+        "sortOrder": 605,
+        "createdAt": "2024-06-26T13:31:16.561413",
+        "updatedAt": "2026-03-19T15:52:32.975260"
+      }
+    ],
+    "field_of_study": [
+      {
+        "fieldOfStudyId": 1,
+        "name": "Tony Moore",
+        "description": "Child say within. Through positive which remain under property worker.\nDegree thing analysis thought he important develop. Various nothing fund despite. Politics now around him thus very land.",
+        "createdAt": "2025-11-26T15:01:16.198013",
+        "updatedAt": "2026-03-30T12:46:25.117557"
+      },
+      {
+        "fieldOfStudyId": 2,
+        "name": "Tristan Wu",
+        "description": "Institution drop us party account investment nearly. Name need husband project individual myself value cut.",
+        "createdAt": "2024-06-13T11:42:27.857981",
+        "updatedAt": "2024-10-03T23:49:49.473761"
+      },
+      {
+        "fieldOfStudyId": 3,
+        "name": "Rhonda Aguirre",
+        "description": "Decide rule environmental growth medical memory although rock. However radio not economic budget. Its draw alone decision.",
+        "createdAt": "2024-04-22T18:33:05.760665",
+        "updatedAt": "2024-06-14T16:58:34.757176"
+      },
+      {
+        "fieldOfStudyId": 4,
+        "name": "Danielle Robinson",
+        "description": "Wait thus news fish money. Front door civil operation our.\nWhen relate environment decide spring with vote. Avoid she effort reach people step most. Meet choice song easy itself stay.",
+        "createdAt": "2024-04-23T23:22:31.998216",
+        "updatedAt": "2025-01-11T01:31:48.678089"
+      },
+      {
+        "fieldOfStudyId": 5,
+        "name": "Beth Wagner",
+        "description": "Among whose artist Democrat take world third model. Today operation current seem number thousand let. Service series heavy main represent current trouble.",
+        "createdAt": "2025-09-27T01:22:53.187258",
+        "updatedAt": "2024-08-17T19:12:58.785469"
+      }
+    ],
+    "institution": [
+      {
+        "institutionId": 1,
+        "name": "David Welch",
+        "country": "Sudan",
+        "website": "http://harris.com/",
+        "createdAt": "2024-05-28T13:15:01.575315",
+        "updatedAt": "2025-10-20T19:32:13.111717"
+      },
+      {
+        "institutionId": 2,
+        "name": null,
+        "country": "Japan",
+        "website": null,
+        "createdAt": "2024-10-15T20:17:45.033365",
+        "updatedAt": "2025-09-02T13:55:45.291813"
+      },
+      {
+        "institutionId": 3,
+        "name": null,
+        "country": "Malaysia",
+        "website": "http://www.martinez-sherman.com/",
+        "createdAt": "2024-11-04T01:56:05.763759",
+        "updatedAt": "2025-06-25T14:50:40.351215"
+      },
+      {
+        "institutionId": 4,
+        "name": "Heather Butler",
+        "country": "Liechtenstein",
+        "website": "http://hall.org/",
+        "createdAt": "2024-06-12T04:56:03.392519",
+        "updatedAt": "2024-11-28T05:04:54.334548"
+      },
+      {
+        "institutionId": 5,
+        "name": "Edward Moore",
+        "country": "El Salvador",
+        "website": "http://rice.com/",
+        "createdAt": "2025-03-16T11:50:49.052437",
+        "updatedAt": "2024-12-13T15:28:27.774703"
+      }
+    ],
+    "user_education": [
+      {
+        "userEducationId": 1,
+        "institutionName": "Mark Olson",
+        "degree": "Including tend class.",
+        "fieldOfStudy": "Fear member speech officer economy.",
+        "startDate": "2024-10-05",
+        "endDate": "2021-11-28",
+        "grade": null,
+        "description": "Fight else direction front rich. Customer cost explain nation hard movement still. Whole them ten.\nTrue service employee cost control go. Thing task board benefit effect part we.",
+        "createdAt": "2025-05-14T06:26:33.963004",
+        "updatedAt": "2025-04-13T17:18:14.774388"
+      },
+      {
+        "userEducationId": 2,
+        "institutionName": "Laura Lopez",
+        "degree": "Team arrive rise scientist check call.",
+        "fieldOfStudy": "Point administration current oil wind.",
+        "startDate": null,
+        "endDate": "2024-11-18",
+        "grade": "Show per difficult.",
+        "description": "Employee push despite speech. Them decision tell age. Life fact play clearly.\nVoice science create future any dark. Staff central authority factor book whom next. Several color page customer.",
+        "createdAt": "2025-08-22T21:06:45.243659",
+        "updatedAt": "2025-12-19T18:16:45.112007"
+      },
+      {
+        "userEducationId": 3,
+        "institutionName": "Marcus Leonard",
+        "degree": "Form want table success.",
+        "fieldOfStudy": "Ago play whole evening.",
+        "startDate": "2021-06-16",
+        "endDate": "2025-11-07",
+        "grade": "Word hard executive risk.",
+        "description": "Only tell newspaper successful shake there about skill. Compare of present society.\nAge government capital fact pass board benefit. Agent make throw us.",
+        "createdAt": "2025-02-13T12:06:10.643240",
+        "updatedAt": "2025-08-12T08:59:56.501828"
+      },
+      {
+        "userEducationId": 4,
+        "institutionName": "Jill Perry",
+        "degree": "Amount allow fire lot wear.",
+        "fieldOfStudy": null,
+        "startDate": "2021-08-31",
+        "endDate": "2022-04-28",
+        "grade": "There small sense change road science.",
+        "description": "Upon all source believe. Really trip feel fear could fund simple.\nDinner adult company score girl clearly add. They avoid thought trade land property character.\nLittle college ready impact now.",
+        "createdAt": "2024-10-04T01:50:45.560222",
+        "updatedAt": "2026-04-07T12:04:18.735314"
+      },
+      {
+        "userEducationId": 5,
+        "institutionName": "Raymond Diaz",
+        "degree": "Nearly issue media either realize.",
+        "fieldOfStudy": null,
+        "startDate": null,
+        "endDate": "2021-11-21",
+        "grade": "With time follow get drive not.",
+        "description": "Traditional right enjoy. End finish current can.\nGreen human campaign safe after war image. Small tree pressure car ten. Hit light full outside lawyer build no.",
+        "createdAt": "2024-06-20T20:47:34.005630",
+        "updatedAt": "2025-01-08T14:55:27.794394"
+      }
+    ],
+    "industry": [
+      {
+        "industryId": 1,
+        "name": "Amanda Sweeney",
+        "description": "Perhaps fire already teacher budget. Experience identify case reason computer. Who ready sea mean group green.\nSpeak authority especially stand bar great. Blood voice yes speak quality available.",
+        "createdAt": "2025-03-17T07:04:55.285733",
+        "updatedAt": "2025-11-30T22:39:50.297346"
+      },
+      {
+        "industryId": 2,
+        "name": "Michelle Warren",
+        "description": null,
+        "createdAt": "2024-04-22T13:20:04.439120",
+        "updatedAt": "2024-04-28T06:17:56.491179"
+      },
+      {
+        "industryId": 3,
+        "name": "Gina Castro",
+        "description": "Hope according impact expert. Former smile final result company amount.\nStudent mother one ground see. Too truth attack. Give put car million.",
+        "createdAt": "2024-06-13T10:30:40.575295",
+        "updatedAt": "2025-03-01T00:33:02.890488"
+      },
+      {
+        "industryId": 4,
+        "name": "Mary Jones",
+        "description": "Imagine computer trip should. Travel realize weight reason detail back know.\nGreen woman work animal clearly director raise. Nature but treatment find. Hot perhaps important enter begin worker race.",
+        "createdAt": "2024-08-26T07:29:25.481087",
+        "updatedAt": "2025-03-08T05:19:47.414947"
+      },
+      {
+        "industryId": 5,
+        "name": "Matthew Odom",
+        "description": "Analysis full culture.\nInside table or father couple somebody. Significant interesting where west.\nBase mean whatever point clearly situation. Staff media view.",
+        "createdAt": "2025-02-17T20:18:23.392279",
+        "updatedAt": "2025-07-16T06:45:59.652151"
+      }
+    ],
+    "job_title": [
+      {
+        "jobTitleId": 1,
+        "name": "Dawn Kennedy",
+        "description": "Position nearly blood none. Early safe mission reach generation eye.\nBig agreement quite hotel. Car center sing begin door. Economic technology president month body however.",
+        "createdAt": "2024-04-28T00:36:34.116568",
+        "updatedAt": "2026-01-26T07:47:49.316373"
+      },
+      {
+        "jobTitleId": 2,
+        "name": "Lauren Wilson",
+        "description": "Day generation easy from save per direction. Ago trip view financial firm. Do responsibility street during impact sport along.\nWatch PM fire weight cut however myself one.",
+        "createdAt": "2024-06-17T21:49:40.912798",
+        "updatedAt": "2025-06-16T23:49:03.260325"
+      },
+      {
+        "jobTitleId": 3,
+        "name": "Michael Holland",
+        "description": "Policy hold million hand fill.\nInvestment wear beautiful law newspaper detail. Sea tax buy wife other grow score.",
+        "createdAt": "2025-12-13T15:32:13.425048",
+        "updatedAt": "2024-09-06T14:20:40.330305"
+      },
+      {
+        "jobTitleId": 4,
+        "name": "Keith Brown",
+        "description": "Never born account building family range song.\nRule industry type describe third leg professional against. Resource seven again listen analysis now.",
+        "createdAt": "2024-10-16T00:54:34.474623",
+        "updatedAt": "2024-09-27T22:20:04.898250"
+      },
+      {
+        "jobTitleId": 5,
+        "name": "Brenda Rose",
+        "description": "True hear training effort national spend. Majority after group age.",
+        "createdAt": "2025-04-08T11:09:23.239763",
+        "updatedAt": "2025-12-08T19:03:08.735170"
+      }
+    ],
+    "user_work_experience": [
+      {
+        "userWorkExperienceId": 1,
+        "companyName": "Samantha Brown",
+        "jobTitle": "Raise his light rock billion close",
+        "industry": "Mrs himself likely president.",
+        "location": "Anything hotel whether become central send.",
+        "startDate": "2024-06-03",
+        "endDate": "2024-08-04",
+        "isCurrent": null,
+        "description": "Leader between goal event score there through partner. Page leader decide focus everything. Once compare western herself.",
+        "createdAt": "2025-03-18T04:06:10.175321",
+        "updatedAt": "2025-06-01T23:54:02.827570"
+      },
+      {
+        "userWorkExperienceId": 2,
+        "companyName": null,
+        "jobTitle": "Worker much onto add trial machine nothing",
+        "industry": "Like alone time.",
+        "location": "Anyone force one provide law.",
+        "startDate": "2022-10-25",
+        "endDate": "2023-05-11",
+        "isCurrent": true,
+        "description": "Light activity reason property.\nAt benefit card social. Month production health least.",
+        "createdAt": "2026-03-24T19:22:15.969377",
+        "updatedAt": "2025-03-28T13:45:34.405427"
+      },
+      {
+        "userWorkExperienceId": 3,
+        "companyName": "Jasmine Collins",
+        "jobTitle": "Whose minute number stuff",
+        "industry": "Because house country.",
+        "location": "Water total walk can.",
+        "startDate": "2021-12-15",
+        "endDate": "2023-12-29",
+        "isCurrent": null,
+        "description": "Population include group dream information. Question purpose meet situation occur explain concern. Simple expect down program mention government character.",
+        "createdAt": "2025-05-21T02:43:22.726900",
+        "updatedAt": "2025-01-01T21:17:32.884560"
+      },
+      {
+        "userWorkExperienceId": 4,
+        "companyName": "Lauren Patterson",
+        "jobTitle": "Check design successful always leave fear",
+        "industry": null,
+        "location": "Speech that head high trial way trouble.",
+        "startDate": "2021-12-11",
+        "endDate": "2025-07-15",
+        "isCurrent": true,
+        "description": "Cut way again wait brother. Field practice scene somebody feel lawyer. Minute whatever receive nor.\nScene reality medical require speech usually painting.",
+        "createdAt": "2024-10-04T15:50:09.030333",
+        "updatedAt": "2025-06-22T22:47:34.470212"
+      },
+      {
+        "userWorkExperienceId": 5,
+        "companyName": "David Williams",
+        "jobTitle": "Trip watch do author amount",
+        "industry": "Already thought these many.",
+        "location": "Class call treatment seven.",
+        "startDate": "2024-12-01",
+        "endDate": "2022-11-06",
+        "isCurrent": true,
+        "description": "Understand election audience source. Bed read minute concern suddenly pull finish. Civil cup beautiful girl easy collection return authority.",
+        "createdAt": "2024-11-21T22:48:54.752323",
+        "updatedAt": "2026-02-22T04:11:06.441044"
+      }
+    ],
+    "skill_category": [
+      {
+        "skillCategoryId": 1,
+        "name": "Maxwell Lopez",
+        "description": "Even yet show necessary visit. Wear media among idea similar girl project enjoy.\nThank never trade interest. Leave catch nothing state.",
+        "createdAt": "2025-12-26T12:05:18.375180",
+        "updatedAt": "2024-10-09T12:10:16.767842"
+      },
+      {
+        "skillCategoryId": 2,
+        "name": "Donna Camacho",
+        "description": "Physical site past side ground not sea. His yeah leg go close team. Use exist fund own including information education.",
+        "createdAt": "2025-04-07T05:20:56.735414",
+        "updatedAt": "2024-09-10T13:15:21.784412"
+      },
+      {
+        "skillCategoryId": 3,
+        "name": null,
+        "description": "Floor short however miss federal effort. Season clearly scene after lawyer practice politics. Director activity listen imagine.\nFloor former hair. Artist detail serve summer live.",
+        "createdAt": "2025-10-27T12:03:50.303422",
+        "updatedAt": "2025-04-13T06:25:06.612380"
+      },
+      {
+        "skillCategoryId": 4,
+        "name": "Evan Wright",
+        "description": "Road name economic tell. Wife open collection. Fight worker tend suggest possible several safe quite.\nDo arm democratic soon benefit. Kid society town these guess rise.",
+        "createdAt": "2024-11-02T00:52:20.434182",
+        "updatedAt": "2024-05-04T06:50:39.551032"
+      },
+      {
+        "skillCategoryId": 5,
+        "name": null,
+        "description": "Ground candidate see small discuss reason effort. Significant study sound mouth back hair pretty. Success hit show occur quite choose hold outside.",
+        "createdAt": "2025-08-27T02:18:30.927881",
+        "updatedAt": "2026-02-01T08:34:10.213099"
+      }
+    ],
+    "skill": [
+      {
+        "skillId": 1,
+        "name": "Michele Valdez",
+        "category": "Present according young really design who.",
+        "description": "Start major that middle seem popular. Note single garden husband term collection whether either. Compare him suggest city professor thank.",
+        "createdAt": "2024-05-01T08:03:55.096902",
+        "updatedAt": "2024-12-06T17:54:01.439985"
+      },
+      {
+        "skillId": 2,
+        "name": "Kristina Smith",
+        "category": null,
+        "description": "Evening whatever parent wall far will TV fine. Option explain else card network throw throughout many. Court season forget soldier city moment.",
+        "createdAt": "2024-07-12T13:51:41.587929",
+        "updatedAt": "2025-03-09T08:30:42.227592"
+      },
+      {
+        "skillId": 3,
+        "name": "Tiffany Owens",
+        "category": "Perhaps because woman piece truth movement.",
+        "description": "Old short various vote later choose instead agreement. Pay probably direction pass. Lose attack morning south natural east where. Policy wonder nearly know.\nWorry son win.",
+        "createdAt": "2024-11-05T05:40:18.962004",
+        "updatedAt": "2026-02-15T13:21:42.668917"
+      },
+      {
+        "skillId": 4,
+        "name": "Jessica Richards",
+        "category": "Administration discussion produce.",
+        "description": "Dinner your house admit available maintain or case. Building church compare some room suddenly.\nOwn care I language thousand sign character. East production evidence officer key method.",
+        "createdAt": "2025-04-05T13:04:55.471010",
+        "updatedAt": "2024-04-12T22:07:23.792386"
+      },
+      {
+        "skillId": 5,
+        "name": "Lori King",
+        "category": "Choose rock argue central.",
+        "description": "Expect population gun.\nFine American give study show. Institution hot ten market apply sister. Teacher school blood contain rule show health.",
+        "createdAt": "2026-04-09T06:40:43.909074",
+        "updatedAt": "2025-10-30T12:46:42.988561"
+      }
+    ],
+    "user_skill": [
+      {
+        "userSkillId": 1,
+        "skillName": "Matthew Vega",
+        "proficiencyLevel": "Office role director significant.",
+        "yearsOfExperience": 448,
+        "createdAt": "2025-03-11T15:04:22.881525",
+        "updatedAt": "2024-11-18T12:31:02.972082"
+      },
+      {
+        "userSkillId": 2,
+        "skillName": "Donna Mcintosh",
+        "proficiencyLevel": "Human night voice.",
+        "yearsOfExperience": 271,
+        "createdAt": "2025-07-30T17:36:58.833177",
+        "updatedAt": "2025-12-15T01:13:53.385072"
+      },
+      {
+        "userSkillId": 3,
+        "skillName": "Richard Boone PhD",
+        "proficiencyLevel": "Civil product down.",
+        "yearsOfExperience": 895,
+        "createdAt": "2024-06-03T14:00:47.012845",
+        "updatedAt": "2025-06-08T10:57:36.600115"
+      },
+      {
+        "userSkillId": 4,
+        "skillName": "Stephanie Ryan",
+        "proficiencyLevel": "Also property maintain than.",
+        "yearsOfExperience": 484,
+        "createdAt": "2025-02-12T01:05:58.609092",
+        "updatedAt": "2025-08-29T00:47:49.674304"
+      },
+      {
+        "userSkillId": 5,
+        "skillName": "Shannon Hall",
+        "proficiencyLevel": "Shoulder laugh sister off.",
+        "yearsOfExperience": 900,
+        "createdAt": "2025-07-13T09:16:07.547287",
+        "updatedAt": "2025-08-29T23:02:16.693306"
+      }
+    ],
+    "training_module": [
+      {
+        "trainingModuleId": 1,
+        "title": "Party social college employee wind",
+        "description": "Individual image like guess though travel. Position yard situation yet.\nSingle religious myself water. Program probably age second. Simple defense your want nature.",
+        "moduleOrder": 92,
+        "durationMinutes": 151,
+        "contentUrl": "http://www.jacobs.com/",
+        "createdAt": "2024-12-21T05:24:48.683596",
+        "updatedAt": "2025-04-20T20:06:21.024162"
+      },
+      {
+        "trainingModuleId": 2,
+        "title": "Road reach raise likely",
+        "description": "Sometimes lead near west perhaps kitchen. Idea out school cell meet.\nPull to class sister face administration show finally. Rather production wall throw.",
+        "moduleOrder": 864,
+        "durationMinutes": null,
+        "contentUrl": "https://www.mccullough.biz/",
+        "createdAt": "2025-03-11T01:46:14.775092",
+        "updatedAt": "2025-04-15T18:32:16.400251"
+      },
+      {
+        "trainingModuleId": 3,
+        "title": "On even make follow thing wish debate",
+        "description": "Imagine movement land house. Most throughout general scene. Thousand practice rock audience painting hand college.\nWeek simply option appear evidence.",
+        "moduleOrder": 673,
+        "durationMinutes": null,
+        "contentUrl": "http://www.pugh.com/",
+        "createdAt": "2025-06-16T23:03:14.464984",
+        "updatedAt": "2025-12-03T20:48:30.948733"
+      },
+      {
+        "trainingModuleId": 4,
+        "title": "Standard bar prove skin line issue",
+        "description": "Operation thank act news store hospital. Officer type front.\nProfessional vote behind a white dog threat. Wall store race six sure maybe throw. Defense develop manager up so yeah entire.",
+        "moduleOrder": 608,
+        "durationMinutes": 798,
+        "contentUrl": "https://www.young.com/",
+        "createdAt": "2024-04-25T17:27:47.696192",
+        "updatedAt": "2025-05-16T10:21:55.393928"
+      },
+      {
+        "trainingModuleId": 5,
+        "title": "Alone act newspaper fight day box look",
+        "description": "Help wonder visit area speak. Give officer defense space identify find. Chair language bring science same management also.\nSell technology agency ten program blue. Others only rule own.",
+        "moduleOrder": 652,
+        "durationMinutes": 44,
+        "contentUrl": "http://www.carpenter.biz/",
+        "createdAt": "2026-01-25T12:48:01.976050",
+        "updatedAt": "2025-05-13T13:31:51.235872"
+      }
+    ],
+    "module_progress": [
+      {
+        "moduleProgressId": 1,
+        "status": "Something teacher hit cut.",
+        "completedAt": null,
+        "progressPercent": 607,
+        "createdAt": "2024-09-18T02:03:26.286678",
+        "updatedAt": "2025-03-03T23:34:13.053604"
+      },
+      {
+        "moduleProgressId": 2,
+        "status": "Book situation put.",
+        "completedAt": "2024-05-05T03:08:46.395342",
+        "progressPercent": 860,
+        "createdAt": "2024-12-21T17:07:37.346432",
+        "updatedAt": "2024-12-22T12:17:57.116310"
+      },
+      {
+        "moduleProgressId": 3,
+        "status": "Adult whom wish.",
+        "completedAt": "2024-11-25T05:43:05.236849",
+        "progressPercent": 892,
+        "createdAt": "2026-02-15T15:59:02.388865",
+        "updatedAt": "2025-04-16T19:42:30.545613"
+      },
+      {
+        "moduleProgressId": 4,
+        "status": "Pressure first myself sometimes poor important.",
+        "completedAt": "2024-07-24T18:57:53.413338",
+        "progressPercent": 558,
+        "createdAt": "2025-03-20T21:04:13.373522",
+        "updatedAt": "2026-02-28T21:33:59.222825"
+      },
+      {
+        "moduleProgressId": 5,
+        "status": "Each price all girl result.",
+        "completedAt": "2024-06-06T17:29:08.451798",
+        "progressPercent": 751,
+        "createdAt": "2025-07-19T02:06:13.108297",
+        "updatedAt": "2025-09-14T15:02:15.073301"
+      }
+    ],
+    "training_exam": [
+      {
+        "trainingExamId": 1,
+        "title": "Offer point art too lose",
+        "description": "Wait million population answer school car movement. Behind thousand throw out successful grow true. Also either when house mouth throughout.",
+        "passingScore": 487,
+        "maxScore": 182,
+        "timeLimitMinutes": 850,
+        "maxAttempts": 30,
+        "createdAt": "2024-09-11T22:31:27.977528",
+        "updatedAt": "2025-11-16T01:55:26.429719"
+      },
+      {
+        "trainingExamId": 2,
+        "title": "Including wait ok enter",
+        "description": "Ago woman people air billion reason certain. Majority attorney alone own.\nRelate no since either. Professional imagine player center.",
+        "passingScore": 485,
+        "maxScore": 279,
+        "timeLimitMinutes": 385,
+        "maxAttempts": 28,
+        "createdAt": "2025-04-04T05:53:13.635294",
+        "updatedAt": "2024-05-30T13:19:51.744355"
+      },
+      {
+        "trainingExamId": 3,
+        "title": "Reduce sense enter",
+        "description": "Form view goal throw whom.\nStandard many low study heart. Difference society deal decide well executive. Place rate officer rather. Military we major wide theory also.",
+        "passingScore": 945,
+        "maxScore": 937,
+        "timeLimitMinutes": 124,
+        "maxAttempts": 127,
+        "createdAt": "2025-10-07T21:27:40.240328",
+        "updatedAt": "2024-12-17T10:54:49.352643"
+      },
+      {
+        "trainingExamId": 4,
+        "title": "Choice why tree drug girl put great couple",
+        "description": "Travel institution authority instead. News party debate first. Lead within will exist.",
+        "passingScore": 598,
+        "maxScore": null,
+        "timeLimitMinutes": 453,
+        "maxAttempts": 313,
+        "createdAt": "2026-04-04T04:55:42.890177",
+        "updatedAt": "2024-11-19T01:38:57.944549"
+      },
+      {
+        "trainingExamId": 5,
+        "title": "Peace mother ever response administration too",
+        "description": "Different ground station. Result ok heavy. Fight with interview picture fear.\nOthers short notice wall hair of.",
+        "passingScore": 989,
+        "maxScore": 952,
+        "timeLimitMinutes": 108,
+        "maxAttempts": 395,
+        "createdAt": "2024-06-26T00:01:41.988348",
+        "updatedAt": "2025-09-18T21:38:46.360762"
+      }
+    ],
+    "exam_attempt": [
+      {
+        "examAttemptId": 1,
+        "score": 436,
+        "passed": true,
+        "startedAt": "2024-10-13T14:24:52.598964",
+        "completedAt": "2025-02-13T22:40:18.721129",
+        "attemptNumber": 547,
+        "createdAt": "2024-11-28T04:51:54.646551",
+        "updatedAt": "2025-05-23T05:01:00.231950"
+      },
+      {
+        "examAttemptId": 2,
+        "score": 53,
+        "passed": null,
+        "startedAt": "2024-10-15T06:35:51.245812",
+        "completedAt": "2025-12-03T02:54:18.765475",
+        "attemptNumber": 954,
+        "createdAt": "2025-05-14T08:34:48.555236",
+        "updatedAt": "2025-10-15T15:51:55.763277"
+      },
+      {
+        "examAttemptId": 3,
+        "score": 971,
+        "passed": true,
+        "startedAt": "2024-11-27T15:22:28.432542",
+        "completedAt": "2025-08-19T06:32:14.823928",
+        "attemptNumber": 152,
+        "createdAt": "2024-11-16T00:46:22.892368",
+        "updatedAt": "2024-11-11T13:08:49.348315"
+      },
+      {
+        "examAttemptId": 4,
+        "score": 632,
+        "passed": null,
+        "startedAt": "2024-06-30T05:19:09.256491",
+        "completedAt": "2025-08-27T13:12:58.307844",
+        "attemptNumber": 372,
+        "createdAt": "2025-01-31T19:22:36.167720",
+        "updatedAt": "2025-05-04T09:00:17.686844"
+      },
+      {
+        "examAttemptId": 5,
+        "score": 88,
+        "passed": false,
+        "startedAt": null,
+        "completedAt": "2026-03-08T00:42:41.738373",
+        "attemptNumber": 897,
+        "createdAt": "2024-11-11T19:35:47.153698",
+        "updatedAt": "2024-12-15T23:59:50.340477"
+      }
+    ],
+    "training_certification": [
+      {
+        "trainingCertificationId": 1,
+        "certificateNumber": "Health turn each visit.",
+        "title": "Education power time including peace",
+        "issuedAt": null,
+        "expiresAt": "2024-04-28T16:55:32.201556",
+        "certificateUrl": "https://thompson-watts.com/",
+        "status": "Approach case close.",
+        "createdAt": "2025-09-12T20:27:15.105891",
+        "updatedAt": "2024-12-07T03:51:41.255311"
+      },
+      {
+        "trainingCertificationId": 2,
+        "certificateNumber": "Table now certainly in sing attack.",
+        "title": "Which new be director",
+        "issuedAt": "2025-01-19T12:26:41.447293",
+        "expiresAt": null,
+        "certificateUrl": "http://stevenson.org/",
+        "status": "Research wear establish in.",
+        "createdAt": "2026-03-20T02:47:06.834159",
+        "updatedAt": "2024-09-23T17:52:12.196348"
+      },
+      {
+        "trainingCertificationId": 3,
+        "certificateNumber": "Create floor arm cultural member.",
+        "title": "Recently bad new remain several if",
+        "issuedAt": "2025-09-10T04:39:17.011598",
+        "expiresAt": "2025-08-20T12:42:42.101778",
+        "certificateUrl": null,
+        "status": "Way popular rather good.",
+        "createdAt": "2024-11-22T00:21:10.656461",
+        "updatedAt": "2025-02-26T04:28:37.128855"
+      },
+      {
+        "trainingCertificationId": 4,
+        "certificateNumber": null,
+        "title": "Wear color threat contain positive rate evening into",
+        "issuedAt": "2025-04-20T14:26:02.166209",
+        "expiresAt": "2024-08-03T20:52:21.673215",
+        "certificateUrl": "http://www.smith.biz/",
+        "status": "Skill someone air central eye.",
+        "createdAt": "2024-06-03T04:52:04.592891",
+        "updatedAt": "2024-06-20T06:27:19.033136"
+      },
+      {
+        "trainingCertificationId": 5,
+        "certificateNumber": "Country child among performance contain.",
+        "title": null,
+        "issuedAt": "2025-09-27T09:29:47.894052",
+        "expiresAt": "2025-06-17T08:34:54.082830",
+        "certificateUrl": "https://www.russell-peterson.org/",
+        "status": "Among nation list kid program too quickly.",
+        "createdAt": "2024-04-15T08:02:54.798016",
+        "updatedAt": "2025-11-01T11:31:12.540424"
+      }
+    ],
+    "course_document": [
+      {
+        "courseDocumentId": 1,
+        "title": "Soldier reduce sort project in film leg",
+        "content": "Usually about major well guy live fish. Surface challenge shoulder always. Body guess since create growth decision soon.\nOrder game thing food. Woman senior argue rate world.\nOur pull I write. Situation worry project.",
+        "sortOrder": 305,
+        "createdAt": "2024-11-13T18:31:02.250251",
+        "updatedAt": "2025-06-08T19:43:02.484594"
+      },
+      {
+        "courseDocumentId": 2,
+        "title": "Organization although claim rise interesting ready wonder edge",
+        "content": "Likely site I from where. Never lose news his near claim wonder within.\nOf office reveal gas kitchen. Modern walk boy address machine.\nBetter reduce decade case each. Family yet cause special race. Month guy hot.",
+        "sortOrder": 2,
+        "createdAt": "2025-01-25T02:30:34.951210",
+        "updatedAt": "2024-06-05T09:17:11.083062"
+      },
+      {
+        "courseDocumentId": 3,
+        "title": "Beat radio PM official cultural",
+        "content": "Individual source blue I player while at. Traditional nature practice mother vote treat concern movie. Minute smile often work how attention.\nMilitary society population such knowledge cover give cold. Meeting phone act measure both agent issue.",
+        "sortOrder": 282,
+        "createdAt": "2025-01-06T15:50:51.783619",
+        "updatedAt": "2026-03-09T16:04:27.224990"
+      },
+      {
+        "courseDocumentId": 4,
+        "title": "Behavior computer over name eye begin hot",
+        "content": "Trial laugh watch serve coach.\nChance south but outside organization dinner participant.\nIssue maintain suggest land buy bad hour. Wonder PM condition need.\nLoss billion left notice. Human wrong third learn. Situation discussion without debate.",
+        "sortOrder": 108,
+        "createdAt": "2024-05-06T00:35:35.155313",
+        "updatedAt": "2026-02-28T09:42:57.609031"
+      },
+      {
+        "courseDocumentId": 5,
+        "title": "Partner customer always white police difference return",
+        "content": "Full dog blood beyond. Involve authority me training.\nCurrent beautiful after I thought see. Attention kind home glass job three foot.\nSo red group industry mention. Future property mind throughout public soon enough. Student case he Mr.",
+        "sortOrder": 81,
+        "createdAt": "2024-08-23T05:01:06.999555",
+        "updatedAt": "2025-02-08T01:13:04.499988"
+      }
+    ],
+    "course_video": [
+      {
+        "courseVideoId": 1,
+        "title": "Reason board professor ten have everything",
+        "description": "Both follow newspaper sing school environmental director. Street wonder many current individual hard. Issue north blue sell Congress.\nThus similar buy clear news. Run cultural maybe senior could.",
+        "videoUrl": "http://rosario.com/",
+        "durationSeconds": 348,
+        "sortOrder": 751,
+        "createdAt": "2026-02-02T05:21:41.258403",
+        "updatedAt": "2025-08-12T04:59:20.848763"
+      },
+      {
+        "courseVideoId": 2,
+        "title": "However her concern happy receive",
+        "description": "News attention point mission. Car well finally lawyer relate left sign manage. Cell talk energy necessary. Organization where official happy.",
+        "videoUrl": "https://www.arnold.info/",
+        "durationSeconds": 43,
+        "sortOrder": 474,
+        "createdAt": "2024-09-13T04:13:05.838479",
+        "updatedAt": "2024-04-29T17:40:38.539046"
+      },
+      {
+        "courseVideoId": 3,
+        "title": "Really he establish win",
+        "description": "Reveal gas scientist report produce family trouble. Record like say rise he career. Discussion concern care identify state own glass.",
+        "videoUrl": "http://www.perez.com/",
+        "durationSeconds": 783,
+        "sortOrder": null,
+        "createdAt": "2025-03-07T06:00:04.162244",
+        "updatedAt": "2025-05-16T14:36:00.089975"
+      },
+      {
+        "courseVideoId": 4,
+        "title": "Arrive eye listen",
+        "description": "Cut become piece last site hair sometimes. Movie road be matter. Politics almost become admit end.\nBelieve stay week thank capital reality tax.",
+        "videoUrl": "https://www.li.com/",
+        "durationSeconds": 768,
+        "sortOrder": 848,
+        "createdAt": "2024-06-17T14:59:44.905336",
+        "updatedAt": "2025-04-24T22:18:43.016239"
+      },
+      {
+        "courseVideoId": 5,
+        "title": "Surface success thought remember art",
+        "description": "Need rather pass buy bag. Total stock research court run attack. Character tree radio.\nFirst understand responsibility medical.",
+        "videoUrl": "https://ware.biz/",
+        "durationSeconds": 544,
+        "sortOrder": 720,
+        "createdAt": "2025-08-11T04:45:40.297055",
+        "updatedAt": "2025-10-06T17:03:29.679740"
+      }
+    ],
+    "course_audio": [
+      {
+        "courseAudioId": 1,
+        "title": "Know these fear white",
+        "description": "Sister very after high break record hear. Wait my free throw yourself environment available. Value across especially modern finish.",
+        "audioUrl": "https://www.medina.com/",
+        "durationSeconds": null,
+        "sortOrder": 791,
+        "createdAt": "2025-10-10T20:23:06.283982",
+        "updatedAt": "2024-12-20T22:00:19.114916"
+      },
+      {
+        "courseAudioId": 2,
+        "title": "Trip party team try into popular",
+        "description": "Popular strong soon activity. Both year term mission interesting particular. Sometimes several off to some billion think.",
+        "audioUrl": null,
+        "durationSeconds": 607,
+        "sortOrder": 926,
+        "createdAt": "2024-08-20T04:01:35.535659",
+        "updatedAt": "2025-11-05T11:07:27.490397"
+      },
+      {
+        "courseAudioId": 3,
+        "title": null,
+        "description": "Us up large. Teacher remember attorney open.\nEasy building president wall easy foreign across.",
+        "audioUrl": "http://ellis.net/",
+        "durationSeconds": 375,
+        "sortOrder": 903,
+        "createdAt": "2025-09-02T12:52:59.957792",
+        "updatedAt": "2025-08-18T18:42:06.950334"
+      },
+      {
+        "courseAudioId": 4,
+        "title": "Decade seem wonder can fast",
+        "description": "Identify at Democrat enjoy prove police able.\nCandidate item seem. Brother week commercial form hear.",
+        "audioUrl": "https://brown-martin.info/",
+        "durationSeconds": 510,
+        "sortOrder": 805,
+        "createdAt": "2025-11-26T03:25:03.352648",
+        "updatedAt": "2025-09-17T12:41:02.395192"
+      },
+      {
+        "courseAudioId": 5,
+        "title": "Consider heavy bed",
+        "description": "Page floor education stage. Method thing identify history book. Type Congress interesting own specific.",
+        "audioUrl": "https://www.reed-potter.biz/",
+        "durationSeconds": 928,
+        "sortOrder": null,
+        "createdAt": "2025-04-27T18:15:40.784040",
+        "updatedAt": "2025-09-11T22:53:27.894261"
+      }
+    ],
+    "course_code_lab": [
+      {
+        "courseCodeLabId": 1,
+        "title": "Event laugh evidence raise heart",
+        "description": "Structure we morning child color still door phone. Top government feeling hit probably give.",
+        "language": "Alone you woman.",
+        "starterCode": null,
+        "solutionCode": "So often say star.",
+        "instructions": "Hot drop top minute.",
+        "sortOrder": 322,
+        "createdAt": "2024-06-12T03:19:24.300030",
+        "updatedAt": "2025-07-19T13:21:32.846693"
+      },
+      {
+        "courseCodeLabId": 2,
+        "title": "Safe dark set keep thought it near sure",
+        "description": "Article number strategy daughter improve watch difference seek. Return television exist instead store lead. Support approach minute ground quite food purpose.",
+        "language": "East skill seem drop full.",
+        "starterCode": null,
+        "solutionCode": "Standard individual performance artist exist administration.",
+        "instructions": "Million positive laugh bank everyone rate.",
+        "sortOrder": 669,
+        "createdAt": "2025-11-13T01:11:36.143947",
+        "updatedAt": "2024-09-01T15:50:40.557460"
+      },
+      {
+        "courseCodeLabId": 3,
+        "title": "Exist your go available",
+        "description": "Exactly moment whole society art. Wide technology soldier finish hear. Onto stop scene month choice affect. Act not back the show.",
+        "language": "Ever commercial base article.",
+        "starterCode": "Himself vote chance want here.",
+        "solutionCode": "Couple level once think community series.",
+        "instructions": "Check available science behavior past.",
+        "sortOrder": 574,
+        "createdAt": "2025-08-23T08:15:58.362820",
+        "updatedAt": "2025-04-20T00:45:17.744492"
+      },
+      {
+        "courseCodeLabId": 4,
+        "title": "Region drive somebody send art rock",
+        "description": "His back position for itself order. Employee choice read. Source security want support along.\nSchool stop push continue house. Might save group beat factor family turn. Each detail sort avoid school.",
+        "language": "Education game which laugh rich seek.",
+        "starterCode": "Hope east today charge.",
+        "solutionCode": "Her mention can television culture high.",
+        "instructions": "Film make side course.",
+        "sortOrder": 141,
+        "createdAt": "2025-10-28T23:33:04.084649",
+        "updatedAt": "2025-06-18T23:35:25.758268"
+      },
+      {
+        "courseCodeLabId": 5,
+        "title": "Body we machine",
+        "description": "Floor within more result score and administration.\nDiscuss trip else person fact.\nCareer animal laugh investment. Soldier ten day candidate although set yet small. Community indeed choose movement.",
+        "language": "Whom especially alone.",
+        "starterCode": "Much west big be.",
+        "solutionCode": "Strong wish political often room individual.",
+        "instructions": null,
+        "sortOrder": 556,
+        "createdAt": "2025-04-08T07:53:30.432592",
+        "updatedAt": "2025-01-03T08:25:34.273212"
+      }
+    ],
+    "exam_question": [
+      {
+        "examQuestionId": 1,
+        "questionText": "Guy include weight reality.",
+        "questionCode": "Whole individual eat.",
+        "questionType": "Ok morning big actually table.",
+        "points": 159,
+        "sortOrder": 317,
+        "createdAt": "2024-11-19T19:05:45.875310",
+        "updatedAt": "2025-07-02T02:30:34.946742"
+      },
+      {
+        "examQuestionId": 2,
+        "questionText": "Anyone wind she.",
+        "questionCode": "Talk world alone.",
+        "questionType": "Not affect year later then television.",
+        "points": 331,
+        "sortOrder": 573,
+        "createdAt": "2025-06-17T14:20:55.398247",
+        "updatedAt": "2025-01-28T12:36:57.614696"
+      },
+      {
+        "examQuestionId": 3,
+        "questionText": "Ever least its item enjoy.",
+        "questionCode": "Operation course move myself.",
+        "questionType": "Finish prove help suffer.",
+        "points": 599,
+        "sortOrder": 929,
+        "createdAt": "2024-05-04T03:55:23.683931",
+        "updatedAt": "2025-03-23T06:02:56.614146"
+      },
+      {
+        "examQuestionId": 4,
+        "questionText": "Once watch individual nothing.",
+        "questionCode": "Discover child amount another.",
+        "questionType": "Short expect spend sure hot PM.",
+        "points": 165,
+        "sortOrder": 693,
+        "createdAt": "2025-07-04T16:15:35.301170",
+        "updatedAt": "2024-07-13T08:53:53.196497"
+      },
+      {
+        "examQuestionId": 5,
+        "questionText": "American focus policy.",
+        "questionCode": "Style local style able.",
+        "questionType": "Executive song low go.",
+        "points": 316,
+        "sortOrder": 855,
+        "createdAt": "2025-03-22T03:40:13.214747",
+        "updatedAt": "2025-02-14T05:28:46.170281"
+      }
+    ],
+    "exam_answer": [
+      {
+        "examAnswerId": 1,
+        "answerText": "Dog enjoy admit.",
+        "answerCode": "Least likely term work book office.",
+        "isCorrect": true,
+        "explanation": "Drive truth often kid.",
+        "sortOrder": 549,
+        "createdAt": "2024-05-17T13:14:07.852866",
+        "updatedAt": "2025-03-26T22:59:50.399700"
+      },
+      {
+        "examAnswerId": 2,
+        "answerText": "Case with month create story page.",
+        "answerCode": "Throughout personal affect.",
+        "isCorrect": null,
+        "explanation": "Police camera cover group participant.",
+        "sortOrder": null,
+        "createdAt": "2024-05-25T00:11:18.477337",
+        "updatedAt": "2024-09-03T21:16:44.656709"
+      },
+      {
+        "examAnswerId": 3,
+        "answerText": null,
+        "answerCode": "Whether oil finish consumer.",
+        "isCorrect": false,
+        "explanation": null,
+        "sortOrder": 60,
+        "createdAt": "2025-06-13T18:43:36.157893",
+        "updatedAt": "2025-10-16T13:23:45.345637"
+      },
+      {
+        "examAnswerId": 4,
+        "answerText": "Focus type my evening these stock.",
+        "answerCode": "Sister behavior travel yet source loss.",
+        "isCorrect": true,
+        "explanation": "Some figure young age development.",
+        "sortOrder": 504,
+        "createdAt": "2025-12-24T00:38:32.684570",
+        "updatedAt": "2025-02-25T10:12:38.015428"
+      },
+      {
+        "examAnswerId": 5,
+        "answerText": "Church necessary national.",
+        "answerCode": "Job although break nor yourself.",
+        "isCorrect": null,
+        "explanation": "Behavior them the.",
+        "sortOrder": 804,
+        "createdAt": "2026-02-12T10:00:37.187107",
+        "updatedAt": "2024-05-31T22:34:07.393530"
+      }
+    ],
+    "course_question": [
+      {
+        "courseQuestionId": 1,
+        "questionText": "Memory student American choice between area.",
+        "questionCode": "Respond should part stuff.",
+        "sortOrder": 679,
+        "createdAt": "2026-01-20T12:58:43.402736",
+        "updatedAt": "2025-12-17T06:23:38.866179"
+      },
+      {
+        "courseQuestionId": 2,
+        "questionText": "Sing activity personal morning along treat.",
+        "questionCode": null,
+        "sortOrder": null,
+        "createdAt": "2024-08-19T23:05:45.892833",
+        "updatedAt": "2025-10-14T22:39:29.152303"
+      },
+      {
+        "courseQuestionId": 3,
+        "questionText": "Indeed almost cell crime officer.",
+        "questionCode": null,
+        "sortOrder": 94,
+        "createdAt": "2024-09-18T14:08:58.721219",
+        "updatedAt": "2025-04-14T23:31:47.940376"
+      },
+      {
+        "courseQuestionId": 4,
+        "questionText": "Without prove poor.",
+        "questionCode": "Up remember particular rather wall.",
+        "sortOrder": 879,
+        "createdAt": "2026-03-04T02:28:50.996503",
+        "updatedAt": "2025-01-04T15:45:56.423778"
+      },
+      {
+        "courseQuestionId": 5,
+        "questionText": "Country member find necessary each.",
+        "questionCode": "Yes career house sign hot increase.",
+        "sortOrder": 514,
+        "createdAt": "2024-11-26T13:11:43.697232",
+        "updatedAt": "2024-07-04T11:26:52.940731"
+      }
+    ],
+    "course_answer": [
+      {
+        "courseAnswerId": 1,
+        "answerText": "Boy southern evidence truth score.",
+        "answerCode": "Program three generation democratic.",
+        "isAccepted": false,
+        "upvotes": 911,
+        "createdAt": "2024-10-03T05:05:15.074372",
+        "updatedAt": "2026-04-07T06:23:40.883067"
+      },
+      {
+        "courseAnswerId": 2,
+        "answerText": "Occur need leg field.",
+        "answerCode": "Purpose eat town agency fish.",
+        "isAccepted": false,
+        "upvotes": 651,
+        "createdAt": "2025-06-03T13:46:56.274196",
+        "updatedAt": "2025-11-09T16:50:33.847437"
+      },
+      {
+        "courseAnswerId": 3,
+        "answerText": "Along international side.",
+        "answerCode": "Smile peace water guess none.",
+        "isAccepted": null,
+        "upvotes": 662,
+        "createdAt": "2026-02-10T15:42:20.103780",
+        "updatedAt": "2025-04-15T22:49:36.097082"
+      },
+      {
+        "courseAnswerId": 4,
+        "answerText": null,
+        "answerCode": "Pick well reason truth health rule.",
+        "isAccepted": false,
+        "upvotes": 425,
+        "createdAt": "2025-01-12T05:05:40.998466",
+        "updatedAt": "2024-06-15T05:42:48.057393"
+      },
+      {
+        "courseAnswerId": 5,
+        "answerText": "Against prevent yet kind country.",
+        "answerCode": null,
+        "isAccepted": false,
+        "upvotes": 718,
+        "createdAt": "2024-12-31T14:47:32.590661",
+        "updatedAt": "2025-07-04T01:49:16.433908"
+      }
+    ],
+    "company": [
+      {
+        "companyId": 1,
+        "name": "Christine Miller",
+        "industry": "Then political hospital some surface.",
+        "website": "http://www.steele-goodman.com/",
+        "description": "Reach factor mission. Car agent sell nation audience soldier. Nothing father accept action.\nHer fund high represent.\nNumber hour allow up.",
+        "createdAt": "2024-11-27T05:45:59.627663",
+        "updatedAt": "2026-01-27T08:55:26.873459"
+      },
+      {
+        "companyId": 2,
+        "name": "Laurie Jackson",
+        "industry": "Art sense paper the.",
+        "website": "https://smith.info/",
+        "description": "Card choose too high stuff behind significant. Congress defense today.\nInto movement dinner magazine charge. Degree arm dream behind let line.\nSit share possible.",
+        "createdAt": "2025-06-23T20:04:03.517560",
+        "updatedAt": "2025-10-25T06:44:41.721625"
+      },
+      {
+        "companyId": 3,
+        "name": "Jessica Cooley",
+        "industry": "Art pattern when cultural international rise.",
+        "website": "https://sanders.com/",
+        "description": "Best either rather let item already. She series north myself situation.\nDecision entire short more source himself within. Treat prepare thank. Really common fight make. Allow member yes particular.",
+        "createdAt": "2025-10-07T15:15:24.006267",
+        "updatedAt": "2025-03-22T18:32:52.660126"
+      },
+      {
+        "companyId": 4,
+        "name": "Eric Hoffman",
+        "industry": "Behavior health allow.",
+        "website": "https://www.sanders.org/",
+        "description": "Along their in thus little indeed raise. Thousand firm prove consider.\nSure reveal finally office over kid realize.\nAccept many one official. Life degree surface. Protect tax case able.",
+        "createdAt": "2026-02-21T07:33:03.579484",
+        "updatedAt": "2025-11-22T11:36:00.012450"
+      },
+      {
+        "companyId": 5,
+        "name": "Amanda Cooper",
+        "industry": "Fall husband somebody surface others.",
+        "website": "http://www.white.info/",
+        "description": "Large reduce choice buy. Technology simply room expect story cultural. Human over conference forget college third science.",
+        "createdAt": "2024-06-15T05:11:24.683098",
+        "updatedAt": "2025-07-19T02:55:35.077209"
+      }
+    ],
+    "location": [
+      {
+        "locationId": 1,
+        "city": "North Josephmouth",
+        "state": null,
+        "country": "Costa Rica",
+        "createdAt": "2024-07-14T15:18:32.356169",
+        "updatedAt": "2024-08-28T10:02:27.731017"
+      },
+      {
+        "locationId": 2,
+        "city": "Port Brandyville",
+        "state": "Pennsylvania",
+        "country": null,
+        "createdAt": "2024-11-19T04:37:18.894685",
+        "updatedAt": "2026-02-16T07:05:09.986664"
+      },
+      {
+        "locationId": 3,
+        "city": "South Bob",
+        "state": "Vermont",
+        "country": null,
+        "createdAt": "2024-11-15T05:35:02.739527",
+        "updatedAt": "2025-12-14T14:39:19.712262"
+      },
+      {
+        "locationId": 4,
+        "city": "West William",
+        "state": "Arkansas",
+        "country": "Guinea-Bissau",
+        "createdAt": "2025-12-18T06:55:04.698532",
+        "updatedAt": "2025-01-10T18:16:04.998479"
+      },
+      {
+        "locationId": 5,
+        "city": "West Charlesfurt",
+        "state": "Idaho",
+        "country": "Luxembourg",
+        "createdAt": "2025-02-11T23:13:12.559662",
+        "updatedAt": "2024-05-02T17:57:46.267306"
+      }
+    ],
+    "system_config": [
+      {
+        "configKey": "Draw seem have effect.",
+        "configValue": null,
+        "createdAt": "2024-05-18T02:22:55.341749",
+        "updatedAt": "2025-03-12T04:59:16.978807"
+      },
+      {
+        "configKey": "Size raise something very under.",
+        "configValue": "Fish data adult call somebody imagine.",
+        "createdAt": "2026-03-22T12:46:22.880400",
+        "updatedAt": "2026-04-08T05:25:32.119569"
+      },
+      {
+        "configKey": "Case if most watch.",
+        "configValue": "View culture too method.",
+        "createdAt": "2024-10-20T17:11:19.122162",
+        "updatedAt": "2024-11-06T00:44:39.550255"
+      },
+      {
+        "configKey": "Performance wind baby.",
+        "configValue": "Upon really score.",
+        "createdAt": "2024-05-30T15:55:37.367821",
+        "updatedAt": "2025-06-18T01:38:52.903113"
+      },
+      {
+        "configKey": "Positive such price front.",
+        "configValue": "Production wind others nearly type happy.",
+        "createdAt": "2024-09-28T01:33:36.337707",
+        "updatedAt": "2025-03-03T06:41:36.310101"
+      }
+    ],
+    "auth_user": [
+      {
+        "authUserId": 1,
+        "username": "thomashuff",
+        "email": "jenkinsannette@example.net",
+        "passwordHash": "#9kWNqTRza",
+        "isActive": true,
+        "createdAt": "2024-06-14T01:57:53.848195",
+        "updatedAt": "2024-05-14T19:26:33.816434"
+      },
+      {
+        "authUserId": 2,
+        "username": "cynthia96",
+        "email": "earl39@example.com",
+        "passwordHash": "cgh58rYy!3",
+        "isActive": false,
+        "createdAt": "2025-08-21T21:42:21.045711",
+        "updatedAt": "2024-12-12T19:04:21.670033"
+      }
+    ],
+    "user_role": [
+      {
+        "userRoleId": 1,
+        "authUserId": 1,
+        "role": "SUPER_ADMIN",
+        "tableName": "Eric Guerrero",
+        "grantedAt": null,
+        "grantedByAuthUserId": 1
+      },
+      {
+        "userRoleId": 2,
+        "authUserId": 2,
+        "role": "USER",
+        "tableName": "Steve Davis",
+        "grantedAt": "2025-11-21T19:43:30.544457",
+        "grantedByAuthUserId": 2
+      },
+      {
+        "userRoleId": 3,
+        "authUserId": 1,
+        "role": "USER",
+        "tableName": "Ashley Hicks",
+        "grantedAt": "2024-12-22T10:03:23.536360",
+        "grantedByAuthUserId": 2
+      },
+      {
+        "userRoleId": 4,
+        "authUserId": 1,
+        "role": "USER",
+        "tableName": "Dr. Julie Austin",
+        "grantedAt": "2025-07-02T20:42:06.806933",
+        "grantedByAuthUserId": 1
+      },
+      {
+        "userRoleId": 5,
+        "authUserId": 2,
+        "role": "SUPER_ADMIN",
+        "tableName": "Denise Castillo",
+        "grantedAt": "2024-09-21T20:27:00.480322",
+        "grantedByAuthUserId": 2
+      }
+    ],
+    "record_owner": [
+      {
+        "recordOwnerId": 1,
+        "authUserId": 2,
+        "tableName": "Rebecca Nelson",
+        "recordId": 342,
+        "createdAt": "2025-04-05T17:31:37.000896"
+      },
+      {
+        "recordOwnerId": 2,
+        "authUserId": 1,
+        "tableName": "Jeanette Lopez",
+        "recordId": 266,
+        "createdAt": "2025-06-08T20:39:55.113107"
+      },
+      {
+        "recordOwnerId": 3,
+        "authUserId": 2,
+        "tableName": "Tyrone Baker",
+        "recordId": 86,
+        "createdAt": "2025-01-16T01:33:24.469652"
+      },
+      {
+        "recordOwnerId": 4,
+        "authUserId": 2,
+        "tableName": "Ashley Carter",
+        "recordId": 471,
+        "createdAt": "2024-07-06T17:30:13.451036"
+      },
+      {
+        "recordOwnerId": 5,
+        "authUserId": 1,
+        "tableName": "Adam Walsh",
+        "recordId": 256,
+        "createdAt": "2024-08-20T19:05:58.414292"
+      }
+    ],
+    "query_group": [
+      {
+        "queryGroupId": 1,
+        "groupName": "Travis Lewis",
+        "groupType": "COMMUNITY",
+        "ownerAuthUserId": 2,
+        "description": "Probably important six window blue what feeling. Yourself voice remember program leader. Economic their indeed.\nThought TV she.",
+        "createdAt": "2024-09-11T03:44:58.203496"
+      },
+      {
+        "queryGroupId": 2,
+        "groupName": "Robert Jones",
+        "groupType": "COMMUNITY",
+        "ownerAuthUserId": 1,
+        "description": "Perform support nor would. Rather dinner understand tough reduce onto speech.",
+        "createdAt": "2025-12-28T22:56:57.952010"
+      }
+    ],
+    "query_group_query": [
+      {
+        "queryGroupQueryId": 1,
+        "queryGroupId": 1,
+        "queryName": "James Jones"
+      },
+      {
+        "queryGroupQueryId": 2,
+        "queryGroupId": 1,
+        "queryName": "Jennifer Anderson"
+      },
+      {
+        "queryGroupQueryId": 3,
+        "queryGroupId": 2,
+        "queryName": "Willie Miranda DDS"
+      },
+      {
+        "queryGroupQueryId": 4,
+        "queryGroupId": 2,
+        "queryName": "Nicole Burton"
+      },
+      {
+        "queryGroupQueryId": 5,
+        "queryGroupId": 1,
+        "queryName": "Dr. Frances Jacobs"
+      }
+    ],
+    "query_group_member": [
+      {
+        "queryGroupMemberId": 1,
+        "queryGroupId": 2,
+        "authUserId": 2,
+        "joinedAt": "2025-09-20T04:49:50.248664",
+        "invitedByAuthUserId": 1
+      },
+      {
+        "queryGroupMemberId": 2,
+        "queryGroupId": 1,
+        "authUserId": 2,
+        "joinedAt": "2025-06-20T23:58:55.517418",
+        "invitedByAuthUserId": 2
+      },
+      {
+        "queryGroupMemberId": 3,
+        "queryGroupId": 2,
+        "authUserId": 2,
+        "joinedAt": "2026-04-01T05:01:00.134132",
+        "invitedByAuthUserId": 1
+      },
+      {
+        "queryGroupMemberId": 4,
+        "queryGroupId": 2,
+        "authUserId": 2,
+        "joinedAt": "2026-03-15T08:36:26.776547",
+        "invitedByAuthUserId": 2
+      },
+      {
+        "queryGroupMemberId": 5,
+        "queryGroupId": 1,
+        "authUserId": 1,
+        "joinedAt": "2024-08-02T23:50:45.862957",
+        "invitedByAuthUserId": 2
+      }
+    ],
+    "query_group_record": [
+      {
+        "queryGroupRecordId": 1,
+        "queryGroupId": 1,
+        "tableName": "Katie Matthews",
+        "recordId": 786,
+        "addedByAuthUserId": 1,
+        "addedAt": "2025-04-18T11:40:58.628922"
+      },
+      {
+        "queryGroupRecordId": 2,
+        "queryGroupId": 1,
+        "tableName": "Matthew Stokes",
+        "recordId": 123,
+        "addedByAuthUserId": 2,
+        "addedAt": "2025-08-07T05:26:24.088535"
+      },
+      {
+        "queryGroupRecordId": 3,
+        "queryGroupId": 1,
+        "tableName": "Monica Hunter",
+        "recordId": 294,
+        "addedByAuthUserId": 2,
+        "addedAt": "2024-12-15T13:34:04.274325"
+      },
+      {
+        "queryGroupRecordId": 4,
+        "queryGroupId": 2,
+        "tableName": "Angela Rodriguez",
+        "recordId": 801,
+        "addedByAuthUserId": 2,
+        "addedAt": "2025-09-16T04:50:09.041323"
+      },
+      {
+        "queryGroupRecordId": 5,
+        "queryGroupId": 1,
+        "tableName": "Richard Woods",
+        "recordId": 46,
+        "addedByAuthUserId": 2,
+        "addedAt": "2025-07-14T16:59:13.847707"
+      }
+    ],
+    "access_audit_log": [
+      {
+        "auditId": 1,
+        "authUserId": 2,
+        "action": "Contain north despite ever body.",
+        "tableName": "Justin Perkins",
+        "recordId": null,
+        "accessGranted": false,
+        "denialReason": "Will quality leg.",
+        "ipAddress": "151 Amanda Hollow, North Kenneth, ND 55864",
+        "userAgent": "Thus agreement reflect.",
+        "accessedAt": "2025-12-05T04:10:06.332379"
+      },
+      {
+        "auditId": 2,
+        "authUserId": 1,
+        "action": "White let magazine population could spend.",
+        "tableName": "Paul Shaw",
+        "recordId": 218,
+        "accessGranted": true,
+        "denialReason": "Local medical out system simply company.",
+        "ipAddress": "959 Long Valley Suite 852, East Emily, TX 087",
+        "userAgent": "City sure arrive organization author way.",
+        "accessedAt": "2025-08-02T22:57:24.487128"
+      },
+      {
+        "auditId": 3,
+        "authUserId": 1,
+        "action": "Hour them next she movement into.",
+        "tableName": "Sandra Rangel",
+        "recordId": 63,
+        "accessGranted": true,
+        "denialReason": "Carry full body star over.",
+        "ipAddress": "91184 Angela Crest Apt. 348, South Joseph, DC",
+        "userAgent": "Shake strategy feeling.",
+        "accessedAt": "2025-03-14T00:07:30.898377"
+      },
+      {
+        "auditId": 4,
+        "authUserId": 1,
+        "action": "Decide my money.",
+        "tableName": "Troy Green",
+        "recordId": 559,
+        "accessGranted": false,
+        "denialReason": "While traditional surface knowledge born.",
+        "ipAddress": "485 Campbell Loaf Apt. 565, Austinside, KS 04",
+        "userAgent": "Head beautiful interest should.",
+        "accessedAt": "2024-05-21T02:12:57.244075"
+      },
+      {
+        "auditId": 5,
+        "authUserId": 2,
+        "action": "Down performance marriage blood.",
+        "tableName": "Christopher Grimes",
+        "recordId": 709,
+        "accessGranted": true,
+        "denialReason": "Bank trial benefit need chair.",
+        "ipAddress": "00124 Ian Crossing, Nathanshire, MT 24110",
+        "userAgent": "Together worker task could.",
+        "accessedAt": "2025-06-02T09:13:13.479764"
+      }
+    ],
+    "oauth2_provider": [
+      {
+        "providerId": 1,
+        "providerName": "Andrea Duncan",
+        "displayName": "Dylan Thomas",
+        "clientId": "Suddenly along issue value.",
+        "clientSecret": "Staff local military land itself while.",
+        "authorizationUri": "Hear student lose.",
+        "tokenUri": "Study hit Congress.",
+        "userInfoUri": "Too force project later institution young.",
+        "jwkSetUri": "Live green order.",
+        "issuerUri": "Determine mention kid little skin.",
+        "scope": "Must most thus for respond one.",
+        "isEnabled": true,
+        "createdAt": null,
+        "updatedAt": "2024-11-11T13:05:57.867474"
+      },
+      {
+        "providerId": 2,
+        "providerName": "Kristina Sutton",
+        "displayName": "Joseph Suarez",
+        "clientId": "Head relationship you.",
+        "clientSecret": "Follow easy agreement center.",
+        "authorizationUri": "State half actually pattern three drive.",
+        "tokenUri": "Institution kind strong out.",
+        "userInfoUri": "Develop agree beyond.",
+        "jwkSetUri": "Experience bill draw.",
+        "issuerUri": null,
+        "scope": "Chair than family deal increase.",
+        "isEnabled": null,
+        "createdAt": "2025-12-20T00:13:16.342863",
+        "updatedAt": "2024-09-29T13:44:47.082952"
+      }
+    ],
+    "oauth2_linked_account": [
+      {
+        "linkedAccountId": 1,
+        "authUserId": 1,
+        "providerId": 1,
+        "providerUserId": "Main wide current help law.",
+        "providerUsername": "iwoods",
+        "providerEmail": "edwardduke@example.com",
+        "accessToken": "Would new successful machine gun.",
+        "refreshToken": "Work high mouth.",
+        "tokenExpiresAt": "2025-12-31T09:09:25.772466",
+        "linkedAt": "2024-08-08T03:41:05.257428",
+        "lastLoginAt": "2024-09-23T09:33:03.530763"
+      },
+      {
+        "linkedAccountId": 2,
+        "authUserId": 1,
+        "providerId": 1,
+        "providerUserId": "After resource technology else.",
+        "providerUsername": "barbaralowe",
+        "providerEmail": "richardduke@example.com",
+        "accessToken": "Skin large against election method.",
+        "refreshToken": "Possible figure arrive behavior road.",
+        "tokenExpiresAt": "2025-09-28T15:34:45.449855",
+        "linkedAt": "2025-10-20T03:02:28.786442",
+        "lastLoginAt": "2025-11-03T11:38:47.644633"
+      },
+      {
+        "linkedAccountId": 3,
+        "authUserId": 2,
+        "providerId": 1,
+        "providerUserId": "Who candidate image radio.",
+        "providerUsername": "haynesandrew",
+        "providerEmail": null,
+        "accessToken": "Soldier bag mission.",
+        "refreshToken": "Night rich manage than partner.",
+        "tokenExpiresAt": "2024-04-30T09:38:59.569472",
+        "linkedAt": "2025-07-31T23:41:14.814409",
+        "lastLoginAt": "2025-07-26T00:29:19.185477"
+      },
+      {
+        "linkedAccountId": 4,
+        "authUserId": 1,
+        "providerId": 2,
+        "providerUserId": "Bad nation serve dream car happen.",
+        "providerUsername": "ashley26",
+        "providerEmail": "iwalker@example.com",
+        "accessToken": "Go window game charge.",
+        "refreshToken": "Share affect begin four finally American.",
+        "tokenExpiresAt": "2024-04-14T09:31:01.323858",
+        "linkedAt": "2024-09-15T02:00:07.188312",
+        "lastLoginAt": "2024-10-24T21:42:05.337800"
+      },
+      {
+        "linkedAccountId": 5,
+        "authUserId": 2,
+        "providerId": 2,
+        "providerUserId": "Local order receive stay.",
+        "providerUsername": "shelley66",
+        "providerEmail": "ghale@example.net",
+        "accessToken": "Cup town pressure others such.",
+        "refreshToken": "Food crime issue.",
+        "tokenExpiresAt": "2024-09-16T17:34:20.437733",
+        "linkedAt": "2024-05-03T21:47:15.655919",
+        "lastLoginAt": "2024-11-20T21:12:36.993549"
+      }
+    ],
+    "crud_activity_log": [
+      {
+        "id": 1,
+        "userId": 268,
+        "username": "harrissandra",
+        "entityType": "One different social pick statement.",
+        "entityId": 667,
+        "operation": "Green response under",
+        "timestamp": "2025-01-25T05:37:34.116144",
+        "ipAddress": "9876 Brenda Harbor Suite 712, North Marcusbur",
+        "userAgent": "Light road decide house night.",
+        "changesJson": "Behavior must his yes hit south.",
+        "success": false,
+        "errorMessage": "Want establish administration step."
+      },
+      {
+        "id": 2,
+        "userId": 429,
+        "username": "vcox",
+        "entityType": "Agency defense budget.",
+        "entityId": 899,
+        "operation": "Event they stock.",
+        "timestamp": "2025-10-13T10:39:43.405883",
+        "ipAddress": null,
+        "userAgent": "None little accept go professional movement.",
+        "changesJson": "Experience option act.",
+        "success": true,
+        "errorMessage": "Box investment anyone determine off common."
+      },
+      {
+        "id": 3,
+        "userId": 398,
+        "username": "hayneskristie",
+        "entityType": "Drop TV send college alone.",
+        "entityId": null,
+        "operation": "Region make data act",
+        "timestamp": "2024-05-16T03:01:57.355583",
+        "ipAddress": "167 Carroll Plaza Suite 422, Sabrinaland, DC ",
+        "userAgent": "Sure such family Democrat.",
+        "changesJson": "We make tend lose.",
+        "success": true,
+        "errorMessage": "Example marriage than future."
+      },
+      {
+        "id": 4,
+        "userId": 406,
+        "username": "rachelsimpson",
+        "entityType": "Popular design little even cut action.",
+        "entityId": null,
+        "operation": "Run ground country f",
+        "timestamp": "2024-10-09T23:58:15.851680",
+        "ipAddress": "967 Kristi Course, Cabrerafurt, MH 94857",
+        "userAgent": "Trade ground source party doctor.",
+        "changesJson": "Writer theory water understand.",
+        "success": true,
+        "errorMessage": null
+      },
+      {
+        "id": 5,
+        "userId": 963,
+        "username": "vvillarreal",
+        "entityType": "Remember space less.",
+        "entityId": 425,
+        "operation": "Those detail signifi",
+        "timestamp": "2024-08-19T16:29:29.329751",
+        "ipAddress": "Unit 5378 Box 2708, DPO AA 29553",
+        "userAgent": "Need floor ahead.",
+        "changesJson": "Number miss human future answer.",
+        "success": false,
+        "errorMessage": null
+      }
+    ],
+    "deleted_record": [
+      {
+        "id": 1,
+        "entityType": "Serious account economy toward up.",
+        "entityId": 440,
+        "recordJson": "Resource own well.",
+        "deletedByUserId": 494,
+        "deletedByUsername": "autumn74",
+        "deletedAt": "2025-09-01T04:37:39.673954",
+        "ipAddress": "34825 Young Wells Apt. 372, Pearsonland, DE 0",
+        "reason": "Though safe fine how college cell.",
+        "canRestore": false
+      },
+      {
+        "id": 2,
+        "entityType": "Most while everyone could.",
+        "entityId": 873,
+        "recordJson": "Cultural give series full piece.",
+        "deletedByUserId": 425,
+        "deletedByUsername": "william20",
+        "deletedAt": "2024-10-23T05:54:16.837198",
+        "ipAddress": "USS Dunlap, FPO AA 02745",
+        "reason": null,
+        "canRestore": true
+      },
+      {
+        "id": 3,
+        "entityType": "Without team example officer low.",
+        "entityId": 916,
+        "recordJson": "Capital stand out night also option.",
+        "deletedByUserId": 275,
+        "deletedByUsername": "nancy11",
+        "deletedAt": "2025-01-18T23:20:07.356041",
+        "ipAddress": "USNV Irwin, FPO AP 37126",
+        "reason": "Can career including hair rich.",
+        "canRestore": false
+      },
+      {
+        "id": 4,
+        "entityType": "Green also sound move.",
+        "entityId": 650,
+        "recordJson": "Statement conference scene decade.",
+        "deletedByUserId": 146,
+        "deletedByUsername": "zbailey",
+        "deletedAt": "2025-06-07T12:18:24.766050",
+        "ipAddress": "Unit 4100 Box 2239, DPO AE 78174",
+        "reason": "Technology first economy.",
+        "canRestore": false
+      },
+      {
+        "id": 5,
+        "entityType": "General degree newspaper.",
+        "entityId": 738,
+        "recordJson": "Mind research plan director.",
+        "deletedByUserId": 657,
+        "deletedByUsername": "sarahskinner",
+        "deletedAt": "2024-08-03T14:07:24.855826",
+        "ipAddress": "30688 Brandon Path Apt. 550, Port Ashley, KY ",
+        "reason": "Next activity employee.",
+        "canRestore": false
+      }
+    ],
+    "login_activity_log": [
+      {
+        "id": 1,
+        "userId": 113,
+        "username": "steven66",
+        "activityType": "Something order earl",
+        "timestamp": "2025-11-20T04:24:47.788327",
+        "ipAddress": "003 Michael River, Oscarchester, PR 06034",
+        "userAgent": "What available stay evening especially.",
+        "sessionId": "Involve piece type.",
+        "success": false,
+        "failureReason": "Structure ready place live ago region.",
+        "loginMethod": "For send first.",
+        "oauth2Provider": null
+      },
+      {
+        "id": 2,
+        "userId": 477,
+        "username": "nathaniel12",
+        "activityType": "Detail pattern insti",
+        "timestamp": "2026-02-16T09:41:31.920117",
+        "ipAddress": "932 Bradley Glen Apt. 659, Lake Howard, VI 94",
+        "userAgent": "Seven bank usually care account address.",
+        "sessionId": "Happen yet great.",
+        "success": false,
+        "failureReason": null,
+        "loginMethod": "Option billion now serve.",
+        "oauth2Provider": "Accept expect money part my."
+      },
+      {
+        "id": 3,
+        "userId": 584,
+        "username": "yhamilton",
+        "activityType": "Open seek according ",
+        "timestamp": "2025-10-23T00:44:18.847646",
+        "ipAddress": "9592 Ronnie Junction, Lake Anna, MO 97344",
+        "userAgent": "Raise million we less I style.",
+        "sessionId": "Family enjoy economic show buy standard.",
+        "success": false,
+        "failureReason": "Design reflect effect follow.",
+        "loginMethod": "Reach from kid sign structure much.",
+        "oauth2Provider": "Here major card into old."
+      },
+      {
+        "id": 4,
+        "userId": 807,
+        "username": null,
+        "activityType": "War effort onto beat",
+        "timestamp": "2024-08-06T11:46:34.557384",
+        "ipAddress": "352 Marshall Row Suite 392, Colemanview, MT 3",
+        "userAgent": "Stock around including focus enjoy grow.",
+        "sessionId": "Glass along those.",
+        "success": false,
+        "failureReason": "Mind science sing.",
+        "loginMethod": "Age dark meet plan public.",
+        "oauth2Provider": "Exactly so most."
+      },
+      {
+        "id": 5,
+        "userId": 935,
+        "username": "tiffany89",
+        "activityType": "Future international",
+        "timestamp": "2025-06-16T23:05:16.403731",
+        "ipAddress": "4051 Darren Street, Lake Paulport, TN 37521",
+        "userAgent": "Personal if scientist.",
+        "sessionId": "Color office always us third.",
+        "success": true,
+        "failureReason": "Design party sense.",
+        "loginMethod": "Mother example yeah indeed mother chair.",
+        "oauth2Provider": "Join threat body position rather."
+      }
+    ],
+    "grant_activity_log": [
+      {
+        "id": 1,
+        "grantedByUserId": 680,
+        "grantedByUsername": "cooperelizabeth",
+        "targetUserId": 869,
+        "targetUsername": "marybrown",
+        "grantType": "Usually hour church party.",
+        "action": "For including such h",
+        "entityType": "Energy light body.",
+        "entityId": 844,
+        "previousValueJson": "How check lot.",
+        "newValueJson": "Now become peace chance.",
+        "timestamp": "2026-03-16T01:00:21.551112",
+        "ipAddress": "421 Michael Mews, Lake Marvinview, OR 01656",
+        "reason": "Watch data play on price in."
+      },
+      {
+        "id": 2,
+        "grantedByUserId": 979,
+        "grantedByUsername": "deanpaul",
+        "targetUserId": null,
+        "targetUsername": "jermaine98",
+        "grantType": "Kid wear theory worker.",
+        "action": "Next turn back miss ",
+        "entityType": "Long view any us him.",
+        "entityId": 624,
+        "previousValueJson": "Father husband tax price everyone course.",
+        "newValueJson": "Run condition then.",
+        "timestamp": "2025-01-02T11:46:18.145456",
+        "ipAddress": "603 Amanda Bridge, New Williamfort, VI 83611",
+        "reason": "Hour job treat word."
+      },
+      {
+        "id": 3,
+        "grantedByUserId": 319,
+        "grantedByUsername": "virginia73",
+        "targetUserId": 679,
+        "targetUsername": "geoffreymartinez",
+        "grantType": "Majority recognize head better common eye.",
+        "action": "Real evidence lay te",
+        "entityType": null,
+        "entityId": 183,
+        "previousValueJson": "Beyond garden new.",
+        "newValueJson": "Deep father offer ask.",
+        "timestamp": "2024-08-20T01:45:34.096889",
+        "ipAddress": "0370 Anthony Prairie Suite 591, Stephenbury, ",
+        "reason": "Know structure station do how."
+      },
+      {
+        "id": 4,
+        "grantedByUserId": 983,
+        "grantedByUsername": "craigmitchell",
+        "targetUserId": 367,
+        "targetUsername": null,
+        "grantType": "More feel small choice cost reduce.",
+        "action": "Cold well natural ye",
+        "entityType": "Only institution draw hotel election today.",
+        "entityId": 26,
+        "previousValueJson": "Either relate total billion individual kid.",
+        "newValueJson": "Own describe else quickly knowledge against.",
+        "timestamp": "2026-01-13T02:05:20.530220",
+        "ipAddress": "2039 Lisa Crossroad Apt. 427, East Katieton, ",
+        "reason": "Officer each necessary."
+      },
+      {
+        "id": 5,
+        "grantedByUserId": 193,
+        "grantedByUsername": "fergusonkyle",
+        "targetUserId": 729,
+        "targetUsername": "ahays",
+        "grantType": "Early crime place.",
+        "action": "Send produce total c",
+        "entityType": "Media low foreign consumer law.",
+        "entityId": 342,
+        "previousValueJson": "Seek its record.",
+        "newValueJson": "Ask today within.",
+        "timestamp": "2025-12-09T12:35:59.811669",
+        "ipAddress": "10927 Troy Hill Apt. 355, New Ronald, OR 0957",
+        "reason": "International family just."
+      }
+    ]
+  }
+}

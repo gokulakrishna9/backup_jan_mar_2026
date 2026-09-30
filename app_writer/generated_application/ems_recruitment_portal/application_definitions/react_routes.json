@@ -1,0 +1,3002 @@
+[
+  {
+    "path": "/user",
+    "pageComponent": "UserPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "User",
+    "navLabel": "User",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-property-group",
+    "pageComponent": "UserPropertyGroupPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "UserPropertyGroup",
+    "navLabel": "User Property Group",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-property",
+    "pageComponent": "UserPropertyPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "UserProperty",
+    "navLabel": "User Property",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution",
+    "pageComponent": "InstitutionPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "Institution",
+    "navLabel": "Institution",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-property-group",
+    "pageComponent": "InstitutionPropertyGroupPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "InstitutionPropertyGroup",
+    "navLabel": "Institution Property Group",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-property",
+    "pageComponent": "InstitutionPropertyPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "InstitutionProperty",
+    "navLabel": "Institution Property",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/candidate-institute-link",
+    "pageComponent": "CandidateInstituteLinkPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "CandidateInstituteLink",
+    "navLabel": "Candidate Institute Link",
+    "navGroup": "Candidate",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-institute-property-link",
+    "pageComponent": "UserInstitutePropertyLinkPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "UserInstitutePropertyLink",
+    "navLabel": "User Institute Property Link",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course",
+    "pageComponent": "CoursePage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "Course",
+    "navLabel": "Course",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-property-group",
+    "pageComponent": "CoursePropertyGroupPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "CoursePropertyGroup",
+    "navLabel": "Course Property Group",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-property",
+    "pageComponent": "CoursePropertyPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "CourseProperty",
+    "navLabel": "Course Property",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-course-link",
+    "pageComponent": "UserCourseLinkPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "UserCourseLink",
+    "navLabel": "User Course Link",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-course-wishlist",
+    "pageComponent": "UserCourseWishlistPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "UserCourseWishlist",
+    "navLabel": "User Course Wishlist",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-course-purchase",
+    "pageComponent": "UserCoursePurchasePage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "UserCoursePurchase",
+    "navLabel": "User Course Purchase",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post",
+    "pageComponent": "JobPostPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "JobPost",
+    "navLabel": "Job Post",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-property-group",
+    "pageComponent": "JobPostPropertyGroupPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "JobPostPropertyGroup",
+    "navLabel": "Job Post Property Group",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-property",
+    "pageComponent": "JobPostPropertyPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "JobPostProperty",
+    "navLabel": "Job Post Property",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-job-post-bookmark",
+    "pageComponent": "UserJobPostBookmarkPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "UserJobPostBookmark",
+    "navLabel": "User Job Post Bookmark",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-user-bookmark",
+    "pageComponent": "JobPostUserBookmarkPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "JobPostUserBookmark",
+    "navLabel": "Job Post User Bookmark",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/subscription-payment-history",
+    "pageComponent": "SubscriptionPaymentHistoryPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "SubscriptionPaymentHistory",
+    "navLabel": "Subscription Payment History",
+    "navGroup": "Subscription",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community",
+    "pageComponent": "CommunityPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "Community",
+    "navLabel": "Community",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-property-group",
+    "pageComponent": "CommunityPropertyGroupPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "CommunityPropertyGroup",
+    "navLabel": "Community Property Group",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-property",
+    "pageComponent": "CommunityPropertyPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "CommunityProperty",
+    "navLabel": "Community Property",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-user-link",
+    "pageComponent": "CommunityUserLinkPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "CommunityUserLink",
+    "navLabel": "Community User Link",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-property-user-link",
+    "pageComponent": "CommunityPropertyUserLinkPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "CommunityPropertyUserLink",
+    "navLabel": "Community Property User Link",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-user-post",
+    "pageComponent": "CommunityUserPostPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "CommunityUserPost",
+    "navLabel": "Community User Post",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-post-link",
+    "pageComponent": "CommunityPostLinkPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "CommunityPostLink",
+    "navLabel": "Community Post Link",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/post-emogi",
+    "pageComponent": "PostEmogiPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "PostEmogi",
+    "navLabel": "Post Emogi",
+    "navGroup": "Post",
+    "requiresAuth": true
+  },
+  {
+    "path": "/emogi-post-user-link",
+    "pageComponent": "EmogiPostUserLinkPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "EmogiPostUserLink",
+    "navLabel": "Emogi Post User Link",
+    "navGroup": "Emogi",
+    "requiresAuth": true
+  },
+  {
+    "path": "/post-flag",
+    "pageComponent": "PostFlagPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "PostFlag",
+    "navLabel": "Post Flag",
+    "navGroup": "Post",
+    "requiresAuth": true
+  },
+  {
+    "path": "/post-comment",
+    "pageComponent": "PostCommentPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "PostComment",
+    "navLabel": "Post Comment",
+    "navGroup": "Post",
+    "requiresAuth": true
+  },
+  {
+    "path": "/post-comment-emogi-link",
+    "pageComponent": "PostCommentEmogiLinkPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "PostCommentEmogiLink",
+    "navLabel": "Post Comment Emogi Link",
+    "navGroup": "Post",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-user-profile-evaluation-parameter-group",
+    "pageComponent": "AiUserProfileEvaluationParameterGroupPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "AiUserProfileEvaluationParameterGroup",
+    "navLabel": "Ai User Profile Evaluation Parameter Group",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-user-profile-evaluation-parameter",
+    "pageComponent": "AiUserProfileEvaluationParameterPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "AiUserProfileEvaluationParameter",
+    "navLabel": "Ai User Profile Evaluation Parameter",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-user-profile-evaluation",
+    "pageComponent": "AiUserProfileEvaluationPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "AiUserProfileEvaluation",
+    "navLabel": "Ai User Profile Evaluation",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-evaluation-parameter-group",
+    "pageComponent": "AiEvaluationParameterGroupPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "AiEvaluationParameterGroup",
+    "navLabel": "Ai Evaluation Parameter Group",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-evaluation-parameter",
+    "pageComponent": "AiEvaluationParameterPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "AiEvaluationParameter",
+    "navLabel": "Ai Evaluation Parameter",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-institution-profile-evaluation",
+    "pageComponent": "AiInstitutionProfileEvaluationPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "AiInstitutionProfileEvaluation",
+    "navLabel": "Ai Institution Profile Evaluation",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-job-recommendation",
+    "pageComponent": "AiJobRecommendationPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "AiJobRecommendation",
+    "navLabel": "Ai Job Recommendation",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-community-post-evaluation",
+    "pageComponent": "AiCommunityPostEvaluationPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "AiCommunityPostEvaluation",
+    "navLabel": "Ai Community Post Evaluation",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-market-trend-parameter-group",
+    "pageComponent": "AiMarketTrendParameterGroupPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "AiMarketTrendParameterGroup",
+    "navLabel": "Ai Market Trend Parameter Group",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-market-trend-parameter",
+    "pageComponent": "AiMarketTrendParameterPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "AiMarketTrendParameter",
+    "navLabel": "Ai Market Trend Parameter",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-market-trend-property",
+    "pageComponent": "AiMarketTrendPropertyPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "AiMarketTrendProperty",
+    "navLabel": "Ai Market Trend Property",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-profile-document",
+    "pageComponent": "UserProfileDocumentPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "UserProfileDocument",
+    "navLabel": "User Profile Document",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-profile-document",
+    "pageComponent": "InstitutionProfileDocumentPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "InstitutionProfileDocument",
+    "navLabel": "Institution Profile Document",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-document-group",
+    "pageComponent": "CourseDocumentGroupPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "CourseDocumentGroup",
+    "navLabel": "Course Document Group",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-document",
+    "pageComponent": "CourseDocumentPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "CourseDocument",
+    "navLabel": "Course Document",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/market-trend-document",
+    "pageComponent": "MarketTrendDocumentPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "MarketTrendDocument",
+    "navLabel": "Market Trend Document",
+    "navGroup": "Market",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-document",
+    "pageComponent": "JobPostDocumentPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "JobPostDocument",
+    "navLabel": "Job Post Document",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-education",
+    "pageComponent": "UserEducationPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "UserEducation",
+    "navLabel": "User Education",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-work-experience",
+    "pageComponent": "UserWorkExperiencePage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "UserWorkExperience",
+    "navLabel": "User Work Experience",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-skill",
+    "pageComponent": "UserSkillPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "UserSkill",
+    "navLabel": "User Skill",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-certification",
+    "pageComponent": "UserCertificationPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "UserCertification",
+    "navLabel": "User Certification",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-language",
+    "pageComponent": "UserLanguagePage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "UserLanguage",
+    "navLabel": "User Language",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-achievement",
+    "pageComponent": "UserAchievementPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "UserAchievement",
+    "navLabel": "User Achievement",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-social-link",
+    "pageComponent": "UserSocialLinkPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "UserSocialLink",
+    "navLabel": "User Social Link",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-department",
+    "pageComponent": "InstitutionDepartmentPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "InstitutionDepartment",
+    "navLabel": "Institution Department",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-location",
+    "pageComponent": "InstitutionLocationPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "InstitutionLocation",
+    "navLabel": "Institution Location",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-accreditation",
+    "pageComponent": "InstitutionAccreditationPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "InstitutionAccreditation",
+    "navLabel": "Institution Accreditation",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-ranking",
+    "pageComponent": "InstitutionRankingPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "InstitutionRanking",
+    "navLabel": "Institution Ranking",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-facility",
+    "pageComponent": "InstitutionFacilityPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "InstitutionFacility",
+    "navLabel": "Institution Facility",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-module",
+    "pageComponent": "CourseModulePage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "CourseModule",
+    "navLabel": "Course Module",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-lesson",
+    "pageComponent": "CourseLessonPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "CourseLesson",
+    "navLabel": "Course Lesson",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-prerequisite",
+    "pageComponent": "CoursePrerequisitePage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "CoursePrerequisite",
+    "navLabel": "Course Prerequisite",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-instructor",
+    "pageComponent": "CourseInstructorPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "CourseInstructor",
+    "navLabel": "Course Instructor",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-review",
+    "pageComponent": "CourseReviewPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "CourseReview",
+    "navLabel": "Course Review",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-assignment",
+    "pageComponent": "CourseAssignmentPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "CourseAssignment",
+    "navLabel": "Course Assignment",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-course-progress",
+    "pageComponent": "UserCourseProgressPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "UserCourseProgress",
+    "navLabel": "User Course Progress",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-assignment-submission",
+    "pageComponent": "UserAssignmentSubmissionPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "UserAssignmentSubmission",
+    "navLabel": "User Assignment Submission",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-requirement",
+    "pageComponent": "JobPostRequirementPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "JobPostRequirement",
+    "navLabel": "Job Post Requirement",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-benefit",
+    "pageComponent": "JobPostBenefitPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "JobPostBenefit",
+    "navLabel": "Job Post Benefit",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-application",
+    "pageComponent": "JobApplicationPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "JobApplication",
+    "navLabel": "Job Application",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-interview",
+    "pageComponent": "JobInterviewPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "JobInterview",
+    "navLabel": "Job Interview",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-question",
+    "pageComponent": "JobPostQuestionPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "JobPostQuestion",
+    "navLabel": "Job Post Question",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-application-answer",
+    "pageComponent": "JobApplicationAnswerPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "JobApplicationAnswer",
+    "navLabel": "Job Application Answer",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-category",
+    "pageComponent": "CommunityCategoryPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "CommunityCategory",
+    "navLabel": "Community Category",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-rule",
+    "pageComponent": "CommunityRulePage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "CommunityRule",
+    "navLabel": "Community Rule",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-event",
+    "pageComponent": "CommunityEventPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "CommunityEvent",
+    "navLabel": "Community Event",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-event-attendee",
+    "pageComponent": "CommunityEventAttendeePage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "CommunityEventAttendee",
+    "navLabel": "Community Event Attendee",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/post-attachment",
+    "pageComponent": "PostAttachmentPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "PostAttachment",
+    "navLabel": "Post Attachment",
+    "navGroup": "Post",
+    "requiresAuth": true
+  },
+  {
+    "path": "/post-tag",
+    "pageComponent": "PostTagPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "PostTag",
+    "navLabel": "Post Tag",
+    "navGroup": "Post",
+    "requiresAuth": true
+  },
+  {
+    "path": "/post-tag-link",
+    "pageComponent": "PostTagLinkPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "PostTagLink",
+    "navLabel": "Post Tag Link",
+    "navGroup": "Post",
+    "requiresAuth": true
+  },
+  {
+    "path": "/market-trend-skill-demand",
+    "pageComponent": "MarketTrendSkillDemandPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "MarketTrendSkillDemand",
+    "navLabel": "Market Trend Skill Demand",
+    "navGroup": "Market",
+    "requiresAuth": true
+  },
+  {
+    "path": "/market-trend-industry",
+    "pageComponent": "MarketTrendIndustryPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "MarketTrendIndustry",
+    "navLabel": "Market Trend Industry",
+    "navGroup": "Market",
+    "requiresAuth": true
+  },
+  {
+    "path": "/market-trend-location",
+    "pageComponent": "MarketTrendLocationPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "MarketTrendLocation",
+    "navLabel": "Market Trend Location",
+    "navGroup": "Market",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-skill-endorsement",
+    "pageComponent": "UserSkillEndorsementPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "UserSkillEndorsement",
+    "navLabel": "User Skill Endorsement",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-recommendation",
+    "pageComponent": "UserRecommendationPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "UserRecommendation",
+    "navLabel": "User Recommendation",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/notification",
+    "pageComponent": "NotificationPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "Notification",
+    "navLabel": "Notification",
+    "navGroup": "Notification",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-job-post-link",
+    "pageComponent": "CourseJobPostLinkPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "CourseJobPostLink",
+    "navLabel": "Course Job Post Link",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-community-link",
+    "pageComponent": "CourseCommunityLinkPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "CourseCommunityLink",
+    "navLabel": "Course Community Link",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-community-link",
+    "pageComponent": "JobPostCommunityLinkPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "JobPostCommunityLink",
+    "navLabel": "Job Post Community Link",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/market-trend-course-link",
+    "pageComponent": "MarketTrendCourseLinkPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "MarketTrendCourseLink",
+    "navLabel": "Market Trend Course Link",
+    "navGroup": "Market",
+    "requiresAuth": true
+  },
+  {
+    "path": "/market-trend-job-post-link",
+    "pageComponent": "MarketTrendJobPostLinkPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "MarketTrendJobPostLink",
+    "navLabel": "Market Trend Job Post Link",
+    "navGroup": "Market",
+    "requiresAuth": true
+  },
+  {
+    "path": "/market-trend-institution-link",
+    "pageComponent": "MarketTrendInstitutionLinkPage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "MarketTrendInstitutionLink",
+    "navLabel": "Market Trend Institution Link",
+    "navGroup": "Market",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-file",
+    "pageComponent": "UserFilePage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "UserFile",
+    "navLabel": "User File",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-file",
+    "pageComponent": "InstitutionFilePage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "InstitutionFile",
+    "navLabel": "Institution File",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-file",
+    "pageComponent": "CourseFilePage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "CourseFile",
+    "navLabel": "Course File",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-file",
+    "pageComponent": "JobPostFilePage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "JobPostFile",
+    "navLabel": "Job Post File",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-file",
+    "pageComponent": "CommunityFilePage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "CommunityFile",
+    "navLabel": "Community File",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/market-trend-file",
+    "pageComponent": "MarketTrendFilePage",
+    "pageType": "entity",
+    "pageFolder": "entitys",
+    "entityName": "MarketTrendFile",
+    "navLabel": "Market Trend File",
+    "navGroup": "Market",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user/filter",
+    "pageComponent": "UserFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "User",
+    "navLabel": "User Filters",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-property-group/filter",
+    "pageComponent": "UserPropertyGroupFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "UserPropertyGroup",
+    "navLabel": "User Property Group Filters",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-property/filter",
+    "pageComponent": "UserPropertyFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "UserProperty",
+    "navLabel": "User Property Filters",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution/filter",
+    "pageComponent": "InstitutionFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "Institution",
+    "navLabel": "Institution Filters",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-property-group/filter",
+    "pageComponent": "InstitutionPropertyGroupFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "InstitutionPropertyGroup",
+    "navLabel": "Institution Property Group Filters",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-property/filter",
+    "pageComponent": "InstitutionPropertyFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "InstitutionProperty",
+    "navLabel": "Institution Property Filters",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/candidate-institute-link/filter",
+    "pageComponent": "CandidateInstituteLinkFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "CandidateInstituteLink",
+    "navLabel": "Candidate Institute Link Filters",
+    "navGroup": "Candidate",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-institute-property-link/filter",
+    "pageComponent": "UserInstitutePropertyLinkFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "UserInstitutePropertyLink",
+    "navLabel": "User Institute Property Link Filters",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course/filter",
+    "pageComponent": "CourseFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "Course",
+    "navLabel": "Course Filters",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-property-group/filter",
+    "pageComponent": "CoursePropertyGroupFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "CoursePropertyGroup",
+    "navLabel": "Course Property Group Filters",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-property/filter",
+    "pageComponent": "CoursePropertyFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "CourseProperty",
+    "navLabel": "Course Property Filters",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-course-link/filter",
+    "pageComponent": "UserCourseLinkFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "UserCourseLink",
+    "navLabel": "User Course Link Filters",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-course-wishlist/filter",
+    "pageComponent": "UserCourseWishlistFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "UserCourseWishlist",
+    "navLabel": "User Course Wishlist Filters",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-course-purchase/filter",
+    "pageComponent": "UserCoursePurchaseFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "UserCoursePurchase",
+    "navLabel": "User Course Purchase Filters",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post/filter",
+    "pageComponent": "JobPostFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "JobPost",
+    "navLabel": "Job Post Filters",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-property-group/filter",
+    "pageComponent": "JobPostPropertyGroupFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "JobPostPropertyGroup",
+    "navLabel": "Job Post Property Group Filters",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-property/filter",
+    "pageComponent": "JobPostPropertyFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "JobPostProperty",
+    "navLabel": "Job Post Property Filters",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-job-post-bookmark/filter",
+    "pageComponent": "UserJobPostBookmarkFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "UserJobPostBookmark",
+    "navLabel": "User Job Post Bookmark Filters",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-user-bookmark/filter",
+    "pageComponent": "JobPostUserBookmarkFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "JobPostUserBookmark",
+    "navLabel": "Job Post User Bookmark Filters",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/subscription-payment-history/filter",
+    "pageComponent": "SubscriptionPaymentHistoryFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "SubscriptionPaymentHistory",
+    "navLabel": "Subscription Payment History Filters",
+    "navGroup": "Subscription",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community/filter",
+    "pageComponent": "CommunityFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "Community",
+    "navLabel": "Community Filters",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-property-group/filter",
+    "pageComponent": "CommunityPropertyGroupFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "CommunityPropertyGroup",
+    "navLabel": "Community Property Group Filters",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-property/filter",
+    "pageComponent": "CommunityPropertyFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "CommunityProperty",
+    "navLabel": "Community Property Filters",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-user-link/filter",
+    "pageComponent": "CommunityUserLinkFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "CommunityUserLink",
+    "navLabel": "Community User Link Filters",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-property-user-link/filter",
+    "pageComponent": "CommunityPropertyUserLinkFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "CommunityPropertyUserLink",
+    "navLabel": "Community Property User Link Filters",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-user-post/filter",
+    "pageComponent": "CommunityUserPostFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "CommunityUserPost",
+    "navLabel": "Community User Post Filters",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-post-link/filter",
+    "pageComponent": "CommunityPostLinkFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "CommunityPostLink",
+    "navLabel": "Community Post Link Filters",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/post-emogi/filter",
+    "pageComponent": "PostEmogiFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "PostEmogi",
+    "navLabel": "Post Emogi Filters",
+    "navGroup": "Post",
+    "requiresAuth": true
+  },
+  {
+    "path": "/emogi-post-user-link/filter",
+    "pageComponent": "EmogiPostUserLinkFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "EmogiPostUserLink",
+    "navLabel": "Emogi Post User Link Filters",
+    "navGroup": "Emogi",
+    "requiresAuth": true
+  },
+  {
+    "path": "/post-flag/filter",
+    "pageComponent": "PostFlagFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "PostFlag",
+    "navLabel": "Post Flag Filters",
+    "navGroup": "Post",
+    "requiresAuth": true
+  },
+  {
+    "path": "/post-comment/filter",
+    "pageComponent": "PostCommentFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "PostComment",
+    "navLabel": "Post Comment Filters",
+    "navGroup": "Post",
+    "requiresAuth": true
+  },
+  {
+    "path": "/post-comment-emogi-link/filter",
+    "pageComponent": "PostCommentEmogiLinkFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "PostCommentEmogiLink",
+    "navLabel": "Post Comment Emogi Link Filters",
+    "navGroup": "Post",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-user-profile-evaluation-parameter-group/filter",
+    "pageComponent": "AiUserProfileEvaluationParameterGroupFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "AiUserProfileEvaluationParameterGroup",
+    "navLabel": "Ai User Profile Evaluation Parameter Group Filters",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-user-profile-evaluation-parameter/filter",
+    "pageComponent": "AiUserProfileEvaluationParameterFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "AiUserProfileEvaluationParameter",
+    "navLabel": "Ai User Profile Evaluation Parameter Filters",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-user-profile-evaluation/filter",
+    "pageComponent": "AiUserProfileEvaluationFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "AiUserProfileEvaluation",
+    "navLabel": "Ai User Profile Evaluation Filters",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-evaluation-parameter-group/filter",
+    "pageComponent": "AiEvaluationParameterGroupFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "AiEvaluationParameterGroup",
+    "navLabel": "Ai Evaluation Parameter Group Filters",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-evaluation-parameter/filter",
+    "pageComponent": "AiEvaluationParameterFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "AiEvaluationParameter",
+    "navLabel": "Ai Evaluation Parameter Filters",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-institution-profile-evaluation/filter",
+    "pageComponent": "AiInstitutionProfileEvaluationFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "AiInstitutionProfileEvaluation",
+    "navLabel": "Ai Institution Profile Evaluation Filters",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-job-recommendation/filter",
+    "pageComponent": "AiJobRecommendationFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "AiJobRecommendation",
+    "navLabel": "Ai Job Recommendation Filters",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-community-post-evaluation/filter",
+    "pageComponent": "AiCommunityPostEvaluationFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "AiCommunityPostEvaluation",
+    "navLabel": "Ai Community Post Evaluation Filters",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-market-trend-parameter-group/filter",
+    "pageComponent": "AiMarketTrendParameterGroupFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "AiMarketTrendParameterGroup",
+    "navLabel": "Ai Market Trend Parameter Group Filters",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-market-trend-parameter/filter",
+    "pageComponent": "AiMarketTrendParameterFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "AiMarketTrendParameter",
+    "navLabel": "Ai Market Trend Parameter Filters",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-market-trend-property/filter",
+    "pageComponent": "AiMarketTrendPropertyFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "AiMarketTrendProperty",
+    "navLabel": "Ai Market Trend Property Filters",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-profile-document/filter",
+    "pageComponent": "UserProfileDocumentFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "UserProfileDocument",
+    "navLabel": "User Profile Document Filters",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-profile-document/filter",
+    "pageComponent": "InstitutionProfileDocumentFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "InstitutionProfileDocument",
+    "navLabel": "Institution Profile Document Filters",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-document-group/filter",
+    "pageComponent": "CourseDocumentGroupFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "CourseDocumentGroup",
+    "navLabel": "Course Document Group Filters",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-document/filter",
+    "pageComponent": "CourseDocumentFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "CourseDocument",
+    "navLabel": "Course Document Filters",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/market-trend-document/filter",
+    "pageComponent": "MarketTrendDocumentFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "MarketTrendDocument",
+    "navLabel": "Market Trend Document Filters",
+    "navGroup": "Market",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-document/filter",
+    "pageComponent": "JobPostDocumentFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "JobPostDocument",
+    "navLabel": "Job Post Document Filters",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-education/filter",
+    "pageComponent": "UserEducationFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "UserEducation",
+    "navLabel": "User Education Filters",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-work-experience/filter",
+    "pageComponent": "UserWorkExperienceFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "UserWorkExperience",
+    "navLabel": "User Work Experience Filters",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-skill/filter",
+    "pageComponent": "UserSkillFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "UserSkill",
+    "navLabel": "User Skill Filters",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-certification/filter",
+    "pageComponent": "UserCertificationFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "UserCertification",
+    "navLabel": "User Certification Filters",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-language/filter",
+    "pageComponent": "UserLanguageFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "UserLanguage",
+    "navLabel": "User Language Filters",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-achievement/filter",
+    "pageComponent": "UserAchievementFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "UserAchievement",
+    "navLabel": "User Achievement Filters",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-social-link/filter",
+    "pageComponent": "UserSocialLinkFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "UserSocialLink",
+    "navLabel": "User Social Link Filters",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-department/filter",
+    "pageComponent": "InstitutionDepartmentFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "InstitutionDepartment",
+    "navLabel": "Institution Department Filters",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-location/filter",
+    "pageComponent": "InstitutionLocationFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "InstitutionLocation",
+    "navLabel": "Institution Location Filters",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-accreditation/filter",
+    "pageComponent": "InstitutionAccreditationFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "InstitutionAccreditation",
+    "navLabel": "Institution Accreditation Filters",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-ranking/filter",
+    "pageComponent": "InstitutionRankingFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "InstitutionRanking",
+    "navLabel": "Institution Ranking Filters",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-facility/filter",
+    "pageComponent": "InstitutionFacilityFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "InstitutionFacility",
+    "navLabel": "Institution Facility Filters",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-module/filter",
+    "pageComponent": "CourseModuleFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "CourseModule",
+    "navLabel": "Course Module Filters",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-lesson/filter",
+    "pageComponent": "CourseLessonFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "CourseLesson",
+    "navLabel": "Course Lesson Filters",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-prerequisite/filter",
+    "pageComponent": "CoursePrerequisiteFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "CoursePrerequisite",
+    "navLabel": "Course Prerequisite Filters",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-instructor/filter",
+    "pageComponent": "CourseInstructorFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "CourseInstructor",
+    "navLabel": "Course Instructor Filters",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-review/filter",
+    "pageComponent": "CourseReviewFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "CourseReview",
+    "navLabel": "Course Review Filters",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-assignment/filter",
+    "pageComponent": "CourseAssignmentFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "CourseAssignment",
+    "navLabel": "Course Assignment Filters",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-course-progress/filter",
+    "pageComponent": "UserCourseProgressFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "UserCourseProgress",
+    "navLabel": "User Course Progress Filters",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-assignment-submission/filter",
+    "pageComponent": "UserAssignmentSubmissionFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "UserAssignmentSubmission",
+    "navLabel": "User Assignment Submission Filters",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-requirement/filter",
+    "pageComponent": "JobPostRequirementFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "JobPostRequirement",
+    "navLabel": "Job Post Requirement Filters",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-benefit/filter",
+    "pageComponent": "JobPostBenefitFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "JobPostBenefit",
+    "navLabel": "Job Post Benefit Filters",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-application/filter",
+    "pageComponent": "JobApplicationFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "JobApplication",
+    "navLabel": "Job Application Filters",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-interview/filter",
+    "pageComponent": "JobInterviewFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "JobInterview",
+    "navLabel": "Job Interview Filters",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-question/filter",
+    "pageComponent": "JobPostQuestionFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "JobPostQuestion",
+    "navLabel": "Job Post Question Filters",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-application-answer/filter",
+    "pageComponent": "JobApplicationAnswerFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "JobApplicationAnswer",
+    "navLabel": "Job Application Answer Filters",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-category/filter",
+    "pageComponent": "CommunityCategoryFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "CommunityCategory",
+    "navLabel": "Community Category Filters",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-rule/filter",
+    "pageComponent": "CommunityRuleFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "CommunityRule",
+    "navLabel": "Community Rule Filters",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-event/filter",
+    "pageComponent": "CommunityEventFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "CommunityEvent",
+    "navLabel": "Community Event Filters",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-event-attendee/filter",
+    "pageComponent": "CommunityEventAttendeeFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "CommunityEventAttendee",
+    "navLabel": "Community Event Attendee Filters",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/post-attachment/filter",
+    "pageComponent": "PostAttachmentFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "PostAttachment",
+    "navLabel": "Post Attachment Filters",
+    "navGroup": "Post",
+    "requiresAuth": true
+  },
+  {
+    "path": "/post-tag/filter",
+    "pageComponent": "PostTagFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "PostTag",
+    "navLabel": "Post Tag Filters",
+    "navGroup": "Post",
+    "requiresAuth": true
+  },
+  {
+    "path": "/post-tag-link/filter",
+    "pageComponent": "PostTagLinkFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "PostTagLink",
+    "navLabel": "Post Tag Link Filters",
+    "navGroup": "Post",
+    "requiresAuth": true
+  },
+  {
+    "path": "/market-trend-skill-demand/filter",
+    "pageComponent": "MarketTrendSkillDemandFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "MarketTrendSkillDemand",
+    "navLabel": "Market Trend Skill Demand Filters",
+    "navGroup": "Market",
+    "requiresAuth": true
+  },
+  {
+    "path": "/market-trend-industry/filter",
+    "pageComponent": "MarketTrendIndustryFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "MarketTrendIndustry",
+    "navLabel": "Market Trend Industry Filters",
+    "navGroup": "Market",
+    "requiresAuth": true
+  },
+  {
+    "path": "/market-trend-location/filter",
+    "pageComponent": "MarketTrendLocationFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "MarketTrendLocation",
+    "navLabel": "Market Trend Location Filters",
+    "navGroup": "Market",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-skill-endorsement/filter",
+    "pageComponent": "UserSkillEndorsementFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "UserSkillEndorsement",
+    "navLabel": "User Skill Endorsement Filters",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-recommendation/filter",
+    "pageComponent": "UserRecommendationFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "UserRecommendation",
+    "navLabel": "User Recommendation Filters",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/notification/filter",
+    "pageComponent": "NotificationFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "Notification",
+    "navLabel": "Notification Filters",
+    "navGroup": "Notification",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-job-post-link/filter",
+    "pageComponent": "CourseJobPostLinkFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "CourseJobPostLink",
+    "navLabel": "Course Job Post Link Filters",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-community-link/filter",
+    "pageComponent": "CourseCommunityLinkFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "CourseCommunityLink",
+    "navLabel": "Course Community Link Filters",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-community-link/filter",
+    "pageComponent": "JobPostCommunityLinkFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "JobPostCommunityLink",
+    "navLabel": "Job Post Community Link Filters",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/market-trend-course-link/filter",
+    "pageComponent": "MarketTrendCourseLinkFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "MarketTrendCourseLink",
+    "navLabel": "Market Trend Course Link Filters",
+    "navGroup": "Market",
+    "requiresAuth": true
+  },
+  {
+    "path": "/market-trend-job-post-link/filter",
+    "pageComponent": "MarketTrendJobPostLinkFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "MarketTrendJobPostLink",
+    "navLabel": "Market Trend Job Post Link Filters",
+    "navGroup": "Market",
+    "requiresAuth": true
+  },
+  {
+    "path": "/market-trend-institution-link/filter",
+    "pageComponent": "MarketTrendInstitutionLinkFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "MarketTrendInstitutionLink",
+    "navLabel": "Market Trend Institution Link Filters",
+    "navGroup": "Market",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-file/filter",
+    "pageComponent": "UserFileFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "UserFile",
+    "navLabel": "User File Filters",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-file/filter",
+    "pageComponent": "InstitutionFileFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "InstitutionFile",
+    "navLabel": "Institution File Filters",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-file/filter",
+    "pageComponent": "CourseFileFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "CourseFile",
+    "navLabel": "Course File Filters",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-file/filter",
+    "pageComponent": "JobPostFileFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "JobPostFile",
+    "navLabel": "Job Post File Filters",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-file/filter",
+    "pageComponent": "CommunityFileFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "CommunityFile",
+    "navLabel": "Community File Filters",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/market-trend-file/filter",
+    "pageComponent": "MarketTrendFileFilterPage",
+    "pageType": "filter",
+    "pageFolder": "filters",
+    "entityName": "MarketTrendFile",
+    "navLabel": "Market Trend File Filters",
+    "navGroup": "Market",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user/queries",
+    "pageComponent": "UserQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "User",
+    "navLabel": "User Queries",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-property-group/queries",
+    "pageComponent": "UserPropertyGroupQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "UserPropertyGroup",
+    "navLabel": "User Property Group Queries",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-property/queries",
+    "pageComponent": "UserPropertyQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "UserProperty",
+    "navLabel": "User Property Queries",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution/queries",
+    "pageComponent": "InstitutionQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "Institution",
+    "navLabel": "Institution Queries",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-property-group/queries",
+    "pageComponent": "InstitutionPropertyGroupQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "InstitutionPropertyGroup",
+    "navLabel": "Institution Property Group Queries",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-property/queries",
+    "pageComponent": "InstitutionPropertyQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "InstitutionProperty",
+    "navLabel": "Institution Property Queries",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/candidate-institute-link/queries",
+    "pageComponent": "CandidateInstituteLinkQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "CandidateInstituteLink",
+    "navLabel": "Candidate Institute Link Queries",
+    "navGroup": "Candidate",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-institute-property-link/queries",
+    "pageComponent": "UserInstitutePropertyLinkQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "UserInstitutePropertyLink",
+    "navLabel": "User Institute Property Link Queries",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course/queries",
+    "pageComponent": "CourseQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "Course",
+    "navLabel": "Course Queries",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-property-group/queries",
+    "pageComponent": "CoursePropertyGroupQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "CoursePropertyGroup",
+    "navLabel": "Course Property Group Queries",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-property/queries",
+    "pageComponent": "CoursePropertyQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "CourseProperty",
+    "navLabel": "Course Property Queries",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-course-link/queries",
+    "pageComponent": "UserCourseLinkQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "UserCourseLink",
+    "navLabel": "User Course Link Queries",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-course-wishlist/queries",
+    "pageComponent": "UserCourseWishlistQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "UserCourseWishlist",
+    "navLabel": "User Course Wishlist Queries",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-course-purchase/queries",
+    "pageComponent": "UserCoursePurchaseQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "UserCoursePurchase",
+    "navLabel": "User Course Purchase Queries",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post/queries",
+    "pageComponent": "JobPostQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "JobPost",
+    "navLabel": "Job Post Queries",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-property-group/queries",
+    "pageComponent": "JobPostPropertyGroupQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "JobPostPropertyGroup",
+    "navLabel": "Job Post Property Group Queries",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-property/queries",
+    "pageComponent": "JobPostPropertyQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "JobPostProperty",
+    "navLabel": "Job Post Property Queries",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-job-post-bookmark/queries",
+    "pageComponent": "UserJobPostBookmarkQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "UserJobPostBookmark",
+    "navLabel": "User Job Post Bookmark Queries",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-user-bookmark/queries",
+    "pageComponent": "JobPostUserBookmarkQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "JobPostUserBookmark",
+    "navLabel": "Job Post User Bookmark Queries",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/subscription-payment-history/queries",
+    "pageComponent": "SubscriptionPaymentHistoryQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "SubscriptionPaymentHistory",
+    "navLabel": "Subscription Payment History Queries",
+    "navGroup": "Subscription",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community/queries",
+    "pageComponent": "CommunityQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "Community",
+    "navLabel": "Community Queries",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-property-group/queries",
+    "pageComponent": "CommunityPropertyGroupQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "CommunityPropertyGroup",
+    "navLabel": "Community Property Group Queries",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-property/queries",
+    "pageComponent": "CommunityPropertyQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "CommunityProperty",
+    "navLabel": "Community Property Queries",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-user-link/queries",
+    "pageComponent": "CommunityUserLinkQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "CommunityUserLink",
+    "navLabel": "Community User Link Queries",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-property-user-link/queries",
+    "pageComponent": "CommunityPropertyUserLinkQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "CommunityPropertyUserLink",
+    "navLabel": "Community Property User Link Queries",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-user-post/queries",
+    "pageComponent": "CommunityUserPostQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "CommunityUserPost",
+    "navLabel": "Community User Post Queries",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-post-link/queries",
+    "pageComponent": "CommunityPostLinkQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "CommunityPostLink",
+    "navLabel": "Community Post Link Queries",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/post-emogi/queries",
+    "pageComponent": "PostEmogiQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "PostEmogi",
+    "navLabel": "Post Emogi Queries",
+    "navGroup": "Post",
+    "requiresAuth": true
+  },
+  {
+    "path": "/emogi-post-user-link/queries",
+    "pageComponent": "EmogiPostUserLinkQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "EmogiPostUserLink",
+    "navLabel": "Emogi Post User Link Queries",
+    "navGroup": "Emogi",
+    "requiresAuth": true
+  },
+  {
+    "path": "/post-flag/queries",
+    "pageComponent": "PostFlagQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "PostFlag",
+    "navLabel": "Post Flag Queries",
+    "navGroup": "Post",
+    "requiresAuth": true
+  },
+  {
+    "path": "/post-comment/queries",
+    "pageComponent": "PostCommentQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "PostComment",
+    "navLabel": "Post Comment Queries",
+    "navGroup": "Post",
+    "requiresAuth": true
+  },
+  {
+    "path": "/post-comment-emogi-link/queries",
+    "pageComponent": "PostCommentEmogiLinkQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "PostCommentEmogiLink",
+    "navLabel": "Post Comment Emogi Link Queries",
+    "navGroup": "Post",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-user-profile-evaluation-parameter-group/queries",
+    "pageComponent": "AiUserProfileEvaluationParameterGroupQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "AiUserProfileEvaluationParameterGroup",
+    "navLabel": "Ai User Profile Evaluation Parameter Group Queries",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-user-profile-evaluation-parameter/queries",
+    "pageComponent": "AiUserProfileEvaluationParameterQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "AiUserProfileEvaluationParameter",
+    "navLabel": "Ai User Profile Evaluation Parameter Queries",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-user-profile-evaluation/queries",
+    "pageComponent": "AiUserProfileEvaluationQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "AiUserProfileEvaluation",
+    "navLabel": "Ai User Profile Evaluation Queries",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-evaluation-parameter-group/queries",
+    "pageComponent": "AiEvaluationParameterGroupQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "AiEvaluationParameterGroup",
+    "navLabel": "Ai Evaluation Parameter Group Queries",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-evaluation-parameter/queries",
+    "pageComponent": "AiEvaluationParameterQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "AiEvaluationParameter",
+    "navLabel": "Ai Evaluation Parameter Queries",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-institution-profile-evaluation/queries",
+    "pageComponent": "AiInstitutionProfileEvaluationQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "AiInstitutionProfileEvaluation",
+    "navLabel": "Ai Institution Profile Evaluation Queries",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-job-recommendation/queries",
+    "pageComponent": "AiJobRecommendationQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "AiJobRecommendation",
+    "navLabel": "Ai Job Recommendation Queries",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-community-post-evaluation/queries",
+    "pageComponent": "AiCommunityPostEvaluationQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "AiCommunityPostEvaluation",
+    "navLabel": "Ai Community Post Evaluation Queries",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-market-trend-parameter-group/queries",
+    "pageComponent": "AiMarketTrendParameterGroupQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "AiMarketTrendParameterGroup",
+    "navLabel": "Ai Market Trend Parameter Group Queries",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-market-trend-parameter/queries",
+    "pageComponent": "AiMarketTrendParameterQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "AiMarketTrendParameter",
+    "navLabel": "Ai Market Trend Parameter Queries",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/ai-market-trend-property/queries",
+    "pageComponent": "AiMarketTrendPropertyQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "AiMarketTrendProperty",
+    "navLabel": "Ai Market Trend Property Queries",
+    "navGroup": "Ai",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-profile-document/queries",
+    "pageComponent": "UserProfileDocumentQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "UserProfileDocument",
+    "navLabel": "User Profile Document Queries",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-profile-document/queries",
+    "pageComponent": "InstitutionProfileDocumentQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "InstitutionProfileDocument",
+    "navLabel": "Institution Profile Document Queries",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-document-group/queries",
+    "pageComponent": "CourseDocumentGroupQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "CourseDocumentGroup",
+    "navLabel": "Course Document Group Queries",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-document/queries",
+    "pageComponent": "CourseDocumentQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "CourseDocument",
+    "navLabel": "Course Document Queries",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/market-trend-document/queries",
+    "pageComponent": "MarketTrendDocumentQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "MarketTrendDocument",
+    "navLabel": "Market Trend Document Queries",
+    "navGroup": "Market",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-document/queries",
+    "pageComponent": "JobPostDocumentQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "JobPostDocument",
+    "navLabel": "Job Post Document Queries",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-education/queries",
+    "pageComponent": "UserEducationQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "UserEducation",
+    "navLabel": "User Education Queries",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-work-experience/queries",
+    "pageComponent": "UserWorkExperienceQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "UserWorkExperience",
+    "navLabel": "User Work Experience Queries",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-skill/queries",
+    "pageComponent": "UserSkillQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "UserSkill",
+    "navLabel": "User Skill Queries",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-certification/queries",
+    "pageComponent": "UserCertificationQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "UserCertification",
+    "navLabel": "User Certification Queries",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-language/queries",
+    "pageComponent": "UserLanguageQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "UserLanguage",
+    "navLabel": "User Language Queries",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-achievement/queries",
+    "pageComponent": "UserAchievementQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "UserAchievement",
+    "navLabel": "User Achievement Queries",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-social-link/queries",
+    "pageComponent": "UserSocialLinkQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "UserSocialLink",
+    "navLabel": "User Social Link Queries",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-department/queries",
+    "pageComponent": "InstitutionDepartmentQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "InstitutionDepartment",
+    "navLabel": "Institution Department Queries",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-location/queries",
+    "pageComponent": "InstitutionLocationQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "InstitutionLocation",
+    "navLabel": "Institution Location Queries",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-accreditation/queries",
+    "pageComponent": "InstitutionAccreditationQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "InstitutionAccreditation",
+    "navLabel": "Institution Accreditation Queries",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-ranking/queries",
+    "pageComponent": "InstitutionRankingQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "InstitutionRanking",
+    "navLabel": "Institution Ranking Queries",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-facility/queries",
+    "pageComponent": "InstitutionFacilityQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "InstitutionFacility",
+    "navLabel": "Institution Facility Queries",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-module/queries",
+    "pageComponent": "CourseModuleQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "CourseModule",
+    "navLabel": "Course Module Queries",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-lesson/queries",
+    "pageComponent": "CourseLessonQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "CourseLesson",
+    "navLabel": "Course Lesson Queries",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-prerequisite/queries",
+    "pageComponent": "CoursePrerequisiteQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "CoursePrerequisite",
+    "navLabel": "Course Prerequisite Queries",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-instructor/queries",
+    "pageComponent": "CourseInstructorQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "CourseInstructor",
+    "navLabel": "Course Instructor Queries",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-review/queries",
+    "pageComponent": "CourseReviewQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "CourseReview",
+    "navLabel": "Course Review Queries",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-assignment/queries",
+    "pageComponent": "CourseAssignmentQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "CourseAssignment",
+    "navLabel": "Course Assignment Queries",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-course-progress/queries",
+    "pageComponent": "UserCourseProgressQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "UserCourseProgress",
+    "navLabel": "User Course Progress Queries",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-assignment-submission/queries",
+    "pageComponent": "UserAssignmentSubmissionQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "UserAssignmentSubmission",
+    "navLabel": "User Assignment Submission Queries",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-requirement/queries",
+    "pageComponent": "JobPostRequirementQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "JobPostRequirement",
+    "navLabel": "Job Post Requirement Queries",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-benefit/queries",
+    "pageComponent": "JobPostBenefitQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "JobPostBenefit",
+    "navLabel": "Job Post Benefit Queries",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-application/queries",
+    "pageComponent": "JobApplicationQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "JobApplication",
+    "navLabel": "Job Application Queries",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-interview/queries",
+    "pageComponent": "JobInterviewQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "JobInterview",
+    "navLabel": "Job Interview Queries",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-question/queries",
+    "pageComponent": "JobPostQuestionQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "JobPostQuestion",
+    "navLabel": "Job Post Question Queries",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-application-answer/queries",
+    "pageComponent": "JobApplicationAnswerQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "JobApplicationAnswer",
+    "navLabel": "Job Application Answer Queries",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-category/queries",
+    "pageComponent": "CommunityCategoryQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "CommunityCategory",
+    "navLabel": "Community Category Queries",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-rule/queries",
+    "pageComponent": "CommunityRuleQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "CommunityRule",
+    "navLabel": "Community Rule Queries",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-event/queries",
+    "pageComponent": "CommunityEventQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "CommunityEvent",
+    "navLabel": "Community Event Queries",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-event-attendee/queries",
+    "pageComponent": "CommunityEventAttendeeQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "CommunityEventAttendee",
+    "navLabel": "Community Event Attendee Queries",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/post-attachment/queries",
+    "pageComponent": "PostAttachmentQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "PostAttachment",
+    "navLabel": "Post Attachment Queries",
+    "navGroup": "Post",
+    "requiresAuth": true
+  },
+  {
+    "path": "/post-tag/queries",
+    "pageComponent": "PostTagQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "PostTag",
+    "navLabel": "Post Tag Queries",
+    "navGroup": "Post",
+    "requiresAuth": true
+  },
+  {
+    "path": "/post-tag-link/queries",
+    "pageComponent": "PostTagLinkQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "PostTagLink",
+    "navLabel": "Post Tag Link Queries",
+    "navGroup": "Post",
+    "requiresAuth": true
+  },
+  {
+    "path": "/market-trend-skill-demand/queries",
+    "pageComponent": "MarketTrendSkillDemandQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "MarketTrendSkillDemand",
+    "navLabel": "Market Trend Skill Demand Queries",
+    "navGroup": "Market",
+    "requiresAuth": true
+  },
+  {
+    "path": "/market-trend-industry/queries",
+    "pageComponent": "MarketTrendIndustryQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "MarketTrendIndustry",
+    "navLabel": "Market Trend Industry Queries",
+    "navGroup": "Market",
+    "requiresAuth": true
+  },
+  {
+    "path": "/market-trend-location/queries",
+    "pageComponent": "MarketTrendLocationQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "MarketTrendLocation",
+    "navLabel": "Market Trend Location Queries",
+    "navGroup": "Market",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-skill-endorsement/queries",
+    "pageComponent": "UserSkillEndorsementQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "UserSkillEndorsement",
+    "navLabel": "User Skill Endorsement Queries",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-recommendation/queries",
+    "pageComponent": "UserRecommendationQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "UserRecommendation",
+    "navLabel": "User Recommendation Queries",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/notification/queries",
+    "pageComponent": "NotificationQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "Notification",
+    "navLabel": "Notification Queries",
+    "navGroup": "Notification",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-job-post-link/queries",
+    "pageComponent": "CourseJobPostLinkQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "CourseJobPostLink",
+    "navLabel": "Course Job Post Link Queries",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-community-link/queries",
+    "pageComponent": "CourseCommunityLinkQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "CourseCommunityLink",
+    "navLabel": "Course Community Link Queries",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-community-link/queries",
+    "pageComponent": "JobPostCommunityLinkQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "JobPostCommunityLink",
+    "navLabel": "Job Post Community Link Queries",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/market-trend-course-link/queries",
+    "pageComponent": "MarketTrendCourseLinkQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "MarketTrendCourseLink",
+    "navLabel": "Market Trend Course Link Queries",
+    "navGroup": "Market",
+    "requiresAuth": true
+  },
+  {
+    "path": "/market-trend-job-post-link/queries",
+    "pageComponent": "MarketTrendJobPostLinkQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "MarketTrendJobPostLink",
+    "navLabel": "Market Trend Job Post Link Queries",
+    "navGroup": "Market",
+    "requiresAuth": true
+  },
+  {
+    "path": "/market-trend-institution-link/queries",
+    "pageComponent": "MarketTrendInstitutionLinkQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "MarketTrendInstitutionLink",
+    "navLabel": "Market Trend Institution Link Queries",
+    "navGroup": "Market",
+    "requiresAuth": true
+  },
+  {
+    "path": "/user-file/queries",
+    "pageComponent": "UserFileQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "UserFile",
+    "navLabel": "User File Queries",
+    "navGroup": "User",
+    "requiresAuth": true
+  },
+  {
+    "path": "/institution-file/queries",
+    "pageComponent": "InstitutionFileQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "InstitutionFile",
+    "navLabel": "Institution File Queries",
+    "navGroup": "Institution",
+    "requiresAuth": true
+  },
+  {
+    "path": "/course-file/queries",
+    "pageComponent": "CourseFileQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "CourseFile",
+    "navLabel": "Course File Queries",
+    "navGroup": "Course",
+    "requiresAuth": true
+  },
+  {
+    "path": "/job-post-file/queries",
+    "pageComponent": "JobPostFileQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "JobPostFile",
+    "navLabel": "Job Post File Queries",
+    "navGroup": "Job",
+    "requiresAuth": true
+  },
+  {
+    "path": "/community-file/queries",
+    "pageComponent": "CommunityFileQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "CommunityFile",
+    "navLabel": "Community File Queries",
+    "navGroup": "Community",
+    "requiresAuth": true
+  },
+  {
+    "path": "/market-trend-file/queries",
+    "pageComponent": "MarketTrendFileQueryPage",
+    "pageType": "query",
+    "pageFolder": "queries",
+    "entityName": "MarketTrendFile",
+    "navLabel": "Market Trend File Queries",
+    "navGroup": "Market",
+    "requiresAuth": true
+  }
+]

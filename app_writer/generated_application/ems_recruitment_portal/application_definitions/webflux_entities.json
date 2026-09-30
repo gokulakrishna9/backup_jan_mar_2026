@@ -1,0 +1,6885 @@
+{
+  "entities": [
+    {
+      "name": "ems_user",
+      "columns": [
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "first_name",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "last_name",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "gender",
+          "type": "ENUM('male','female','other')",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "date_of_birth",
+          "type": "DATE",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "email_address",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": true,
+          "defaultValue": null
+        },
+        {
+          "name": "user_name",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": true,
+          "defaultValue": null
+        },
+        {
+          "name": "encrypted_password",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_number",
+          "type": "VARCHAR(30)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "profile_photo",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_active",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_entity",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_user_property_group",
+      "columns": [
+        {
+          "name": "group_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_name",
+          "type": "VARCHAR(150)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_active",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_user_property",
+      "columns": [
+        {
+          "name": "property_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "property_name",
+          "type": "VARCHAR(150)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "property_value",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "property_type",
+          "type": "VARCHAR(50)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "property_description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_institution",
+      "columns": [
+        {
+          "name": "institution_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "moto",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "institution_type_id",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "website",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "contact_email",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "contact_phone",
+          "type": "VARCHAR(30)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_active",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_entity",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_institution_property_group",
+      "columns": [
+        {
+          "name": "group_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_name",
+          "type": "VARCHAR(150)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "institution_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_active",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_institution_property",
+      "columns": [
+        {
+          "name": "property_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "property_name",
+          "type": "VARCHAR(150)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "property_value",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "property_type",
+          "type": "VARCHAR(50)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "property_description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "institution_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_candidate_institute_link",
+      "columns": [
+        {
+          "name": "link_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "institution_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(50)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_user_institute_property_link",
+      "columns": [
+        {
+          "name": "link_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "property_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_course",
+      "columns": [
+        {
+          "name": "course_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "course_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "outcomes",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "course_type_id",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_published",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "price",
+          "type": "DECIMAL(10,2)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "duration_weeks",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "institution_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_entity",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_course_property_group",
+      "columns": [
+        {
+          "name": "group_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_name",
+          "type": "VARCHAR(150)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "course_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_active",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_course_property",
+      "columns": [
+        {
+          "name": "property_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "property_name",
+          "type": "VARCHAR(150)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "property_value",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "property_type",
+          "type": "VARCHAR(50)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "property_description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "course_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_user_course_link",
+      "columns": [
+        {
+          "name": "link_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "course_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "role",
+          "type": "VARCHAR(50)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_user_course_wishlist",
+      "columns": [
+        {
+          "name": "wish_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "course_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_user_course_purchase",
+      "columns": [
+        {
+          "name": "purchase_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "course_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "amount",
+          "type": "DECIMAL(10,2)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "transaction_id",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "purchased_on",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_job_post",
+      "columns": [
+        {
+          "name": "job_post_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "job_post_subject",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "job_post_description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "institution_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "location",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "salary_range",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "posted_on",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "expires_on",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_active",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_entity",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_job_post_property_group",
+      "columns": [
+        {
+          "name": "group_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_name",
+          "type": "VARCHAR(150)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "job_post_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_job_post_property",
+      "columns": [
+        {
+          "name": "property_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "property_name",
+          "type": "VARCHAR(150)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "property_value",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "property_type",
+          "type": "VARCHAR(50)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "property_description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "job_post_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_user_job_post_bookmark",
+      "columns": [
+        {
+          "name": "bookmark_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "job_post_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_job_post_user_bookmark",
+      "columns": [
+        {
+          "name": "bookmark_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "job_post_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_subscription_payment_history",
+      "columns": [
+        {
+          "name": "payment_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "amount",
+          "type": "DECIMAL(12,2)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "subscription_type",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "transaction_details",
+          "type": "JSON",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "transaction_reference",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "payment_on",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_community",
+      "columns": [
+        {
+          "name": "community_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "institute_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_owner_user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_entity",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_community_property_group",
+      "columns": [
+        {
+          "name": "group_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_name",
+          "type": "VARCHAR(150)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "community_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_community_property",
+      "columns": [
+        {
+          "name": "property_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "property_name",
+          "type": "VARCHAR(150)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "property_value",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "property_type",
+          "type": "VARCHAR(50)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "property_description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "community_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_community_user_link",
+      "columns": [
+        {
+          "name": "link_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "community_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "role",
+          "type": "VARCHAR(50)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_community_property_user_link",
+      "columns": [
+        {
+          "name": "link_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "community_property_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_community_user_post",
+      "columns": [
+        {
+          "name": "post_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "community_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "post",
+          "type": "JSON",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_community_post_link",
+      "columns": [
+        {
+          "name": "link_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "post_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "community_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_post_emogi",
+      "columns": [
+        {
+          "name": "emogi_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(150)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_location",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_emogi_post_user_link",
+      "columns": [
+        {
+          "name": "link_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "emogi_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "post_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_post_flag",
+      "columns": [
+        {
+          "name": "flag_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "type",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "post_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "reason",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "flagged_on",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_post_comment",
+      "columns": [
+        {
+          "name": "comment_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "post_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_post_comment_emogi_link",
+      "columns": [
+        {
+          "name": "link_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "emogi_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_ai_user_profile_evaluation_parameter_group",
+      "columns": [
+        {
+          "name": "group_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_name",
+          "type": "VARCHAR(150)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_ai_user_profile_evaluation_parameter",
+      "columns": [
+        {
+          "name": "parameter_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "parameter_name",
+          "type": "VARCHAR(150)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "parameter_value",
+          "type": "JSON",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_ai_user_profile_evaluation",
+      "columns": [
+        {
+          "name": "evaluation_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "property_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "evaluation_summary",
+          "type": "JSON",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "rating",
+          "type": "DECIMAL(3,2)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_ai_evaluation_parameter_group",
+      "columns": [
+        {
+          "name": "group_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_name",
+          "type": "VARCHAR(150)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_ai_evaluation_parameter",
+      "columns": [
+        {
+          "name": "parameter_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "parameter_name",
+          "type": "VARCHAR(150)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "parameter_group_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "parameter_value",
+          "type": "JSON",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_ai_institution_profile_evaluation",
+      "columns": [
+        {
+          "name": "evaluation_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "institution_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "evaluation_summary",
+          "type": "JSON",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "rating",
+          "type": "DECIMAL(3,2)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_ai_job_recommendation",
+      "columns": [
+        {
+          "name": "preference_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "job_post_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "profile_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "preference_rating",
+          "type": "DECIMAL(3,2)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "recommendation_summary",
+          "type": "JSON",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_ai_community_post_evaluation",
+      "columns": [
+        {
+          "name": "evaluation_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "post_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "evaluation_summary",
+          "type": "JSON",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "rating",
+          "type": "DECIMAL(3,2)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_ai_market_trend_parameter_group",
+      "columns": [
+        {
+          "name": "group_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_name",
+          "type": "VARCHAR(150)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "trend_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_ai_market_trend_parameter",
+      "columns": [
+        {
+          "name": "parameter_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "parameter_name",
+          "type": "VARCHAR(150)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "parameter_value",
+          "type": "JSON",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_ai_market_trend_property",
+      "columns": [
+        {
+          "name": "trend_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "trend_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "trend_description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_user_profile_document",
+      "columns": [
+        {
+          "name": "document_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "document",
+          "type": "JSON",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "document_type",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_institution_profile_document",
+      "columns": [
+        {
+          "name": "document_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "institution_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "document",
+          "type": "JSON",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "document_type",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_course_document_group",
+      "columns": [
+        {
+          "name": "group_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_name",
+          "type": "VARCHAR(150)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "course_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_active",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_course_document",
+      "columns": [
+        {
+          "name": "document_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "course_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "document",
+          "type": "JSON",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "document_type",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_market_trend_document",
+      "columns": [
+        {
+          "name": "document_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "trend_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "document",
+          "type": "JSON",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "document_type",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_job_post_document",
+      "columns": [
+        {
+          "name": "document_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "job_post_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "document",
+          "type": "JSON",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "document_type",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_user_education",
+      "columns": [
+        {
+          "name": "education_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "institution_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "degree_type",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "field_of_study",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "specialization",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "start_date",
+          "type": "DATE",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "end_date",
+          "type": "DATE",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "grade_gpa",
+          "type": "VARCHAR(50)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_verified",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "certificate_document_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_user_work_experience",
+      "columns": [
+        {
+          "name": "experience_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "institution_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "job_title",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "company_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "employment_type",
+          "type": "ENUM('Full-time','Part-time','Contract','Internship','Freelance')",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "location",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "start_date",
+          "type": "DATE",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "end_date",
+          "type": "DATE",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_current",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "responsibilities",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "achievements",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "skills_used",
+          "type": "JSON",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_user_skill",
+      "columns": [
+        {
+          "name": "skill_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "skill_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "skill_category",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "proficiency_level",
+          "type": "ENUM('Beginner','Intermediate','Advanced','Expert')",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "years_of_experience",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_verified",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "verified_by_institution_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "endorsement_count",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_user_certification",
+      "columns": [
+        {
+          "name": "certification_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "certification_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "issuing_organization",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "institution_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "issue_date",
+          "type": "DATE",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "expiry_date",
+          "type": "DATE",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "credential_id",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "credential_url",
+          "type": "VARCHAR(500)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "certificate_document_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_verified",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_user_language",
+      "columns": [
+        {
+          "name": "language_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "language_name",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "proficiency_level",
+          "type": "ENUM('Basic','Conversational','Professional','Native')",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "can_read",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "can_write",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "can_speak",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_user_achievement",
+      "columns": [
+        {
+          "name": "achievement_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "achievement_type",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "issuer",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "date_achieved",
+          "type": "DATE",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "url",
+          "type": "VARCHAR(500)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "document_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_user_social_link",
+      "columns": [
+        {
+          "name": "link_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "platform",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "profile_url",
+          "type": "VARCHAR(500)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_verified",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_institution_department",
+      "columns": [
+        {
+          "name": "department_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "institution_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "department_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "head_of_department_user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "contact_email",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "contact_phone",
+          "type": "VARCHAR(30)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_active",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_institution_location",
+      "columns": [
+        {
+          "name": "location_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "institution_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "location_type",
+          "type": "ENUM('Main Campus','Branch','Office','Training Center')",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "address_line1",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "address_line2",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "city",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "state_province",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "country",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "postal_code",
+          "type": "VARCHAR(20)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "latitude",
+          "type": "DECIMAL(10,8)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "longitude",
+          "type": "DECIMAL(11,8)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_primary",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_institution_accreditation",
+      "columns": [
+        {
+          "name": "accreditation_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "institution_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "accrediting_body",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "accreditation_type",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "accreditation_level",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "issue_date",
+          "type": "DATE",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "expiry_date",
+          "type": "DATE",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "certificate_document_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_active",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_institution_ranking",
+      "columns": [
+        {
+          "name": "ranking_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "institution_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "ranking_organization",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "ranking_year",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "overall_rank",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "country_rank",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "category",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "category_rank",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "score",
+          "type": "DECIMAL(5,2)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_institution_facility",
+      "columns": [
+        {
+          "name": "facility_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "institution_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "facility_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "facility_type",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "capacity",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "location_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_available",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_course_module",
+      "columns": [
+        {
+          "name": "module_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "course_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "module_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "module_number",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "duration_hours",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "learning_objectives",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_mandatory",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "order_sequence",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_course_lesson",
+      "columns": [
+        {
+          "name": "lesson_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "module_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "course_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "lesson_title",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "lesson_number",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "content_type",
+          "type": "ENUM('Video','Text','Quiz','Assignment','Live Session')",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "content_url",
+          "type": "VARCHAR(500)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "duration_minutes",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_preview_available",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "order_sequence",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_course_prerequisite",
+      "columns": [
+        {
+          "name": "prerequisite_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "course_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "prerequisite_course_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "prerequisite_type",
+          "type": "ENUM('Course','Skill','Certification','Experience')",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "prerequisite_description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_mandatory",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_course_instructor",
+      "columns": [
+        {
+          "name": "instructor_link_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "course_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "role",
+          "type": "ENUM('Lead Instructor','Co-Instructor','Teaching Assistant','Guest Lecturer')",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "bio",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "specialization",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_course_review",
+      "columns": [
+        {
+          "name": "review_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "course_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "rating",
+          "type": "DECIMAL(2,1)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "review_title",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "review_text",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "helpful_count",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_verified_purchase",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_course_assignment",
+      "columns": [
+        {
+          "name": "assignment_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "course_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "module_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "assignment_type",
+          "type": "ENUM('Quiz','Project','Essay','Practical','Exam')",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "max_score",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "passing_score",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "due_date",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "duration_minutes",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_mandatory",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_user_course_progress",
+      "columns": [
+        {
+          "name": "progress_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "course_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "lesson_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "completion_percentage",
+          "type": "DECIMAL(5,2)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "last_accessed_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "time_spent_minutes",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status",
+          "type": "ENUM('Not Started','In Progress','Completed','Dropped')",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_user_assignment_submission",
+      "columns": [
+        {
+          "name": "submission_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "assignment_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "submission_content",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "submission_file_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "submitted_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "score",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "feedback",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "graded_by_user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "graded_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status",
+          "type": "ENUM('Submitted','Graded','Resubmit Required')",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_job_post_requirement",
+      "columns": [
+        {
+          "name": "requirement_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "job_post_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "requirement_type",
+          "type": "ENUM('Education','Experience','Skill','Certification','Language')",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "requirement_description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_mandatory",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "minimum_years",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "proficiency_level",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_job_post_benefit",
+      "columns": [
+        {
+          "name": "benefit_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "job_post_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "benefit_type",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "benefit_description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_job_application",
+      "columns": [
+        {
+          "name": "application_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "job_post_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "cover_letter",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "resume_document_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "application_status",
+          "type": "ENUM('Applied','Under Review','Shortlisted','Interview Scheduled','Rejected','Accepted','Withdrawn')",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "applied_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_updated_by_user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "notes",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_job_interview",
+      "columns": [
+        {
+          "name": "interview_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "application_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "interview_type",
+          "type": "ENUM('Phone Screen','Video','In-Person','Technical','HR','Final')",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "interview_round",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "scheduled_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "duration_minutes",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "location",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "meeting_link",
+          "type": "VARCHAR(500)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "interviewer_user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status",
+          "type": "ENUM('Scheduled','Completed','Cancelled','Rescheduled')",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "feedback",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "rating",
+          "type": "DECIMAL(2,1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_job_post_question",
+      "columns": [
+        {
+          "name": "question_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "job_post_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "question_text",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "question_type",
+          "type": "ENUM('Text','Multiple Choice','Yes/No','File Upload')",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_required",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "order_sequence",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_job_application_answer",
+      "columns": [
+        {
+          "name": "answer_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "application_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "question_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "answer_text",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "answer_file_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_community_category",
+      "columns": [
+        {
+          "name": "category_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "community_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "category_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "icon",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "color",
+          "type": "VARCHAR(50)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "order_sequence",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_community_rule",
+      "columns": [
+        {
+          "name": "rule_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "community_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "rule_title",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "rule_description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "order_sequence",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_community_event",
+      "columns": [
+        {
+          "name": "event_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "community_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "event_title",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "event_type",
+          "type": "ENUM('Webinar','Workshop','Meetup','Conference','Social')",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "start_datetime",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "end_datetime",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "location",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "meeting_link",
+          "type": "VARCHAR(500)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "max_attendees",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "organizer_user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_community_event_attendee",
+      "columns": [
+        {
+          "name": "attendee_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "event_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "rsvp_status",
+          "type": "ENUM('Going','Maybe','Not Going','Waitlist')",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "attended",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_post_attachment",
+      "columns": [
+        {
+          "name": "attachment_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "post_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_type",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_url",
+          "type": "VARCHAR(500)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_size_kb",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "thumbnail_url",
+          "type": "VARCHAR(500)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_post_tag",
+      "columns": [
+        {
+          "name": "tag_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "tag_name",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": true,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "usage_count",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_post_tag_link",
+      "columns": [
+        {
+          "name": "link_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "post_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "tag_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_market_trend_skill_demand",
+      "columns": [
+        {
+          "name": "demand_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "trend_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "skill_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "demand_level",
+          "type": "ENUM('Low','Medium','High','Very High')",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "growth_rate",
+          "type": "DECIMAL(5,2)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "average_salary_range",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "job_openings_count",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "region",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "industry",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_market_trend_industry",
+      "columns": [
+        {
+          "name": "industry_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "trend_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "industry_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "growth_rate",
+          "type": "DECIMAL(5,2)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "market_size",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "emerging_technologies",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_market_trend_location",
+      "columns": [
+        {
+          "name": "location_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "trend_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "country",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "region",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "city",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "job_market_health",
+          "type": "ENUM('Weak','Fair','Good','Excellent')",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "unemployment_rate",
+          "type": "DECIMAL(5,2)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "average_salary",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "cost_of_living_index",
+          "type": "DECIMAL(5,2)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "top_industries",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_user_skill_endorsement",
+      "columns": [
+        {
+          "name": "endorsement_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "skill_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "endorsed_by_user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "endorsement_comment",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "relationship",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_user_recommendation",
+      "columns": [
+        {
+          "name": "recommendation_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "recommended_by_user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "recommendation_text",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "relationship",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "position_at_time",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_visible",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_notification",
+      "columns": [
+        {
+          "name": "notification_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "notification_type",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "message",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "related_entity_type",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "related_entity_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "action_url",
+          "type": "VARCHAR(500)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_read",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "read_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "priority",
+          "type": "ENUM('Low','Normal','High','Urgent')",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_course_job_post_link",
+      "columns": [
+        {
+          "name": "link_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "course_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "job_post_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "relevance_score",
+          "type": "DECIMAL(3,2)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "matching_skills",
+          "type": "JSON",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "ai_generated",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_course_community_link",
+      "columns": [
+        {
+          "name": "link_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "course_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "community_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "link_type",
+          "type": "ENUM('Official','Study Group','Alumni','Discussion')",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_active",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_job_post_community_link",
+      "columns": [
+        {
+          "name": "link_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "job_post_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "community_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_featured",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "posted_by_user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_market_trend_course_link",
+      "columns": [
+        {
+          "name": "link_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "trend_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "course_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "relevance_score",
+          "type": "DECIMAL(3,2)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "demand_level",
+          "type": "ENUM('Low','Medium','High','Very High')",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "recommendation_reason",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "ai_generated",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_market_trend_job_post_link",
+      "columns": [
+        {
+          "name": "link_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "trend_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "job_post_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "relevance_score",
+          "type": "DECIMAL(3,2)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "growth_potential",
+          "type": "ENUM('Low','Medium','High','Very High')",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "salary_trend",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "ai_generated",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_market_trend_institution_link",
+      "columns": [
+        {
+          "name": "link_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "trend_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "institution_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "relevance_score",
+          "type": "DECIMAL(3,2)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "specialization_areas",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "partnership_opportunities",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "ai_generated",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_user_file",
+      "columns": [
+        {
+          "name": "file_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "original_file_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_type",
+          "type": "ENUM('pdf','image','video','audio','document','spreadsheet','presentation','archive','code','html','markdown','other')",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_extension",
+          "type": "VARCHAR(20)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_location",
+          "type": "VARCHAR(500)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_size_bytes",
+          "type": "BIGINT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "mime_type",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "category",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_verified",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "download_count",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "thumbnail_location",
+          "type": "VARCHAR(500)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_institution_file",
+      "columns": [
+        {
+          "name": "file_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "institution_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "original_file_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_type",
+          "type": "ENUM('pdf','image','video','audio','document','spreadsheet','presentation','archive','code','html','markdown','other')",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_extension",
+          "type": "VARCHAR(20)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_location",
+          "type": "VARCHAR(500)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_size_bytes",
+          "type": "BIGINT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "mime_type",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "category",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_verified",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "download_count",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "thumbnail_location",
+          "type": "VARCHAR(500)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_course_file",
+      "columns": [
+        {
+          "name": "file_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "course_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "module_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "lesson_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "original_file_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_type",
+          "type": "ENUM('pdf','image','video','audio','document','spreadsheet','presentation','archive','code','html','markdown','other')",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_extension",
+          "type": "VARCHAR(20)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_location",
+          "type": "VARCHAR(500)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_size_bytes",
+          "type": "BIGINT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "mime_type",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "category",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_downloadable",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "requires_enrollment",
+          "type": "TINYINT(1)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "download_count",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "thumbnail_location",
+          "type": "VARCHAR(500)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "duration_seconds",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_job_post_file",
+      "columns": [
+        {
+          "name": "file_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "job_post_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "application_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "original_file_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_type",
+          "type": "ENUM('pdf','image','video','audio','document','spreadsheet','presentation','archive','code','html','markdown','other')",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_extension",
+          "type": "VARCHAR(20)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_location",
+          "type": "VARCHAR(500)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_size_bytes",
+          "type": "BIGINT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "mime_type",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "category",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "uploaded_by_user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "download_count",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "thumbnail_location",
+          "type": "VARCHAR(500)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_community_file",
+      "columns": [
+        {
+          "name": "file_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "community_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "post_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "event_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "original_file_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_type",
+          "type": "ENUM('pdf','image','video','audio','document','spreadsheet','presentation','archive','code','html','markdown','other')",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_extension",
+          "type": "VARCHAR(20)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_location",
+          "type": "VARCHAR(500)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_size_bytes",
+          "type": "BIGINT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "mime_type",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "category",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "uploaded_by_user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "download_count",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "thumbnail_location",
+          "type": "VARCHAR(500)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "ems_market_trend_file",
+      "columns": [
+        {
+          "name": "file_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "trend_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "original_file_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_type",
+          "type": "ENUM('pdf','image','video','audio','document','spreadsheet','presentation','archive','code','html','markdown','other')",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_extension",
+          "type": "VARCHAR(20)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_location",
+          "type": "VARCHAR(500)",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "file_size_bytes",
+          "type": "BIGINT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "mime_type",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment",
+          "type": "TEXT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "category",
+          "type": "VARCHAR(100)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "source",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "report_date",
+          "type": "DATE",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "download_count",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "thumbnail_location",
+          "type": "VARCHAR(500)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    }
+  ]
+}

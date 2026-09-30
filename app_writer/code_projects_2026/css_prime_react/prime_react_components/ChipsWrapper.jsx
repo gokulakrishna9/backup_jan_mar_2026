@@ -1,0 +1,313 @@
+/**
+ * ChipsWrapper - Enhanced wrapper for PrimeReact Chips
+ * Category: Form
+ * 
+ * Input for entering multiple values as chips
+ * 
+ * This wrapper provides:
+ * - Simplified event handlers for Redux integration
+ * - Validation hooks
+ * - Lifecycle callbacks
+ * - Embedded component metadata for runtime introspection
+ */
+
+import React, { useEffect, useRef } from 'react';
+import { Chips } from 'primereact/chips';
+
+// Component metadata embedded for runtime access
+export const ChipsMetadata = {
+  "name": "Chips",
+  "import": "Chips",
+  "category": "Form",
+  "metadata": {
+    "description": "Input for entering multiple values as chips",
+    "usageExamples": [
+      "<ChipsWrapper value={tags} onChange={(e) => setTags(e.value)} />",
+      "<ChipsWrapper value={emails} separator=\",\" placeholder=\"Enter emails\" />"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "value",
+        "type": "any[]",
+        "optional": true,
+        "description": "Array of values",
+        "helpText": "Current chip values (controlled component)",
+        "dataTypes": [
+          "string[]",
+          "any[]"
+        ],
+        "examples": [
+          "['tag1', 'tag2']",
+          "['email@example.com']"
+        ]
+      },
+      {
+        "name": "max",
+        "type": "number",
+        "optional": true,
+        "description": "Maximum items",
+        "helpText": "Max number of chips allowed",
+        "dataTypes": [
+          "number"
+        ],
+        "examples": [
+          "5",
+          "10"
+        ]
+      },
+      {
+        "name": "separator",
+        "type": "string",
+        "optional": true,
+        "description": "Separator character",
+        "helpText": "Character that creates new chip (default: Enter)",
+        "dataTypes": [
+          "string"
+        ],
+        "examples": [
+          "','",
+          "';'",
+          "'|'"
+        ]
+      },
+      {
+        "name": "allowDuplicate",
+        "type": "boolean",
+        "optional": true,
+        "description": "Allow duplicates",
+        "helpText": "Allows duplicate values (default: true)",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "optional": true,
+        "description": "Placeholder text",
+        "helpText": "Text shown when empty",
+        "dataTypes": [
+          "string"
+        ],
+        "examples": [
+          "'Enter tags'",
+          "'Add items'"
+        ]
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "optional": true,
+        "description": "Disabled state",
+        "helpText": "Disables the input",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "name": "removable",
+        "type": "boolean",
+        "optional": true,
+        "description": "Show remove icons",
+        "helpText": "Displays X button on chips (default: true)",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes",
+        "helpText": "Supports PrimeFlex utility classes",
+        "examples": [
+          "'w-full'"
+        ]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles",
+        "helpText": "Standard React inline styles",
+        "examples": [
+          "{ width: '100%' }"
+        ]
+      }
+    ],
+    "children": null
+  },
+  "eventHandlers": {
+    "standard": [
+      {
+        "name": "onChange",
+        "type": "(e: { value: any[], target: { value: any[] } }) => void",
+        "description": "Callback when chips change"
+      },
+      {
+        "name": "onAdd",
+        "type": "(e: { value: any }) => void",
+        "description": "Callback when chip is added"
+      },
+      {
+        "name": "onRemove",
+        "type": "(e: { value: any }) => void",
+        "description": "Callback when chip is removed"
+      },
+      {
+        "name": "onFocus",
+        "type": "(e: React.FocusEvent) => void",
+        "description": "Callback when input gains focus"
+      },
+      {
+        "name": "onBlur",
+        "type": "(e: React.FocusEvent) => void",
+        "description": "Callback when input loses focus"
+      }
+    ],
+    "simplified": [
+      {
+        "name": "onValueChange",
+        "type": "(value: any[]) => void",
+        "description": "Simplified callback with just the array"
+      }
+    ],
+    "validation": [
+      {
+        "name": "onValidate",
+        "type": "(value: any[]) => boolean | string",
+        "description": "Validation callback"
+      },
+      {
+        "name": "onError",
+        "type": "(error: string) => void",
+        "description": "Called when validation fails"
+      }
+    ],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "description": "Called when component mounts"
+      },
+      {
+        "name": "onUnmount",
+        "type": "() => void",
+        "description": "Called when component unmounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [
+      "handleChange - Processes onChange event, calls onChange, onValueChange, onValidate",
+      "handleAdd - Processes onAdd event",
+      "handleRemove - Processes onRemove event",
+      "handleFocus - Processes onFocus event",
+      "handleBlur - Processes onBlur event, triggers validation"
+    ],
+    "patterns": [
+      "Check if event handler exists before calling",
+      "Extract value array from event object",
+      "Run validation on blur and change events"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": [],
+    "childrenDescription": "This component does not accept children",
+    "hasChildren": false,
+    "examples": []
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<ChipsWrapper value={tags} onChange={(e) => setTags(e.value)} />",
+    "withStyling": "<ChipsWrapper value={emails} separator=\",\" placeholder=\"Enter emails\" className=\"w-full\" />",
+    "withEvents": "<ChipsWrapper value={items} onChange={handleChange} onAdd={handleAdd} onRemove={handleRemove} />",
+    "withRedux": "<ChipsWrapper value={tagList} onValueChange={(val) => dispatch(setTags(val))} />",
+    "withValidation": "<ChipsWrapper value={tags} max={5} onValidate={(val) => val.length > 0 ? true : 'At least one required'} onError={(err) => setError(err)} />",
+    "withChildren": "N/A"
+  }
+};
+
+const ChipsWrapper = (props) => {
+  const {
+    value, max, separator, allowDuplicate, placeholder, disabled, removable, className, style, onChange, onAdd, onRemove, onFocus, onBlur, onValueChange, onValidate, onError, onMount, onUnmount,
+    ...restProps
+  } = props;
+
+  const componentRef = useRef(null);
+
+  // Lifecycle: onMount
+  useEffect(() => {
+    if (onMount) {
+      onMount();
+    }
+  }, []);
+
+  // Lifecycle: onUnmount
+  useEffect(() => {
+    return () => {
+      if (onUnmount) {
+        onUnmount();
+      }
+    };
+  }, []);
+
+  // Simplified event handler: onValueChange
+  const handleChange = (e) => {
+    if (onChange) {
+      onChange(e);
+    }
+    if (onValueChange) {
+      onValueChange(e.value || e.data || e);
+    }
+  };
+
+  // Build props for underlying PrimeReact component
+  const primeReactProps = {
+    value,
+    max,
+    separator,
+    allowDuplicate,
+    placeholder,
+    disabled,
+    removable,
+    className,
+    style,
+    onChange: handleChange,
+    onAdd,
+    onRemove,
+    onFocus,
+    onBlur,
+    ref: componentRef,
+    ...restProps
+  };
+
+  return (
+    <Chips {...primeReactProps} />
+  );
+};
+
+ChipsWrapper.displayName = 'ChipsWrapper';
+
+export default ChipsWrapper;

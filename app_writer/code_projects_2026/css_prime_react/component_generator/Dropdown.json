@@ -1,0 +1,220 @@
+{
+  "name": "Dropdown",
+  "import": "Dropdown",
+  "category": "Form",
+  "metadata": {
+    "description": "Select component with dropdown list",
+    "usageExamples": [
+      "<DropdownWrapper value={selected} options={cities} onChange={(e) => setSelected(e.value)} />",
+      "<DropdownWrapper value={country} options={countries} optionLabel=\"name\" placeholder=\"Select Country\" />"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "value",
+        "type": "any",
+        "optional": true,
+        "description": "Selected value",
+        "helpText": "Currently selected option value",
+        "dataTypes": ["string", "number", "object", "any"],
+        "examples": ["'USA'", "1", "{ code: 'US', name: 'United States' }"]
+      },
+      {
+        "name": "options",
+        "type": "any[]",
+        "optional": false,
+        "description": "Array of options",
+        "helpText": "List of selectable items - can be primitives or objects",
+        "dataTypes": ["string[]", "number[]", "object[] with optionLabel/optionValue"],
+        "examples": ["['Option 1', 'Option 2']", "[{ label: 'USA', value: 'us' }]", "[{ name: 'John', id: 1 }]"]
+      },
+      {
+        "name": "optionLabel",
+        "type": "string",
+        "optional": true,
+        "description": "Property name for option label",
+        "helpText": "When options are objects, specifies which property to display",
+        "dataTypes": ["string (property name)"],
+        "examples": ["'name'", "'label'", "'title'"]
+      },
+      {
+        "name": "optionValue",
+        "type": "string",
+        "optional": true,
+        "description": "Property name for option value",
+        "helpText": "When options are objects, specifies which property to use as value",
+        "dataTypes": ["string (property name)"],
+        "examples": ["'code'", "'id'", "'value'"]
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "optional": true,
+        "description": "Placeholder text",
+        "helpText": "Text shown when no option is selected",
+        "dataTypes": ["string"],
+        "examples": ["'Select an option'", "'Choose...'"]
+      },
+      {
+        "name": "filter",
+        "type": "boolean",
+        "optional": true,
+        "description": "Enable filtering",
+        "helpText": "Shows search input to filter options",
+        "dataTypes": ["boolean"],
+        "examples": ["true", "false"]
+      },
+      {
+        "name": "filterPlaceholder",
+        "type": "string",
+        "optional": true,
+        "description": "Filter input placeholder",
+        "helpText": "Placeholder for filter search box",
+        "dataTypes": ["string"],
+        "examples": ["'Search...'", "'Type to filter'"]
+      },
+      {
+        "name": "showClear",
+        "type": "boolean",
+        "optional": true,
+        "description": "Show clear button",
+        "helpText": "Displays X button to clear selection",
+        "dataTypes": ["boolean"],
+        "examples": ["true", "false"]
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "optional": true,
+        "description": "Disabled state",
+        "helpText": "Disables the dropdown",
+        "dataTypes": ["boolean"],
+        "examples": ["true", "false"]
+      },
+      {
+        "name": "editable",
+        "type": "boolean",
+        "optional": true,
+        "description": "Enable manual input",
+        "helpText": "Allows typing custom values",
+        "dataTypes": ["boolean"],
+        "examples": ["true", "false"]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes",
+        "helpText": "Supports PrimeFlex utility classes",
+        "examples": ["'w-full'", "'mb-3'"]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles",
+        "helpText": "Standard React inline styles",
+        "examples": ["{ width: '100%' }", "{ minWidth: '200px' }"]
+      }
+    ],
+    "children": null
+  },
+  "eventHandlers": {
+    "standard": [
+      {
+        "name": "onChange",
+        "type": "(e: { value: any, target: { name: string, value: any } }) => void",
+        "description": "Callback when selection changes"
+      },
+      {
+        "name": "onFocus",
+        "type": "(e: React.FocusEvent) => void",
+        "description": "Callback when dropdown gains focus"
+      },
+      {
+        "name": "onBlur",
+        "type": "(e: React.FocusEvent) => void",
+        "description": "Callback when dropdown loses focus"
+      },
+      {
+        "name": "onShow",
+        "type": "() => void",
+        "description": "Callback when dropdown panel opens"
+      },
+      {
+        "name": "onHide",
+        "type": "() => void",
+        "description": "Callback when dropdown panel closes"
+      }
+    ],
+    "simplified": [
+      {
+        "name": "onValueChange",
+        "type": "(value: any) => void",
+        "description": "Simplified callback with just the value"
+      }
+    ],
+    "validation": [
+      {
+        "name": "onValidate",
+        "type": "(value: any) => boolean | string",
+        "description": "Validation callback - return true/false or error message"
+      },
+      {
+        "name": "onError",
+        "type": "(error: string) => void",
+        "description": "Called when validation fails"
+      }
+    ],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "description": "Called when component mounts"
+      },
+      {
+        "name": "onUnmount",
+        "type": "() => void",
+        "description": "Called when component unmounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [
+      "handleChange - Processes onChange event, calls onChange, onValueChange, onValidate",
+      "handleFocus - Processes onFocus event",
+      "handleBlur - Processes onBlur event, triggers validation",
+      "handleShow - Processes onShow event",
+      "handleHide - Processes onHide event"
+    ],
+    "patterns": [
+      "Check if event handler exists before calling",
+      "Extract value from event object for simplified callbacks",
+      "Run validation on blur and change events",
+      "Call lifecycle methods in useEffect hooks"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": [],
+    "childrenDescription": "This component does not accept children",
+    "hasChildren": false,
+    "examples": []
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<DropdownWrapper value={selected} options={['Option 1', 'Option 2']} onChange={(e) => setSelected(e.value)} />",
+    "withStyling": "<DropdownWrapper value={city} options={cities} className=\"w-full mb-3\" style={{ minWidth: '200px' }} />",
+    "withEvents": "<DropdownWrapper value={country} options={countries} onChange={handleChange} onFocus={() => console.log('focused')} onBlur={handleBlur} />",
+    "withRedux": "<DropdownWrapper value={selectedUser} options={users} onValueChange={(val) => dispatch(setUser(val))} />",
+    "withValidation": "<DropdownWrapper value={category} options={categories} onValidate={(val) => val ? true : 'Required'} onError={(err) => setError(err)} />",
+    "withChildren": "N/A"
+  }
+}

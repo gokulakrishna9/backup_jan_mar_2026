@@ -1,0 +1,130 @@
+### KIRO DO NOT READ OR MODIFY THIS FILE, THIS IS FOR MY REFERENCE AND TRACKING
+### Layers
+1## Auth
+1#  JwtConfig.java
+1.
+2#  JwtService.java
+1.  
+2## Config
+1#  DatabaseConfig.java
+1.  Used to apply @EnableR2dbcRepositories.
+2.  Has no other code.
+2#  PasswordEncoderConfig.java
+1.  Using BCryptPasswordEncoder.
+3#  SecurityConfig.java
+1.  SecurityWebFilterChain, csrf, cors, https, exceptionHandling(authenticationEntryPoint, accessDeniedHandler), authorizeExchange, jwtAuthenticationFilter
+2.  Authentication Entry Sets exception handling response.
+4#  SwaggerConfig.java
+1.  Swagger configuration object.
+5#  WebSecurityProperties.java
+1.  Used in security config, contains static classes.
+3## Controller
+1#  ActivityTrackingController.java
+1.  get user activity, get activity for a specific entity, login history of a specific user.
+2.  grant user permission history
+3.  Get restorable records
+4.  get deleted reocrds
+2#  AdminController.java
+1.  Get current user, check if user is in super user group, db query.
+2.  Admin dashboard page.
+3.  list groups
+4.  list users
+5.  view user
+6.  addUserToGroup
+7.  removeUserFromGroup
+8.  listDocumentGroups
+9.  viewDocumentGroup
+10. grantPermission
+3#  AuditController.java{TODO's pending}
+1.  access-logs/me -> current user logs.
+2.  access-logs/user/{userId}
+3.  super-user-logs/user/{userId}
+4.  access-logs/record
+5.  /denied-access
+4#  AuthController.java{username, password}
+1.  /login
+2.  /register
+3.  /change-password
+4.  /me
+5#  OAuth2Controller.java
+1.  /providers
+2.  /login/{providerName}
+3.  /callback/{providerName}
+6#  SetupController.java
+1.  /setup
+2.  /login
+3.  /setup
+7#  Sample Business Data Points
+1.  
+8#  Payment Controllers
+1.
+4## DTO
+1#  Sample set of DTOs
+1.
+5## Entity
+1#  AccessAuditLog.java
+1.
+2#  AccessControl.java
+1.
+3#  AuthUser.java
+1.
+4#  CrudActivityLog.java
+1.
+5#  LoginActivityLog.java
+1.
+6#  OAuth2LinkedAccount.java
+1.
+7#  OAuth2Provider.java
+1.
+8#  SubscriptionPaymentHistory.java
+1.
+9#  SuperUserActionLog.java
+1.
+10# SystemConfig.java
+1.
+11# Sample Entity List
+1.
+6## Exception
+1#
+1.
+7## Repository
+1#
+1.
+8## Security
+1#
+1.
+9## Service
+1#  ActivityTrackingService.java
+1.  CrudActivityLogRepository, DeletedRecordRepository, LoginActivityLogRepository, grantActivityLogRepository, objectMapper.
+2.  logCreate --> What's a userAgent field?
+3.  logRead
+4.  logUpdate
+5.  logDelete
+6.  logFailedOperation
+7.  logLogin
+8.  logLogout
+9.  logFailedLogin
+10. logGrant
+11. logRevoke
+12. getUserCrudActivity
+13. getEntityHistory
+14. getUserLoginHistory
+15. getUserGrantHistory
+16. getRestorableRecords
+17. getDeletedRecord
+18. getIpAddress
+19. getUserAgent
+2#  AdminService.java
+1.  
+3#  AuditLoggingService.java
+1.
+4#  AuthorizationService.java
+1.
+5#  AuthService.java
+1.
+6#  OAuth2Service.java
+1.
+7#  PermissionResolver.java
+1.
+8#  SubscriptionPaymentHistoryService.java
+1.

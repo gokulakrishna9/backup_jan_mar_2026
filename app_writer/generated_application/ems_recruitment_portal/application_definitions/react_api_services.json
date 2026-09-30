@@ -1,0 +1,4102 @@
+[
+  {
+    "entityName": "User",
+    "basePath": "/api/users",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "UserPropertyGroup",
+    "basePath": "/api/userpropertygroups",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "UserProperty",
+    "basePath": "/api/userpropertys",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "Institution",
+    "basePath": "/api/institutions",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "InstitutionPropertyGroup",
+    "basePath": "/api/institutionpropertygroups",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "InstitutionProperty",
+    "basePath": "/api/institutionpropertys",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "CandidateInstituteLink",
+    "basePath": "/api/candidateinstitutelinks",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "UserInstitutePropertyLink",
+    "basePath": "/api/userinstitutepropertylinks",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "Course",
+    "basePath": "/api/courses",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "CoursePropertyGroup",
+    "basePath": "/api/coursepropertygroups",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "CourseProperty",
+    "basePath": "/api/coursepropertys",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "UserCourseLink",
+    "basePath": "/api/usercourselinks",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "UserCourseWishlist",
+    "basePath": "/api/usercoursewishlists",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "UserCoursePurchase",
+    "basePath": "/api/usercoursepurchases",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "JobPost",
+    "basePath": "/api/jobposts",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "JobPostPropertyGroup",
+    "basePath": "/api/jobpostpropertygroups",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "JobPostProperty",
+    "basePath": "/api/jobpostpropertys",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "UserJobPostBookmark",
+    "basePath": "/api/userjobpostbookmarks",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "JobPostUserBookmark",
+    "basePath": "/api/jobpostuserbookmarks",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "SubscriptionPaymentHistory",
+    "basePath": "/api/subscriptionpaymenthistorys",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "Community",
+    "basePath": "/api/communitys",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "CommunityPropertyGroup",
+    "basePath": "/api/communitypropertygroups",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "CommunityProperty",
+    "basePath": "/api/communitypropertys",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "CommunityUserLink",
+    "basePath": "/api/communityuserlinks",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "CommunityPropertyUserLink",
+    "basePath": "/api/communitypropertyuserlinks",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "CommunityUserPost",
+    "basePath": "/api/communityuserposts",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "CommunityPostLink",
+    "basePath": "/api/communitypostlinks",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "PostEmogi",
+    "basePath": "/api/postemogis",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "EmogiPostUserLink",
+    "basePath": "/api/emogipostuserlinks",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "PostFlag",
+    "basePath": "/api/postflags",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "PostComment",
+    "basePath": "/api/postcomments",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "PostCommentEmogiLink",
+    "basePath": "/api/postcommentemogilinks",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "AiUserProfileEvaluationParameterGroup",
+    "basePath": "/api/aiuserprofileevaluationparametergroups",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "AiUserProfileEvaluationParameter",
+    "basePath": "/api/aiuserprofileevaluationparameters",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "AiUserProfileEvaluation",
+    "basePath": "/api/aiuserprofileevaluations",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "AiEvaluationParameterGroup",
+    "basePath": "/api/aievaluationparametergroups",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "AiEvaluationParameter",
+    "basePath": "/api/aievaluationparameters",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "AiInstitutionProfileEvaluation",
+    "basePath": "/api/aiinstitutionprofileevaluations",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "AiJobRecommendation",
+    "basePath": "/api/aijobrecommendations",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "AiCommunityPostEvaluation",
+    "basePath": "/api/aicommunitypostevaluations",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "AiMarketTrendParameterGroup",
+    "basePath": "/api/aimarkettrendparametergroups",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "AiMarketTrendParameter",
+    "basePath": "/api/aimarkettrendparameters",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "AiMarketTrendProperty",
+    "basePath": "/api/aimarkettrendpropertys",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "UserProfileDocument",
+    "basePath": "/api/userprofiledocuments",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "InstitutionProfileDocument",
+    "basePath": "/api/institutionprofiledocuments",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "CourseDocumentGroup",
+    "basePath": "/api/coursedocumentgroups",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "CourseDocument",
+    "basePath": "/api/coursedocuments",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "MarketTrendDocument",
+    "basePath": "/api/markettrenddocuments",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "JobPostDocument",
+    "basePath": "/api/jobpostdocuments",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "UserEducation",
+    "basePath": "/api/usereducations",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "UserWorkExperience",
+    "basePath": "/api/userworkexperiences",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "UserSkill",
+    "basePath": "/api/userskills",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "UserCertification",
+    "basePath": "/api/usercertifications",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "UserLanguage",
+    "basePath": "/api/userlanguages",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "UserAchievement",
+    "basePath": "/api/userachievements",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "UserSocialLink",
+    "basePath": "/api/usersociallinks",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "InstitutionDepartment",
+    "basePath": "/api/institutiondepartments",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "InstitutionLocation",
+    "basePath": "/api/institutionlocations",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "InstitutionAccreditation",
+    "basePath": "/api/institutionaccreditations",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "InstitutionRanking",
+    "basePath": "/api/institutionrankings",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "InstitutionFacility",
+    "basePath": "/api/institutionfacilitys",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "CourseModule",
+    "basePath": "/api/coursemodules",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "CourseLesson",
+    "basePath": "/api/courselessons",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "CoursePrerequisite",
+    "basePath": "/api/courseprerequisites",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "CourseInstructor",
+    "basePath": "/api/courseinstructors",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "CourseReview",
+    "basePath": "/api/coursereviews",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "CourseAssignment",
+    "basePath": "/api/courseassignments",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "UserCourseProgress",
+    "basePath": "/api/usercourseprogresss",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "UserAssignmentSubmission",
+    "basePath": "/api/userassignmentsubmissions",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "JobPostRequirement",
+    "basePath": "/api/jobpostrequirements",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "JobPostBenefit",
+    "basePath": "/api/jobpostbenefits",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "JobApplication",
+    "basePath": "/api/jobapplications",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "JobInterview",
+    "basePath": "/api/jobinterviews",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "JobPostQuestion",
+    "basePath": "/api/jobpostquestions",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "JobApplicationAnswer",
+    "basePath": "/api/jobapplicationanswers",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "CommunityCategory",
+    "basePath": "/api/communitycategorys",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "CommunityRule",
+    "basePath": "/api/communityrules",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "CommunityEvent",
+    "basePath": "/api/communityevents",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "CommunityEventAttendee",
+    "basePath": "/api/communityeventattendees",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "PostAttachment",
+    "basePath": "/api/postattachments",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "PostTag",
+    "basePath": "/api/posttags",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "PostTagLink",
+    "basePath": "/api/posttaglinks",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "MarketTrendSkillDemand",
+    "basePath": "/api/markettrendskilldemands",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "MarketTrendIndustry",
+    "basePath": "/api/markettrendindustrys",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "MarketTrendLocation",
+    "basePath": "/api/markettrendlocations",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "UserSkillEndorsement",
+    "basePath": "/api/userskillendorsements",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "UserRecommendation",
+    "basePath": "/api/userrecommendations",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "Notification",
+    "basePath": "/api/notifications",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "CourseJobPostLink",
+    "basePath": "/api/coursejobpostlinks",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "CourseCommunityLink",
+    "basePath": "/api/coursecommunitylinks",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "JobPostCommunityLink",
+    "basePath": "/api/jobpostcommunitylinks",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "MarketTrendCourseLink",
+    "basePath": "/api/markettrendcourselinks",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "MarketTrendJobPostLink",
+    "basePath": "/api/markettrendjobpostlinks",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "MarketTrendInstitutionLink",
+    "basePath": "/api/markettrendinstitutionlinks",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "UserFile",
+    "basePath": "/api/userfiles",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "InstitutionFile",
+    "basePath": "/api/institutionfiles",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "CourseFile",
+    "basePath": "/api/coursefiles",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "JobPostFile",
+    "basePath": "/api/jobpostfiles",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "CommunityFile",
+    "basePath": "/api/communityfiles",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  },
+  {
+    "entityName": "MarketTrendFile",
+    "basePath": "/api/markettrendfiles",
+    "endpoints": {
+      "create": {
+        "enabled": true,
+        "method": "POST",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getById": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "getAll": {
+        "enabled": true,
+        "method": "GET",
+        "supportsPagination": true,
+        "supportsFiltering": true,
+        "supportsSorting": true
+      },
+      "update": {
+        "enabled": true,
+        "method": "PUT",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      },
+      "delete": {
+        "enabled": true,
+        "method": "DELETE",
+        "supportsPagination": false,
+        "supportsFiltering": false,
+        "supportsSorting": false
+      }
+    }
+  }
+]

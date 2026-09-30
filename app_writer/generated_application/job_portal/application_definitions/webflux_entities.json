@@ -1,0 +1,2311 @@
+{
+  "entities": [
+    {
+      "name": "student_profile",
+      "columns": [
+        {
+          "name": "student_profile_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "resume_url",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "skills",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "education_level",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "employer_profile",
+      "columns": [
+        {
+          "name": "employer_profile_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "company_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "industry",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "website",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "logo_url",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "contact_email",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "trainer_profile",
+      "columns": [
+        {
+          "name": "trainer_profile_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "specialization",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "certifications",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "hourly_rate",
+          "type": "DECIMAL(19,4)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "job_posting",
+      "columns": [
+        {
+          "name": "job_posting_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "location",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "salary_min",
+          "type": "DECIMAL(19,4)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "salary_max",
+          "type": "DECIMAL(19,4)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "job_type",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "training_program",
+      "columns": [
+        {
+          "name": "training_program_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "duration_days",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "price",
+          "type": "DECIMAL(19,4)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "job_application",
+      "columns": [
+        {
+          "name": "job_application_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "cover_letter",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "applied_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "training_enrollment",
+      "columns": [
+        {
+          "name": "training_enrollment_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "progress",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "enrolled_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "user_profile",
+      "columns": [
+        {
+          "name": "user_profile_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "first_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "last_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "bio",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "education_level",
+      "columns": [
+        {
+          "name": "education_level_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "sort_order",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "field_of_study",
+      "columns": [
+        {
+          "name": "field_of_study_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "institution",
+      "columns": [
+        {
+          "name": "institution_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "country",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "website",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "user_education",
+      "columns": [
+        {
+          "name": "user_education_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "institution_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "degree",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "field_of_study",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "start_date",
+          "type": "DATE",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "end_date",
+          "type": "DATE",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "grade",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "industry",
+      "columns": [
+        {
+          "name": "industry_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "job_title",
+      "columns": [
+        {
+          "name": "job_title_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "user_work_experience",
+      "columns": [
+        {
+          "name": "user_work_experience_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "company_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "job_title",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "industry",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "location",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "start_date",
+          "type": "DATE",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "end_date",
+          "type": "DATE",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_current",
+          "type": "BOOLEAN",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "skill_category",
+      "columns": [
+        {
+          "name": "skill_category_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "skill",
+      "columns": [
+        {
+          "name": "skill_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "category",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "user_skill",
+      "columns": [
+        {
+          "name": "user_skill_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "skill_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "proficiency_level",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "years_of_experience",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "training_module",
+      "columns": [
+        {
+          "name": "training_module_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "module_order",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "duration_minutes",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "content_url",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "module_progress",
+      "columns": [
+        {
+          "name": "module_progress_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "completed_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "progress_percent",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "training_exam",
+      "columns": [
+        {
+          "name": "training_exam_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "passing_score",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "max_score",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "time_limit_minutes",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "max_attempts",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "exam_attempt",
+      "columns": [
+        {
+          "name": "exam_attempt_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "score",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "passed",
+          "type": "BOOLEAN",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "started_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "completed_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "attempt_number",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "training_certification",
+      "columns": [
+        {
+          "name": "training_certification_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "certificate_number",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "issued_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "expires_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "certificate_url",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "course_document",
+      "columns": [
+        {
+          "name": "course_document_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "content",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "sort_order",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "course_video",
+      "columns": [
+        {
+          "name": "course_video_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "video_url",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "duration_seconds",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "sort_order",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "course_audio",
+      "columns": [
+        {
+          "name": "course_audio_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "audio_url",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "duration_seconds",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "sort_order",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "course_code_lab",
+      "columns": [
+        {
+          "name": "course_code_lab_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "language",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "starter_code",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "solution_code",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "instructions",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "sort_order",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "exam_question",
+      "columns": [
+        {
+          "name": "exam_question_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "question_text",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "question_code",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "question_type",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "points",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "sort_order",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "exam_answer",
+      "columns": [
+        {
+          "name": "exam_answer_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "answer_text",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "answer_code",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_correct",
+          "type": "BOOLEAN",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "explanation",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "sort_order",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "course_question",
+      "columns": [
+        {
+          "name": "course_question_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "question_text",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "question_code",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "sort_order",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "course_answer",
+      "columns": [
+        {
+          "name": "course_answer_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "answer_text",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "answer_code",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_accepted",
+          "type": "BOOLEAN",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "upvotes",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "company",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "industry",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "website",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "location",
+      "columns": [
+        {
+          "name": "location_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "city",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "country",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    }
+  ]
+}

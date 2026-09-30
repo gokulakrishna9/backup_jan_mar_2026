@@ -1,0 +1,855 @@
+{
+  "entities": [
+    {
+      "name": "user",
+      "columns": [
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "username",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "encrypted_password",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "first_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "last_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "role",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "category",
+      "columns": [
+        {
+          "name": "category_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "category_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "image_url",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "parent_category_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "product",
+      "columns": [
+        {
+          "name": "product_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "product_name",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "price",
+          "type": "DECIMAL(19,4)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "stock_quantity",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "image_url",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "sku",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "category_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "cart",
+      "columns": [
+        {
+          "name": "cart_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "total_amount",
+          "type": "DECIMAL(19,4)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "item_count",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "cart_item",
+      "columns": [
+        {
+          "name": "cart_item_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "cart_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "product_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "quantity",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "unit_price",
+          "type": "DECIMAL(19,4)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "subtotal",
+          "type": "DECIMAL(19,4)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "address",
+      "columns": [
+        {
+          "name": "address_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "address_line1",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "address_line2",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "city",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "postal_code",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "country",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "is_default",
+          "type": "BOOLEAN",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "order",
+      "columns": [
+        {
+          "name": "order_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "order_date",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "total_amount",
+          "type": "DECIMAL(19,4)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "shipping_address_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "tracking_number",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "notes",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "order_item",
+      "columns": [
+        {
+          "name": "order_item_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "order_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "product_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "quantity",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "unit_price",
+          "type": "DECIMAL(19,4)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "subtotal",
+          "type": "DECIMAL(19,4)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "payment",
+      "columns": [
+        {
+          "name": "payment_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "order_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "payment_method",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "amount",
+          "type": "DECIMAL(19,4)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "payment_date",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "transaction_id",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "review",
+      "columns": [
+        {
+          "name": "review_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": true,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "product_id",
+          "type": "BIGINT UNSIGNED",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "rating",
+          "type": "INT",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment",
+          "type": "VARCHAR(255)",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "review_date",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": true,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "primaryKey": false,
+          "nullable": false,
+          "foreignKey": null,
+          "unique": false,
+          "defaultValue": null
+        }
+      ]
+    }
+  ]
+}

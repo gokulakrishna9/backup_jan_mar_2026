@@ -1,0 +1,445 @@
+/**
+ * CalendarWrapper - Enhanced wrapper for PrimeReact Calendar
+ * Category: Form
+ * 
+ * Date picker component
+ * 
+ * This wrapper provides:
+ * - Simplified event handlers for Redux integration
+ * - Validation hooks
+ * - Lifecycle callbacks
+ * - Embedded component metadata for runtime introspection
+ */
+
+import React, { useEffect, useRef } from 'react';
+import { Calendar } from 'primereact/calendar';
+
+// Component metadata embedded for runtime access
+export const CalendarMetadata = {
+  "name": "Calendar",
+  "import": "Calendar",
+  "category": "Form",
+  "metadata": {
+    "description": "Date picker component",
+    "usageExamples": [
+      "<CalendarWrapper value={date} onChange={(e) => setDate(e.value)} />",
+      "<CalendarWrapper value={dateRange} selectionMode=\"range\" showTime />"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "value",
+        "type": "Date | Date[] | null",
+        "optional": true,
+        "description": "Selected date(s)",
+        "helpText": "Single date, array of dates, or date range",
+        "dataTypes": [
+          "Date",
+          "Date[]",
+          "null"
+        ],
+        "examples": [
+          "new Date()",
+          "[new Date(), new Date()]",
+          "null"
+        ]
+      },
+      {
+        "name": "selectionMode",
+        "type": "'single' | 'multiple' | 'range'",
+        "optional": true,
+        "description": "Selection mode",
+        "helpText": "single=one date, multiple=multiple dates, range=date range",
+        "dataTypes": [
+          "'single' (default)",
+          "'multiple'",
+          "'range'"
+        ],
+        "examples": [
+          "'single'",
+          "'range'"
+        ]
+      },
+      {
+        "name": "dateFormat",
+        "type": "string",
+        "optional": true,
+        "description": "Date format pattern",
+        "helpText": "Format for displaying date (mm/dd/yy, dd.mm.yy, etc.)",
+        "dataTypes": [
+          "string (date format pattern)"
+        ],
+        "examples": [
+          "'mm/dd/yy'",
+          "'dd.mm.yy'",
+          "'yy-mm-dd'"
+        ]
+      },
+      {
+        "name": "showTime",
+        "type": "boolean",
+        "optional": true,
+        "description": "Show time picker",
+        "helpText": "Enables time selection",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "name": "timeOnly",
+        "type": "boolean",
+        "optional": true,
+        "description": "Time picker only",
+        "helpText": "Shows only time picker without date",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "name": "showIcon",
+        "type": "boolean",
+        "optional": true,
+        "description": "Show calendar icon",
+        "helpText": "Displays calendar icon button",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "name": "inline",
+        "type": "boolean",
+        "optional": true,
+        "description": "Inline mode",
+        "helpText": "Always visible calendar (not popup)",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "name": "minDate",
+        "type": "Date",
+        "optional": true,
+        "description": "Minimum selectable date",
+        "helpText": "Dates before this are disabled",
+        "dataTypes": [
+          "Date"
+        ],
+        "examples": [
+          "new Date()",
+          "new Date('2024-01-01')"
+        ]
+      },
+      {
+        "name": "maxDate",
+        "type": "Date",
+        "optional": true,
+        "description": "Maximum selectable date",
+        "helpText": "Dates after this are disabled",
+        "dataTypes": [
+          "Date"
+        ],
+        "examples": [
+          "new Date()",
+          "new Date('2024-12-31')"
+        ]
+      },
+      {
+        "name": "disabledDates",
+        "type": "Date[]",
+        "optional": true,
+        "description": "Array of disabled dates",
+        "helpText": "Specific dates that cannot be selected",
+        "dataTypes": [
+          "Date[]"
+        ],
+        "examples": [
+          "[new Date('2024-12-25')]"
+        ]
+      },
+      {
+        "name": "disabledDays",
+        "type": "number[]",
+        "optional": true,
+        "description": "Disabled days of week",
+        "helpText": "0=Sunday, 1=Monday, etc.",
+        "dataTypes": [
+          "number[] (0-6)"
+        ],
+        "examples": [
+          "[0, 6]",
+          "[0]"
+        ]
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "optional": true,
+        "description": "Placeholder text",
+        "helpText": "Text shown when no date selected",
+        "dataTypes": [
+          "string"
+        ],
+        "examples": [
+          "'Select a date'",
+          "'mm/dd/yyyy'"
+        ]
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "optional": true,
+        "description": "Disabled state",
+        "helpText": "Disables the calendar",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "name": "readOnlyInput",
+        "type": "boolean",
+        "optional": true,
+        "description": "Read-only input",
+        "helpText": "Input field is read-only (calendar still works)",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "name": "showButtonBar",
+        "type": "boolean",
+        "optional": true,
+        "description": "Show button bar",
+        "helpText": "Shows Today/Clear buttons",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes",
+        "helpText": "Supports PrimeFlex utility classes",
+        "examples": [
+          "'w-full'",
+          "'mb-3'"
+        ]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles",
+        "helpText": "Standard React inline styles",
+        "examples": [
+          "{ width: '100%' }"
+        ]
+      }
+    ],
+    "children": null
+  },
+  "eventHandlers": {
+    "standard": [
+      {
+        "name": "onChange",
+        "type": "(e: { value: Date | Date[] | null }) => void",
+        "description": "Callback when date selection changes"
+      },
+      {
+        "name": "onSelect",
+        "type": "(e: { value: Date }) => void",
+        "description": "Callback when a date is selected"
+      },
+      {
+        "name": "onFocus",
+        "type": "(e: React.FocusEvent) => void",
+        "description": "Callback when calendar gains focus"
+      },
+      {
+        "name": "onBlur",
+        "type": "(e: React.FocusEvent) => void",
+        "description": "Callback when calendar loses focus"
+      },
+      {
+        "name": "onShow",
+        "type": "() => void",
+        "description": "Callback when calendar panel opens"
+      },
+      {
+        "name": "onHide",
+        "type": "() => void",
+        "description": "Callback when calendar panel closes"
+      }
+    ],
+    "simplified": [
+      {
+        "name": "onValueChange",
+        "type": "(value: Date | Date[] | null) => void",
+        "description": "Simplified callback with just the date value"
+      }
+    ],
+    "validation": [
+      {
+        "name": "onValidate",
+        "type": "(value: Date | Date[] | null) => boolean | string",
+        "description": "Validation callback"
+      },
+      {
+        "name": "onError",
+        "type": "(error: string) => void",
+        "description": "Called when validation fails"
+      }
+    ],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "description": "Called when component mounts"
+      },
+      {
+        "name": "onUnmount",
+        "type": "() => void",
+        "description": "Called when component unmounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [
+      "handleChange - Processes onChange event, calls onChange, onValueChange, onValidate",
+      "handleSelect - Processes onSelect event",
+      "handleFocus - Processes onFocus event",
+      "handleBlur - Processes onBlur event, triggers validation",
+      "handleShow - Processes onShow event",
+      "handleHide - Processes onHide event"
+    ],
+    "patterns": [
+      "Check if event handler exists before calling",
+      "Extract date value from event object",
+      "Run validation on blur and change events",
+      "Call lifecycle methods in useEffect hooks"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": [],
+    "childrenDescription": "This component does not accept children",
+    "hasChildren": false,
+    "examples": []
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<CalendarWrapper value={date} onChange={(e) => setDate(e.value)} />",
+    "withStyling": "<CalendarWrapper value={date} onChange={(e) => setDate(e.value)} className=\"w-full\" showIcon />",
+    "withEvents": "<CalendarWrapper value={date} onChange={handleChange} onSelect={handleSelect} onShow={() => console.log('opened')} />",
+    "withRedux": "<CalendarWrapper value={selectedDate} onValueChange={(val) => dispatch(setDate(val))} />",
+    "withValidation": "<CalendarWrapper value={date} onValidate={(val) => val ? true : 'Date required'} onError={(err) => setError(err)} />",
+    "withChildren": "N/A"
+  }
+};
+
+const CalendarWrapper = (props) => {
+  const {
+    value, selectionMode, dateFormat, showTime, timeOnly, showIcon, inline, minDate, maxDate, disabledDates, disabledDays, placeholder, disabled, readOnlyInput, showButtonBar, className, style, onChange, onSelect, onFocus, onBlur, onShow, onHide, onValueChange, onValidate, onError, onMount, onUnmount,
+    ...restProps
+  } = props;
+
+  const componentRef = useRef(null);
+
+  // Lifecycle: onMount
+  useEffect(() => {
+    if (onMount) {
+      onMount();
+    }
+  }, []);
+
+  // Lifecycle: onUnmount
+  useEffect(() => {
+    return () => {
+      if (onUnmount) {
+        onUnmount();
+      }
+    };
+  }, []);
+
+  // Simplified event handler: onValueChange
+  const handleChange = (e) => {
+    if (onChange) {
+      onChange(e);
+    }
+    if (onValueChange) {
+      onValueChange(e.value || e.data || e);
+    }
+  };
+
+  // Build props for underlying PrimeReact component
+  const primeReactProps = {
+    value,
+    selectionMode,
+    dateFormat,
+    showTime,
+    timeOnly,
+    showIcon,
+    inline,
+    minDate,
+    maxDate,
+    disabledDates,
+    disabledDays,
+    placeholder,
+    disabled,
+    readOnlyInput,
+    showButtonBar,
+    className,
+    style,
+    onChange: handleChange,
+    onSelect,
+    onFocus,
+    onBlur,
+    onShow,
+    onHide,
+    ref: componentRef,
+    ...restProps
+  };
+
+  return (
+    <Calendar {...primeReactProps} />
+  );
+};
+
+CalendarWrapper.displayName = 'CalendarWrapper';
+
+export default CalendarWrapper;

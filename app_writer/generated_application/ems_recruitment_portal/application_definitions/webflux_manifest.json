@@ -1,0 +1,23 @@
+{
+  "version": "2.5",
+  "format": "split",
+  "description": "Application definition split into multiple files by layer",
+  "files": {
+    "project_metadata": "webflux_project_metadata.json",
+    "entities": "webflux_entities.json",
+    "relationships": "webflux_relationships.json",
+    "entity_layer": "webflux_entity_layer.json",
+    "repository_layer": "webflux_repository_layer.json",
+    "service_layer": "webflux_service_layer.json",
+    "controller_layer": "webflux_controller_layer.json",
+    "dto_layer": "webflux_dto_layer.json",
+    "query_layer": "webflux_query_layer.json",
+    "filter_layer": "webflux_filter_layer.json",
+    "group_definition_layer": "webflux_group_definition_layer.json"
+  },
+  "statistics": {
+    "total_entities": 100,
+    "total_relationships": 0,
+    "total_columns": 709
+  }
+}

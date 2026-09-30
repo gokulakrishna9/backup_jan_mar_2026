@@ -1,0 +1,934 @@
+[
+  {
+    "id": 1,
+    "timestamp": "2026-04-01T15:32:13.269895",
+    "topic": "App architecture: job portal",
+    "category": "decision",
+    "query": "Build a job portal with students, employers, trainers interacting",
+    "response": "Three user types, subscription-based access via authorization groups",
+    "status": "decided",
+    "tags": [
+      "architecture"
+    ],
+    "relatedEntities": [],
+    "app": "job_portal"
+  },
+  {
+    "id": 2,
+    "timestamp": "2026-04-01T15:32:13.270893",
+    "topic": "User roles via authorization groups",
+    "category": "decision",
+    "query": "No role fields on UserProfile — access controlled entirely through authorization groups (table/query access)",
+    "response": "Users get default USER role, subscription determines table access",
+    "status": "decided",
+    "tags": [
+      "auth",
+      "architecture"
+    ],
+    "relatedEntities": [],
+    "app": "job_portal"
+  },
+  {
+    "id": 3,
+    "timestamp": "2026-04-01T15:32:13.273420",
+    "topic": "Single record per user",
+    "category": "decision",
+    "query": "Profile entities (UserProfile, StudentProfile, EmployerProfile, TrainerProfile) allow only one record per user",
+    "response": "Implemented singleRecordPerUser flag across swfaw/reaw/app_def_manager",
+    "status": "decided",
+    "tags": [
+      "feature",
+      "singleRecordPerUser"
+    ],
+    "relatedEntities": [],
+    "app": "job_portal"
+  },
+  {
+    "id": 4,
+    "timestamp": "2026-04-01T15:32:13.275669",
+    "topic": "Common profile fields",
+    "category": "decision",
+    "query": "Extracted common fields (firstName, lastName, email, phone, bio) into UserProfile",
+    "response": "Role-specific profiles keep only their unique fields",
+    "status": "decided",
+    "tags": [
+      "refactoring"
+    ],
+    "relatedEntities": [],
+    "app": "job_portal"
+  },
+  {
+    "id": 5,
+    "timestamp": "2026-04-01T15:32:13.276671",
+    "topic": "Entity design",
+    "category": "discussion",
+    "query": "Designed 33 entities across profiles, user data, jobs, training, course content, Q&A, and masters",
+    "response": "Entities organized into categories: Profile(4), User Data(3), Jobs(2), Training(7), Course Content(4), Q&A(4), Master(9)",
+    "status": "noted",
+    "tags": [
+      "entities"
+    ],
+    "relatedEntities": [],
+    "app": "job_portal"
+  },
+  {
+    "id": 6,
+    "timestamp": "2026-04-01T15:32:13.278669",
+    "topic": "React UI structure",
+    "category": "discussion",
+    "query": "Defined navigation with 7 groups: Dashboard, My Profile, My Resume, Jobs, Training, My Learning, Masters",
+    "response": "Tabbed forms for Profile, Resume, Training Program, Exams, Q&A groups",
+    "status": "noted",
+    "tags": [
+      "react",
+      "ui"
+    ],
+    "relatedEntities": [],
+    "app": "job_portal"
+  },
+  {
+    "id": 7,
+    "timestamp": "2026-04-01T15:32:13.279668",
+    "topic": "Theme selection",
+    "category": "discussion",
+    "query": "Scraped Sakai PrimeReact theme for the job portal",
+    "response": "Indigo accent (#6366F1), Inter font, clean light background",
+    "status": "noted",
+    "tags": [
+      "theme",
+      "react"
+    ],
+    "relatedEntities": [],
+    "app": "job_portal"
+  },
+  {
+    "id": 8,
+    "timestamp": "2026-04-01T15:32:13.281669",
+    "topic": "Add entity relationships",
+    "category": "task",
+    "query": "Define FK relationships between all 33 entities (e.g., JobApplication→StudentProfile+JobPosting)",
+    "response": "Relationships not yet added to webflux_relationships.json",
+    "status": "open",
+    "priority": "high",
+    "tags": [
+      "relationships"
+    ],
+    "relatedEntities": [],
+    "app": "workspace"
+  },
+  {
+    "id": 9,
+    "timestamp": "2026-04-01T15:32:13.283670",
+    "topic": "Fix React register page",
+    "category": "task",
+    "query": "Register page shows warning: missing input field",
+    "response": "Frontend validator flagged /register as warning",
+    "status": "open",
+    "priority": "normal",
+    "tags": [
+      "react",
+      "bug"
+    ],
+    "relatedEntities": [],
+    "app": "workspace"
+  },
+  {
+    "id": 10,
+    "timestamp": "2026-04-01T15:32:13.284669",
+    "topic": "Enable CORS for production",
+    "category": "task",
+    "query": "Configure proper CORS origins for production deployment",
+    "response": "Currently allows localhost origins + null",
+    "status": "open",
+    "priority": "normal",
+    "tags": [
+      "security",
+      "deployment"
+    ],
+    "relatedEntities": [],
+    "app": "workspace"
+  },
+  {
+    "id": 11,
+    "timestamp": "2026-04-01T15:32:13.286669",
+    "topic": "Generate dummy data",
+    "category": "task",
+    "query": "Generate seed data for all 33 entities using Dummy Data Generator",
+    "response": "Database has schema but no test data",
+    "status": "open",
+    "priority": "normal",
+    "tags": [
+      "data"
+    ],
+    "relatedEntities": [],
+    "app": "workspace"
+  },
+  {
+    "id": 12,
+    "timestamp": "2026-04-01T15:32:13.288669",
+    "topic": "Build workspace web app",
+    "category": "task",
+    "query": "Browser-based UI for all workspace tools",
+    "response": "Spec at .kiro/specs/workspace-web-app/. FastAPI + Kafka + React",
+    "status": "open",
+    "priority": "low",
+    "tags": [
+      "tooling"
+    ],
+    "relatedEntities": [],
+    "app": "workspace"
+  },
+  {
+    "id": 13,
+    "timestamp": "2026-04-01T15:38:14.385551",
+    "topic": "Auto-seed default roles and authorization data",
+    "category": "task",
+    "query": "auth-schema.sql should INSERT default roles (SUPER_ADMIN, TABLE_ADMIN, USER). Setup flow should also create default query groups per subscription tier and default table access mappings. Master data seeding needed too.",
+    "response": "Roles are hardcoded strings in Java — user_role table exists but isn't pre-populated. No default query groups or table access configs are seeded.",
+    "status": "open",
+    "priority": "high",
+    "tags": [
+      "auth",
+      "seed-data",
+      "swfaw"
+    ],
+    "relatedEntities": [],
+    "app": "workspace"
+  },
+  {
+    "id": 14,
+    "timestamp": "2026-04-01T15:40:37.131057",
+    "topic": "BUG: Super user has no access after setup — JWT roles empty",
+    "category": "task",
+    "query": "Setup creates auth_user but doesn't insert SUPER_ADMIN role into user_role table. JWT token has empty roles claim, so AuthorizationWebFilter denies all requests including master data CRUD.",
+    "response": "Root cause: SetupController saves user but doesn't assign role. AuthService.login generates JWT with roles from user_role table which is empty. Fix needs to: 1) seed default roles in auth-schema.sql, 2) assign SUPER_ADMIN role to setup user in SetupController.",
+    "status": "completed",
+    "priority": "critical",
+    "tags": [
+      "bug",
+      "auth",
+      "setup",
+      "swfaw"
+    ],
+    "relatedEntities": [],
+    "app": "workspace",
+    "startedAt": "2026-04-12T16:36:19.697430",
+    "startNotes": "Debugging super admin roles bug with live running app",
+    "completedAt": "2026-04-12T16:56:59.074173",
+    "completionNotes": "Root cause was REAW template using tabOrder==0 check but definition JSON uses 1-based tabOrder. Fixed template to use loop.first. Also fixed 5 generated GroupedForm files. Not a JWT/permissions issue."
+  },
+  {
+    "id": 15,
+    "timestamp": "2026-04-01T15:42:51.307334",
+    "topic": "New definition: webflux_authorization_config.json",
+    "category": "task",
+    "query": "Create a new definition file for roles, default table access per role, and subscription groups. Feeds into auth-schema.sql seed data, AuthService JWT claims, and App Def Manager CLI.",
+    "response": "Currently no way to define default table access in app definitions. Proposed structure: roles array, defaultTableAccess array (role+table+operations), subscriptionGroups array (group name + table access list). Needs new scaffolder support, new CRUD commands, and swfaw template changes.",
+    "status": "open",
+    "priority": "high",
+    "tags": [
+      "auth",
+      "definitions",
+      "app-def-manager",
+      "swfaw"
+    ],
+    "relatedEntities": [],
+    "app": "workspace"
+  },
+  {
+    "id": 16,
+    "timestamp": "2026-04-01T15:46:31.102100",
+    "topic": "Event-driven authorization: accessTriggers in definition",
+    "category": "task",
+    "query": "Add accessTriggers section to webflux_authorization_config.json. When a CRUD operation occurs on a trigger entity, automatically grant the user membership in a query group. Generates post-create hooks in the service layer that call queryGroupMemberRepository.save() within the same transaction.",
+    "response": "Examples: creating StudentProfile grants StudentAccess group, enrolling in TrainingProgram grants access to that program's content (scoped by FK). Service-layer hook approach — simple, transactional, no external event bus.",
+    "status": "open",
+    "priority": "high",
+    "tags": [
+      "auth",
+      "definitions",
+      "swfaw",
+      "service-template"
+    ],
+    "relatedEntities": [],
+    "app": "workspace"
+  },
+  {
+    "id": 17,
+    "timestamp": "2026-04-01T15:48:58.905817",
+    "topic": "Built-in user networking: connections, follows, messages, notifications",
+    "category": "task",
+    "query": "Add default networking entities to swfaw code generators (like auth entities are auto-generated). Includes: UserConnection (bidirectional with status), UserFollow (one-way), UserMessage/Conversation (direct messaging), UserNotification (system alerts), UserRecommendation (endorsements). These should be generated automatically alongside auth entities, not defined per-app.",
+    "response": "Currently no networking support. These are common to all apps, so they belong in the generator as built-in entities like AuthUser, RecordOwner, etc. Connection acceptance could also trigger shared query group creation for record visibility.",
+    "status": "open",
+    "priority": "normal",
+    "tags": [
+      "networking",
+      "swfaw",
+      "built-in",
+      "entities"
+    ],
+    "relatedEntities": [],
+    "app": "workspace"
+  },
+  {
+    "id": 18,
+    "timestamp": "2026-04-01T15:50:32.471090",
+    "topic": "Payment gateway: configurable via application definition",
+    "category": "task",
+    "query": "Add payment support as built-in entities (Transaction, Subscription, Invoice, PaymentMethod) and a new webflux_payment_config.json definition file. Configurable gateway (Stripe/Razorpay/PayPal), subscription plans, webhook handlers, and integration with accessTriggers (payment confirmed -> grant group access). Code generators produce payment service, webhook controller, and subscription lifecycle management.",
+    "response": "Needed for job portal subscriptions, training purchases, job posting fees, exam fees. Payment completion should trigger authorization group grants via the accessTriggers system.",
+    "status": "open",
+    "priority": "normal",
+    "tags": [
+      "payments",
+      "definitions",
+      "swfaw",
+      "built-in"
+    ],
+    "relatedEntities": [],
+    "app": "workspace"
+  },
+  {
+    "id": 19,
+    "timestamp": "2026-04-01T15:52:01.310278",
+    "topic": "OAuth2 providers: fully configurable via application definition",
+    "category": "task",
+    "query": "Make OAuth2 provider config definition-driven. Add provider details (Google, GitHub, etc. with client IDs, secrets, scopes, callback URLs) to a definition file. Code generators should produce the correct Spring Security OAuth2 client config in application.yml and React frontend should render the right social login buttons based on the definition.",
+    "response": "Currently OAuth2 entities and service exist but provider config is hardcoded in templates. React auth config has oauth2Enabled/oauth2Providers fields but they don't drive the backend config.",
+    "status": "open",
+    "priority": "normal",
+    "tags": [
+      "auth",
+      "oauth2",
+      "definitions",
+      "swfaw",
+      "reaw"
+    ],
+    "relatedEntities": [],
+    "app": "workspace"
+  },
+  {
+    "id": 20,
+    "timestamp": "2026-04-01T15:53:21.737015",
+    "topic": "Public landing page: data-driven from WebFlux backend",
+    "category": "task",
+    "query": "Create a public-facing page (no auth required) that fetches and displays data from the WebFlux API. Configurable via definition — which entities to show publicly, what fields to display, layout/sections. Examples: public job listings, training catalog, trainer profiles. Needs public API endpoints (allowPublicRead flag), a public page template in REAW, and route config for unauthenticated access.",
+    "response": "Currently all routes require auth. Need a way to mark certain entities/endpoints as publicly readable and generate a landing page that consumes them.",
+    "status": "open",
+    "priority": "normal",
+    "tags": [
+      "react",
+      "public-page",
+      "reaw",
+      "definitions"
+    ],
+    "relatedEntities": [],
+    "app": "workspace"
+  },
+  {
+    "id": 21,
+    "timestamp": "2026-04-01T15:54:18.005478",
+    "topic": "Mail server: configurable email support via application definition",
+    "category": "task",
+    "query": "Add email support as a built-in feature. Configurable SMTP settings in a definition file, email template system, and trigger-based sending (e.g., registration confirmation, password reset, job application notification, enrollment confirmation). Code generators produce EmailService, email templates, and event-driven send hooks in the service layer.",
+    "response": "No email support currently. Needed for user registration, password reset, notifications, and transactional emails.",
+    "status": "open",
+    "priority": "normal",
+    "tags": [
+      "email",
+      "definitions",
+      "swfaw",
+      "built-in"
+    ],
+    "relatedEntities": [],
+    "app": "workspace"
+  },
+  {
+    "id": 22,
+    "timestamp": "2026-04-01T15:55:13.949384",
+    "topic": "Real-time chat between users",
+    "category": "task",
+    "query": "Add WebSocket-based real-time chat as a built-in feature. Entities: ChatRoom, ChatMessage, ChatParticipant. WebFlux WebSocket handler for real-time messaging, message persistence to DB, read receipts, typing indicators. React chat widget component in REAW. Configurable via definition — enable/disable, allowed chat types (1-to-1, group).",
+    "response": "Complements the user networking feature (task #17). Chat should respect authorization — users can only chat with connections or within shared groups.",
+    "status": "open",
+    "priority": "normal",
+    "tags": [
+      "chat",
+      "websocket",
+      "swfaw",
+      "reaw",
+      "built-in"
+    ],
+    "relatedEntities": [],
+    "app": "workspace"
+  },
+  {
+    "id": 23,
+    "timestamp": "2026-04-01T16:03:57.776697",
+    "topic": "Auto-assign query groups by role + Grant Access UI button",
+    "category": "task",
+    "query": "Two parts: 1) Definition-level roleQueryGroups mapping in authorization_config.json — when user gets a role, auto-add to associated query groups. 2) Wire the existing Grant Access button on root entity forms in REAW — generate a dialog to select query group/user, call a grant-access API endpoint that inserts into query_group_record. Backend needs grant-access endpoint per root entity.",
+    "response": "REAW form template already has canGrantAccess check and Grant Access button stub on root entities. Needs dialog component, API service call, and backend endpoint. Ties into tasks #15 and #16.",
+    "status": "open",
+    "priority": "high",
+    "tags": [
+      "auth",
+      "query-groups",
+      "react",
+      "swfaw",
+      "reaw",
+      "definitions"
+    ],
+    "relatedEntities": [],
+    "app": "workspace"
+  },
+  {
+    "id": 24,
+    "timestamp": "2026-04-01T16:05:39.506684",
+    "topic": "Auto-generate dummy data + auth seed data on code generation",
+    "category": "task",
+    "query": "When Phase 3 generates an application, automatically: 1) Seed default roles, query groups, and table access rules from authorization_config.json into auth-schema.sql. 2) Generate and load dummy data for all entities using Dummy Data Generator. 3) Create test users with different roles and pre-assigned query group memberships. The generated app should be immediately usable with sample data after running schemas.",
+    "response": "Currently database has schema but no data. Dummy Data Generator exists but isn't integrated into the generation pipeline. Auth seed data is completely missing. Ties into tasks #11, #13, #15.",
+    "status": "open",
+    "priority": "high",
+    "tags": [
+      "seed-data",
+      "dummy-data",
+      "auth",
+      "swfaw",
+      "pipeline"
+    ],
+    "relatedEntities": [],
+    "app": "workspace"
+  },
+  {
+    "id": 25,
+    "timestamp": "2026-04-02T10:04:46.384528",
+    "topic": "Runtime theme/layout editor: colors, labels, layout changeable at runtime",
+    "category": "task",
+    "query": "Add runtime customization to the React app. Users should be able to change colors (palette, accent, backgrounds), labels (nav items, page titles, field labels), and layout (sidebar position, grid columns, component visibility) without redeploying. Needs: 1) A theme/config context provider that reads from a runtime config (API or localStorage). 2) A wrapper component (e.g., ThemeEditorPanel) that exposes a UI for editing these properties live. 3) A settings page or floating panel with color pickers, text inputs, and layout toggles. 4) Persistence — save customizations to backend (per-user or global). Consider using CSS custom properties for colors, a label registry for text, and a layout config object for structure.",
+    "response": "Currently all theme values are baked into CSS at build time via react_theme.json. Labels are hardcoded in templates. Layout is fixed in AppLayout.jsx. Need to make these dynamic. Wrapper component options: floating settings panel, dedicated /settings page, or a toolbar overlay.",
+    "status": "open",
+    "priority": "normal",
+    "tags": [
+      "react",
+      "theme",
+      "runtime",
+      "reaw",
+      "ui-customization"
+    ],
+    "relatedEntities": [],
+    "app": "workspace"
+  },
+  {
+    "id": 26,
+    "timestamp": "2026-04-02T10:39:59.816977",
+    "topic": "Header: show user name, email, and profile photo/icon",
+    "category": "task",
+    "query": "Display the logged-in user's name, email, and profile thumbnail in the app header. If no photo is uploaded, show a default avatar icon (e.g., initials or pi pi-user). Needs: 1) Fetch user info from /api/auth/me on login. 2) Store in auth context. 3) Render in AppLayout header — name, email, and avatar. 4) Add profile photo upload support to UserProfile entity.",
+    "response": "Currently the header just shows the app title. No user info displayed. The auth context has the JWT but doesn't expose user details to the UI.",
+    "status": "open",
+    "priority": "normal",
+    "tags": [
+      "react",
+      "header",
+      "reaw",
+      "ui",
+      "auth"
+    ],
+    "relatedEntities": [],
+    "app": "workspace"
+  },
+  {
+    "id": 27,
+    "timestamp": "2026-04-02T10:42:22.147121",
+    "topic": "BUG: API path mismatch — controller uses camelCase, React uses snake_case",
+    "category": "task",
+    "query": "Backend controllers use camelCase paths (e.g., /api/userprofiles) but React API services use snake_case paths (e.g., /api/user_profiles). The controller basePath comes from webflux_controller_layer.json (generated by scaffolder with snake_case table name + 's'), while the React service path comes from react_api_services.json. The controller transformer in swfaw uses camelCase conversion. Need to align both to use the same path convention.",
+    "response": "Error: 404 NOT_FOUND No static resource api/user_profiles. Affects all entities with multi-word names. Single-word entities (Skill, Industry) work fine.",
+    "status": "completed",
+    "priority": "critical",
+    "tags": [
+      "bug",
+      "api-paths",
+      "swfaw",
+      "reaw",
+      "controller"
+    ],
+    "relatedEntities": [],
+    "app": "workspace",
+    "completedAt": "2026-04-12T17:10:28.153455",
+    "completionNotes": "Verified fixed: both backend controllers and React services use snake_case paths (e.g. /api/user_profiles). Paths match."
+  },
+  {
+    "id": 28,
+    "timestamp": "2026-04-02T10:52:35.266018",
+    "topic": "BUG: Input DTO includes audit/soft-delete fields as required — validation fails on create",
+    "category": "task",
+    "query": "The generated Input DTO includes createdAt, updatedAt, and isDeleted as required fields. Form submission fails with 400 validation error because these aren't submitted by the client. These fields should be excluded from Input DTOs — they're auto-managed by the service layer (timestamps set on create/update, isDeleted defaults to false). Fix needed in swfaw DTO generator to exclude audit and soft-delete fields from Input DTOs.",
+    "response": "Error: 400 Bad Request — createdAt is required, isDeleted is required. The service template already sets these: .createdOn(LocalDateTime.now()). The DTO generator or scaffolder is incorrectly including them in Input DTO fields.",
+    "status": "completed",
+    "priority": "critical",
+    "tags": [
+      "bug",
+      "dto",
+      "swfaw",
+      "validation"
+    ],
+    "relatedEntities": [],
+    "app": "workspace",
+    "completedAt": "2026-04-12T17:10:51.425877",
+    "completionNotes": "Verified fixed: Input DTOs only contain user fields. Audit fields (createdAt, updatedAt) and soft-delete fields excluded."
+  },
+  {
+    "id": 29,
+    "timestamp": "2026-04-02T13:18:32.086200",
+    "topic": "Admin bulk email upload + invite flow + profile access rules",
+    "category": "task",
+    "query": "Admin can bulk upload user emails (CSV/list). Each email gets an invite to create a profile and set password. If email exists in auth_user, user can create a profile anytime. Admin can only VIEW other users' profiles — no create/update/delete of profiles. This is part of auth-schema: needs an invite table (email, invite_token, status, sent_at, accepted_at), bulk upload endpoint, email sending integration, and profile access rules (admin = READ-only on profiles).",
+    "response": "Ties into task #21 (mail server) for sending invites, task #15 (authorization config) for profile access rules, and task #13 (auth seed data). The invite flow is: admin uploads emails -> system creates auth_user stubs -> sends invite emails -> user clicks link -> sets password -> creates profile.",
+    "status": "open",
+    "priority": "high",
+    "tags": [
+      "auth",
+      "admin",
+      "invite",
+      "bulk-upload",
+      "email",
+      "profiles"
+    ],
+    "relatedEntities": [],
+    "app": "workspace"
+  },
+  {
+    "id": 30,
+    "timestamp": "2026-04-03T11:38:09.553073",
+    "topic": "React: derive permissions from JWT instead of /api/auth/permissions endpoint",
+    "category": "task",
+    "query": "The JWT already contains roles, tableAccess, and queryGroupMemberships. The React usePermissions hook should decode the JWT client-side and derive canCreate/canUpdate/canDelete/canView from the claims. SUPER_ADMIN gets full access. TABLE_ADMIN checks tableAccess map. USER checks record ownership at service layer. Eliminates the /api/auth/permissions endpoint dependency and the allowedApiList state.",
+    "response": "Currently usePermissions checks allowedApiList from AuthContext which is fetched from /api/auth/permissions. This endpoint may return empty or wrong data, causing all permission checks to fail. Decoding JWT client-side is simpler and always in sync.",
+    "status": "completed",
+    "priority": "critical",
+    "tags": [
+      "bug",
+      "react",
+      "auth",
+      "permissions",
+      "reaw"
+    ],
+    "relatedEntities": [],
+    "app": "workspace",
+    "completedAt": "2026-04-12T17:11:18.890116",
+    "completionNotes": "Verified fixed: usePermissions hook decodes JWT directly from localStorage. No dependency on /api/auth/permissions endpoint or allowedApiList."
+  },
+  {
+    "id": 31,
+    "timestamp": "2026-04-03T11:44:17.780418",
+    "topic": "Remove redundant allowedApiList/permissions code after JWT-based permissions",
+    "category": "task",
+    "query": "The usePermissions hook now decodes JWT directly. Remove: 1) allowedApiList state and fetchPermissions from AuthContext template. 2) /api/auth/permissions endpoint from PermissionsController in swfaw. 3) permissionsEndpoint from react_auth_config.json and AuthConfig model. 4) PermissionTransformer in REAW. Keep the AuthContext otherwise intact.",
+    "response": "These are now dead code after issue #013 fix. The permissions endpoint, allowedApiList state, and fetchPermissions callback are no longer used.",
+    "status": "open",
+    "priority": "low",
+    "tags": [
+      "cleanup",
+      "react",
+      "auth",
+      "reaw",
+      "swfaw"
+    ],
+    "relatedEntities": [],
+    "app": "workspace"
+  },
+  {
+    "id": 32,
+    "timestamp": "2026-04-03T12:35:36.527028",
+    "topic": "BUG: Records not persisting — API returns 200 but database is empty",
+    "category": "task",
+    "query": "Create endpoint returns 200 with entity data but records are not committed to the database. Likely R2DBC transaction or entity mapping issue. The record_owner save in the flatMap chain may be failing silently, or the @Transactional annotation isn't working with R2DBC. Need to check: 1) R2DBC entity mapping (column names match DB), 2) Transaction manager auto-config, 3) Error handling in the reactive chain.",
+    "response": "Tested with education_level: POST returns 200 with ID 3, but SELECT shows 0 rows. Delete returns 404 because record doesn't exist.",
+    "status": "completed",
+    "priority": "critical",
+    "tags": [
+      "bug",
+      "r2dbc",
+      "persistence",
+      "swfaw"
+    ],
+    "relatedEntities": [],
+    "app": "workspace",
+    "completedAt": "2026-04-12T17:11:34.260867",
+    "completionNotes": "Verified fixed: live api-coverage test confirmed records persist after create (DB verified). Root cause was double-invocation from AuthorizationWebFilter — fixed by moving to AOP AuthorizationAspect."
+  },
+  {
+    "id": 33,
+    "timestamp": "2026-04-03T12:42:57.249553",
+    "topic": "BUG: R2DBC findById returns empty for existing records — delete/getById broken",
+    "category": "task",
+    "query": "repository.findById(id) returns empty even though the record exists in the database. List endpoint (custom query) works fine. Affects delete, getById, and update operations. Likely R2DBC @Id column mapping issue — the entity has @Id @Column('education_level_id') on field educationLevelId, but R2DBC's default findById may not resolve the column correctly.",
+    "response": "Tested: DB has record ID 4, GET /api/education_levels returns it in list, but GET /api/education_levels/4 returns 404. DELETE also returns 404. The custom paged query works but R2DBC's built-in findById does not.",
+    "status": "completed",
+    "priority": "critical",
+    "tags": [
+      "bug",
+      "r2dbc",
+      "findById",
+      "entity-mapping",
+      "swfaw"
+    ],
+    "relatedEntities": [],
+    "app": "workspace",
+    "completedAt": "2026-04-03T13:35:07.476375",
+    "completionNotes": "Partially investigated. Root cause not yet confirmed. See issues_logs_fixes/014. The @Query fix and SecurityContextHolder fallback didn't resolve it. Needs deeper debugging of the reactive chain for Mono<Void> delete operations."
+  },
+  {
+    "id": 34,
+    "timestamp": "2026-04-03T12:51:15.898387",
+    "topic": "Debug: DELETE 404 — security context empty for DELETE requests",
+    "category": "discussion",
+    "query": "Delete returns 404 even though record exists. GET and PUT work fine.",
+    "response": "The SecurityContextHolder.getCurrentUser() returns empty for DELETE requests. The reactive security context set by JwtAuthenticationFilter via contextWrite is not propagating to the service layer for DELETE. The Mono<Void> return type causes empty completion to be treated as success, masking the error. Need to investigate why contextWrite doesn't propagate for DELETE specifically.",
+    "status": "noted",
+    "tags": [
+      "debug",
+      "delete",
+      "security-context",
+      "r2dbc"
+    ],
+    "relatedEntities": [],
+    "app": "workspace"
+  },
+  {
+    "id": 35,
+    "timestamp": "2026-04-03T13:09:56.173313",
+    "topic": "Ensure all authorized WebFlux operations use SecurityContextHolder with exchange fallback",
+    "category": "task",
+    "query": "Audit all swfaw service templates (create, update, delete, deleteWithJustification, findAllPaged, findMyRecord) to ensure they use SecurityContextHolder.getCurrentUser(exchange, jwtService, authUserRepository) instead of the no-arg version. The exchange fallback ensures the user is always resolved even when the reactive security context doesn't propagate. Services need JwtService and AuthUserRepository injected as dependencies.",
+    "response": "The no-arg getCurrentUser() relies on ReactiveSecurityContextHolder which doesn't propagate reliably for all HTTP methods (DELETE fails). The exchange-based overload falls back to JWT header extraction.",
+    "status": "open",
+    "priority": "high",
+    "tags": [
+      "auth",
+      "security-context",
+      "swfaw",
+      "service-template"
+    ],
+    "relatedEntities": [],
+    "app": "workspace"
+  },
+  {
+    "id": 36,
+    "timestamp": "2026-04-03T13:36:05.137703",
+    "topic": "BUG: DELETE returns 404 for existing records — reactive chain issue",
+    "category": "task",
+    "query": "DELETE endpoint returns 404 even though the record exists and GET/PUT work fine. The SecurityContextHolder.getCurrentUser() inside the delete service method appears to fail silently with Mono<Void>, causing repository.findById() to never execute. Needs deeper debugging: test without activity tracking, test without SecurityContextHolder, add error logging to the reactive chain.",
+    "response": "See issues_logs_fixes/014. Attempted fixes: @Query on deleteByTableNameAndRecordId, SecurityContextHolder exchange fallback — neither resolved it.",
+    "status": "completed",
+    "priority": "critical",
+    "tags": [
+      "bug",
+      "delete",
+      "reactive",
+      "swfaw",
+      "service-template"
+    ],
+    "relatedEntities": [],
+    "app": "workspace",
+    "startedAt": "2026-04-10T21:36:10.310502",
+    "startNotes": "Analyzing the DELETE 404 bug across backend and React frontend",
+    "completedAt": "2026-04-12T15:38:31.150241",
+    "completionNotes": "Root cause confirmed: delete used 3-arg SecurityContextHolder.getCurrentUser(exchange, jwtService, authUserRepository) which made a DB call via authUserRepository.findByUsername(), causing repository.findById() to return empty under @Transactional R2DBC. Fixed swfaw/templates/service_templates.py — changed both delete and deleteWithJustification to use no-args getCurrentUser() like create/update. Generated code needs regeneration to pick up the fix."
+  },
+  {
+    "id": 37,
+    "timestamp": "2026-04-04T12:48:38.341145",
+    "topic": "Generated Application JSON Files",
+    "category": "task",
+    "query": "Figure out what the JSON files in the generated_application folder mean — understand their purpose, structure, and how they relate to the generation pipeline.",
+    "response": "",
+    "status": "open",
+    "priority": "normal",
+    "tags": [],
+    "relatedEntities": [],
+    "app": ""
+  },
+  {
+    "id": 38,
+    "timestamp": "2026-04-06T10:30:12.538876",
+    "topic": "Online Shopping Application",
+    "category": "task",
+    "query": "Build an online shopping application — scaffold application definitions using App Def Manager. Entities to plan: Product, Category, Cart, CartItem, Order, OrderItem, Review, Address, Payment, etc.",
+    "response": "",
+    "status": "open",
+    "priority": "high",
+    "tags": [],
+    "relatedEntities": [],
+    "app": ""
+  },
+  {
+    "id": 39,
+    "timestamp": "2026-04-06T10:45:18.737686",
+    "topic": "App Def Manager scaffold missing REAW-required layers",
+    "category": "task",
+    "query": "When scaffolding a new app via app_def_manager, only 6 definition files are created: webflux_manifest, webflux_project_metadata, webflux_entities, webflux_relationships, webflux_entity_layer, webflux_repository_layer, webflux_service_layer, webflux_controller_layer, webflux_dto_layer, and webflux_document_storage_layer. However, REAW (React generator) requires three additional layers that are marked as required in reaw/parsers/definition_parser.py: (1) webflux_query_layer.json — defines list queries per entity with select, from, joins, where, orderBy (orderBy must be plain strings like 'e.user_id ASC', not objects), (2) webflux_filter_layer.json — defines filterable fields and operators per entity, (3) webflux_group_definition_layer.json — defines access groups (system groups, ownership defaults, entity access). Additionally, the entity layer generated by scaffold is missing two keys that swfaw Phase 3 requires: isRootEntity and hasPublicFlag. These had to be manually added via definition_editor before code generation would succeed. The fix should be in app_def_manager/scaffolder.py to generate all required layers during scaffold, and to include isRootEntity + hasPublicFlag in the entity layer from the start.",
+    "response": "",
+    "status": "open",
+    "priority": "high",
+    "tags": [
+      "app_def_manager",
+      "reaw",
+      "scaffold",
+      "bug"
+    ],
+    "relatedEntities": [],
+    "app": ""
+  },
+  {
+    "id": 40,
+    "timestamp": "2026-04-06T12:34:42.736827",
+    "topic": "Dependency Security Scanner Tool",
+    "category": "task",
+    "query": "Build a workspace tool that checks both frontend (npm) and backend (Maven) dependencies for known malware, supply chain compromises, and vulnerabilities. Should scan package.json/pom.xml from application definitions or generated apps, check against OSV.dev API (free, covers npm and Maven advisories), and report compromised versions. Triggered via CLI like other workspace tools. Motivated by the axios 1.14.1 supply chain attack.",
+    "response": "",
+    "status": "open",
+    "priority": "critical",
+    "tags": [
+      "security",
+      "tooling",
+      "npm",
+      "maven"
+    ],
+    "relatedEntities": [],
+    "app": ""
+  },
+  {
+    "id": 41,
+    "timestamp": "2026-04-09T20:38:34.534420",
+    "topic": "Java file naming convention: separate business logic from application support framework",
+    "category": "task",
+    "query": "Establish a naming convention for generated Java files that clearly distinguishes business logic files (entity services, controllers, repositories) from application support framework files (AuthService, AuditLoggingService, AdminService, OAuth2Service, PermissionsService, etc.). Convention should be documented and enforced by swfaw templates.",
+    "response": "",
+    "status": "open",
+    "priority": "high",
+    "tags": [
+      "naming-convention",
+      "java",
+      "swfaw",
+      "templates",
+      "architecture"
+    ],
+    "relatedEntities": [],
+    "app": "workspace"
+  },
+  {
+    "id": 42,
+    "timestamp": "2026-04-10T21:32:01.441242",
+    "topic": "Add in_progress status and start command to Discussion Tracker",
+    "category": "task",
+    "query": "Extend Discussion Tracker with a 'start' command that sets task status to in_progress with a startedAt timestamp. Update summary to show a 'Currently working on' section. Adds start_task function to tracker.py and 'start' subcommand to cli.py.",
+    "response": "",
+    "status": "completed",
+    "priority": "high",
+    "tags": [
+      "discussion-tracker",
+      "workflow",
+      "wip"
+    ],
+    "relatedEntities": [],
+    "app": "workspace",
+    "startedAt": "2026-04-10T21:34:03.864645",
+    "completedAt": "2026-04-10T21:34:30.613746",
+    "completionNotes": "Added start_task to tracker.py, start subcommand to cli.py, in_progress status with orange icon, and Currently working on section in summary output."
+  },
+  {
+    "id": 43,
+    "timestamp": "2026-04-10T21:42:59.161855",
+    "topic": "Analysis update for task #36: DELETE 404 bug",
+    "category": "discussion",
+    "query": "Deep analysis of the DELETE 404 bug found two issues: (1) delete uses 3-arg SecurityContextHolder.getCurrentUser(exchange, jwtService, authUserRepository) while create/update use no-args getCurrentUser() — the fallback path may be the culprit. (2) The reactive chain uses triple .then() with Mono<Void> which is fragile — if activityTrackingService.logDelete() errors silently, the chain dies. Next steps: test with no-args getCurrentUser, test without activity tracking, then fix the swfaw service template.",
+    "response": "Updated issues_logs_fixes/014. Two hypotheses to test before fixing the template.",
+    "status": "noted",
+    "tags": [
+      "bug",
+      "delete",
+      "reactive",
+      "task-36"
+    ],
+    "relatedEntities": [],
+    "app": "workspace"
+  },
+  {
+    "id": 44,
+    "timestamp": "2026-04-11T20:23:42.554703",
+    "topic": "BUG: Admin user cannot open tabbed pages in React — JWT roles double-serialized as JSON string",
+    "category": "task",
+    "query": "Admin users cannot navigate to any tabbed page in the React frontend. Root cause: JwtService.generateToken() serializes roles as a JSON string via objectMapper.writeValueAsString(), then stores it as a JWT claim string. When usePermissions.js decodes the JWT, claims.roles is a JSON string like '[{\"role\":\"SUPER_ADMIN\"}]' — the hook parses it correctly. However, the roles are stored as List<Map<String,Object>> (objects with a 'role' key), and the hook maps them via r.role. This should work for SUPER_ADMIN. The real issue is likely that the admin user's JWT has empty roles (task #14 — JWT roles empty). If the roles array is empty, usePermissions falls through all checks and returns all-false permissions, making every page appear blank/inaccessible. Secondary issue: AuthContext.fetchPermissions() calls /api/auth/permissions which may return 403 for admin, causing allowedApiList to be empty — though this is legacy code and usePermissions reads JWT directly. Need to verify: (1) what roles the admin JWT actually contains, (2) whether the /api/auth/permissions endpoint works for admin.",
+    "response": "",
+    "status": "completed",
+    "priority": "critical",
+    "tags": [
+      "bug",
+      "react",
+      "jwt",
+      "permissions",
+      "admin",
+      "usePermissions"
+    ],
+    "relatedEntities": [],
+    "app": "job_portal",
+    "completedAt": "2026-04-12T16:57:14.658977",
+    "completionNotes": "Same root cause as #14 — disabled tabs were caused by REAW template mismatch (tabOrder 1-based vs 0-based check), not JWT permissions. Fixed."
+  },
+  {
+    "id": 45,
+    "timestamp": "2026-04-11T20:24:06.418146",
+    "topic": "Analysis: Admin cannot open tabbed pages — full code trace",
+    "category": "discussion",
+    "query": "Traced the full flow: LoginPage -> AuthContext.setAuth -> ProtectedRoute (auth-only, no role check) -> AppLayout (renders all nav unconditionally) -> Page component -> DataTable -> usePermissions(basePath). The usePermissions hook decodes JWT, extracts roles, and checks for SUPER_ADMIN. JwtService stores roles as JSON-serialized string of List<Map<String,Object>> e.g. '[{role:SUPER_ADMIN}]'. The hook handles this: parses the string, maps r.role. If SUPER_ADMIN is present, full access is granted. So the hook logic is correct IF the JWT actually contains the role. This bug is likely connected to task #14 (JWT roles empty after setup). If the admin user has no roles in the JWT, usePermissions returns all-false, and while the page renders, the DataTable shows no action buttons and the data fetch may fail with 403 from the backend.",
+    "response": "Two possible root causes: (1) Admin JWT has empty roles — connected to task #14. (2) The /api/auth/permissions endpoint (called by AuthContext on login) fails for admin, though this is legacy and usePermissions reads JWT directly. Need to decode an actual admin JWT to confirm.",
+    "status": "noted",
+    "tags": [
+      "bug",
+      "react",
+      "admin",
+      "jwt",
+      "permissions",
+      "task-44"
+    ],
+    "relatedEntities": [],
+    "app": "job_portal"
+  },
+  {
+    "id": 46,
+    "timestamp": "2026-04-11T20:39:26.598485",
+    "topic": "Fix plan for task #44: Admin tabbed pages bug — full code trace and hypotheses",
+    "category": "discussion",
+    "query": "Traced the full auth chain: SetupService.createSuperUser() inserts SUPER_ADMIN role -> AuthService.buildJwtClaims() queries user_role table and builds roles as List<Map> -> JwtService.generateToken() serializes to JSON string in JWT -> JwtAuthenticationFilter extracts roles from JWT, sets on AuthUser transient field, puts into security context -> usePermissions.js decodes JWT, parses roles, checks SUPER_ADMIN. Logic chain looks correct on paper. Two hypotheses: (A) user_role table has no rows for admin — SetupService uses @Transactional with reactive chain, role save may fail silently, JWT gets empty roles, usePermissions returns all-false. (B) validateToken succeeds but roles extraction fails silently. Fix plan: 1) Query user_role table to confirm data. 2) If no role row: fix swfaw SetupService template with explicit error handling, add USER role alongside SUPER_ADMIN, add startup check. 3) If role exists but JWT empty: add logging to buildJwtClaims, check extractRoles deserialization. 4) React hardening: usePermissions should warn on empty roles, show error instead of blank page.",
+    "response": "Need to verify database state first before choosing fix path. This connects to task #14 (JWT roles empty). Template fix in swfaw required.",
+    "status": "noted",
+    "tags": [
+      "bug",
+      "react",
+      "admin",
+      "jwt",
+      "permissions",
+      "task-44",
+      "fix-plan"
+    ],
+    "relatedEntities": [],
+    "app": "job_portal"
+  },
+  {
+    "id": 47,
+    "timestamp": "2026-04-12T15:31:15.041372",
+    "topic": "CONFIRMED: Delete bug root cause — delete succeeds but returns 404",
+    "category": "discussion",
+    "query": "Live debugging confirmed: DELETE actually removes the record from the database but returns 404 to the client. The record is gone after the call. Root cause is the 3-arg SecurityContextHolder.getCurrentUser(exchange, jwtService, authUserRepository) which calls authUserRepository.findByUsername() as a fallback. This DB call on the same @Transactional R2DBC connection causes repository.findById(id) to return empty, triggering the switchIfEmpty EntityNotFoundException. The delete still executes because the reactive chain partially completes. Fix: change delete template to use no-args getCurrentUser() like create/update do — the JwtAuthenticationFilter already populates the security context.",
+    "response": "Verified by testing: GET /2 returns 200, UPDATE /2 returns 200, DELETE /3 returns 404 but record is actually deleted from DB. All operations that use no-args getCurrentUser() work. Only delete uses 3-arg version.",
+    "status": "noted",
+    "tags": [
+      "bug",
+      "delete",
+      "reactive",
+      "task-36",
+      "confirmed",
+      "root-cause"
+    ],
+    "relatedEntities": [],
+    "app": "job_portal"
+  },
+  {
+    "id": 48,
+    "timestamp": "2026-04-12T15:57:38.730939",
+    "topic": "DELETE bug deeper root cause: AuthorizationWebFilter causes double handler invocation",
+    "category": "discussion",
+    "query": "Debug logging confirmed the delete service method runs TWICE per request. First run succeeds (finds entity, logs delete, deletes, cleans up record_owner). Second run fails (entity already deleted, throws EntityNotFoundException -> 404). Root cause: AuthorizationWebFilter uses handlerMapping.getHandler(exchange) which in Spring WebFlux resolves AND triggers handler execution. Then DispatcherHandler invokes the handler again. This is NOT a service template issue — it's an AuthorizationWebFilter issue. The @ResponseStatus(NO_CONTENT) and .then() fixes are still correct but insufficient because the 404 comes from the second invocation. Fix options: (1) Cache the handler resolution result in the exchange attributes so it's not re-invoked, (2) Use a different approach in AuthorizationWebFilter to read annotations without triggering handler execution, (3) Change the filter to use exchange attributes to mark 'already authorized' and skip on second pass.",
+    "response": "Previous fixes (no-args getCurrentUser, .then(), @ResponseStatus) are all correct improvements but don't address the double invocation. The AuthorizationWebFilter template needs fixing.",
+    "status": "noted",
+    "tags": [
+      "bug",
+      "delete",
+      "reactive",
+      "task-36",
+      "authorization-filter",
+      "double-invocation"
+    ],
+    "relatedEntities": [],
+    "app": "job_portal"
+  },
+  {
+    "id": 49,
+    "timestamp": "2026-04-12T16:28:19.277997",
+    "topic": "FIXED: DELETE 404 bug — replaced AuthorizationWebFilter with AuthorizationAspect (AOP)",
+    "category": "discussion",
+    "query": "Root cause was AuthorizationWebFilter calling handlerMapping.getHandler(exchange) which caused double handler invocation. Fix: moved authorization from WebFilter to AOP aspect (AuthorizationAspect). Authentication stays in JwtAuthenticationFilter WebFilter. AuthorizationAspect uses @Around advice on @TableAccess and @QueryAccess annotations — runs once per controller method invocation, no double invocation. Changes: (1) New AuthorizationAspect template in authorization_service_templates.py, (2) Removed AuthorizationWebFilter from SecurityConfig template, (3) Added spring-boot-starter-aop to pom template, (4) Added generator method in authorization_service_generator.py, (5) Added generation call in main.py. All CRUD operations verified: CREATE 200, GET 200, UPDATE 200, DELETE 204, GET-after-delete 404.",
+    "response": "Bug fixed. Template changes are additive — AuthorizationWebFilter still exists as a file but is no longer registered in SecurityConfig.",
+    "status": "noted",
+    "tags": [
+      "bug",
+      "delete",
+      "fixed",
+      "aop",
+      "authorization",
+      "task-36"
+    ],
+    "relatedEntities": [],
+    "app": "job_portal"
+  },
+  {
+    "id": 50,
+    "timestamp": "2026-04-12T16:39:20.707398",
+    "topic": "Task #14/#44 status: Backend verified working, needs browser testing",
+    "category": "discussion",
+    "query": "Verified: (1) admin user has SUPER_ADMIN role in DB, (2) JWT contains role correctly as [{role:SUPER_ADMIN,tableName:null}], (3) usePermissions.js parsing logic correctly detects SUPER_ADMIN, (4) /api/auth/permissions returns full access for admin, (5) Vite proxy configured correctly, (6) DELETE bug fixed with AOP aspect. The original bug may have been caused by missing user_role row in DB (data issue at setup time) or the double-invocation bug causing 404s on all operations. Both are now fixed. Needs browser testing to confirm React tabbed pages work.",
+    "response": "Awaiting user browser test at http://localhost:5173 with admin/Admin123!",
+    "status": "noted",
+    "tags": [
+      "bug",
+      "admin",
+      "jwt",
+      "permissions",
+      "task-14",
+      "task-44"
+    ],
+    "relatedEntities": [],
+    "app": "job_portal"
+  },
+  {
+    "id": 51,
+    "timestamp": "2026-04-12T16:56:40.232030",
+    "topic": "FIXED: Disabled tabs bug — first tab used handleRowSelect instead of handleParentRowSelect",
+    "category": "discussion",
+    "query": "Root cause: REAW grouped form template used tabOrder == 0 to identify the first tab, but the application_definitions JSON uses 1-based tabOrder (starts at 1, not 0). So the first tab never matched the condition and used handleRowSelect instead of handleParentRowSelect. selectedParentId was never set, keeping all child tabs disabled. Template fix: changed from tabOrder == 0 / tabOrder > 0 to loop.first in Jinja2. Also fixed 5 generated grouped form files directly since REAW can't regenerate (missing query_layer). This was NOT a permissions/JWT bug — it was a REAW template data mismatch.",
+    "response": "Fixed in reaw/templates/grouped_form_templates.py and 5 generated GroupedForm.jsx files.",
+    "status": "noted",
+    "tags": [
+      "bug",
+      "react",
+      "tabs",
+      "reaw",
+      "template",
+      "task-14",
+      "task-44",
+      "fixed"
+    ],
+    "relatedEntities": [],
+    "app": "job_portal"
+  },
+  {
+    "id": 52,
+    "timestamp": "2026-04-14T18:08:21.542558",
+    "topic": "Build GitHub Crawler Tool",
+    "category": "task",
+    "query": "Create a workspace tool (github_crawler/) that can: 1) List repositories for a GitHub user/org via GitHub API, 2) Fetch repo metadata (description, language, stars, topics), 3) Browse repo file trees, 4) Read file contents, 5) Generate markdown summaries. Bypasses JS-rendered page limitation. Uses GitHub REST API with optional token support.",
+    "response": "",
+    "status": "completed",
+    "priority": "high",
+    "tags": [],
+    "relatedEntities": [],
+    "app": "",
+    "completedAt": "2026-04-14T18:12:13.015573",
+    "completionNotes": "Tool built at github_crawler/ with subcommands: list-repos, repo-info, tree, read-file, summarize. Successfully used to generate santifer_repos_summary.md."
+  }
+]

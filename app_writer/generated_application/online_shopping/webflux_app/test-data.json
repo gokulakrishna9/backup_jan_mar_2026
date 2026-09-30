@@ -1,0 +1,266 @@
+{
+  "metadata": {
+    "project": "online-shopping",
+    "description": "Sample test data for API testing",
+    "generated": "2024-01-01T00:00:00Z"
+  },
+  "entities": {
+    "User": [
+      {
+        "username": "sample_username 1",
+        "encryptedPassword": "sample_encrypted_password 1",
+        "email": "sample_email",
+        "firstName": "sample_first_name 1",
+        "lastName": "sample_last_name 1",
+        "phone": "sample_phone",
+        "role": "sample_role 1"
+      },
+      {
+        "username": "sample_username 2",
+        "encryptedPassword": "sample_encrypted_password 2",
+        "email": "sample_email",
+        "firstName": "sample_first_name 2",
+        "lastName": "sample_last_name 2",
+        "phone": "sample_phone",
+        "role": "sample_role 2"
+      },
+      {
+        "username": "sample_username 3",
+        "encryptedPassword": "sample_encrypted_password 3",
+        "email": "sample_email",
+        "firstName": "sample_first_name 3",
+        "lastName": "sample_last_name 3",
+        "phone": "sample_phone",
+        "role": "sample_role 3"
+      }
+    ],
+    "Category": [
+      {
+        "categoryName": "sample_category_name 1",
+        "description": "sample_description 1",
+        "imageUrl": "sample_image_url",
+        "parentCategoryId": "sample_parent_category_id 1"
+      },
+      {
+        "categoryName": "sample_category_name 2",
+        "description": "sample_description 2",
+        "imageUrl": "sample_image_url",
+        "parentCategoryId": "sample_parent_category_id 2"
+      },
+      {
+        "categoryName": "sample_category_name 3",
+        "description": "sample_description 3",
+        "imageUrl": "sample_image_url",
+        "parentCategoryId": "sample_parent_category_id 3"
+      }
+    ],
+    "Product": [
+      {
+        "productName": "sample_product_name 1",
+        "description": "sample_description 1",
+        "price": "sample_price 1",
+        "stockQuantity": 10,
+        "imageUrl": "sample_image_url",
+        "sku": "sample_sku 1",
+        "isActive": true,
+        "categoryId": "sample_category_id 1"
+      },
+      {
+        "productName": "sample_product_name 2",
+        "description": "sample_description 2",
+        "price": "sample_price 2",
+        "stockQuantity": 10,
+        "imageUrl": "sample_image_url",
+        "sku": "sample_sku 2",
+        "isActive": true,
+        "categoryId": "sample_category_id 2"
+      },
+      {
+        "productName": "sample_product_name 3",
+        "description": "sample_description 3",
+        "price": "sample_price 3",
+        "stockQuantity": 10,
+        "imageUrl": "sample_image_url",
+        "sku": "sample_sku 3",
+        "isActive": true,
+        "categoryId": "sample_category_id 3"
+      }
+    ],
+    "Cart": [
+      {
+        "userId": "sample_user_id 1",
+        "totalAmount": "sample_total_amount 1",
+        "itemCount": 10
+      },
+      {
+        "userId": "sample_user_id 2",
+        "totalAmount": "sample_total_amount 2",
+        "itemCount": 10
+      },
+      {
+        "userId": "sample_user_id 3",
+        "totalAmount": "sample_total_amount 3",
+        "itemCount": 10
+      }
+    ],
+    "CartItem": [
+      {
+        "cartId": "sample_cart_id 1",
+        "productId": "sample_product_id 1",
+        "quantity": 10,
+        "unitPrice": "sample_unit_price 1",
+        "subtotal": "sample_subtotal 1"
+      },
+      {
+        "cartId": "sample_cart_id 2",
+        "productId": "sample_product_id 2",
+        "quantity": 10,
+        "unitPrice": "sample_unit_price 2",
+        "subtotal": "sample_subtotal 2"
+      },
+      {
+        "cartId": "sample_cart_id 3",
+        "productId": "sample_product_id 3",
+        "quantity": 10,
+        "unitPrice": "sample_unit_price 3",
+        "subtotal": "sample_subtotal 3"
+      }
+    ],
+    "Address": [
+      {
+        "userId": "sample_user_id 1",
+        "addressLine1": "sample_address_line1 1",
+        "addressLine2": "sample_address_line2 1",
+        "city": "sample_city 1",
+        "state": "sample_state 1",
+        "postalCode": "sample_postal_code",
+        "country": "sample_country 1",
+        "isDefault": true
+      },
+      {
+        "userId": "sample_user_id 2",
+        "addressLine1": "sample_address_line1 2",
+        "addressLine2": "sample_address_line2 2",
+        "city": "sample_city 2",
+        "state": "sample_state 2",
+        "postalCode": "sample_postal_code",
+        "country": "sample_country 2",
+        "isDefault": true
+      },
+      {
+        "userId": "sample_user_id 3",
+        "addressLine1": "sample_address_line1 3",
+        "addressLine2": "sample_address_line2 3",
+        "city": "sample_city 3",
+        "state": "sample_state 3",
+        "postalCode": "sample_postal_code",
+        "country": "sample_country 3",
+        "isDefault": true
+      }
+    ],
+    "Order": [
+      {
+        "userId": "sample_user_id 1",
+        "orderDate": "2024-01-01T10:00:00 1",
+        "status": "sample_status 1",
+        "totalAmount": "sample_total_amount 1",
+        "shippingAddressId": "sample_shipping_address_id 1",
+        "trackingNumber": "sample_tracking_number 1",
+        "notes": "sample_notes 1"
+      },
+      {
+        "userId": "sample_user_id 2",
+        "orderDate": "2024-01-01T10:00:00 2",
+        "status": "sample_status 2",
+        "totalAmount": "sample_total_amount 2",
+        "shippingAddressId": "sample_shipping_address_id 2",
+        "trackingNumber": "sample_tracking_number 2",
+        "notes": "sample_notes 2"
+      },
+      {
+        "userId": "sample_user_id 3",
+        "orderDate": "2024-01-01T10:00:00 3",
+        "status": "sample_status 3",
+        "totalAmount": "sample_total_amount 3",
+        "shippingAddressId": "sample_shipping_address_id 3",
+        "trackingNumber": "sample_tracking_number 3",
+        "notes": "sample_notes 3"
+      }
+    ],
+    "OrderItem": [
+      {
+        "orderId": "sample_order_id 1",
+        "productId": "sample_product_id 1",
+        "quantity": 10,
+        "unitPrice": "sample_unit_price 1",
+        "subtotal": "sample_subtotal 1"
+      },
+      {
+        "orderId": "sample_order_id 2",
+        "productId": "sample_product_id 2",
+        "quantity": 10,
+        "unitPrice": "sample_unit_price 2",
+        "subtotal": "sample_subtotal 2"
+      },
+      {
+        "orderId": "sample_order_id 3",
+        "productId": "sample_product_id 3",
+        "quantity": 10,
+        "unitPrice": "sample_unit_price 3",
+        "subtotal": "sample_subtotal 3"
+      }
+    ],
+    "Payment": [
+      {
+        "orderId": "sample_order_id 1",
+        "paymentMethod": "sample_payment_method 1",
+        "amount": "sample_amount 1",
+        "paymentDate": "2024-01-01T10:00:00 1",
+        "transactionId": "sample_transaction_id 1",
+        "status": "sample_status 1"
+      },
+      {
+        "orderId": "sample_order_id 2",
+        "paymentMethod": "sample_payment_method 2",
+        "amount": "sample_amount 2",
+        "paymentDate": "2024-01-01T10:00:00 2",
+        "transactionId": "sample_transaction_id 2",
+        "status": "sample_status 2"
+      },
+      {
+        "orderId": "sample_order_id 3",
+        "paymentMethod": "sample_payment_method 3",
+        "amount": "sample_amount 3",
+        "paymentDate": "2024-01-01T10:00:00 3",
+        "transactionId": "sample_transaction_id 3",
+        "status": "sample_status 3"
+      }
+    ],
+    "Review": [
+      {
+        "userId": "sample_user_id 1",
+        "productId": "sample_product_id 1",
+        "rating": 100,
+        "title": "sample_title 1",
+        "comment": "sample_comment 1",
+        "reviewDate": "2024-01-01T10:00:00 1"
+      },
+      {
+        "userId": "sample_user_id 2",
+        "productId": "sample_product_id 2",
+        "rating": 100,
+        "title": "sample_title 2",
+        "comment": "sample_comment 2",
+        "reviewDate": "2024-01-01T10:00:00 2"
+      },
+      {
+        "userId": "sample_user_id 3",
+        "productId": "sample_product_id 3",
+        "rating": 100,
+        "title": "sample_title 3",
+        "comment": "sample_comment 3",
+        "reviewDate": "2024-01-01T10:00:00 3"
+      }
+    ]
+  }
+}

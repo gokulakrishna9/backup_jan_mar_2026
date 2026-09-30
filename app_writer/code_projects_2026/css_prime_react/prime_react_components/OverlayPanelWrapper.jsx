@@ -1,0 +1,217 @@
+/**
+ * OverlayPanelWrapper - Enhanced wrapper for PrimeReact OverlayPanel
+ * Category: Overlay
+ * 
+ * Popup overlay panel
+ * 
+ * This wrapper provides:
+ * - Simplified event handlers for Redux integration
+ * - Validation hooks
+ * - Lifecycle callbacks
+ * - Embedded component metadata for runtime introspection
+ */
+
+import React, { useEffect, useRef } from 'react';
+import { OverlayPanel } from 'primereact/overlaypanel';
+
+// Component metadata embedded for runtime access
+export const OverlayPanelMetadata = {
+  "name": "OverlayPanel",
+  "import": "OverlayPanel",
+  "category": "Overlay",
+  "metadata": {
+    "description": "Popup overlay panel",
+    "usageExamples": [
+      "const op = useRef(null); <OverlayPanelWrapper ref={op}><p>Content</p></OverlayPanelWrapper>; op.current.toggle(event);",
+      "<OverlayPanelWrapper ref={overlayRef} showCloseIcon><div>Panel content</div></OverlayPanelWrapper>"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "showCloseIcon",
+        "type": "boolean",
+        "optional": true,
+        "description": "Show close icon",
+        "helpText": "Displays X button",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "name": "dismissable",
+        "type": "boolean",
+        "optional": true,
+        "description": "Close on outside click",
+        "helpText": "Clicking outside closes panel (default: true)",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "name": "appendTo",
+        "type": "'self' | HTMLElement | null",
+        "optional": true,
+        "description": "Append target",
+        "helpText": "Element to append panel to",
+        "dataTypes": [
+          "'self'",
+          "HTMLElement",
+          "null"
+        ],
+        "examples": [
+          "'self'",
+          "document.body"
+        ]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes",
+        "helpText": "Supports PrimeFlex utility classes",
+        "examples": [
+          "'custom-panel'"
+        ]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles",
+        "helpText": "Standard React inline styles",
+        "examples": [
+          "{ width: '20rem' }"
+        ]
+      }
+    ],
+    "children": {
+      "type": "React.ReactNode",
+      "description": "Panel content",
+      "helpText": "Any React content"
+    }
+  },
+  "eventHandlers": {
+    "standard": [
+      {
+        "name": "onShow",
+        "type": "() => void",
+        "description": "Callback when panel is shown"
+      },
+      {
+        "name": "onHide",
+        "type": "() => void",
+        "description": "Callback when panel is hidden"
+      }
+    ],
+    "simplified": [],
+    "validation": [],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "description": "Called when component mounts"
+      },
+      {
+        "name": "onUnmount",
+        "type": "() => void",
+        "description": "Called when component unmounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [
+      "show - Method to display panel",
+      "hide - Method to hide panel",
+      "toggle - Method to toggle panel"
+    ],
+    "patterns": [
+      "Use ref to access panel methods",
+      "Call toggle(event) with event object for positioning"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": [
+      "Any React component",
+      "Text",
+      "HTML elements"
+    ],
+    "childrenDescription": "OverlayPanel accepts any React content as children",
+    "hasChildren": true,
+    "examples": [
+      "const op = useRef(null); <OverlayPanelWrapper ref={op}><div><h3>Title</h3><p>Content</p></div></OverlayPanelWrapper>; <Button onClick={(e) => op.current.toggle(e)} />"
+    ]
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "const op = useRef(null); <OverlayPanelWrapper ref={op}><p>Content</p></OverlayPanelWrapper>; <Button onClick={(e) => op.current.toggle(e)} />",
+    "withStyling": "<OverlayPanelWrapper ref={overlayRef} showCloseIcon className=\"custom-panel\" style={{ width: '20rem' }}><div>Content</div></OverlayPanelWrapper>",
+    "withEvents": "<OverlayPanelWrapper ref={op} onShow={() => console.log('shown')} onHide={() => console.log('hidden')}><p>Content</p></OverlayPanelWrapper>",
+    "withRedux": "<OverlayPanelWrapper ref={op} onShow={() => dispatch(panelShown())}><div>Panel content</div></OverlayPanelWrapper>",
+    "withValidation": "N/A",
+    "withChildren": "<OverlayPanelWrapper ref={op}><div><h3>Options</h3><Button label=\"Action\" /></div></OverlayPanelWrapper>"
+  }
+};
+
+const OverlayPanelWrapper = (props) => {
+  const {
+    showCloseIcon, dismissable, appendTo, className, style, children, onShow, onHide, onMount, onUnmount,
+    ...restProps
+  } = props;
+
+  const componentRef = useRef(null);
+
+  // Lifecycle: onMount
+  useEffect(() => {
+    if (onMount) {
+      onMount();
+    }
+  }, []);
+
+  // Lifecycle: onUnmount
+  useEffect(() => {
+    return () => {
+      if (onUnmount) {
+        onUnmount();
+      }
+    };
+  }, []);
+
+  // Build props for underlying PrimeReact component
+  const primeReactProps = {
+    showCloseIcon,
+    dismissable,
+    appendTo,
+    className,
+    style,
+    onShow,
+    onHide,
+    ref: componentRef,
+    ...restProps
+  };
+
+  return (
+    <OverlayPanel {...primeReactProps}>
+      {children}
+    </OverlayPanel>
+  );
+};
+
+OverlayPanelWrapper.displayName = 'OverlayPanelWrapper';
+
+export default OverlayPanelWrapper;

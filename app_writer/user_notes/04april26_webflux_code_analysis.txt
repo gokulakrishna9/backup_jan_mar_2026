@@ -1,0 +1,260 @@
+#.  04 April 2026
+1## Auth
+1+  JwtConfig{@Configuration}
+1.  Wrapper around application.properties for JWT configuration.
++.  JWT Secret
++.  JWT expiration
++.  JWT refresh token expiration
+2+  JwtService{@Service, no talking to DB}
+1.  Dependencies: Jackson Core, JJWT API, Spring Framework, Lombok, Java Standard Library
+2.  `jjwt-api` is the public API module of the JJWT library used to create and parse JSON Web Tokens in Java.
++.  It provides classes like `Jwts`, `Claims`, `SignatureAlgorithm`, and `Keys` for JWT handling.
++.  The actual implementation is usually added separately at runtime, along with a JSON support module. [github](https://github.com/jwtk/jjwt)
+3.  generateToken{Getting input from some other service, not calling db}
++.  Jwts.builder().setSubject(....).claim(....)
+4.  generateRefreshToken
+5.  extractUsername
+6.  validateToken
+7.  validateRefreshToken
+8.  extractUserId
+9.  extractRoles
+10. extractTableAccess
+11. extractQueryGroupMemberships
+12. getClaims
+2## Config{@Configuration}
+1#  DatabaseConfig.java
+1.  Used to apply @EnableR2dbcRepositories.
+2.  Has no other code.
+2#  PasswordEncoderConfig.java
+1.  Using BCryptPasswordEncoder.
+3#  SecurityConfig.java
+1+  Beans
+1.  JwtAuthenticationFilter
+2.  AuthorizationWebFilter
+3.  SecurityWebFilterChain
+4.  CorsConfigurationSource
+2+  Methods
+1.  authenticationEntryPoint
+2.  accessDeniedHandler
+1.  SecurityWebFilterChain, csrf, cors, https, exceptionHandling(authenticationEntryPoint, accessDeniedHandler), authorizeExchange, jwtAuthenticationFilter
+2.  Authentication Entry Sets exception handling response.
+4#  SwaggerConfig.java
+1.  Swagger configuration object.
+5#  WebSecurityProperties.java
+1.  Used in security config, contains static classes.
+3## Controller
+1#  ActivityTrackingController.java{REST API}
+1.  get user activity, get activity for a specific entity, login history of a specific user.
+2.  grant user permission history
+3.  Get restorable records
+4.  get deleted reocrds
+2#  AdminController.java{REST API}
+1.  Get current user, check if user is in super user group, db query.
+2.  Admin dashboard page.
+3.  list groups
+4.  list users
+5.  view user
+6.  addUserToGroup
+7.  removeUserFromGroup
+8.  listDocumentGroups
+9.  viewDocumentGroup
+10. grantPermission
+3#  AuditController.java{TODO's pending, Add admin authorization check}
+0.  Get access audit logs for current user.
+1.  access-logs/me -> current user logs.
+2.  access-logs/user/{userId}
+3.  super-user-logs/user/{userId}
+4.  access-logs/record
+5.  /denied-access
+4#  AuthController.java{username, password}
+1.  /login
+2.  /register
+3.  /change-password
+4.  /me
+5#  OAuth2Controller.java
+1.  /providers
+2.  /login/{providerName}
+3.  /callback/{providerName}
+6#  SetupController.java
+1.  /setup
+2.  /login
+3.  /setup
+7#  PermissionsController.java
+1.  /permissions
+2.  User -> PermissionsService -> AllowedApis
+4## DTO
+1.
+5## Entity
+1#  AccessAuditLog.java
+1.
+2#  AccessControl.java
+1.
+3#  AuthUser.java
+1.
+4#  CrudActivityLog.java
+1.
+5#  LoginActivityLog.java
+1.
+6#  OAuth2LinkedAccount.java
+1.
+7#  OAuth2Provider.java
+1.
+8#  SubscriptionPaymentHistory.java
+1.
+9#  SuperUserActionLog.java
+1.
+10# SystemConfig.java
+1.
+11# Sample Entity List
+1.
+6## Exception
+1.
+7## Model
+1.
+8## Repository
+1#  AccessAuditLogRepository.java{Using R2dbcRepository methods}
+1.  findByAuthUserId
+2.  findByTableNameAndRecordId
+3.  findByAccessGranted
+4.  findByAuthUserIdAndAccessedAtBetween
+2#  AuthUserRepository.java
+1.  findByUsername
+2.  findByEmail
+3.  findByIsActive
+4.  existsByEmail
+3#  CrudActivityLogRepository.java
+1.  findByUserId
+2.  findByEntityTypeAndEntityId
+3.  findByOperation
+4.  findRecentByUserIdAndOperation
+5.  findRecentByEntityType
+6.  findByTimestampBetween
+5#  DeletedRecordRepository.java
+1.  findByEntityType
+2.  findByEntityTypeAndEntityId
+3.  findByDeletedByUserId
+4.  findAllRestorableRecords
+5.  findRestorableByEntityType
+6.  findByDeletedAtBetween
+6#  LoginActivityLogRepository.java
+1.  findByUserId
+2.  findByActivityType
+3.  findRecentByUserId
+4.  findRecentFailedLogins
+5.  findFailedLoginsSince
+6.  findByTimestampBetween
+7.  findLastSuccessfulLogin
+7#  OAuth2LinkedAccountRepository.java
+1.  findByAuthUserId
+2.  findByProviderAndUserId
+3.  findByProviderEmail
+8#  OAuth2ProviderRepository.java
+1.  findByProviderName
+2.  findAllEnabled
+9#  QueryGroupMemberRepository.java
+1.  findByQueryGroupId
+2.  findByAuthUserId
+3.  existsByQueryGroupIdAndAuthUserId
+10# QueryGroupQueryRepository
+1.  findByQueryGroupId
+2.  findByQueryName
+11# QueryGroupRecordRepository
+1.  findByQueryGroupId
+2.  findByTableNameAndRecordId
+3.  existsByQueryGroupIdAndTableNameAndRecordId
+12# QueryGroupRepository
+1.  findByGroupType
+2.  findByOwnerAuthUserId
+3.  findByGroupName
+13# RecordOwnerRepository.java
+1.  findByAuthUserIdAndTableName
+2.  findByTableNameAndRecordId
+3.  deleteByTableNameAndRecordId
+4.  existsByAuthUserIdAndTableNameAndRecordId
+14# SystemConfigRepository
+1.  findByConfigKey
+15# UserRoleRepository
+1.  findByAuthUserId
+2.  findByAuthUserIdAndTableName
+3.  findByRole
+4.  deleteByAuthUserIdAndTableName
+16# UserProfileRepository{The complicated query repository}
+1.  findAllPaged
+2.  countAll()
+3.  findAllPagedAuthorized()
+4.  countAuthorized
+5.  countOwnedOrShared
+6.  findAllPagedOwnedOrShared
+7.  findByOwnerUserId
+17# GrantActivityLogRepository.java
+1.  findByTargetUserId
+2.  findByGrantedByUserId
+3.  findByGrantType
+4.  findRecentByTargetUserId
+5.  findByEntityTypeAndEntityId
+6.  findByTimestampBetween
+7.  findRecentByAction
+18# ...
+1.
+9## Security
+1#  AuthorizationDeniedHandler.java
+1.  handle -> return error response
+2.  handleGeneric
+2#  AuthorizationWebFilter.java
+1.  filter --> WebFilter method
+2.  denyAccess
+3#  EntityTable.java
+0.  Declares which database table a controller manages.
+1.  @interface ??
++.  @interface declares an annotation type in Java, introduced in Java 5 for creating custom annotations like @Override or @Deprecated.
++.  Use it like public @interface MyAnnotation {}, defining elements such as String value(); inside for annotation parameters. Classes apply it via @MyAnnotation on types, methods, or fields.
+2.  Defining a new annotation
+4#  JwtAuthenticationFilter
+1.  filter
+2.  writeUnauthorizedResponse
+3.  isPublicEndpoint
+5#  QueryAccess.java
+1.  @interface
+6#  SecurityContextHolder.java
+1.  getCurrentUser
+2.  getCurrentUser
+3.  getCurrentUserId
+7#  TableAccess.java
+1.  @interface
+10## Service
+1#  ActivityTrackingService.java
+1.  CrudActivityLogRepository, DeletedRecordRepository, LoginActivityLogRepository, grantActivityLogRepository, objectMapper.
+2.  logCreate --> What's a userAgent field?
+3.  logRead
+4.  logUpdate
+5.  logDelete
+6.  logFailedOperation
+7.  logLogin
+8.  logLogout
+9.  logFailedLogin
+10. logGrant
+11. logRevoke
+12. getUserCrudActivity
+13. getEntityHistory
+14. getUserLoginHistory
+15. getUserGrantHistory
+16. getRestorableRecords
+17. getDeletedRecord
+18. getIpAddress
+19. getUserAgent
+2#  AdminService.java
+1.  
+3#  AuditLoggingService.java
+1.
+4#  AuthorizationService.java
+1.
+5#  AuthService.java
+1.
+6#  OAuth2Service.java
+1.
+7#  PermissionResolver.java
+1.
+8#  SubscriptionPaymentHistoryService.java
+1.
+11## Resources
+1.

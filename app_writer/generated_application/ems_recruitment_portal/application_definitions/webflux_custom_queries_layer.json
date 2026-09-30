@@ -1,0 +1,107 @@
+{
+  "layerType": "customQueries",
+  "description": "Custom query templates for authorization - used with CUSTOM_QUERY and CUSTOM_QUERY_ALL document group types",
+  "queries": [
+    {
+      "queryName": "ActiveUsers",
+      "description": "All active user records",
+      "table": "ems_user",
+      "conditions": [
+        {
+          "field": "is_active",
+          "operator": "EQUALS",
+          "value": "active"
+        }
+      ],
+      "logic": "AND"
+    },
+    {
+      "queryName": "ActiveUserPropertyGroups",
+      "description": "All active userpropertygroup records",
+      "table": "ems_user_property_group",
+      "conditions": [
+        {
+          "field": "is_active",
+          "operator": "EQUALS",
+          "value": "active"
+        }
+      ],
+      "logic": "AND"
+    }
+  ],
+  "queryFormat": {
+    "description": "JSON format for defining custom queries",
+    "structure": {
+      "queryName": "Unique identifier for the query",
+      "description": "Human-readable description",
+      "table": "Target table name",
+      "conditions": [
+        {
+          "field": "Column name",
+          "operator": "Comparison operator",
+          "value": "Value to compare against"
+        }
+      ],
+      "logic": "AND or OR - how to combine conditions"
+    },
+    "supportedOperators": [
+      "EQUALS",
+      "NOT_EQUALS",
+      "GREATER_THAN",
+      "LESS_THAN",
+      "GREATER_THAN_OR_EQUAL",
+      "LESS_THAN_OR_EQUAL",
+      "LIKE",
+      "IN",
+      "NOT_IN"
+    ],
+    "supportedLogic": [
+      "AND",
+      "OR"
+    ]
+  },
+  "examples": [
+    {
+      "queryName": "ActiveUsers",
+      "description": "All active user accounts",
+      "table": "users",
+      "conditions": [
+        {
+          "field": "status",
+          "operator": "EQUALS",
+          "value": "active"
+        }
+      ],
+      "logic": "AND"
+    },
+    {
+      "queryName": "SalesDepartment",
+      "description": "All users in sales or marketing departments",
+      "table": "users",
+      "conditions": [
+        {
+          "field": "department",
+          "operator": "IN",
+          "value": [
+            "sales",
+            "marketing"
+          ]
+        }
+      ],
+      "logic": "AND"
+    },
+    {
+      "queryName": "RecentOrders",
+      "description": "Orders from the last 30 days",
+      "table": "orders",
+      "conditions": [
+        {
+          "field": "created_date",
+          "operator": "GREATER_THAN",
+          "value": "NOW() - INTERVAL 30 DAY"
+        }
+      ],
+      "logic": "AND"
+    }
+  ]
+}

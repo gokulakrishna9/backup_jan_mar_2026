@@ -1,0 +1,296 @@
+{
+  "layerType": "service",
+  "description": "Service layer configuration - controls business logic and authorization",
+  "services": [
+    {
+      "entityName": "User",
+      "className": "UserService",
+      "packageName": "com.onlineshopping.service",
+      "repositoryName": "UserRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "Category",
+      "className": "CategoryService",
+      "packageName": "com.onlineshopping.service",
+      "repositoryName": "CategoryRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "Product",
+      "className": "ProductService",
+      "packageName": "com.onlineshopping.service",
+      "repositoryName": "ProductRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "Cart",
+      "className": "CartService",
+      "packageName": "com.onlineshopping.service",
+      "repositoryName": "CartRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": true,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CartItem",
+      "className": "CartItemService",
+      "packageName": "com.onlineshopping.service",
+      "repositoryName": "CartItemRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "Address",
+      "className": "AddressService",
+      "packageName": "com.onlineshopping.service",
+      "repositoryName": "AddressRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "Order",
+      "className": "OrderService",
+      "packageName": "com.onlineshopping.service",
+      "repositoryName": "OrderRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "OrderItem",
+      "className": "OrderItemService",
+      "packageName": "com.onlineshopping.service",
+      "repositoryName": "OrderItemRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "Payment",
+      "className": "PaymentService",
+      "packageName": "com.onlineshopping.service",
+      "repositoryName": "PaymentRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "Review",
+      "className": "ReviewService",
+      "packageName": "com.onlineshopping.service",
+      "repositoryName": "ReviewRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+/**
+ * ChartWrapper - Enhanced wrapper for PrimeReact Chart
+ * Category: Chart
+ * 
+ * Chart.js wrapper for various chart types including line, bar, pie, doughnut, radar, and more
+ * 
+ * This wrapper provides:
+ * - Simplified event handlers for Redux integration
+ * - Validation hooks
+ * - Lifecycle callbacks
+ * - Embedded component metadata for runtime introspection
+ */
+
+import React, { useEffect, useRef } from 'react';
+import { Chart } from 'primereact/chart';
+
+// Component metadata embedded for runtime access
+export const ChartMetadata = {
+  "name": "Chart",
+  "import": "Chart",
+  "category": "Chart",
+  "metadata": {
+    "description": "Chart.js wrapper for various chart types including line, bar, pie, doughnut, radar, and more",
+    "usageExamples": [
+      "<ChartWrapper type=\"line\" data={chartData} />",
+      "<ChartWrapper type=\"bar\" data={barData} options={chartOptions} />"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "type",
+        "type": "'line' | 'bar' | 'pie' | 'doughnut' | 'polarArea' | 'radar' | 'bubble' | 'scatter'",
+        "optional": false,
+        "description": "Type of chart to display",
+        "helpText": "Chart visualization type",
+        "dataTypes": [
+          "'line'",
+          "'bar'",
+          "'pie'",
+          "'doughnut'",
+          "'polarArea'",
+          "'radar'",
+          "'bubble'",
+          "'scatter'"
+        ],
+        "examples": [
+          "'line'",
+          "'bar'",
+          "'pie'"
+        ]
+      },
+      {
+        "name": "data",
+        "type": "ChartData",
+        "optional": false,
+        "description": "Chart data object",
+        "helpText": "Data structure with labels and datasets",
+        "dataTypes": [
+          "{ labels: string[], datasets: [{ label: string, data: number[], backgroundColor?: string[], borderColor?: string }] }"
+        ],
+        "examples": [
+          "{ labels: ['Jan', 'Feb'], datasets: [{ label: 'Sales', data: [10, 20] }] }"
+        ]
+      },
+      {
+        "name": "options",
+        "type": "ChartOptions",
+        "optional": true,
+        "description": "Chart.js options object",
+        "helpText": "Configuration options for chart behavior and appearance",
+        "dataTypes": [
+          "ChartOptions - { responsive?: boolean, plugins?: {}, scales?: {} }"
+        ],
+        "examples": [
+          "{ responsive: true, maintainAspectRatio: false }"
+        ]
+      },
+      {
+        "name": "width",
+        "type": "string",
+        "optional": true,
+        "description": "Width of the chart",
+        "helpText": "Chart width (default: auto)",
+        "dataTypes": [
+          "string (CSS value)"
+        ],
+        "examples": [
+          "'100%'",
+          "'500px'"
+        ]
+      },
+      {
+        "name": "height",
+        "type": "string",
+        "optional": true,
+        "description": "Height of the chart",
+        "helpText": "Chart height (default: auto)",
+        "dataTypes": [
+          "string (CSS value)"
+        ],
+        "examples": [
+          "'400px'",
+          "'100%'"
+        ]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes for custom styling",
+        "helpText": "Supports PrimeFlex utility classes and custom CSS",
+        "examples": [
+          "'w-full'",
+          "'shadow-2'"
+        ]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles object",
+        "helpText": "Standard React inline styles",
+        "examples": [
+          "{ width: '100%', height: '400px' }"
+        ]
+      }
+    ],
+    "children": null
+  },
+  "eventHandlers": {
+    "standard": [
+      {
+        "name": "onDataSelect",
+        "type": "(e: { originalEvent: Event, element: any, dataset: any }) => void",
+        "optional": true,
+        "description": "Callback when chart element is clicked"
+      }
+    ],
+    "simplified": [
+      {
+        "name": "onElementClick",
+        "type": "(element: any, dataset: any) => void",
+        "optional": true,
+        "description": "Simplified callback with element and dataset"
+      }
+    ],
+    "validation": [],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "optional": true,
+        "description": "Callback when component mounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [
+      "handleDataSelect(e): Processes data selection and calls onElementClick if provided"
+    ],
+    "patterns": [
+      "For interactive charts: Use onDataSelect to handle click events on chart elements",
+      "For Redux: Use onElementClick to dispatch actions with selected data"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": [],
+    "childrenDescription": "This component does not accept children. Use data and options props to configure the chart.",
+    "hasChildren": false,
+    "examples": []
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<ChartWrapper type=\"line\" data={chartData} />",
+    "withStyling": "<ChartWrapper type=\"bar\" data={barData} className=\"w-full shadow-2\" style={{ height: '400px' }} />",
+    "withEvents": "<ChartWrapper type=\"pie\" data={pieData} onDataSelect={(e) => console.log('Selected:', e.dataset)} />",
+    "withRedux": "<ChartWrapper type=\"line\" data={chartData} onElementClick={(element, dataset) => dispatch(selectChartData(dataset))} />",
+    "withValidation": "N/A",
+    "withChildren": "N/A"
+  }
+};
+
+const ChartWrapper = (props) => {
+  const {
+    type, data, options, width, height, className, style, onDataSelect, onElementClick, onMount,
+    ...restProps
+  } = props;
+
+  const componentRef = useRef(null);
+
+  // Lifecycle: onMount
+  useEffect(() => {
+    if (onMount) {
+      onMount();
+    }
+  }, []);
+
+  // Build props for underlying PrimeReact component
+  const primeReactProps = {
+    type,
+    data,
+    options,
+    width,
+    height,
+    className,
+    style,
+    onDataSelect,
+    ref: componentRef,
+    ...restProps
+  };
+
+  return (
+    <Chart {...primeReactProps} />
+  );
+};
+
+ChartWrapper.displayName = 'ChartWrapper';
+
+export default ChartWrapper;

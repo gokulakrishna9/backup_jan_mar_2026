@@ -1,0 +1,315 @@
+/**
+ * TreeSelectWrapper - Enhanced wrapper for PrimeReact TreeSelect
+ * Category: Form
+ * 
+ * Tree-based selection dropdown
+ * 
+ * This wrapper provides:
+ * - Simplified event handlers for Redux integration
+ * - Validation hooks
+ * - Lifecycle callbacks
+ * - Embedded component metadata for runtime introspection
+ */
+
+import React, { useEffect, useRef } from 'react';
+import { TreeSelect } from 'primereact/treeselect';
+
+// Component metadata embedded for runtime access
+export const TreeSelectMetadata = {
+  "name": "TreeSelect",
+  "import": "TreeSelect",
+  "category": "Form",
+  "metadata": {
+    "description": "Tree-based selection dropdown",
+    "usageExamples": [
+      "<TreeSelectWrapper value={selected} options={nodes} onChange={(e) => setSelected(e.value)} />",
+      "<TreeSelectWrapper value={selectedKeys} options={treeData} selectionMode=\"checkbox\" />"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "value",
+        "type": "any",
+        "optional": true,
+        "description": "Selected value(s)",
+        "helpText": "Selected node key(s)",
+        "dataTypes": [
+          "string",
+          "object",
+          "any"
+        ],
+        "examples": [
+          "'0-0'",
+          "{key: value}"
+        ]
+      },
+      {
+        "name": "options",
+        "type": "TreeNode[]",
+        "optional": false,
+        "description": "Tree nodes",
+        "helpText": "Array of tree node objects",
+        "dataTypes": [
+          "TreeNode[] - {key, label, children}"
+        ],
+        "examples": [
+          "[{key: '0', label: 'Root', children: [{key: '0-0', label: 'Child'}]}]"
+        ]
+      },
+      {
+        "name": "selectionMode",
+        "type": "'single' | 'multiple' | 'checkbox'",
+        "optional": true,
+        "description": "Selection mode",
+        "helpText": "How nodes can be selected",
+        "dataTypes": [
+          "'single' (default)",
+          "'multiple'",
+          "'checkbox'"
+        ],
+        "examples": [
+          "'single'",
+          "'checkbox'"
+        ]
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "optional": true,
+        "description": "Placeholder text",
+        "helpText": "Text shown when no selection",
+        "dataTypes": [
+          "string"
+        ],
+        "examples": [
+          "'Select items'",
+          "'Choose...'"
+        ]
+      },
+      {
+        "name": "filter",
+        "type": "boolean",
+        "optional": true,
+        "description": "Enable filtering",
+        "helpText": "Shows search input",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "optional": true,
+        "description": "Disabled state",
+        "helpText": "Disables the tree select",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "name": "display",
+        "type": "'comma' | 'chip'",
+        "optional": true,
+        "description": "Display mode",
+        "helpText": "How selected items are shown",
+        "dataTypes": [
+          "'comma' (default)",
+          "'chip'"
+        ],
+        "examples": [
+          "'comma'",
+          "'chip'"
+        ]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes",
+        "helpText": "Supports PrimeFlex utility classes",
+        "examples": [
+          "'w-full'"
+        ]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles",
+        "helpText": "Standard React inline styles",
+        "examples": [
+          "{ width: '100%' }"
+        ]
+      }
+    ],
+    "children": null
+  },
+  "eventHandlers": {
+    "standard": [
+      {
+        "name": "onChange",
+        "type": "(e: { value: any }) => void",
+        "description": "Callback when selection changes"
+      },
+      {
+        "name": "onNodeExpand",
+        "type": "(e: { node: TreeNode }) => void",
+        "description": "Callback when node expands"
+      },
+      {
+        "name": "onNodeCollapse",
+        "type": "(e: { node: TreeNode }) => void",
+        "description": "Callback when node collapses"
+      },
+      {
+        "name": "onShow",
+        "type": "() => void",
+        "description": "Callback when panel opens"
+      },
+      {
+        "name": "onHide",
+        "type": "() => void",
+        "description": "Callback when panel closes"
+      }
+    ],
+    "simplified": [
+      {
+        "name": "onValueChange",
+        "type": "(value: any) => void",
+        "description": "Simplified callback with just the value"
+      }
+    ],
+    "validation": [
+      {
+        "name": "onValidate",
+        "type": "(value: any) => boolean | string",
+        "description": "Validation callback"
+      },
+      {
+        "name": "onError",
+        "type": "(error: string) => void",
+        "description": "Called when validation fails"
+      }
+    ],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "description": "Called when component mounts"
+      },
+      {
+        "name": "onUnmount",
+        "type": "() => void",
+        "description": "Called when component unmounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [
+      "handleChange - Processes onChange event, calls onChange, onValueChange, onValidate",
+      "handleNodeExpand - Processes onNodeExpand event",
+      "handleNodeCollapse - Processes onNodeCollapse event",
+      "handleShow - Processes onShow event",
+      "handleHide - Processes onHide event"
+    ],
+    "patterns": [
+      "Check if event handler exists before calling",
+      "Extract value from event object",
+      "Run validation on change"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": [],
+    "childrenDescription": "This component does not accept children",
+    "hasChildren": false,
+    "examples": []
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<TreeSelectWrapper value={selected} options={nodes} onChange={(e) => setSelected(e.value)} />",
+    "withStyling": "<TreeSelectWrapper value={selectedKeys} options={treeData} selectionMode=\"checkbox\" display=\"chip\" className=\"w-full\" />",
+    "withEvents": "<TreeSelectWrapper value={selection} options={nodes} onChange={handleChange} onNodeExpand={handleExpand} />",
+    "withRedux": "<TreeSelectWrapper value={selectedNode} options={treeNodes} onValueChange={(val) => dispatch(setNode(val))} />",
+    "withValidation": "<TreeSelectWrapper value={selection} options={nodes} onValidate={(val) => val ? true : 'Required'} onError={(err) => setError(err)} />",
+    "withChildren": "N/A"
+  }
+};
+
+const TreeSelectWrapper = (props) => {
+  const {
+    value, options, selectionMode, placeholder, filter, disabled, display, className, style, onChange, onNodeExpand, onNodeCollapse, onShow, onHide, onValueChange, onValidate, onError, onMount, onUnmount,
+    ...restProps
+  } = props;
+
+  const componentRef = useRef(null);
+
+  // Lifecycle: onMount
+  useEffect(() => {
+    if (onMount) {
+      onMount();
+    }
+  }, []);
+
+  // Lifecycle: onUnmount
+  useEffect(() => {
+    return () => {
+      if (onUnmount) {
+        onUnmount();
+      }
+    };
+  }, []);
+
+  // Simplified event handler: onValueChange
+  const handleChange = (e) => {
+    if (onChange) {
+      onChange(e);
+    }
+    if (onValueChange) {
+      onValueChange(e.value || e.data || e);
+    }
+  };
+
+  // Build props for underlying PrimeReact component
+  const primeReactProps = {
+    value,
+    options,
+    selectionMode,
+    placeholder,
+    filter,
+    disabled,
+    display,
+    className,
+    style,
+    onChange: handleChange,
+    onNodeExpand,
+    onNodeCollapse,
+    onShow,
+    onHide,
+    ref: componentRef,
+    ...restProps
+  };
+
+  return (
+    <TreeSelect {...primeReactProps} />
+  );
+};
+
+TreeSelectWrapper.displayName = 'TreeSelectWrapper';
+
+export default TreeSelectWrapper;

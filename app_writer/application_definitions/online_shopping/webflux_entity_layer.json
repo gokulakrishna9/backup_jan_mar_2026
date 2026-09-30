@@ -1,0 +1,838 @@
+{
+  "layerType": "entity",
+  "description": "Entity layer configuration - controls JPA entity generation with R2DBC support",
+  "entities": [
+    {
+      "tableName": "user",
+      "className": "User",
+      "packageName": "com.onlineshopping.entity",
+      "fields": [
+        {
+          "columnName": "user_id",
+          "fieldName": "userId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "username",
+          "fieldName": "username",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "encrypted_password",
+          "fieldName": "encryptedpassword",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "email",
+          "fieldName": "email",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "first_name",
+          "fieldName": "firstname",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "last_name",
+          "fieldName": "lastname",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "phone",
+          "fieldName": "phone",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "role",
+          "fieldName": "role",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": false,
+      "isRootEntity": true,
+      "hasPublicFlag": true,
+      "parentEntity": null
+    },
+    {
+      "tableName": "category",
+      "className": "Category",
+      "packageName": "com.onlineshopping.entity",
+      "fields": [
+        {
+          "columnName": "category_id",
+          "fieldName": "categoryId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "category_name",
+          "fieldName": "categoryname",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "description",
+          "fieldName": "description",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "image_url",
+          "fieldName": "imageurl",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "parent_category_id",
+          "fieldName": "parentcategoryid",
+          "javaType": "Long",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": false,
+      "isRootEntity": false,
+      "hasPublicFlag": false,
+      "parentEntity": null
+    },
+    {
+      "tableName": "product",
+      "className": "Product",
+      "packageName": "com.onlineshopping.entity",
+      "fields": [
+        {
+          "columnName": "product_id",
+          "fieldName": "productId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "product_name",
+          "fieldName": "productname",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "description",
+          "fieldName": "description",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "price",
+          "fieldName": "price",
+          "javaType": "BigDecimal",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "DECIMAL(19,4)"
+        },
+        {
+          "columnName": "stock_quantity",
+          "fieldName": "stockquantity",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "image_url",
+          "fieldName": "imageurl",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "sku",
+          "fieldName": "sku",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "is_active",
+          "fieldName": "isactive",
+          "javaType": "Boolean",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "BOOLEAN"
+        },
+        {
+          "columnName": "category_id",
+          "fieldName": "categoryid",
+          "javaType": "Long",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": false,
+      "isRootEntity": false,
+      "hasPublicFlag": false,
+      "parentEntity": null
+    },
+    {
+      "tableName": "cart",
+      "className": "Cart",
+      "packageName": "com.onlineshopping.entity",
+      "fields": [
+        {
+          "columnName": "cart_id",
+          "fieldName": "cartId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "user_id",
+          "fieldName": "userid",
+          "javaType": "Long",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "total_amount",
+          "fieldName": "totalamount",
+          "javaType": "BigDecimal",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "DECIMAL(19,4)"
+        },
+        {
+          "columnName": "item_count",
+          "fieldName": "itemcount",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": false,
+      "isRootEntity": false,
+      "hasPublicFlag": false,
+      "parentEntity": null
+    },
+    {
+      "tableName": "cart_item",
+      "className": "CartItem",
+      "packageName": "com.onlineshopping.entity",
+      "fields": [
+        {
+          "columnName": "cart_item_id",
+          "fieldName": "cartItemId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "cart_id",
+          "fieldName": "cartid",
+          "javaType": "Long",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "product_id",
+          "fieldName": "productid",
+          "javaType": "Long",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "quantity",
+          "fieldName": "quantity",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "unit_price",
+          "fieldName": "unitprice",
+          "javaType": "BigDecimal",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "DECIMAL(19,4)"
+        },
+        {
+          "columnName": "subtotal",
+          "fieldName": "subtotal",
+          "javaType": "BigDecimal",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "DECIMAL(19,4)"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": false,
+      "isRootEntity": false,
+      "hasPublicFlag": false,
+      "parentEntity": null
+    },
+    {
+      "tableName": "address",
+      "className": "Address",
+      "packageName": "com.onlineshopping.entity",
+      "fields": [
+        {
+          "columnName": "address_id",
+          "fieldName": "addressId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "user_id",
+          "fieldName": "userid",
+          "javaType": "Long",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "address_line1",
+          "fieldName": "addressline1",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "address_line2",
+          "fieldName": "addressline2",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "city",
+          "fieldName": "city",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "state",
+          "fieldName": "state",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "postal_code",
+          "fieldName": "postalcode",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "country",
+          "fieldName": "country",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "is_default",
+          "fieldName": "isdefault",
+          "javaType": "Boolean",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "BOOLEAN"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": false,
+      "isRootEntity": false,
+      "hasPublicFlag": false,
+      "parentEntity": null
+    },
+    {
+      "tableName": "order",
+      "className": "Order",
+      "packageName": "com.onlineshopping.entity",
+      "fields": [
+        {
+          "columnName": "order_id",
+          "fieldName": "orderId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "user_id",
+          "fieldName": "userid",
+          "javaType": "Long",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "order_date",
+          "fieldName": "orderdate",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "status",
+          "fieldName": "status",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "total_amount",
+          "fieldName": "totalamount",
+          "javaType": "BigDecimal",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "DECIMAL(19,4)"
+        },
+        {
+          "columnName": "shipping_address_id",
+          "fieldName": "shippingaddressid",
+          "javaType": "Long",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "tracking_number",
+          "fieldName": "trackingnumber",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "notes",
+          "fieldName": "notes",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": false,
+      "isRootEntity": false,
+      "hasPublicFlag": false,
+      "parentEntity": null
+    },
+    {
+      "tableName": "order_item",
+      "className": "OrderItem",
+      "packageName": "com.onlineshopping.entity",
+      "fields": [
+        {
+          "columnName": "order_item_id",
+          "fieldName": "orderItemId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "order_id",
+          "fieldName": "orderid",
+          "javaType": "Long",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "product_id",
+          "fieldName": "productid",
+          "javaType": "Long",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "quantity",
+          "fieldName": "quantity",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "unit_price",
+          "fieldName": "unitprice",
+          "javaType": "BigDecimal",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "DECIMAL(19,4)"
+        },
+        {
+          "columnName": "subtotal",
+          "fieldName": "subtotal",
+          "javaType": "BigDecimal",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "DECIMAL(19,4)"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": false,
+      "isRootEntity": false,
+      "hasPublicFlag": false,
+      "parentEntity": null
+    },
+    {
+      "tableName": "payment",
+      "className": "Payment",
+      "packageName": "com.onlineshopping.entity",
+      "fields": [
+        {
+          "columnName": "payment_id",
+          "fieldName": "paymentId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "order_id",
+          "fieldName": "orderid",
+          "javaType": "Long",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "payment_method",
+          "fieldName": "paymentmethod",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "amount",
+          "fieldName": "amount",
+          "javaType": "BigDecimal",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "DECIMAL(19,4)"
+        },
+        {
+          "columnName": "payment_date",
+          "fieldName": "paymentdate",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "transaction_id",
+          "fieldName": "transactionid",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "status",
+          "fieldName": "status",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": false,
+      "isRootEntity": false,
+      "hasPublicFlag": false,
+      "parentEntity": null
+    },
+    {
+      "tableName": "review",
+      "className": "Review",
+      "packageName": "com.onlineshopping.entity",
+      "fields": [
+        {
+          "columnName": "review_id",
+          "fieldName": "reviewId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "user_id",
+          "fieldName": "userid",
+          "javaType": "Long",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "product_id",
+          "fieldName": "productid",
+          "javaType": "Long",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "rating",
+          "fieldName": "rating",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "title",
+          "fieldName": "title",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "comment",
+          "fieldName": "comment",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "review_date",
+          "fieldName": "reviewdate",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": false,
+      "isRootEntity": false,
+      "hasPublicFlag": false,
+      "parentEntity": null
+    }
+  ]
+}

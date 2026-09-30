@@ -1,0 +1,3130 @@
+{
+  "layerType": "query",
+  "description": "Custom query definitions - define R2DBC DatabaseClient queries with joins, aggregations, and filters. Default queries are auto-generated based on table relationships.",
+  "version": "2.4.0",
+  "queries": {
+    "User": [
+      {
+        "name": "listUser",
+        "description": "List all User records",
+        "returnType": "UserOutputDTO",
+        "select": [
+          "e.user_id",
+          "e.first_name",
+          "e.last_name",
+          "e.gender",
+          "e.date_of_birth",
+          "e.email_address",
+          "e.user_name",
+          "e.encrypted_password",
+          "e.phone_number",
+          "e.profile_photo",
+          "e.is_active",
+          "e.is_entity"
+        ],
+        "from": "ems_user e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "UserPropertyGroup": [
+      {
+        "name": "listUserPropertyGroup",
+        "description": "List all UserPropertyGroup records",
+        "returnType": "UserPropertyGroupOutputDTO",
+        "select": [
+          "e.group_id",
+          "e.group_name",
+          "e.group_description",
+          "e.user_id",
+          "e.is_active"
+        ],
+        "from": "ems_user_property_group e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "UserProperty": [
+      {
+        "name": "listUserProperty",
+        "description": "List all UserProperty records",
+        "returnType": "UserPropertyOutputDTO",
+        "select": [
+          "e.property_id",
+          "e.property_name",
+          "e.property_value",
+          "e.property_type",
+          "e.property_description",
+          "e.group_id",
+          "e.user_id"
+        ],
+        "from": "ems_user_property e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "Institution": [
+      {
+        "name": "listInstitution",
+        "description": "List all Institution records",
+        "returnType": "InstitutionOutputDTO",
+        "select": [
+          "e.institution_id",
+          "e.name",
+          "e.description",
+          "e.moto",
+          "e.institution_type_id",
+          "e.website",
+          "e.contact_email",
+          "e.contact_phone",
+          "e.is_active",
+          "e.is_entity"
+        ],
+        "from": "ems_institution e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "InstitutionPropertyGroup": [
+      {
+        "name": "listInstitutionPropertyGroup",
+        "description": "List all InstitutionPropertyGroup records",
+        "returnType": "InstitutionPropertyGroupOutputDTO",
+        "select": [
+          "e.group_id",
+          "e.group_name",
+          "e.group_description",
+          "e.institution_id",
+          "e.is_active"
+        ],
+        "from": "ems_institution_property_group e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "InstitutionProperty": [
+      {
+        "name": "listInstitutionProperty",
+        "description": "List all InstitutionProperty records",
+        "returnType": "InstitutionPropertyOutputDTO",
+        "select": [
+          "e.property_id",
+          "e.property_name",
+          "e.property_value",
+          "e.property_type",
+          "e.property_description",
+          "e.group_id",
+          "e.institution_id"
+        ],
+        "from": "ems_institution_property e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "CandidateInstituteLink": [
+      {
+        "name": "listCandidateInstituteLink",
+        "description": "List all CandidateInstituteLink records",
+        "returnType": "CandidateInstituteLinkOutputDTO",
+        "select": [
+          "e.link_id",
+          "e.user_id",
+          "e.institution_id",
+          "e.comment",
+          "e.status"
+        ],
+        "from": "ems_candidate_institute_link e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "UserInstitutePropertyLink": [
+      {
+        "name": "listUserInstitutePropertyLink",
+        "description": "List all UserInstitutePropertyLink records",
+        "returnType": "UserInstitutePropertyLinkOutputDTO",
+        "select": [
+          "e.link_id",
+          "e.user_id",
+          "e.property_id",
+          "e.comment"
+        ],
+        "from": "ems_user_institute_property_link e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "Course": [
+      {
+        "name": "listCourse",
+        "description": "List all Course records",
+        "returnType": "CourseOutputDTO",
+        "select": [
+          "e.course_id",
+          "e.course_name",
+          "e.description",
+          "e.outcomes",
+          "e.course_type_id",
+          "e.is_published",
+          "e.price",
+          "e.duration_weeks",
+          "e.institution_id",
+          "e.is_entity"
+        ],
+        "from": "ems_course e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "CoursePropertyGroup": [
+      {
+        "name": "listCoursePropertyGroup",
+        "description": "List all CoursePropertyGroup records",
+        "returnType": "CoursePropertyGroupOutputDTO",
+        "select": [
+          "e.group_id",
+          "e.group_name",
+          "e.group_description",
+          "e.course_id",
+          "e.is_active"
+        ],
+        "from": "ems_course_property_group e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "CourseProperty": [
+      {
+        "name": "listCourseProperty",
+        "description": "List all CourseProperty records",
+        "returnType": "CoursePropertyOutputDTO",
+        "select": [
+          "e.property_id",
+          "e.property_name",
+          "e.property_value",
+          "e.property_type",
+          "e.property_description",
+          "e.group_id",
+          "e.course_id"
+        ],
+        "from": "ems_course_property e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "UserCourseLink": [
+      {
+        "name": "listUserCourseLink",
+        "description": "List all UserCourseLink records",
+        "returnType": "UserCourseLinkOutputDTO",
+        "select": [
+          "e.link_id",
+          "e.user_id",
+          "e.course_id",
+          "e.role"
+        ],
+        "from": "ems_user_course_link e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "UserCourseWishlist": [
+      {
+        "name": "listUserCourseWishlist",
+        "description": "List all UserCourseWishlist records",
+        "returnType": "UserCourseWishlistOutputDTO",
+        "select": [
+          "e.wish_id",
+          "e.user_id",
+          "e.course_id",
+          "e.comment"
+        ],
+        "from": "ems_user_course_wishlist e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "UserCoursePurchase": [
+      {
+        "name": "listUserCoursePurchase",
+        "description": "List all UserCoursePurchase records",
+        "returnType": "UserCoursePurchaseOutputDTO",
+        "select": [
+          "e.purchase_id",
+          "e.user_id",
+          "e.course_id",
+          "e.comment",
+          "e.amount",
+          "e.transaction_id",
+          "e.purchased_on"
+        ],
+        "from": "ems_user_course_purchase e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "JobPost": [
+      {
+        "name": "listJobPost",
+        "description": "List all JobPost records",
+        "returnType": "JobPostOutputDTO",
+        "select": [
+          "e.job_post_id",
+          "e.job_post_subject",
+          "e.job_post_description",
+          "e.institution_id",
+          "e.location",
+          "e.salary_range",
+          "e.posted_on",
+          "e.expires_on",
+          "e.is_active",
+          "e.is_entity"
+        ],
+        "from": "ems_job_post e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "JobPostPropertyGroup": [
+      {
+        "name": "listJobPostPropertyGroup",
+        "description": "List all JobPostPropertyGroup records",
+        "returnType": "JobPostPropertyGroupOutputDTO",
+        "select": [
+          "e.group_id",
+          "e.group_name",
+          "e.group_description",
+          "e.job_post_id"
+        ],
+        "from": "ems_job_post_property_group e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "JobPostProperty": [
+      {
+        "name": "listJobPostProperty",
+        "description": "List all JobPostProperty records",
+        "returnType": "JobPostPropertyOutputDTO",
+        "select": [
+          "e.property_id",
+          "e.property_name",
+          "e.property_value",
+          "e.property_type",
+          "e.property_description",
+          "e.group_id",
+          "e.job_post_id"
+        ],
+        "from": "ems_job_post_property e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "UserJobPostBookmark": [
+      {
+        "name": "listUserJobPostBookmark",
+        "description": "List all UserJobPostBookmark records",
+        "returnType": "UserJobPostBookmarkOutputDTO",
+        "select": [
+          "e.bookmark_id",
+          "e.user_id",
+          "e.job_post_id",
+          "e.comment"
+        ],
+        "from": "ems_user_job_post_bookmark e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "JobPostUserBookmark": [
+      {
+        "name": "listJobPostUserBookmark",
+        "description": "List all JobPostUserBookmark records",
+        "returnType": "JobPostUserBookmarkOutputDTO",
+        "select": [
+          "e.bookmark_id",
+          "e.job_post_id",
+          "e.user_id",
+          "e.comment"
+        ],
+        "from": "ems_job_post_user_bookmark e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "SubscriptionPaymentHistory": [
+      {
+        "name": "listSubscriptionPaymentHistory",
+        "description": "List all SubscriptionPaymentHistory records",
+        "returnType": "SubscriptionPaymentHistoryOutputDTO",
+        "select": [
+          "e.payment_id",
+          "e.user_id",
+          "e.amount",
+          "e.subscription_type",
+          "e.transaction_details",
+          "e.transaction_reference",
+          "e.payment_on"
+        ],
+        "from": "ems_subscription_payment_history e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "Community": [
+      {
+        "name": "listCommunity",
+        "description": "List all Community records",
+        "returnType": "CommunityOutputDTO",
+        "select": [
+          "e.community_id",
+          "e.institute_id",
+          "e.name",
+          "e.description",
+          "e.group_owner_user_id",
+          "e.is_entity"
+        ],
+        "from": "ems_community e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "CommunityPropertyGroup": [
+      {
+        "name": "listCommunityPropertyGroup",
+        "description": "List all CommunityPropertyGroup records",
+        "returnType": "CommunityPropertyGroupOutputDTO",
+        "select": [
+          "e.group_id",
+          "e.group_name",
+          "e.group_description",
+          "e.community_id"
+        ],
+        "from": "ems_community_property_group e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "CommunityProperty": [
+      {
+        "name": "listCommunityProperty",
+        "description": "List all CommunityProperty records",
+        "returnType": "CommunityPropertyOutputDTO",
+        "select": [
+          "e.property_id",
+          "e.property_name",
+          "e.property_value",
+          "e.property_type",
+          "e.property_description",
+          "e.group_id",
+          "e.community_id"
+        ],
+        "from": "ems_community_property e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "CommunityUserLink": [
+      {
+        "name": "listCommunityUserLink",
+        "description": "List all CommunityUserLink records",
+        "returnType": "CommunityUserLinkOutputDTO",
+        "select": [
+          "e.link_id",
+          "e.community_id",
+          "e.user_id",
+          "e.role",
+          "e.comment"
+        ],
+        "from": "ems_community_user_link e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "CommunityPropertyUserLink": [
+      {
+        "name": "listCommunityPropertyUserLink",
+        "description": "List all CommunityPropertyUserLink records",
+        "returnType": "CommunityPropertyUserLinkOutputDTO",
+        "select": [
+          "e.link_id",
+          "e.community_property_id",
+          "e.user_id",
+          "e.comment"
+        ],
+        "from": "ems_community_property_user_link e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "CommunityUserPost": [
+      {
+        "name": "listCommunityUserPost",
+        "description": "List all CommunityUserPost records",
+        "returnType": "CommunityUserPostOutputDTO",
+        "select": [
+          "e.post_id",
+          "e.community_id",
+          "e.user_id",
+          "e.post"
+        ],
+        "from": "ems_community_user_post e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "CommunityPostLink": [
+      {
+        "name": "listCommunityPostLink",
+        "description": "List all CommunityPostLink records",
+        "returnType": "CommunityPostLinkOutputDTO",
+        "select": [
+          "e.link_id",
+          "e.post_id",
+          "e.community_id"
+        ],
+        "from": "ems_community_post_link e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "PostEmogi": [
+      {
+        "name": "listPostEmogi",
+        "description": "List all PostEmogi records",
+        "returnType": "PostEmogiOutputDTO",
+        "select": [
+          "e.emogi_id",
+          "e.name",
+          "e.description",
+          "e.file_location"
+        ],
+        "from": "ems_post_emogi e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "EmogiPostUserLink": [
+      {
+        "name": "listEmogiPostUserLink",
+        "description": "List all EmogiPostUserLink records",
+        "returnType": "EmogiPostUserLinkOutputDTO",
+        "select": [
+          "e.link_id",
+          "e.emogi_id",
+          "e.post_id",
+          "e.user_id"
+        ],
+        "from": "ems_emogi_post_user_link e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "PostFlag": [
+      {
+        "name": "listPostFlag",
+        "description": "List all PostFlag records",
+        "returnType": "PostFlagOutputDTO",
+        "select": [
+          "e.flag_id",
+          "e.type",
+          "e.user_id",
+          "e.post_id",
+          "e.reason",
+          "e.flagged_on"
+        ],
+        "from": "ems_post_flag e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "PostComment": [
+      {
+        "name": "listPostComment",
+        "description": "List all PostComment records",
+        "returnType": "PostCommentOutputDTO",
+        "select": [
+          "e.comment_id",
+          "e.post_id",
+          "e.comment",
+          "e.user_id"
+        ],
+        "from": "ems_post_comment e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "PostCommentEmogiLink": [
+      {
+        "name": "listPostCommentEmogiLink",
+        "description": "List all PostCommentEmogiLink records",
+        "returnType": "PostCommentEmogiLinkOutputDTO",
+        "select": [
+          "e.link_id",
+          "e.comment_id",
+          "e.emogi_id",
+          "e.user_id"
+        ],
+        "from": "ems_post_comment_emogi_link e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "AiUserProfileEvaluationParameterGroup": [
+      {
+        "name": "listAiUserProfileEvaluationParameterGroup",
+        "description": "List all AiUserProfileEvaluationParameterGroup records",
+        "returnType": "AiUserProfileEvaluationParameterGroupOutputDTO",
+        "select": [
+          "e.group_id",
+          "e.group_name",
+          "e.description"
+        ],
+        "from": "ems_ai_user_profile_evaluation_parameter_group e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "AiUserProfileEvaluationParameter": [
+      {
+        "name": "listAiUserProfileEvaluationParameter",
+        "description": "List all AiUserProfileEvaluationParameter records",
+        "returnType": "AiUserProfileEvaluationParameterOutputDTO",
+        "select": [
+          "e.parameter_id",
+          "e.parameter_name",
+          "e.group_id",
+          "e.parameter_value"
+        ],
+        "from": "ems_ai_user_profile_evaluation_parameter e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "AiUserProfileEvaluation": [
+      {
+        "name": "listAiUserProfileEvaluation",
+        "description": "List all AiUserProfileEvaluation records",
+        "returnType": "AiUserProfileEvaluationOutputDTO",
+        "select": [
+          "e.evaluation_id",
+          "e.user_id",
+          "e.property_id",
+          "e.evaluation_summary",
+          "e.rating"
+        ],
+        "from": "ems_ai_user_profile_evaluation e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "AiEvaluationParameterGroup": [
+      {
+        "name": "listAiEvaluationParameterGroup",
+        "description": "List all AiEvaluationParameterGroup records",
+        "returnType": "AiEvaluationParameterGroupOutputDTO",
+        "select": [
+          "e.group_id",
+          "e.group_name",
+          "e.description"
+        ],
+        "from": "ems_ai_evaluation_parameter_group e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "AiEvaluationParameter": [
+      {
+        "name": "listAiEvaluationParameter",
+        "description": "List all AiEvaluationParameter records",
+        "returnType": "AiEvaluationParameterOutputDTO",
+        "select": [
+          "e.parameter_id",
+          "e.parameter_name",
+          "e.parameter_group_id",
+          "e.parameter_value"
+        ],
+        "from": "ems_ai_evaluation_parameter e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "AiInstitutionProfileEvaluation": [
+      {
+        "name": "listAiInstitutionProfileEvaluation",
+        "description": "List all AiInstitutionProfileEvaluation records",
+        "returnType": "AiInstitutionProfileEvaluationOutputDTO",
+        "select": [
+          "e.evaluation_id",
+          "e.institution_id",
+          "e.evaluation_summary",
+          "e.rating"
+        ],
+        "from": "ems_ai_institution_profile_evaluation e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "AiJobRecommendation": [
+      {
+        "name": "listAiJobRecommendation",
+        "description": "List all AiJobRecommendation records",
+        "returnType": "AiJobRecommendationOutputDTO",
+        "select": [
+          "e.preference_id",
+          "e.job_post_id",
+          "e.profile_id",
+          "e.preference_rating",
+          "e.recommendation_summary"
+        ],
+        "from": "ems_ai_job_recommendation e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "AiCommunityPostEvaluation": [
+      {
+        "name": "listAiCommunityPostEvaluation",
+        "description": "List all AiCommunityPostEvaluation records",
+        "returnType": "AiCommunityPostEvaluationOutputDTO",
+        "select": [
+          "e.evaluation_id",
+          "e.post_id",
+          "e.evaluation_summary",
+          "e.rating"
+        ],
+        "from": "ems_ai_community_post_evaluation e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "AiMarketTrendParameterGroup": [
+      {
+        "name": "listAiMarketTrendParameterGroup",
+        "description": "List all AiMarketTrendParameterGroup records",
+        "returnType": "AiMarketTrendParameterGroupOutputDTO",
+        "select": [
+          "e.group_id",
+          "e.group_name",
+          "e.description",
+          "e.trend_id"
+        ],
+        "from": "ems_ai_market_trend_parameter_group e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "AiMarketTrendParameter": [
+      {
+        "name": "listAiMarketTrendParameter",
+        "description": "List all AiMarketTrendParameter records",
+        "returnType": "AiMarketTrendParameterOutputDTO",
+        "select": [
+          "e.parameter_id",
+          "e.parameter_name",
+          "e.parameter_value",
+          "e.group_id"
+        ],
+        "from": "ems_ai_market_trend_parameter e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "AiMarketTrendProperty": [
+      {
+        "name": "listAiMarketTrendProperty",
+        "description": "List all AiMarketTrendProperty records",
+        "returnType": "AiMarketTrendPropertyOutputDTO",
+        "select": [
+          "e.trend_id",
+          "e.trend_name",
+          "e.trend_description"
+        ],
+        "from": "ems_ai_market_trend_property e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "UserProfileDocument": [
+      {
+        "name": "listUserProfileDocument",
+        "description": "List all UserProfileDocument records",
+        "returnType": "UserProfileDocumentOutputDTO",
+        "select": [
+          "e.document_id",
+          "e.user_id",
+          "e.title",
+          "e.document",
+          "e.document_type"
+        ],
+        "from": "ems_user_profile_document e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "InstitutionProfileDocument": [
+      {
+        "name": "listInstitutionProfileDocument",
+        "description": "List all InstitutionProfileDocument records",
+        "returnType": "InstitutionProfileDocumentOutputDTO",
+        "select": [
+          "e.document_id",
+          "e.institution_id",
+          "e.title",
+          "e.document",
+          "e.document_type"
+        ],
+        "from": "ems_institution_profile_document e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "CourseDocumentGroup": [
+      {
+        "name": "listCourseDocumentGroup",
+        "description": "List all CourseDocumentGroup records",
+        "returnType": "CourseDocumentGroupOutputDTO",
+        "select": [
+          "e.group_id",
+          "e.group_name",
+          "e.group_description",
+          "e.course_id",
+          "e.is_active"
+        ],
+        "from": "ems_course_document_group e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "CourseDocument": [
+      {
+        "name": "listCourseDocument",
+        "description": "List all CourseDocument records",
+        "returnType": "CourseDocumentOutputDTO",
+        "select": [
+          "e.document_id",
+          "e.course_id",
+          "e.group_id",
+          "e.title",
+          "e.document",
+          "e.document_type",
+          "e.file_name"
+        ],
+        "from": "ems_course_document e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "MarketTrendDocument": [
+      {
+        "name": "listMarketTrendDocument",
+        "description": "List all MarketTrendDocument records",
+        "returnType": "MarketTrendDocumentOutputDTO",
+        "select": [
+          "e.document_id",
+          "e.trend_id",
+          "e.title",
+          "e.document",
+          "e.document_type"
+        ],
+        "from": "ems_market_trend_document e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "JobPostDocument": [
+      {
+        "name": "listJobPostDocument",
+        "description": "List all JobPostDocument records",
+        "returnType": "JobPostDocumentOutputDTO",
+        "select": [
+          "e.document_id",
+          "e.job_post_id",
+          "e.title",
+          "e.document",
+          "e.document_type",
+          "e.file_name"
+        ],
+        "from": "ems_job_post_document e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "UserEducation": [
+      {
+        "name": "listUserEducation",
+        "description": "List all UserEducation records",
+        "returnType": "UserEducationOutputDTO",
+        "select": [
+          "e.education_id",
+          "e.user_id",
+          "e.institution_id",
+          "e.degree_type",
+          "e.field_of_study",
+          "e.specialization",
+          "e.start_date",
+          "e.end_date",
+          "e.grade_gpa",
+          "e.is_verified",
+          "e.certificate_document_id"
+        ],
+        "from": "ems_user_education e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "UserWorkExperience": [
+      {
+        "name": "listUserWorkExperience",
+        "description": "List all UserWorkExperience records",
+        "returnType": "UserWorkExperienceOutputDTO",
+        "select": [
+          "e.experience_id",
+          "e.user_id",
+          "e.institution_id",
+          "e.job_title",
+          "e.company_name",
+          "e.employment_type",
+          "e.location",
+          "e.start_date",
+          "e.end_date",
+          "e.is_current",
+          "e.responsibilities",
+          "e.achievements",
+          "e.skills_used"
+        ],
+        "from": "ems_user_work_experience e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "UserSkill": [
+      {
+        "name": "listUserSkill",
+        "description": "List all UserSkill records",
+        "returnType": "UserSkillOutputDTO",
+        "select": [
+          "e.skill_id",
+          "e.user_id",
+          "e.skill_name",
+          "e.skill_category",
+          "e.proficiency_level",
+          "e.years_of_experience",
+          "e.is_verified",
+          "e.verified_by_institution_id",
+          "e.endorsement_count"
+        ],
+        "from": "ems_user_skill e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "UserCertification": [
+      {
+        "name": "listUserCertification",
+        "description": "List all UserCertification records",
+        "returnType": "UserCertificationOutputDTO",
+        "select": [
+          "e.certification_id",
+          "e.user_id",
+          "e.certification_name",
+          "e.issuing_organization",
+          "e.institution_id",
+          "e.issue_date",
+          "e.expiry_date",
+          "e.credential_id",
+          "e.credential_url",
+          "e.certificate_document_id",
+          "e.is_verified"
+        ],
+        "from": "ems_user_certification e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "UserLanguage": [
+      {
+        "name": "listUserLanguage",
+        "description": "List all UserLanguage records",
+        "returnType": "UserLanguageOutputDTO",
+        "select": [
+          "e.language_id",
+          "e.user_id",
+          "e.language_name",
+          "e.proficiency_level",
+          "e.can_read",
+          "e.can_write",
+          "e.can_speak"
+        ],
+        "from": "ems_user_language e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "UserAchievement": [
+      {
+        "name": "listUserAchievement",
+        "description": "List all UserAchievement records",
+        "returnType": "UserAchievementOutputDTO",
+        "select": [
+          "e.achievement_id",
+          "e.user_id",
+          "e.title",
+          "e.description",
+          "e.achievement_type",
+          "e.issuer",
+          "e.date_achieved",
+          "e.url",
+          "e.document_id"
+        ],
+        "from": "ems_user_achievement e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "UserSocialLink": [
+      {
+        "name": "listUserSocialLink",
+        "description": "List all UserSocialLink records",
+        "returnType": "UserSocialLinkOutputDTO",
+        "select": [
+          "e.link_id",
+          "e.user_id",
+          "e.platform",
+          "e.profile_url",
+          "e.is_verified"
+        ],
+        "from": "ems_user_social_link e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "InstitutionDepartment": [
+      {
+        "name": "listInstitutionDepartment",
+        "description": "List all InstitutionDepartment records",
+        "returnType": "InstitutionDepartmentOutputDTO",
+        "select": [
+          "e.department_id",
+          "e.institution_id",
+          "e.department_name",
+          "e.description",
+          "e.head_of_department_user_id",
+          "e.contact_email",
+          "e.contact_phone",
+          "e.is_active"
+        ],
+        "from": "ems_institution_department e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "InstitutionLocation": [
+      {
+        "name": "listInstitutionLocation",
+        "description": "List all InstitutionLocation records",
+        "returnType": "InstitutionLocationOutputDTO",
+        "select": [
+          "e.location_id",
+          "e.institution_id",
+          "e.location_type",
+          "e.address_line1",
+          "e.address_line2",
+          "e.city",
+          "e.state_province",
+          "e.country",
+          "e.postal_code",
+          "e.latitude",
+          "e.longitude",
+          "e.is_primary"
+        ],
+        "from": "ems_institution_location e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "InstitutionAccreditation": [
+      {
+        "name": "listInstitutionAccreditation",
+        "description": "List all InstitutionAccreditation records",
+        "returnType": "InstitutionAccreditationOutputDTO",
+        "select": [
+          "e.accreditation_id",
+          "e.institution_id",
+          "e.accrediting_body",
+          "e.accreditation_type",
+          "e.accreditation_level",
+          "e.issue_date",
+          "e.expiry_date",
+          "e.certificate_document_id",
+          "e.is_active"
+        ],
+        "from": "ems_institution_accreditation e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "InstitutionRanking": [
+      {
+        "name": "listInstitutionRanking",
+        "description": "List all InstitutionRanking records",
+        "returnType": "InstitutionRankingOutputDTO",
+        "select": [
+          "e.ranking_id",
+          "e.institution_id",
+          "e.ranking_organization",
+          "e.ranking_year",
+          "e.overall_rank",
+          "e.country_rank",
+          "e.category",
+          "e.category_rank",
+          "e.score"
+        ],
+        "from": "ems_institution_ranking e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "InstitutionFacility": [
+      {
+        "name": "listInstitutionFacility",
+        "description": "List all InstitutionFacility records",
+        "returnType": "InstitutionFacilityOutputDTO",
+        "select": [
+          "e.facility_id",
+          "e.institution_id",
+          "e.facility_name",
+          "e.facility_type",
+          "e.description",
+          "e.capacity",
+          "e.location_id",
+          "e.is_available"
+        ],
+        "from": "ems_institution_facility e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "CourseModule": [
+      {
+        "name": "listCourseModule",
+        "description": "List all CourseModule records",
+        "returnType": "CourseModuleOutputDTO",
+        "select": [
+          "e.module_id",
+          "e.course_id",
+          "e.module_name",
+          "e.module_number",
+          "e.description",
+          "e.duration_hours",
+          "e.learning_objectives",
+          "e.is_mandatory",
+          "e.order_sequence"
+        ],
+        "from": "ems_course_module e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "CourseLesson": [
+      {
+        "name": "listCourseLesson",
+        "description": "List all CourseLesson records",
+        "returnType": "CourseLessonOutputDTO",
+        "select": [
+          "e.lesson_id",
+          "e.module_id",
+          "e.course_id",
+          "e.lesson_title",
+          "e.lesson_number",
+          "e.content_type",
+          "e.content_url",
+          "e.duration_minutes",
+          "e.is_preview_available",
+          "e.order_sequence"
+        ],
+        "from": "ems_course_lesson e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "CoursePrerequisite": [
+      {
+        "name": "listCoursePrerequisite",
+        "description": "List all CoursePrerequisite records",
+        "returnType": "CoursePrerequisiteOutputDTO",
+        "select": [
+          "e.prerequisite_id",
+          "e.course_id",
+          "e.prerequisite_course_id",
+          "e.prerequisite_type",
+          "e.prerequisite_description",
+          "e.is_mandatory"
+        ],
+        "from": "ems_course_prerequisite e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "CourseInstructor": [
+      {
+        "name": "listCourseInstructor",
+        "description": "List all CourseInstructor records",
+        "returnType": "CourseInstructorOutputDTO",
+        "select": [
+          "e.instructor_link_id",
+          "e.course_id",
+          "e.user_id",
+          "e.role",
+          "e.bio",
+          "e.specialization"
+        ],
+        "from": "ems_course_instructor e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "CourseReview": [
+      {
+        "name": "listCourseReview",
+        "description": "List all CourseReview records",
+        "returnType": "CourseReviewOutputDTO",
+        "select": [
+          "e.review_id",
+          "e.course_id",
+          "e.user_id",
+          "e.rating",
+          "e.review_title",
+          "e.review_text",
+          "e.helpful_count",
+          "e.is_verified_purchase"
+        ],
+        "from": "ems_course_review e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "CourseAssignment": [
+      {
+        "name": "listCourseAssignment",
+        "description": "List all CourseAssignment records",
+        "returnType": "CourseAssignmentOutputDTO",
+        "select": [
+          "e.assignment_id",
+          "e.course_id",
+          "e.module_id",
+          "e.title",
+          "e.description",
+          "e.assignment_type",
+          "e.max_score",
+          "e.passing_score",
+          "e.due_date",
+          "e.duration_minutes",
+          "e.is_mandatory"
+        ],
+        "from": "ems_course_assignment e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "UserCourseProgress": [
+      {
+        "name": "listUserCourseProgress",
+        "description": "List all UserCourseProgress records",
+        "returnType": "UserCourseProgressOutputDTO",
+        "select": [
+          "e.progress_id",
+          "e.user_id",
+          "e.course_id",
+          "e.lesson_id",
+          "e.completion_percentage",
+          "e.last_accessed_at",
+          "e.time_spent_minutes",
+          "e.status"
+        ],
+        "from": "ems_user_course_progress e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "UserAssignmentSubmission": [
+      {
+        "name": "listUserAssignmentSubmission",
+        "description": "List all UserAssignmentSubmission records",
+        "returnType": "UserAssignmentSubmissionOutputDTO",
+        "select": [
+          "e.submission_id",
+          "e.assignment_id",
+          "e.user_id",
+          "e.submission_content",
+          "e.submission_file_id",
+          "e.submitted_at",
+          "e.score",
+          "e.feedback",
+          "e.graded_by_user_id",
+          "e.graded_at",
+          "e.status"
+        ],
+        "from": "ems_user_assignment_submission e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "JobPostRequirement": [
+      {
+        "name": "listJobPostRequirement",
+        "description": "List all JobPostRequirement records",
+        "returnType": "JobPostRequirementOutputDTO",
+        "select": [
+          "e.requirement_id",
+          "e.job_post_id",
+          "e.requirement_type",
+          "e.requirement_description",
+          "e.is_mandatory",
+          "e.minimum_years",
+          "e.proficiency_level"
+        ],
+        "from": "ems_job_post_requirement e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "JobPostBenefit": [
+      {
+        "name": "listJobPostBenefit",
+        "description": "List all JobPostBenefit records",
+        "returnType": "JobPostBenefitOutputDTO",
+        "select": [
+          "e.benefit_id",
+          "e.job_post_id",
+          "e.benefit_type",
+          "e.benefit_description"
+        ],
+        "from": "ems_job_post_benefit e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "JobApplication": [
+      {
+        "name": "listJobApplication",
+        "description": "List all JobApplication records",
+        "returnType": "JobApplicationOutputDTO",
+        "select": [
+          "e.application_id",
+          "e.job_post_id",
+          "e.user_id",
+          "e.cover_letter",
+          "e.resume_document_id",
+          "e.application_status",
+          "e.applied_at",
+          "e.status_updated_at",
+          "e.status_updated_by_user_id",
+          "e.notes"
+        ],
+        "from": "ems_job_application e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "JobInterview": [
+      {
+        "name": "listJobInterview",
+        "description": "List all JobInterview records",
+        "returnType": "JobInterviewOutputDTO",
+        "select": [
+          "e.interview_id",
+          "e.application_id",
+          "e.interview_type",
+          "e.interview_round",
+          "e.scheduled_at",
+          "e.duration_minutes",
+          "e.location",
+          "e.meeting_link",
+          "e.interviewer_user_id",
+          "e.status",
+          "e.feedback",
+          "e.rating"
+        ],
+        "from": "ems_job_interview e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "JobPostQuestion": [
+      {
+        "name": "listJobPostQuestion",
+        "description": "List all JobPostQuestion records",
+        "returnType": "JobPostQuestionOutputDTO",
+        "select": [
+          "e.question_id",
+          "e.job_post_id",
+          "e.question_text",
+          "e.question_type",
+          "e.is_required",
+          "e.order_sequence"
+        ],
+        "from": "ems_job_post_question e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "JobApplicationAnswer": [
+      {
+        "name": "listJobApplicationAnswer",
+        "description": "List all JobApplicationAnswer records",
+        "returnType": "JobApplicationAnswerOutputDTO",
+        "select": [
+          "e.answer_id",
+          "e.application_id",
+          "e.question_id",
+          "e.answer_text",
+          "e.answer_file_id"
+        ],
+        "from": "ems_job_application_answer e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "CommunityCategory": [
+      {
+        "name": "listCommunityCategory",
+        "description": "List all CommunityCategory records",
+        "returnType": "CommunityCategoryOutputDTO",
+        "select": [
+          "e.category_id",
+          "e.community_id",
+          "e.category_name",
+          "e.description",
+          "e.icon",
+          "e.color",
+          "e.order_sequence"
+        ],
+        "from": "ems_community_category e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "CommunityRule": [
+      {
+        "name": "listCommunityRule",
+        "description": "List all CommunityRule records",
+        "returnType": "CommunityRuleOutputDTO",
+        "select": [
+          "e.rule_id",
+          "e.community_id",
+          "e.rule_title",
+          "e.rule_description",
+          "e.order_sequence"
+        ],
+        "from": "ems_community_rule e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "CommunityEvent": [
+      {
+        "name": "listCommunityEvent",
+        "description": "List all CommunityEvent records",
+        "returnType": "CommunityEventOutputDTO",
+        "select": [
+          "e.event_id",
+          "e.community_id",
+          "e.event_title",
+          "e.description",
+          "e.event_type",
+          "e.start_datetime",
+          "e.end_datetime",
+          "e.location",
+          "e.meeting_link",
+          "e.max_attendees",
+          "e.organizer_user_id"
+        ],
+        "from": "ems_community_event e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "CommunityEventAttendee": [
+      {
+        "name": "listCommunityEventAttendee",
+        "description": "List all CommunityEventAttendee records",
+        "returnType": "CommunityEventAttendeeOutputDTO",
+        "select": [
+          "e.attendee_id",
+          "e.event_id",
+          "e.user_id",
+          "e.rsvp_status",
+          "e.attended"
+        ],
+        "from": "ems_community_event_attendee e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "PostAttachment": [
+      {
+        "name": "listPostAttachment",
+        "description": "List all PostAttachment records",
+        "returnType": "PostAttachmentOutputDTO",
+        "select": [
+          "e.attachment_id",
+          "e.post_id",
+          "e.file_name",
+          "e.file_type",
+          "e.file_url",
+          "e.file_size_kb",
+          "e.thumbnail_url"
+        ],
+        "from": "ems_post_attachment e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "PostTag": [
+      {
+        "name": "listPostTag",
+        "description": "List all PostTag records",
+        "returnType": "PostTagOutputDTO",
+        "select": [
+          "e.tag_id",
+          "e.tag_name",
+          "e.description",
+          "e.usage_count"
+        ],
+        "from": "ems_post_tag e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "PostTagLink": [
+      {
+        "name": "listPostTagLink",
+        "description": "List all PostTagLink records",
+        "returnType": "PostTagLinkOutputDTO",
+        "select": [
+          "e.link_id",
+          "e.post_id",
+          "e.tag_id"
+        ],
+        "from": "ems_post_tag_link e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "MarketTrendSkillDemand": [
+      {
+        "name": "listMarketTrendSkillDemand",
+        "description": "List all MarketTrendSkillDemand records",
+        "returnType": "MarketTrendSkillDemandOutputDTO",
+        "select": [
+          "e.demand_id",
+          "e.trend_id",
+          "e.skill_name",
+          "e.demand_level",
+          "e.growth_rate",
+          "e.average_salary_range",
+          "e.job_openings_count",
+          "e.region",
+          "e.industry"
+        ],
+        "from": "ems_market_trend_skill_demand e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "MarketTrendIndustry": [
+      {
+        "name": "listMarketTrendIndustry",
+        "description": "List all MarketTrendIndustry records",
+        "returnType": "MarketTrendIndustryOutputDTO",
+        "select": [
+          "e.industry_id",
+          "e.trend_id",
+          "e.industry_name",
+          "e.description",
+          "e.growth_rate",
+          "e.market_size",
+          "e.emerging_technologies"
+        ],
+        "from": "ems_market_trend_industry e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "MarketTrendLocation": [
+      {
+        "name": "listMarketTrendLocation",
+        "description": "List all MarketTrendLocation records",
+        "returnType": "MarketTrendLocationOutputDTO",
+        "select": [
+          "e.location_id",
+          "e.trend_id",
+          "e.country",
+          "e.region",
+          "e.city",
+          "e.job_market_health",
+          "e.unemployment_rate",
+          "e.average_salary",
+          "e.cost_of_living_index",
+          "e.top_industries"
+        ],
+        "from": "ems_market_trend_location e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "UserSkillEndorsement": [
+      {
+        "name": "listUserSkillEndorsement",
+        "description": "List all UserSkillEndorsement records",
+        "returnType": "UserSkillEndorsementOutputDTO",
+        "select": [
+          "e.endorsement_id",
+          "e.skill_id",
+          "e.endorsed_by_user_id",
+          "e.endorsement_comment",
+          "e.relationship"
+        ],
+        "from": "ems_user_skill_endorsement e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "UserRecommendation": [
+      {
+        "name": "listUserRecommendation",
+        "description": "List all UserRecommendation records",
+        "returnType": "UserRecommendationOutputDTO",
+        "select": [
+          "e.recommendation_id",
+          "e.user_id",
+          "e.recommended_by_user_id",
+          "e.recommendation_text",
+          "e.relationship",
+          "e.position_at_time",
+          "e.is_visible"
+        ],
+        "from": "ems_user_recommendation e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "Notification": [
+      {
+        "name": "listNotification",
+        "description": "List all Notification records",
+        "returnType": "NotificationOutputDTO",
+        "select": [
+          "e.notification_id",
+          "e.user_id",
+          "e.notification_type",
+          "e.title",
+          "e.message",
+          "e.related_entity_type",
+          "e.related_entity_id",
+          "e.action_url",
+          "e.is_read",
+          "e.read_at",
+          "e.priority"
+        ],
+        "from": "ems_notification e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "CourseJobPostLink": [
+      {
+        "name": "listCourseJobPostLink",
+        "description": "List all CourseJobPostLink records",
+        "returnType": "CourseJobPostLinkOutputDTO",
+        "select": [
+          "e.link_id",
+          "e.course_id",
+          "e.job_post_id",
+          "e.relevance_score",
+          "e.matching_skills",
+          "e.ai_generated"
+        ],
+        "from": "ems_course_job_post_link e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "CourseCommunityLink": [
+      {
+        "name": "listCourseCommunityLink",
+        "description": "List all CourseCommunityLink records",
+        "returnType": "CourseCommunityLinkOutputDTO",
+        "select": [
+          "e.link_id",
+          "e.course_id",
+          "e.community_id",
+          "e.link_type",
+          "e.is_active"
+        ],
+        "from": "ems_course_community_link e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "JobPostCommunityLink": [
+      {
+        "name": "listJobPostCommunityLink",
+        "description": "List all JobPostCommunityLink records",
+        "returnType": "JobPostCommunityLinkOutputDTO",
+        "select": [
+          "e.link_id",
+          "e.job_post_id",
+          "e.community_id",
+          "e.is_featured",
+          "e.posted_by_user_id"
+        ],
+        "from": "ems_job_post_community_link e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "MarketTrendCourseLink": [
+      {
+        "name": "listMarketTrendCourseLink",
+        "description": "List all MarketTrendCourseLink records",
+        "returnType": "MarketTrendCourseLinkOutputDTO",
+        "select": [
+          "e.link_id",
+          "e.trend_id",
+          "e.course_id",
+          "e.relevance_score",
+          "e.demand_level",
+          "e.recommendation_reason",
+          "e.ai_generated"
+        ],
+        "from": "ems_market_trend_course_link e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "MarketTrendJobPostLink": [
+      {
+        "name": "listMarketTrendJobPostLink",
+        "description": "List all MarketTrendJobPostLink records",
+        "returnType": "MarketTrendJobPostLinkOutputDTO",
+        "select": [
+          "e.link_id",
+          "e.trend_id",
+          "e.job_post_id",
+          "e.relevance_score",
+          "e.growth_potential",
+          "e.salary_trend",
+          "e.ai_generated"
+        ],
+        "from": "ems_market_trend_job_post_link e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "MarketTrendInstitutionLink": [
+      {
+        "name": "listMarketTrendInstitutionLink",
+        "description": "List all MarketTrendInstitutionLink records",
+        "returnType": "MarketTrendInstitutionLinkOutputDTO",
+        "select": [
+          "e.link_id",
+          "e.trend_id",
+          "e.institution_id",
+          "e.relevance_score",
+          "e.specialization_areas",
+          "e.partnership_opportunities",
+          "e.ai_generated"
+        ],
+        "from": "ems_market_trend_institution_link e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "UserFile": [
+      {
+        "name": "listUserFile",
+        "description": "List all UserFile records",
+        "returnType": "UserFileOutputDTO",
+        "select": [
+          "e.file_id",
+          "e.user_id",
+          "e.file_name",
+          "e.original_file_name",
+          "e.file_type",
+          "e.file_extension",
+          "e.file_location",
+          "e.file_size_bytes",
+          "e.mime_type",
+          "e.description",
+          "e.comment",
+          "e.category",
+          "e.is_verified",
+          "e.download_count",
+          "e.thumbnail_location"
+        ],
+        "from": "ems_user_file e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "InstitutionFile": [
+      {
+        "name": "listInstitutionFile",
+        "description": "List all InstitutionFile records",
+        "returnType": "InstitutionFileOutputDTO",
+        "select": [
+          "e.file_id",
+          "e.institution_id",
+          "e.file_name",
+          "e.original_file_name",
+          "e.file_type",
+          "e.file_extension",
+          "e.file_location",
+          "e.file_size_bytes",
+          "e.mime_type",
+          "e.description",
+          "e.comment",
+          "e.category",
+          "e.is_verified",
+          "e.download_count",
+          "e.thumbnail_location"
+        ],
+        "from": "ems_institution_file e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "CourseFile": [
+      {
+        "name": "listCourseFile",
+        "description": "List all CourseFile records",
+        "returnType": "CourseFileOutputDTO",
+        "select": [
+          "e.file_id",
+          "e.course_id",
+          "e.module_id",
+          "e.lesson_id",
+          "e.file_name",
+          "e.original_file_name",
+          "e.file_type",
+          "e.file_extension",
+          "e.file_location",
+          "e.file_size_bytes",
+          "e.mime_type",
+          "e.description",
+          "e.comment",
+          "e.category",
+          "e.is_downloadable",
+          "e.requires_enrollment",
+          "e.download_count",
+          "e.thumbnail_location",
+          "e.duration_seconds"
+        ],
+        "from": "ems_course_file e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "JobPostFile": [
+      {
+        "name": "listJobPostFile",
+        "description": "List all JobPostFile records",
+        "returnType": "JobPostFileOutputDTO",
+        "select": [
+          "e.file_id",
+          "e.job_post_id",
+          "e.application_id",
+          "e.file_name",
+          "e.original_file_name",
+          "e.file_type",
+          "e.file_extension",
+          "e.file_location",
+          "e.file_size_bytes",
+          "e.mime_type",
+          "e.description",
+          "e.comment",
+          "e.category",
+          "e.uploaded_by_user_id",
+          "e.download_count",
+          "e.thumbnail_location"
+        ],
+        "from": "ems_job_post_file e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "CommunityFile": [
+      {
+        "name": "listCommunityFile",
+        "description": "List all CommunityFile records",
+        "returnType": "CommunityFileOutputDTO",
+        "select": [
+          "e.file_id",
+          "e.community_id",
+          "e.post_id",
+          "e.event_id",
+          "e.file_name",
+          "e.original_file_name",
+          "e.file_type",
+          "e.file_extension",
+          "e.file_location",
+          "e.file_size_bytes",
+          "e.mime_type",
+          "e.description",
+          "e.comment",
+          "e.category",
+          "e.uploaded_by_user_id",
+          "e.download_count",
+          "e.thumbnail_location"
+        ],
+        "from": "ems_community_file e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ],
+    "MarketTrendFile": [
+      {
+        "name": "listMarketTrendFile",
+        "description": "List all MarketTrendFile records",
+        "returnType": "MarketTrendFileOutputDTO",
+        "select": [
+          "e.file_id",
+          "e.trend_id",
+          "e.file_name",
+          "e.original_file_name",
+          "e.file_type",
+          "e.file_extension",
+          "e.file_location",
+          "e.file_size_bytes",
+          "e.mime_type",
+          "e.description",
+          "e.comment",
+          "e.category",
+          "e.source",
+          "e.report_date",
+          "e.download_count",
+          "e.thumbnail_location"
+        ],
+        "from": "ems_market_trend_file e",
+        "joins": [],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [
+          "e.id DESC"
+        ],
+        "pagination": true,
+        "parameters": [],
+        "authorization": {
+          "enabled": true,
+          "documentField": "id"
+        }
+      }
+    ]
+  },
+  "queryStructure": {
+    "name": "Query method name (camelCase)",
+    "description": "Human-readable description",
+    "returnType": "DTO class name for results",
+    "select": [
+      "List of SELECT fields (e.g., 'u.id', 'u.username', 'COUNT(r.id) as role_count')"
+    ],
+    "from": "FROM clause with alias (e.g., 'users u')",
+    "joins": [
+      {
+        "type": "INNER|LEFT|RIGHT|FULL",
+        "table": "Table name",
+        "alias": "Optional table alias",
+        "on": "Join condition (e.g., 'u.id = ur.user_id')"
+      }
+    ],
+    "where": [
+      "List of WHERE conditions (e.g., 'u.active = :active')"
+    ],
+    "groupBy": [
+      "List of GROUP BY fields"
+    ],
+    "having": [
+      "List of HAVING conditions"
+    ],
+    "orderBy": [
+      "List of ORDER BY clauses (e.g., 'u.username ASC')"
+    ],
+    "pagination": "true|false - Enable pagination support",
+    "parameters": [
+      {
+        "name": "Parameter name",
+        "type": "Java type (String, Integer, Boolean, LocalDateTime, etc.)",
+        "required": "true|false",
+        "defaultValue": "Optional default value"
+      }
+    ],
+    "authorization": {
+      "enabled": "true|false - Check document access",
+      "documentField": "Field name containing document ID for authorization check"
+    }
+  },
+  "examples": [
+    {
+      "name": "findActiveUsersWithRoles",
+      "description": "Find active users with their roles",
+      "returnType": "UserWithRolesDTO",
+      "select": [
+        "u.id",
+        "u.username",
+        "u.email",
+        "r.role_name"
+      ],
+      "from": "users u",
+      "joins": [
+        {
+          "type": "INNER",
+          "table": "user_roles",
+          "alias": "ur",
+          "on": "u.id = ur.user_id"
+        },
+        {
+          "type": "LEFT",
+          "table": "roles",
+          "alias": "r",
+          "on": "ur.role_id = r.id"
+        }
+      ],
+      "where": [
+        "u.active = :active",
+        "u.created_date > :fromDate"
+      ],
+      "groupBy": [
+        "u.id",
+        "u.username"
+      ],
+      "having": [
+        "COUNT(r.id) > :minRoles"
+      ],
+      "orderBy": [
+        "u.username ASC"
+      ],
+      "pagination": true,
+      "parameters": [
+        {
+          "name": "active",
+          "type": "Boolean",
+          "required": true
+        },
+        {
+          "name": "fromDate",
+          "type": "LocalDateTime",
+          "required": false
+        },
+        {
+          "name": "minRoles",
+          "type": "Integer",
+          "required": false,
+          "defaultValue": "1"
+        }
+      ],
+      "authorization": {
+        "enabled": true,
+        "documentField": "id"
+      }
+    }
+  ],
+  "notes": [
+    "All queries are generated as R2DBC DatabaseClient parameterized queries",
+    "No dynamic SQL generation at runtime - all queries are pre-built",
+    "Authorization checks are applied at the service layer if enabled",
+    "Pagination adds LIMIT and OFFSET parameters automatically",
+    "Query results are mapped to DTOs specified in returnType"
+  ]
+}

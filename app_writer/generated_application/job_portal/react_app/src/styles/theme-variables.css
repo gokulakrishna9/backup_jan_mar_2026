@@ -1,0 +1,47 @@
+:root {
+  /* ── Color Palette ── */
+  --background-primary: #f9fafb;
+  --background-secondary: #ffffff;
+  --surface: #f9fafb;
+  --border: #6b7280;
+  --text-primary: #4b5563;
+  --text-secondary: #868e96;
+  --accent: #6366F1;
+  --accent-hover: #ffaca7;
+  --success: #22c55e;
+  --warning: #816204;
+  --error: #ffd0ce;
+  --info: #609af8;
+
+
+  /* ── Typography ── */
+  --font-family: 'Inter var', sans-serif;
+  --font-size: 14px;
+  --font-size-small: 12px;
+  --font-size-large: 18px;
+  --heading-font-family: 'Inter var', sans-serif;
+  --heading-font-weight: 600;
+  --line-height: normal;
+
+  /* ── Spacing ── */
+  --spacing-unit: 8px;
+  --spacing-small: 4px;
+  --spacing-medium: 8px;
+  --spacing-large: 16px;
+  --spacing-xlarge: 24px;
+
+  /* ── Borders ── */
+  --border-radius: 6px;
+  --border-radius-large: 12px;
+  --border-width: 1px;
+  --border-color: #6b7280;
+
+  /* ── Shadows ── */
+  --shadow-small: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-medium: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-large: 0 10px 15px rgba(0,0,0,0.1);
+
+  /* ── Animations ── */
+  --transition-duration: 200ms;
+  --easing-function: ease-out;
+}

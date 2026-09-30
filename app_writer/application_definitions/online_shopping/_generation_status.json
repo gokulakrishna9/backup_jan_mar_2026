@@ -1,0 +1,67 @@
+{
+  "app_name": "online_shopping",
+  "schema_version": "1.0",
+  "files": {
+    "webflux_manifest.json": {
+      "status": "clean",
+      "last_modified": "2026-04-06T05:01:29Z",
+      "last_generated": "2026-04-06T05:07:56Z",
+      "content_hash": "sha256:a21ada32056a6730c8a316b76a2498aa810293b4ec67faa8a45d14090cc5fa4e"
+    },
+    "webflux_project_metadata.json": {
+      "status": "clean",
+      "last_modified": "2026-04-06T05:01:29Z",
+      "last_generated": "2026-04-06T05:07:56Z",
+      "content_hash": "sha256:b17ec6e0f6ab4e75de47032a543776eb08408f0687e3620f657c1c55c27026f4"
+    },
+    "webflux_entity_layer.json": {
+      "status": "clean",
+      "last_modified": "2026-04-06T05:01:29Z",
+      "last_generated": "2026-04-06T05:07:56Z",
+      "content_hash": "sha256:65ae2200c957034b1c3ed775cd513f7c417b39ceacf376124e6b4aa24f06cb9f"
+    },
+    "webflux_entities.json": {
+      "status": "clean",
+      "last_modified": "2026-04-06T05:01:29Z",
+      "last_generated": "2026-04-06T05:07:56Z",
+      "content_hash": "sha256:80687bfd9b1a92c63cfb83f8b270a898e5e54c9d83ad9f35f9004edd3959a986"
+    },
+    "webflux_relationships.json": {
+      "status": "clean",
+      "last_modified": "2026-04-06T05:01:29Z",
+      "last_generated": "2026-04-06T05:07:56Z",
+      "content_hash": "sha256:d4b5d1f57cf14acdb0cb25afee1fc30c4ad3b3e725a026672e3451793f60a98e"
+    },
+    "webflux_repository_layer.json": {
+      "status": "clean",
+      "last_modified": "2026-04-06T05:04:08Z",
+      "last_generated": "2026-04-06T05:07:56Z",
+      "content_hash": "sha256:478362f99816ad67895050e90b06f7ba4e9efb2f198d09ec3c292bcb61e65fba"
+    },
+    "webflux_service_layer.json": {
+      "status": "clean",
+      "last_modified": "2026-04-06T05:04:08Z",
+      "last_generated": "2026-04-06T05:07:56Z",
+      "content_hash": "sha256:177b7f4d4c1e00c00c01650b7cd561c01524c4cdb1e7f95a2aab04009143a2f6"
+    },
+    "webflux_controller_layer.json": {
+      "status": "clean",
+      "last_modified": "2026-04-06T05:04:08Z",
+      "last_generated": "2026-04-06T05:07:56Z",
+      "content_hash": "sha256:7150dd1290dd0b80245f3f83f3744834fd9fcc8392be80a5f4bce3776f22e9d9"
+    },
+    "webflux_dto_layer.json": {
+      "status": "clean",
+      "last_modified": "2026-04-06T05:01:29Z",
+      "last_generated": "2026-04-06T05:07:56Z",
+      "content_hash": "sha256:a7de4f1e1b3fe3be4457f04126bc087486494d9c392a7ed8a5173b1c8882266f"
+    },
+    "webflux_document_storage_layer.json": {
+      "status": "clean",
+      "last_modified": "2026-04-06T05:01:29Z",
+      "last_generated": "2026-04-06T05:07:56Z",
+      "content_hash": "sha256:783bb509871db7f0abc90daf556c920355d25ead94a7704cc93aea39e0b6712e"
+    }
+  },
+  "last_full_generation": null
+}

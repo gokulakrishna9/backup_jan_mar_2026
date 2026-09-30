@@ -1,0 +1,14 @@
+{
+  "variables": [
+    {
+      "key": "VITE_API_URL",
+      "value": "http://localhost:8081",
+      "comment": "Backend API base URL. Leave empty to use Vite proxy in dev."
+    },
+    {
+      "key": "VITE_ENABLE_LOGGING",
+      "value": "true",
+      "comment": "Enable client-side logging (API errors, network errors, data errors). Set to false to disable."
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+/**
+ * ScrollPanelWrapper - Enhanced wrapper for PrimeReact ScrollPanel
+ * Category: Panel
+ * 
+ * Scrollable content area with custom styled scrollbars
+ * 
+ * This wrapper provides:
+ * - Simplified event handlers for Redux integration
+ * - Validation hooks
+ * - Lifecycle callbacks
+ * - Embedded component metadata for runtime introspection
+ */
+
+import React, { useEffect, useRef } from 'react';
+import { ScrollPanel } from 'primereact/scrollpanel';
+
+// Component metadata embedded for runtime access
+export const ScrollPanelMetadata = {
+  "name": "ScrollPanel",
+  "import": "ScrollPanel",
+  "category": "Panel",
+  "metadata": {
+    "description": "Scrollable content area with custom styled scrollbars",
+    "usageExamples": [
+      "<ScrollPanelWrapper style={{ width: '100%', height: '200px' }}><p>Long content...</p></ScrollPanelWrapper>",
+      "<ScrollPanelWrapper className=\"custom-scrollbar\" style={{ height: '400px' }}>{content}</ScrollPanelWrapper>"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes for custom styling",
+        "helpText": "Supports PrimeFlex utility classes and custom CSS",
+        "examples": [
+          "'w-full'",
+          "'shadow-2'"
+        ]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles object",
+        "helpText": "Standard React inline styles - height is typically required",
+        "examples": [
+          "{ width: '100%', height: '300px' }"
+        ]
+      }
+    ],
+    "children": {
+      "type": "React.ReactNode",
+      "required": true,
+      "description": "Scrollable content"
+    }
+  },
+  "eventHandlers": {
+    "standard": [],
+    "simplified": [],
+    "validation": [],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "optional": true,
+        "description": "Callback when component mounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [],
+    "patterns": []
+  },
+  "childComponentInfo": {
+    "allowedChildren": [
+      "Any React component"
+    ],
+    "childrenDescription": "Can contain any content that needs custom scrollbars. Content that exceeds the panel dimensions will be scrollable.",
+    "hasChildren": true,
+    "examples": [
+      "<ScrollPanelWrapper style={{ height: '300px' }}><div>{longContent}</div></ScrollPanelWrapper>",
+      "<ScrollPanelWrapper style={{ height: '400px' }}><DataTable value={data} /></ScrollPanelWrapper>"
+    ]
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<ScrollPanelWrapper style={{ width: '100%', height: '200px' }}><p>Scrollable content here...</p></ScrollPanelWrapper>",
+    "withStyling": "<ScrollPanelWrapper className=\"w-full shadow-2 border-round\" style={{ height: '300px' }}><div className=\"p-3\">{content}</div></ScrollPanelWrapper>",
+    "withEvents": "N/A",
+    "withRedux": "<ScrollPanelWrapper style={{ height: '400px' }}><div>{reduxContent}</div></ScrollPanelWrapper>",
+    "withValidation": "N/A",
+    "withChildren": "<ScrollPanelWrapper style={{ height: '500px' }}><div className=\"grid\"><div className=\"col-12\">{items.map(item => <Card key={item.id}>{item.content}</Card>)}</div></div></ScrollPanelWrapper>"
+  }
+};
+
+const ScrollPanelWrapper = (props) => {
+  const {
+    className, style, children, onMount,
+    ...restProps
+  } = props;
+
+  const componentRef = useRef(null);
+
+  // Lifecycle: onMount
+  useEffect(() => {
+    if (onMount) {
+      onMount();
+    }
+  }, []);
+
+  // Build props for underlying PrimeReact component
+  const primeReactProps = {
+    className,
+    style,
+    ref: componentRef,
+    ...restProps
+  };
+
+  return (
+    <ScrollPanel {...primeReactProps}>
+      {children}
+    </ScrollPanel>
+  );
+};
+
+ScrollPanelWrapper.displayName = 'ScrollPanelWrapper';
+
+export default ScrollPanelWrapper;

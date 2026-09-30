@@ -1,0 +1,139 @@
+{
+  "name": "OrganizationChart",
+  "import": "OrganizationChart",
+  "category": "Data",
+  "metadata": {
+    "description": "Hierarchical organization chart for visualizing company structure and relationships",
+    "usageExamples": [
+      "<OrganizationChartWrapper value={orgData} />",
+      "<OrganizationChartWrapper value={orgData} selectionMode=\"single\" selection={selectedNode} onSelectionChange={(e) => setSelectedNode(e.data)} />"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "value",
+        "type": "TreeNode[]",
+        "optional": false,
+        "description": "Hierarchical data to display",
+        "helpText": "Array of TreeNode objects with label, expanded, children properties",
+        "dataTypes": ["TreeNode[] - { label: string, expanded?: boolean, children?: TreeNode[], data?: any }"],
+        "examples": ["[{ label: 'CEO', expanded: true, children: [{ label: 'CTO' }, { label: 'CFO' }] }]"]
+      },
+      {
+        "name": "selectionMode",
+        "type": "'single' | 'multiple'",
+        "optional": true,
+        "description": "Selection mode for nodes",
+        "helpText": "Enables node selection - single or multiple",
+        "dataTypes": ["'single'", "'multiple'"],
+        "examples": ["'single'", "'multiple'"]
+      },
+      {
+        "name": "selection",
+        "type": "TreeNode | TreeNode[]",
+        "optional": true,
+        "description": "Selected node(s)",
+        "helpText": "Currently selected node or nodes",
+        "dataTypes": ["TreeNode (single mode)", "TreeNode[] (multiple mode)"],
+        "examples": ["selectedNode", "[node1, node2]"]
+      },
+      {
+        "name": "nodeTemplate",
+        "type": "(node: TreeNode) => React.ReactNode",
+        "optional": true,
+        "description": "Custom template for rendering nodes",
+        "helpText": "Function to customize node appearance",
+        "dataTypes": ["(node) => JSX.Element"],
+        "examples": ["(node) => <div>{node.label}</div>"]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes for custom styling",
+        "helpText": "Supports PrimeFlex utility classes and custom CSS",
+        "examples": ["'w-full'", "'shadow-2'"]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles object",
+        "helpText": "Standard React inline styles",
+        "examples": ["{ width: '100%' }"]
+      }
+    ],
+    "children": null
+  },
+  "eventHandlers": {
+    "standard": [
+      {
+        "name": "onSelectionChange",
+        "type": "(e: { originalEvent: Event, data: TreeNode | TreeNode[] }) => void",
+        "optional": true,
+        "description": "Callback when selection changes"
+      },
+      {
+        "name": "onNodeSelect",
+        "type": "(e: { originalEvent: Event, node: TreeNode }) => void",
+        "optional": true,
+        "description": "Callback when a node is selected"
+      },
+      {
+        "name": "onNodeUnselect",
+        "type": "(e: { originalEvent: Event, node: TreeNode }) => void",
+        "optional": true,
+        "description": "Callback when a node is unselected"
+      }
+    ],
+    "simplified": [
+      {
+        "name": "onSelectionValueChange",
+        "type": "(selection: TreeNode | TreeNode[]) => void",
+        "optional": true,
+        "description": "Simplified callback with just the selection"
+      }
+    ],
+    "validation": [],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "optional": true,
+        "description": "Callback when component mounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [
+      "handleSelectionChange(e): Processes selection change and calls onSelectionValueChange if provided"
+    ],
+    "patterns": [
+      "For Redux: Use onSelectionValueChange to dispatch selection actions",
+      "For custom rendering: Use nodeTemplate to customize node appearance"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": [],
+    "childrenDescription": "This component does not accept children. Use nodeTemplate prop for custom node rendering.",
+    "hasChildren": false,
+    "examples": []
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<OrganizationChartWrapper value={orgData} />",
+    "withStyling": "<OrganizationChartWrapper value={orgData} className=\"w-full shadow-2\" style={{ height: '500px' }} />",
+    "withEvents": "<OrganizationChartWrapper value={orgData} selectionMode=\"single\" selection={selectedNode} onSelectionChange={(e) => setSelectedNode(e.data)} onNodeSelect={(e) => console.log('Selected:', e.node)} />",
+    "withRedux": "<OrganizationChartWrapper value={orgData} selectionMode=\"single\" selection={selectedNode} onSelectionValueChange={(node) => dispatch(setSelectedNode(node))} />",
+    "withValidation": "N/A",
+    "withChildren": "N/A"
+  }
+}

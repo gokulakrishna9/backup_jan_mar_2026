@@ -1,0 +1,10 @@
+1)  Change
+
+2)  Remove
+3)  Add
+1.  Have a separate folder for application definitions in emotisense-ai folder.
++.  ./application_definition/<application_name>/
+2.  Have a tool that kero can use to generates this application definition.
+3.  Have kero be able to modify the individual components in the application definition using this tool.
+4.  This tool should also mark definitions as dirty or as clean based on wheather the corresponding code has been writter.
+5.  Each file should be updated independent of the entire project based on change to application definition file.

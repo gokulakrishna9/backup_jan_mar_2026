@@ -1,0 +1,150 @@
+{
+  "name": "InputOtp",
+  "import": "InputOtp",
+  "category": "Form",
+  "metadata": {
+    "description": "One-time password input with multiple character fields for 2FA and verification codes",
+    "usageExamples": [
+      "<InputOtpWrapper value={otp} onChange={(e) => setOtp(e.value)} length={6} />",
+      "<InputOtpWrapper value={code} onChange={(e) => setCode(e.value)} length={4} integerOnly />"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "value",
+        "type": "string | number",
+        "optional": true,
+        "description": "Value of the OTP input",
+        "helpText": "Current OTP value as string or number",
+        "dataTypes": ["string (e.g., '123456')", "number (e.g., 123456)"],
+        "examples": ["'123456'", "123456"]
+      },
+      {
+        "name": "length",
+        "type": "number",
+        "optional": true,
+        "description": "Number of OTP input fields",
+        "helpText": "Determines how many character fields to display (default: 4)",
+        "dataTypes": ["number (e.g., 4, 6, 8)"],
+        "examples": ["4", "6", "8"]
+      },
+      {
+        "name": "mask",
+        "type": "boolean",
+        "optional": true,
+        "description": "Whether to mask the input characters",
+        "helpText": "When true, displays dots instead of actual characters",
+        "dataTypes": ["boolean"],
+        "examples": ["true", "false"]
+      },
+      {
+        "name": "integerOnly",
+        "type": "boolean",
+        "optional": true,
+        "description": "Whether to accept only numeric input",
+        "helpText": "When true, only allows digits 0-9",
+        "dataTypes": ["boolean"],
+        "examples": ["true", "false"]
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "optional": true,
+        "description": "Whether the input is disabled",
+        "helpText": "Disables all input fields",
+        "dataTypes": ["boolean"],
+        "examples": ["true", "false"]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes for custom styling",
+        "helpText": "Supports PrimeFlex utility classes and custom CSS",
+        "examples": ["'mb-3'", "'w-full'"]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles object",
+        "helpText": "Standard React inline styles",
+        "examples": ["{ marginBottom: '1rem' }"]
+      }
+    ],
+    "children": null
+  },
+  "eventHandlers": {
+    "standard": [
+      {
+        "name": "onChange",
+        "type": "(e: { value: string | number }) => void",
+        "optional": true,
+        "description": "Callback when OTP value changes"
+      }
+    ],
+    "simplified": [
+      {
+        "name": "onValueChange",
+        "type": "(value: string | number) => void",
+        "optional": true,
+        "description": "Simplified callback with just the value"
+      }
+    ],
+    "validation": [
+      {
+        "name": "onValidate",
+        "type": "(value: string | number) => boolean",
+        "optional": true,
+        "description": "Validation callback"
+      },
+      {
+        "name": "onComplete",
+        "type": "(value: string | number) => void",
+        "optional": true,
+        "description": "Callback when all fields are filled"
+      }
+    ],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "optional": true,
+        "description": "Callback when component mounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [
+      "handleChange(e): Processes onChange event and calls onValueChange if provided",
+      "handleComplete(value): Calls onComplete when all fields are filled"
+    ],
+    "patterns": [
+      "For Redux: Use onValueChange to dispatch actions directly with the value",
+      "For validation: Use onValidate to check OTP format and onComplete for submission"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": [],
+    "childrenDescription": "This component does not accept children",
+    "hasChildren": false,
+    "examples": []
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<InputOtpWrapper value={otp} onChange={(e) => setOtp(e.value)} length={6} />",
+    "withStyling": "<InputOtpWrapper value={otp} onChange={(e) => setOtp(e.value)} length={6} className=\"mb-3\" />",
+    "withEvents": "<InputOtpWrapper value={otp} onChange={(e) => setOtp(e.value)} onComplete={(value) => verifyOtp(value)} length={6} />",
+    "withRedux": "<InputOtpWrapper value={otp} onValueChange={(value) => dispatch(setOtp(value))} length={6} integerOnly />",
+    "withValidation": "<InputOtpWrapper value={otp} onChange={(e) => setOtp(e.value)} onValidate={(value) => value.length === 6} onComplete={(value) => submitOtp(value)} length={6} />",
+    "withChildren": "N/A"
+  }
+}

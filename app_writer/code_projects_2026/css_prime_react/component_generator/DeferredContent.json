@@ -1,0 +1,88 @@
+{
+  "name": "DeferredContent",
+  "import": "DeferredContent",
+  "category": "Panel",
+  "metadata": {
+    "description": "Lazy loads content when it becomes visible in viewport for performance optimization",
+    "usageExamples": [
+      "<DeferredContentWrapper><HeavyComponent /></DeferredContentWrapper>",
+      "<DeferredContentWrapper onLoad={() => console.log('Content loaded')}><DataTable value={data} /></DeferredContentWrapper>"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes for custom styling",
+        "helpText": "Supports PrimeFlex utility classes and custom CSS",
+        "examples": ["'w-full'", "'p-3'"]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles object",
+        "helpText": "Standard React inline styles",
+        "examples": ["{ minHeight: '200px' }"]
+      }
+    ],
+    "children": {
+      "type": "React.ReactNode",
+      "required": true,
+      "description": "Content to be lazy loaded"
+    }
+  },
+  "eventHandlers": {
+    "standard": [
+      {
+        "name": "onLoad",
+        "type": "(e: Event) => void",
+        "optional": true,
+        "description": "Callback when content is loaded"
+      }
+    ],
+    "simplified": [],
+    "validation": [],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "optional": true,
+        "description": "Callback when component mounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [],
+    "patterns": [
+      "For performance: Wrap heavy components to defer loading until visible",
+      "For analytics: Use onLoad to track when content becomes visible"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": ["Any React component"],
+    "childrenDescription": "Can contain any React components. Content is only rendered when it enters the viewport.",
+    "hasChildren": true,
+    "examples": [
+      "<DeferredContentWrapper><DataTable value={largeDataset} /></DeferredContentWrapper>",
+      "<DeferredContentWrapper><Chart type=\"line\" data={chartData} /></DeferredContentWrapper>"
+    ]
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<DeferredContentWrapper><HeavyComponent /></DeferredContentWrapper>",
+    "withStyling": "<DeferredContentWrapper className=\"w-full p-3\" style={{ minHeight: '300px' }}><DataTable value={data} /></DeferredContentWrapper>",
+    "withEvents": "<DeferredContentWrapper onLoad={() => console.log('Content visible')}><Chart data={chartData} /></DeferredContentWrapper>",
+    "withRedux": "<DeferredContentWrapper onLoad={() => dispatch(loadData())}><DataView value={items} /></DeferredContentWrapper>",
+    "withValidation": "N/A",
+    "withChildren": "<DeferredContentWrapper><div className=\"grid\"><div className=\"col-12\"><DataTable value={products} /></div></div></DeferredContentWrapper>"
+  }
+}

@@ -1,0 +1,578 @@
+[
+  {
+    "pageId": "TrainingExamPage",
+    "pageType": "entity",
+    "entityName": "TrainingExam",
+    "gridTemplate": {
+      "gridTemplateRows": "1fr",
+      "gridTemplateColumns": "1fr",
+      "gridTemplateAreas": [
+        "content"
+      ]
+    },
+    "componentPlacements": [
+      {
+        "componentType": "groupedForm",
+        "entityName": "TrainingExam",
+        "gridArea": "content"
+      }
+    ]
+  },
+  {
+    "pageId": "UserProfilePage",
+    "pageType": "entity",
+    "entityName": "UserProfile",
+    "gridTemplate": {
+      "gridTemplateRows": "1fr",
+      "gridTemplateColumns": "1fr",
+      "gridTemplateAreas": [
+        "content"
+      ]
+    },
+    "componentPlacements": [
+      {
+        "componentType": "groupedForm",
+        "entityName": "UserProfile",
+        "gridArea": "content"
+      }
+    ]
+  },
+  {
+    "pageId": "TrainingProgramPage",
+    "pageType": "entity",
+    "entityName": "TrainingProgram",
+    "gridTemplate": {
+      "gridTemplateRows": "1fr",
+      "gridTemplateColumns": "1fr",
+      "gridTemplateAreas": [
+        "content"
+      ]
+    },
+    "componentPlacements": [
+      {
+        "componentType": "groupedForm",
+        "entityName": "TrainingProgram",
+        "gridArea": "content"
+      }
+    ]
+  },
+  {
+    "pageId": "CourseQuestionPage",
+    "pageType": "entity",
+    "entityName": "CourseQuestion",
+    "gridTemplate": {
+      "gridTemplateRows": "1fr",
+      "gridTemplateColumns": "1fr",
+      "gridTemplateAreas": [
+        "content"
+      ]
+    },
+    "componentPlacements": [
+      {
+        "componentType": "groupedForm",
+        "entityName": "CourseQuestion",
+        "gridArea": "content"
+      }
+    ]
+  },
+  {
+    "pageId": "UserEducationPage",
+    "pageType": "entity",
+    "entityName": "UserEducation",
+    "gridTemplate": {
+      "gridTemplateRows": "1fr",
+      "gridTemplateColumns": "1fr",
+      "gridTemplateAreas": [
+        "content"
+      ]
+    },
+    "componentPlacements": [
+      {
+        "componentType": "groupedForm",
+        "entityName": "UserEducation",
+        "gridArea": "content"
+      }
+    ]
+  },
+  {
+    "pageId": "FieldOfStudyPage",
+    "pageType": "entity",
+    "entityName": "FieldOfStudy",
+    "gridTemplate": {
+      "gridTemplateRows": "auto 1fr",
+      "gridTemplateColumns": "1fr",
+      "gridTemplateAreas": [
+        "form",
+        "table"
+      ]
+    },
+    "componentPlacements": [
+      {
+        "componentType": "form",
+        "entityName": "FieldOfStudy",
+        "gridArea": "form",
+        "formLayout": {
+          "columnsLg": 3,
+          "columnsMd": 2,
+          "columnsSm": 1,
+          "fullWidthComponentTypes": [
+            "InputTextarea",
+            "QuillEditor",
+            "MonacoEditor",
+            "MarkdownEditor",
+            "FileUpload"
+          ]
+        }
+      },
+      {
+        "componentType": "dataTable",
+        "entityName": "FieldOfStudy",
+        "gridArea": "table"
+      }
+    ]
+  },
+  {
+    "pageId": "SkillCategoryPage",
+    "pageType": "entity",
+    "entityName": "SkillCategory",
+    "gridTemplate": {
+      "gridTemplateRows": "auto 1fr",
+      "gridTemplateColumns": "1fr",
+      "gridTemplateAreas": [
+        "form",
+        "table"
+      ]
+    },
+    "componentPlacements": [
+      {
+        "componentType": "form",
+        "entityName": "SkillCategory",
+        "gridArea": "form",
+        "formLayout": {
+          "columnsLg": 3,
+          "columnsMd": 2,
+          "columnsSm": 1,
+          "fullWidthComponentTypes": [
+            "InputTextarea",
+            "QuillEditor",
+            "MonacoEditor",
+            "MarkdownEditor",
+            "FileUpload"
+          ]
+        }
+      },
+      {
+        "componentType": "dataTable",
+        "entityName": "SkillCategory",
+        "gridArea": "table"
+      }
+    ]
+  },
+  {
+    "pageId": "IndustryPage",
+    "pageType": "entity",
+    "entityName": "Industry",
+    "gridTemplate": {
+      "gridTemplateRows": "auto 1fr",
+      "gridTemplateColumns": "1fr",
+      "gridTemplateAreas": [
+        "form",
+        "table"
+      ]
+    },
+    "componentPlacements": [
+      {
+        "componentType": "form",
+        "entityName": "Industry",
+        "gridArea": "form",
+        "formLayout": {
+          "columnsLg": 3,
+          "columnsMd": 2,
+          "columnsSm": 1,
+          "fullWidthComponentTypes": [
+            "InputTextarea",
+            "QuillEditor",
+            "MonacoEditor",
+            "MarkdownEditor",
+            "FileUpload"
+          ]
+        }
+      },
+      {
+        "componentType": "dataTable",
+        "entityName": "Industry",
+        "gridArea": "table"
+      }
+    ]
+  },
+  {
+    "pageId": "SkillPage",
+    "pageType": "entity",
+    "entityName": "Skill",
+    "gridTemplate": {
+      "gridTemplateRows": "auto 1fr",
+      "gridTemplateColumns": "1fr",
+      "gridTemplateAreas": [
+        "form",
+        "table"
+      ]
+    },
+    "componentPlacements": [
+      {
+        "componentType": "form",
+        "entityName": "Skill",
+        "gridArea": "form",
+        "formLayout": {
+          "columnsLg": 3,
+          "columnsMd": 2,
+          "columnsSm": 1,
+          "fullWidthComponentTypes": [
+            "InputTextarea",
+            "QuillEditor",
+            "MonacoEditor",
+            "MarkdownEditor",
+            "FileUpload"
+          ]
+        }
+      },
+      {
+        "componentType": "dataTable",
+        "entityName": "Skill",
+        "gridArea": "table"
+      }
+    ]
+  },
+  {
+    "pageId": "JobTitlePage",
+    "pageType": "entity",
+    "entityName": "JobTitle",
+    "gridTemplate": {
+      "gridTemplateRows": "auto 1fr",
+      "gridTemplateColumns": "1fr",
+      "gridTemplateAreas": [
+        "form",
+        "table"
+      ]
+    },
+    "componentPlacements": [
+      {
+        "componentType": "form",
+        "entityName": "JobTitle",
+        "gridArea": "form",
+        "formLayout": {
+          "columnsLg": 3,
+          "columnsMd": 2,
+          "columnsSm": 1,
+          "fullWidthComponentTypes": [
+            "InputTextarea",
+            "QuillEditor",
+            "MonacoEditor",
+            "MarkdownEditor",
+            "FileUpload"
+          ]
+        }
+      },
+      {
+        "componentType": "dataTable",
+        "entityName": "JobTitle",
+        "gridArea": "table"
+      }
+    ]
+  },
+  {
+    "pageId": "CompanyPage",
+    "pageType": "entity",
+    "entityName": "Company",
+    "gridTemplate": {
+      "gridTemplateRows": "auto 1fr",
+      "gridTemplateColumns": "1fr",
+      "gridTemplateAreas": [
+        "form",
+        "table"
+      ]
+    },
+    "componentPlacements": [
+      {
+        "componentType": "form",
+        "entityName": "Company",
+        "gridArea": "form",
+        "formLayout": {
+          "columnsLg": 3,
+          "columnsMd": 2,
+          "columnsSm": 1,
+          "fullWidthComponentTypes": [
+            "InputTextarea",
+            "QuillEditor",
+            "MonacoEditor",
+            "MarkdownEditor",
+            "FileUpload"
+          ]
+        }
+      },
+      {
+        "componentType": "dataTable",
+        "entityName": "Company",
+        "gridArea": "table"
+      }
+    ]
+  },
+  {
+    "pageId": "LocationPage",
+    "pageType": "entity",
+    "entityName": "Location",
+    "gridTemplate": {
+      "gridTemplateRows": "auto 1fr",
+      "gridTemplateColumns": "1fr",
+      "gridTemplateAreas": [
+        "form",
+        "table"
+      ]
+    },
+    "componentPlacements": [
+      {
+        "componentType": "form",
+        "entityName": "Location",
+        "gridArea": "form",
+        "formLayout": {
+          "columnsLg": 3,
+          "columnsMd": 2,
+          "columnsSm": 1,
+          "fullWidthComponentTypes": [
+            "InputTextarea",
+            "QuillEditor",
+            "MonacoEditor",
+            "MarkdownEditor",
+            "FileUpload"
+          ]
+        }
+      },
+      {
+        "componentType": "dataTable",
+        "entityName": "Location",
+        "gridArea": "table"
+      }
+    ]
+  },
+  {
+    "pageId": "TrainingCertificationPage",
+    "pageType": "entity",
+    "entityName": "TrainingCertification",
+    "gridTemplate": {
+      "gridTemplateRows": "auto 1fr",
+      "gridTemplateColumns": "1fr",
+      "gridTemplateAreas": [
+        "form",
+        "table"
+      ]
+    },
+    "componentPlacements": [
+      {
+        "componentType": "form",
+        "entityName": "TrainingCertification",
+        "gridArea": "form",
+        "formLayout": {
+          "columnsLg": 3,
+          "columnsMd": 2,
+          "columnsSm": 1,
+          "fullWidthComponentTypes": [
+            "InputTextarea",
+            "QuillEditor",
+            "MonacoEditor",
+            "MarkdownEditor",
+            "FileUpload"
+          ]
+        }
+      },
+      {
+        "componentType": "dataTable",
+        "entityName": "TrainingCertification",
+        "gridArea": "table"
+      }
+    ]
+  },
+  {
+    "pageId": "JobPostingPage",
+    "pageType": "entity",
+    "entityName": "JobPosting",
+    "gridTemplate": {
+      "gridTemplateRows": "auto 1fr",
+      "gridTemplateColumns": "1fr",
+      "gridTemplateAreas": [
+        "form",
+        "table"
+      ]
+    },
+    "componentPlacements": [
+      {
+        "componentType": "form",
+        "entityName": "JobPosting",
+        "gridArea": "form",
+        "formLayout": {
+          "columnsLg": 3,
+          "columnsMd": 2,
+          "columnsSm": 1,
+          "fullWidthComponentTypes": [
+            "InputTextarea",
+            "QuillEditor",
+            "MonacoEditor",
+            "MarkdownEditor",
+            "FileUpload"
+          ]
+        }
+      },
+      {
+        "componentType": "dataTable",
+        "entityName": "JobPosting",
+        "gridArea": "table"
+      }
+    ]
+  },
+  {
+    "pageId": "EducationLevelPage",
+    "pageType": "entity",
+    "entityName": "EducationLevel",
+    "gridTemplate": {
+      "gridTemplateRows": "auto 1fr",
+      "gridTemplateColumns": "1fr",
+      "gridTemplateAreas": [
+        "form",
+        "table"
+      ]
+    },
+    "componentPlacements": [
+      {
+        "componentType": "form",
+        "entityName": "EducationLevel",
+        "gridArea": "form",
+        "formLayout": {
+          "columnsLg": 3,
+          "columnsMd": 2,
+          "columnsSm": 1,
+          "fullWidthComponentTypes": [
+            "InputTextarea",
+            "QuillEditor",
+            "MonacoEditor",
+            "MarkdownEditor",
+            "FileUpload"
+          ]
+        }
+      },
+      {
+        "componentType": "dataTable",
+        "entityName": "EducationLevel",
+        "gridArea": "table"
+      }
+    ]
+  },
+  {
+    "pageId": "InstitutionPage",
+    "pageType": "entity",
+    "entityName": "Institution",
+    "gridTemplate": {
+      "gridTemplateRows": "auto 1fr",
+      "gridTemplateColumns": "1fr",
+      "gridTemplateAreas": [
+        "form",
+        "table"
+      ]
+    },
+    "componentPlacements": [
+      {
+        "componentType": "form",
+        "entityName": "Institution",
+        "gridArea": "form",
+        "formLayout": {
+          "columnsLg": 3,
+          "columnsMd": 2,
+          "columnsSm": 1,
+          "fullWidthComponentTypes": [
+            "InputTextarea",
+            "QuillEditor",
+            "MonacoEditor",
+            "MarkdownEditor",
+            "FileUpload"
+          ]
+        }
+      },
+      {
+        "componentType": "dataTable",
+        "entityName": "Institution",
+        "gridArea": "table"
+      }
+    ]
+  },
+  {
+    "pageId": "TrainingEnrollmentPage",
+    "pageType": "entity",
+    "entityName": "TrainingEnrollment",
+    "gridTemplate": {
+      "gridTemplateRows": "auto 1fr",
+      "gridTemplateColumns": "1fr",
+      "gridTemplateAreas": [
+        "form",
+        "table"
+      ]
+    },
+    "componentPlacements": [
+      {
+        "componentType": "form",
+        "entityName": "TrainingEnrollment",
+        "gridArea": "form",
+        "formLayout": {
+          "columnsLg": 3,
+          "columnsMd": 2,
+          "columnsSm": 1,
+          "fullWidthComponentTypes": [
+            "InputTextarea",
+            "QuillEditor",
+            "MonacoEditor",
+            "MarkdownEditor",
+            "FileUpload"
+          ]
+        }
+      },
+      {
+        "componentType": "dataTable",
+        "entityName": "TrainingEnrollment",
+        "gridArea": "table"
+      }
+    ]
+  },
+  {
+    "pageId": "JobApplicationPage",
+    "pageType": "entity",
+    "entityName": "JobApplication",
+    "gridTemplate": {
+      "gridTemplateRows": "auto 1fr",
+      "gridTemplateColumns": "1fr",
+      "gridTemplateAreas": [
+        "form",
+        "table"
+      ]
+    },
+    "componentPlacements": [
+      {
+        "componentType": "form",
+        "entityName": "JobApplication",
+        "gridArea": "form",
+        "formLayout": {
+          "columnsLg": 3,
+          "columnsMd": 2,
+          "columnsSm": 1,
+          "fullWidthComponentTypes": [
+            "InputTextarea",
+            "QuillEditor",
+            "MonacoEditor",
+            "MarkdownEditor",
+            "FileUpload"
+          ]
+        }
+      },
+      {
+        "componentType": "dataTable",
+        "entityName": "JobApplication",
+        "gridArea": "table"
+      }
+    ]
+  }
+]

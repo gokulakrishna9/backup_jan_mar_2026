@@ -1,0 +1,21 @@
+{
+  "projectMetadata": {
+    "name": "job-portal",
+    "applicationName": "Job Portal",
+    "groupId": "com.jobportal",
+    "artifactId": "job-portal",
+    "version": "1.0.0",
+    "port": 8081,
+    "sqlFileName": "job_portal.sql",
+    "dateCreated": "2026-04-01",
+    "database": {
+      "type": "mysql",
+      "host": "localhost",
+      "port": 3306,
+      "name": "job_portal",
+      "url": null,
+      "username": "root",
+      "password": "password"
+    }
+  }
+}

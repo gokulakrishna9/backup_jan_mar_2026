@@ -1,0 +1,877 @@
+{
+  "layerType": "filter",
+  "description": "Filter definitions",
+  "version": "2.4.0",
+  "filters": {
+    "User": {
+      "fields": [
+        {
+          "name": "username",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "encryptedpassword",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "email",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "firstname",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "lastname",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "phone",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "role",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "createdAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "updatedAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        }
+      ]
+    },
+    "Category": {
+      "fields": [
+        {
+          "name": "categoryname",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "imageurl",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "parentcategoryid",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "createdAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "updatedAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        }
+      ]
+    },
+    "Product": {
+      "fields": [
+        {
+          "name": "productname",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "price",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "stockquantity",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "imageurl",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "sku",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "isactive",
+          "type": "Boolean",
+          "operators": [
+            "equals"
+          ]
+        },
+        {
+          "name": "categoryid",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "createdAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "updatedAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        }
+      ]
+    },
+    "Cart": {
+      "fields": [
+        {
+          "name": "userid",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "totalamount",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "itemcount",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "createdAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "updatedAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        }
+      ]
+    },
+    "CartItem": {
+      "fields": [
+        {
+          "name": "cartid",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "productid",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "quantity",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "unitprice",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "subtotal",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "createdAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "updatedAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        }
+      ]
+    },
+    "Address": {
+      "fields": [
+        {
+          "name": "userid",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "addressline1",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "addressline2",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "city",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "state",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "postalcode",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "country",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "isdefault",
+          "type": "Boolean",
+          "operators": [
+            "equals"
+          ]
+        },
+        {
+          "name": "createdAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "updatedAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        }
+      ]
+    },
+    "Order": {
+      "fields": [
+        {
+          "name": "userid",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "orderdate",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "status",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "totalamount",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "shippingaddressid",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "trackingnumber",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "notes",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "createdAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "updatedAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        }
+      ]
+    },
+    "OrderItem": {
+      "fields": [
+        {
+          "name": "orderid",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "productid",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "quantity",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "unitprice",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "subtotal",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "createdAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "updatedAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        }
+      ]
+    },
+    "Payment": {
+      "fields": [
+        {
+          "name": "orderid",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "paymentmethod",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "amount",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "paymentdate",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "transactionid",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "status",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "createdAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "updatedAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        }
+      ]
+    },
+    "Review": {
+      "fields": [
+        {
+          "name": "userid",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "productid",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "rating",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "comment",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "reviewdate",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "createdAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "updatedAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        }
+      ]
+    }
+  }
+}

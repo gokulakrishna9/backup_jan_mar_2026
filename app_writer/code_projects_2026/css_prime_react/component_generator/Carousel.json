@@ -1,0 +1,149 @@
+{
+  "name": "Carousel",
+  "import": "Carousel",
+  "category": "Media",
+  "metadata": {
+    "description": "Content slider with navigation",
+    "usageExamples": [
+      "<CarouselWrapper value={products} itemTemplate={productTemplate} />",
+      "<CarouselWrapper value={images} numVisible={3} numScroll={1} responsiveOptions={responsive} />"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "value",
+        "type": "any[]",
+        "optional": false,
+        "description": "Items array",
+        "helpText": "Array of items to display",
+        "dataTypes": ["any[]"],
+        "examples": ["[{id: 1, name: 'Item'}]", "products", "images"]
+      },
+      {
+        "name": "itemTemplate",
+        "type": "(item: any) => React.ReactNode",
+        "optional": true,
+        "description": "Item template",
+        "helpText": "Function to render each item",
+        "dataTypes": ["function"],
+        "examples": ["(item) => <div>{item.name}</div>"]
+      },
+      {
+        "name": "numVisible",
+        "type": "number",
+        "optional": true,
+        "description": "Visible items",
+        "helpText": "Number of items visible at once (default: 1)",
+        "dataTypes": ["number"],
+        "examples": ["1", "3", "5"]
+      },
+      {
+        "name": "numScroll",
+        "type": "number",
+        "optional": true,
+        "description": "Scroll items",
+        "helpText": "Number of items to scroll (default: 1)",
+        "dataTypes": ["number"],
+        "examples": ["1", "3"]
+      },
+      {
+        "name": "circular",
+        "type": "boolean",
+        "optional": true,
+        "description": "Circular mode",
+        "helpText": "Infinite loop",
+        "dataTypes": ["boolean"],
+        "examples": ["true", "false"]
+      },
+      {
+        "name": "autoplayInterval",
+        "type": "number",
+        "optional": true,
+        "description": "Autoplay interval",
+        "helpText": "Milliseconds between auto-scroll (0=disabled)",
+        "dataTypes": ["number (milliseconds)"],
+        "examples": ["3000", "5000", "0"]
+      },
+      {
+        "name": "orientation",
+        "type": "'horizontal' | 'vertical'",
+        "optional": true,
+        "description": "Orientation",
+        "helpText": "Scroll direction",
+        "dataTypes": ["'horizontal' (default)", "'vertical'"],
+        "examples": ["'horizontal'", "'vertical'"]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes",
+        "helpText": "Supports PrimeFlex utility classes",
+        "examples": ["'mb-3'"]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles",
+        "helpText": "Standard React inline styles",
+        "examples": ["{ marginBottom: '1rem' }"]
+      }
+    ],
+    "children": null
+  },
+  "eventHandlers": {
+    "standard": [
+      {
+        "name": "onPageChange",
+        "type": "(e: { page: number }) => void",
+        "description": "Callback when page changes"
+      }
+    ],
+    "simplified": [],
+    "validation": [],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "description": "Called when component mounts"
+      },
+      {
+        "name": "onUnmount",
+        "type": "() => void",
+        "description": "Called when component unmounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [
+      "handlePageChange - Processes onPageChange event"
+    ],
+    "patterns": [
+      "Check if event handler exists before calling"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": [],
+    "childrenDescription": "This component does not accept children - items defined via value prop and itemTemplate",
+    "hasChildren": false,
+    "examples": []
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<CarouselWrapper value={products} itemTemplate={(item) => <div>{item.name}</div>} />",
+    "withStyling": "<CarouselWrapper value={images} numVisible={3} numScroll={1} circular className=\"mb-3\" />",
+    "withEvents": "<CarouselWrapper value={items} onPageChange={(e) => console.log('Page:', e.page)} />",
+    "withRedux": "<CarouselWrapper value={carouselItems} onPageChange={(e) => dispatch(setPage(e.page))} />",
+    "withValidation": "N/A",
+    "withChildren": "N/A"
+  }
+}

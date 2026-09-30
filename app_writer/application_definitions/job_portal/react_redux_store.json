@@ -1,0 +1,695 @@
+[
+  {
+    "entityName": "StudentProfile",
+    "pkField": "studentProfileId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "EmployerProfile",
+    "pkField": "employerProfileId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "TrainerProfile",
+    "pkField": "trainerProfileId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "JobPosting",
+    "pkField": "jobPostingId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "TrainingProgram",
+    "pkField": "trainingProgramId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "JobApplication",
+    "pkField": "jobApplicationId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "TrainingEnrollment",
+    "pkField": "trainingEnrollmentId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "UserProfile",
+    "pkField": "userProfileId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "EducationLevel",
+    "pkField": "educationLevelId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "FieldOfStudy",
+    "pkField": "fieldOfStudyId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "Institution",
+    "pkField": "institutionId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "UserEducation",
+    "pkField": "userEducationId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "Industry",
+    "pkField": "industryId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "JobTitle",
+    "pkField": "jobTitleId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "UserWorkExperience",
+    "pkField": "userWorkExperienceId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "SkillCategory",
+    "pkField": "skillCategoryId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "Skill",
+    "pkField": "skillId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "UserSkill",
+    "pkField": "userSkillId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "TrainingModule",
+    "pkField": "trainingModuleId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "ModuleProgress",
+    "pkField": "moduleProgressId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "TrainingExam",
+    "pkField": "trainingExamId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "ExamAttempt",
+    "pkField": "examAttemptId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "TrainingCertification",
+    "pkField": "trainingCertificationId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CourseDocument",
+    "pkField": "courseDocumentId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CourseVideo",
+    "pkField": "courseVideoId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CourseAudio",
+    "pkField": "courseAudioId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CourseCodeLab",
+    "pkField": "courseCodeLabId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "ExamQuestion",
+    "pkField": "examQuestionId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "ExamAnswer",
+    "pkField": "examAnswerId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CourseQuestion",
+    "pkField": "courseQuestionId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CourseAnswer",
+    "pkField": "courseAnswerId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "Company",
+    "pkField": "companyId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "Location",
+    "pkField": "locationId",
+    "thunks": {
+      "fetchAll": true,
+      "fetchById": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  }
+]

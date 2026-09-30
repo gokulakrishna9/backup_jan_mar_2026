@@ -1,0 +1,214 @@
+/**
+ * BlockUIWrapper - Enhanced wrapper for PrimeReact BlockUI
+ * Category: Misc
+ * 
+ * Blocks user interaction
+ * 
+ * This wrapper provides:
+ * - Simplified event handlers for Redux integration
+ * - Validation hooks
+ * - Lifecycle callbacks
+ * - Embedded component metadata for runtime introspection
+ */
+
+import React, { useEffect, useRef } from 'react';
+import { BlockUI } from 'primereact/blockui';
+
+// Component metadata embedded for runtime access
+export const BlockUIMetadata = {
+  "name": "BlockUI",
+  "import": "BlockUI",
+  "category": "Misc",
+  "metadata": {
+    "description": "Blocks user interaction",
+    "usageExamples": [
+      "<BlockUIWrapper blocked={blocked}><Panel>Content</Panel></BlockUIWrapper>",
+      "<BlockUIWrapper blocked={loading} fullScreen><div>App content</div></BlockUIWrapper>"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "blocked",
+        "type": "boolean",
+        "optional": false,
+        "description": "Blocked state",
+        "helpText": "Controls whether content is blocked",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "loading",
+          "isBlocked",
+          "true"
+        ]
+      },
+      {
+        "name": "fullScreen",
+        "type": "boolean",
+        "optional": true,
+        "description": "Full screen mode",
+        "helpText": "Blocks entire screen",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "name": "template",
+        "type": "React.ReactNode",
+        "optional": true,
+        "description": "Custom template",
+        "helpText": "Custom content to show when blocked",
+        "dataTypes": [
+          "React.ReactNode"
+        ],
+        "examples": [
+          "<ProgressSpinner />",
+          "<i className=\"pi pi-lock\" />"
+        ]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes",
+        "helpText": "Supports PrimeFlex utility classes",
+        "examples": [
+          "'custom-block'"
+        ]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles",
+        "helpText": "Standard React inline styles",
+        "examples": [
+          "{ minHeight: '200px' }"
+        ]
+      }
+    ],
+    "children": {
+      "type": "React.ReactNode",
+      "description": "Content to block",
+      "helpText": "Any React content that can be blocked"
+    }
+  },
+  "eventHandlers": {
+    "standard": [
+      {
+        "name": "onBlocked",
+        "type": "() => void",
+        "description": "Callback when content is blocked"
+      },
+      {
+        "name": "onUnblocked",
+        "type": "() => void",
+        "description": "Callback when content is unblocked"
+      }
+    ],
+    "simplified": [],
+    "validation": [],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "description": "Called when component mounts"
+      },
+      {
+        "name": "onUnmount",
+        "type": "() => void",
+        "description": "Called when component unmounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [
+      "handleBlocked - Processes onBlocked event",
+      "handleUnblocked - Processes onUnblocked event"
+    ],
+    "patterns": [
+      "Check if event handler exists before calling"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": [
+      "Any React component",
+      "Text",
+      "HTML elements"
+    ],
+    "childrenDescription": "BlockUI wraps any React content that needs to be blocked",
+    "hasChildren": true,
+    "examples": [
+      "<BlockUIWrapper blocked={loading}><Panel header=\"Data\"><DataTable value={data} /></Panel></BlockUIWrapper>"
+    ]
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<BlockUIWrapper blocked={blocked}><Panel>Content</Panel></BlockUIWrapper>",
+    "withStyling": "<BlockUIWrapper blocked={loading} template={<ProgressSpinner />} className=\"custom-block\"><div>Content</div></BlockUIWrapper>",
+    "withEvents": "<BlockUIWrapper blocked={isBlocked} onBlocked={() => console.log('blocked')} onUnblocked={() => console.log('unblocked')}><Panel>Content</Panel></BlockUIWrapper>",
+    "withRedux": "<BlockUIWrapper blocked={isLoading} fullScreen><div>App content</div></BlockUIWrapper>",
+    "withValidation": "N/A",
+    "withChildren": "<BlockUIWrapper blocked={loading}><DataTable value={products} /><Button label=\"Load\" /></BlockUIWrapper>"
+  }
+};
+
+const BlockUIWrapper = (props) => {
+  const {
+    blocked, fullScreen, template, className, style, children, onBlocked, onUnblocked, onMount, onUnmount,
+    ...restProps
+  } = props;
+
+  const componentRef = useRef(null);
+
+  // Lifecycle: onMount
+  useEffect(() => {
+    if (onMount) {
+      onMount();
+    }
+  }, []);
+
+  // Lifecycle: onUnmount
+  useEffect(() => {
+    return () => {
+      if (onUnmount) {
+        onUnmount();
+      }
+    };
+  }, []);
+
+  // Build props for underlying PrimeReact component
+  const primeReactProps = {
+    blocked,
+    fullScreen,
+    template,
+    className,
+    style,
+    onBlocked,
+    onUnblocked,
+    ref: componentRef,
+    ...restProps
+  };
+
+  return (
+    <BlockUI {...primeReactProps}>
+      {children}
+    </BlockUI>
+  );
+};
+
+BlockUIWrapper.displayName = 'BlockUIWrapper';
+
+export default BlockUIWrapper;

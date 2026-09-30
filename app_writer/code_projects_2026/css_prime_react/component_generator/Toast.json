@@ -1,0 +1,113 @@
+{
+  "name": "Toast",
+  "import": "Toast",
+  "category": "Messages",
+  "metadata": {
+    "description": "Notification messages",
+    "usageExamples": [
+      "const toast = useRef(null); toast.current.show({ severity: 'success', summary: 'Success', detail: 'Message' });",
+      "<ToastWrapper ref={toastRef} position=\"top-right\" />"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "position",
+        "type": "'top-left' | 'top-center' | 'top-right' | 'bottom-left' | 'bottom-center' | 'bottom-right' | 'center'",
+        "optional": true,
+        "description": "Toast position",
+        "helpText": "Screen position for toast messages",
+        "dataTypes": ["'top-right' (default)", "'top-left'", "'bottom-right'", "'center'"],
+        "examples": ["'top-right'", "'bottom-center'"]
+      },
+      {
+        "name": "baseZIndex",
+        "type": "number",
+        "optional": true,
+        "description": "Base z-index",
+        "helpText": "Starting z-index value",
+        "dataTypes": ["number"],
+        "examples": ["1000", "9999"]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes",
+        "helpText": "Supports PrimeFlex utility classes",
+        "examples": ["'custom-toast'"]
+      }
+,
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles",
+        "helpText": "Standard React inline styles",
+        "examples": ["{ zIndex: 9999 }"]
+      }
+    ],
+    "children": null
+  },
+  "eventHandlers": {
+    "standard": [
+      {
+        "name": "onRemove",
+        "type": "(message: any) => void",
+        "description": "Callback when message is removed"
+      },
+      {
+        "name": "onClick",
+        "type": "(message: any) => void",
+        "description": "Callback when message is clicked"
+      }
+    ],
+    "simplified": [],
+    "validation": [],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "description": "Called when component mounts"
+      },
+      {
+        "name": "onUnmount",
+        "type": "() => void",
+        "description": "Called when component unmounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [
+      "show - Method to display toast message",
+      "clear - Method to clear all messages",
+      "replace - Method to replace messages"
+    ],
+    "patterns": [
+      "Use ref to access toast methods",
+      "Call show() with message object { severity, summary, detail, life }"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": [],
+    "childrenDescription": "This component does not accept children - messages are shown via ref methods",
+    "hasChildren": false,
+    "examples": []
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "const toast = useRef(null); <ToastWrapper ref={toast} />; toast.current.show({ severity: 'success', summary: 'Success', detail: 'Message' });",
+    "withStyling": "<ToastWrapper ref={toast} position=\"top-right\" className=\"custom-toast\" />",
+    "withEvents": "<ToastWrapper ref={toast} onRemove={(msg) => console.log('removed', msg)} />",
+    "withRedux": "toast.current.show({ severity: 'success', summary: 'Saved', detail: 'Data saved to Redux' });",
+    "withValidation": "N/A",
+    "withChildren": "N/A"
+  }
+}

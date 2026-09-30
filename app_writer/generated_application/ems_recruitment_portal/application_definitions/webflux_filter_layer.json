@@ -1,0 +1,8267 @@
+{
+  "layerType": "filter",
+  "description": "Filter definitions - entity-specific filter fields and operators for custom queries",
+  "version": "2.4.0",
+  "filters": {
+    "User": {
+      "fields": [
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "firstName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "lastName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "gender",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "dateOfBirth",
+          "type": "LocalDate",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "emailAddress",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "userName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "encryptedPassword",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "phoneNumber",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "profilePhoto",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "isActive",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "isEntity",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "isPublic",
+          "type": "Boolean",
+          "operators": [
+            "equals"
+          ]
+        }
+      ]
+    },
+    "UserPropertyGroup": {
+      "fields": [
+        {
+          "name": "groupId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "groupName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "groupDescription",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "isActive",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "UserProperty": {
+      "fields": [
+        {
+          "name": "propertyId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "propertyName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "propertyValue",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "propertyType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "propertyDescription",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "groupId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "Institution": {
+      "fields": [
+        {
+          "name": "institutionId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "moto",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "institutionTypeId",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "website",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "contactEmail",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "contactPhone",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "isActive",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "isEntity",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "isPublic",
+          "type": "Boolean",
+          "operators": [
+            "equals"
+          ]
+        }
+      ]
+    },
+    "InstitutionPropertyGroup": {
+      "fields": [
+        {
+          "name": "groupId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "groupName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "groupDescription",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "institutionId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "isActive",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "InstitutionProperty": {
+      "fields": [
+        {
+          "name": "propertyId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "propertyName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "propertyValue",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "propertyType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "propertyDescription",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "groupId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "institutionId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "CandidateInstituteLink": {
+      "fields": [
+        {
+          "name": "linkId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "institutionId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "comment",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "status",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "UserInstitutePropertyLink": {
+      "fields": [
+        {
+          "name": "linkId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "propertyId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "comment",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "Course": {
+      "fields": [
+        {
+          "name": "courseId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "courseName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "outcomes",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "courseTypeId",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "isPublished",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "price",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "durationWeeks",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "institutionId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "isEntity",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "isPublic",
+          "type": "Boolean",
+          "operators": [
+            "equals"
+          ]
+        }
+      ]
+    },
+    "CoursePropertyGroup": {
+      "fields": [
+        {
+          "name": "groupId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "groupName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "groupDescription",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "courseId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "isActive",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "CourseProperty": {
+      "fields": [
+        {
+          "name": "propertyId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "propertyName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "propertyValue",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "propertyType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "propertyDescription",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "groupId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "courseId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "UserCourseLink": {
+      "fields": [
+        {
+          "name": "linkId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "courseId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "role",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "UserCourseWishlist": {
+      "fields": [
+        {
+          "name": "wishId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "courseId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "comment",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "UserCoursePurchase": {
+      "fields": [
+        {
+          "name": "purchaseId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "courseId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "comment",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "amount",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "transactionId",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "purchasedOn",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        }
+      ]
+    },
+    "JobPost": {
+      "fields": [
+        {
+          "name": "jobPostId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "jobPostSubject",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "jobPostDescription",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "institutionId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "location",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "salaryRange",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "postedOn",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "expiresOn",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "isActive",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "isEntity",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "JobPostPropertyGroup": {
+      "fields": [
+        {
+          "name": "groupId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "groupName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "groupDescription",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "jobPostId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "JobPostProperty": {
+      "fields": [
+        {
+          "name": "propertyId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "propertyName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "propertyValue",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "propertyType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "propertyDescription",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "groupId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "jobPostId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "UserJobPostBookmark": {
+      "fields": [
+        {
+          "name": "bookmarkId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "jobPostId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "comment",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "JobPostUserBookmark": {
+      "fields": [
+        {
+          "name": "bookmarkId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "jobPostId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "comment",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "SubscriptionPaymentHistory": {
+      "fields": [
+        {
+          "name": "paymentId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "amount",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "subscriptionType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "transactionDetails",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "transactionReference",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "paymentOn",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        }
+      ]
+    },
+    "Community": {
+      "fields": [
+        {
+          "name": "communityId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "instituteId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "groupOwnerUserId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "isEntity",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "isPublic",
+          "type": "Boolean",
+          "operators": [
+            "equals"
+          ]
+        }
+      ]
+    },
+    "CommunityPropertyGroup": {
+      "fields": [
+        {
+          "name": "groupId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "groupName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "groupDescription",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "communityId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "CommunityProperty": {
+      "fields": [
+        {
+          "name": "propertyId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "propertyName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "propertyValue",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "propertyType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "propertyDescription",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "groupId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "communityId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "CommunityUserLink": {
+      "fields": [
+        {
+          "name": "linkId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "communityId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "role",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "comment",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "CommunityPropertyUserLink": {
+      "fields": [
+        {
+          "name": "linkId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "communityPropertyId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "comment",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "CommunityUserPost": {
+      "fields": [
+        {
+          "name": "postId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "communityId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "post",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "CommunityPostLink": {
+      "fields": [
+        {
+          "name": "linkId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "postId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "communityId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "PostEmogi": {
+      "fields": [
+        {
+          "name": "emogiId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileLocation",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "EmogiPostUserLink": {
+      "fields": [
+        {
+          "name": "linkId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "emogiId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "postId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "PostFlag": {
+      "fields": [
+        {
+          "name": "flagId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "type",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "postId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "reason",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "flaggedOn",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        }
+      ]
+    },
+    "PostComment": {
+      "fields": [
+        {
+          "name": "commentId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "postId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "comment",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "PostCommentEmogiLink": {
+      "fields": [
+        {
+          "name": "linkId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "commentId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "emogiId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "AiUserProfileEvaluationParameterGroup": {
+      "fields": [
+        {
+          "name": "groupId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "groupName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "AiUserProfileEvaluationParameter": {
+      "fields": [
+        {
+          "name": "parameterId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "parameterName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "groupId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "parameterValue",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "AiUserProfileEvaluation": {
+      "fields": [
+        {
+          "name": "evaluationId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "propertyId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "evaluationSummary",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "rating",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "AiEvaluationParameterGroup": {
+      "fields": [
+        {
+          "name": "groupId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "groupName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "AiEvaluationParameter": {
+      "fields": [
+        {
+          "name": "parameterId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "parameterName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "parameterGroupId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "parameterValue",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "AiInstitutionProfileEvaluation": {
+      "fields": [
+        {
+          "name": "evaluationId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "institutionId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "evaluationSummary",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "rating",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "AiJobRecommendation": {
+      "fields": [
+        {
+          "name": "preferenceId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "jobPostId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "profileId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "preferenceRating",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "recommendationSummary",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "AiCommunityPostEvaluation": {
+      "fields": [
+        {
+          "name": "evaluationId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "postId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "evaluationSummary",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "rating",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "AiMarketTrendParameterGroup": {
+      "fields": [
+        {
+          "name": "groupId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "groupName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "trendId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "AiMarketTrendParameter": {
+      "fields": [
+        {
+          "name": "parameterId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "parameterName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "parameterValue",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "groupId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "AiMarketTrendProperty": {
+      "fields": [
+        {
+          "name": "trendId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "trendName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "trendDescription",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "UserProfileDocument": {
+      "fields": [
+        {
+          "name": "documentId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "document",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "documentType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "InstitutionProfileDocument": {
+      "fields": [
+        {
+          "name": "documentId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "institutionId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "document",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "documentType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "CourseDocumentGroup": {
+      "fields": [
+        {
+          "name": "groupId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "groupName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "groupDescription",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "courseId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "isActive",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "CourseDocument": {
+      "fields": [
+        {
+          "name": "documentId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "courseId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "groupId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "document",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "documentType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "MarketTrendDocument": {
+      "fields": [
+        {
+          "name": "documentId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "trendId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "document",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "documentType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "JobPostDocument": {
+      "fields": [
+        {
+          "name": "documentId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "jobPostId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "document",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "documentType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "UserEducation": {
+      "fields": [
+        {
+          "name": "educationId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "institutionId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "degreeType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fieldOfStudy",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "specialization",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "startDate",
+          "type": "LocalDate",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "endDate",
+          "type": "LocalDate",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "gradeGpa",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "isVerified",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "certificateDocumentId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "UserWorkExperience": {
+      "fields": [
+        {
+          "name": "experienceId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "institutionId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "jobTitle",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "companyName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "employmentType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "location",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "startDate",
+          "type": "LocalDate",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "endDate",
+          "type": "LocalDate",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "isCurrent",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "responsibilities",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "achievements",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "skillsUsed",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "UserSkill": {
+      "fields": [
+        {
+          "name": "skillId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "skillName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "skillCategory",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "proficiencyLevel",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "yearsOfExperience",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "isVerified",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "verifiedByInstitutionId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "endorsementCount",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "UserCertification": {
+      "fields": [
+        {
+          "name": "certificationId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "certificationName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "issuingOrganization",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "institutionId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "issueDate",
+          "type": "LocalDate",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "expiryDate",
+          "type": "LocalDate",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "credentialId",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "credentialUrl",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "certificateDocumentId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "isVerified",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "UserLanguage": {
+      "fields": [
+        {
+          "name": "languageId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "languageName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "proficiencyLevel",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "canRead",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "canWrite",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "canSpeak",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "UserAchievement": {
+      "fields": [
+        {
+          "name": "achievementId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "achievementType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "issuer",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "dateAchieved",
+          "type": "LocalDate",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "documentId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "UserSocialLink": {
+      "fields": [
+        {
+          "name": "linkId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "platform",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "profileUrl",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "isVerified",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "InstitutionDepartment": {
+      "fields": [
+        {
+          "name": "departmentId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "institutionId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "departmentName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "headOfDepartmentUserId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "contactEmail",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "contactPhone",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "isActive",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "InstitutionLocation": {
+      "fields": [
+        {
+          "name": "locationId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "institutionId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "locationType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "addressLine1",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "addressLine2",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "city",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "stateProvince",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "country",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "postalCode",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "latitude",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "longitude",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "isPrimary",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "InstitutionAccreditation": {
+      "fields": [
+        {
+          "name": "accreditationId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "institutionId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "accreditingBody",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "accreditationType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "accreditationLevel",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "issueDate",
+          "type": "LocalDate",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "expiryDate",
+          "type": "LocalDate",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "certificateDocumentId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "isActive",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "InstitutionRanking": {
+      "fields": [
+        {
+          "name": "rankingId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "institutionId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "rankingOrganization",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "rankingYear",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "overallRank",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "countryRank",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "category",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "categoryRank",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "score",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "InstitutionFacility": {
+      "fields": [
+        {
+          "name": "facilityId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "institutionId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "facilityName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "facilityType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "capacity",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "locationId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "isAvailable",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "CourseModule": {
+      "fields": [
+        {
+          "name": "moduleId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "courseId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "moduleName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "moduleNumber",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "durationHours",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "learningObjectives",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "isMandatory",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "orderSequence",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "CourseLesson": {
+      "fields": [
+        {
+          "name": "lessonId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "moduleId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "courseId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "lessonTitle",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "lessonNumber",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "contentType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "contentUrl",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "durationMinutes",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "isPreviewAvailable",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "orderSequence",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "CoursePrerequisite": {
+      "fields": [
+        {
+          "name": "prerequisiteId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "courseId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "prerequisiteCourseId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "prerequisiteType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "prerequisiteDescription",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "isMandatory",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "CourseInstructor": {
+      "fields": [
+        {
+          "name": "instructorLinkId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "courseId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "role",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "bio",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "specialization",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "CourseReview": {
+      "fields": [
+        {
+          "name": "reviewId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "courseId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "rating",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "reviewTitle",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "reviewText",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "helpfulCount",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "isVerifiedPurchase",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "CourseAssignment": {
+      "fields": [
+        {
+          "name": "assignmentId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "courseId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "moduleId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "assignmentType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "maxScore",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "passingScore",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "dueDate",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "durationMinutes",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "isMandatory",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "UserCourseProgress": {
+      "fields": [
+        {
+          "name": "progressId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "courseId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "lessonId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "completionPercentage",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "lastAccessedAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "timeSpentMinutes",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "status",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "UserAssignmentSubmission": {
+      "fields": [
+        {
+          "name": "submissionId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "assignmentId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "submissionContent",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "submissionFileId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "submittedAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "score",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "feedback",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "gradedByUserId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "gradedAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "status",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "JobPostRequirement": {
+      "fields": [
+        {
+          "name": "requirementId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "jobPostId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "requirementType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "requirementDescription",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "isMandatory",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "minimumYears",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "proficiencyLevel",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "JobPostBenefit": {
+      "fields": [
+        {
+          "name": "benefitId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "jobPostId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "benefitType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "benefitDescription",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "JobApplication": {
+      "fields": [
+        {
+          "name": "applicationId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "jobPostId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "coverLetter",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "resumeDocumentId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "applicationStatus",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "appliedAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "statusUpdatedAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "statusUpdatedByUserId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "notes",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "JobInterview": {
+      "fields": [
+        {
+          "name": "interviewId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "applicationId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "interviewType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "interviewRound",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "scheduledAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "durationMinutes",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "location",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "meetingLink",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "interviewerUserId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "status",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "feedback",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "rating",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "JobPostQuestion": {
+      "fields": [
+        {
+          "name": "questionId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "jobPostId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "questionText",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "questionType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "isRequired",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "orderSequence",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "JobApplicationAnswer": {
+      "fields": [
+        {
+          "name": "answerId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "applicationId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "questionId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "answerText",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "answerFileId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "CommunityCategory": {
+      "fields": [
+        {
+          "name": "categoryId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "communityId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "categoryName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "icon",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "color",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "orderSequence",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "CommunityRule": {
+      "fields": [
+        {
+          "name": "ruleId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "communityId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "ruleTitle",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "ruleDescription",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "orderSequence",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "CommunityEvent": {
+      "fields": [
+        {
+          "name": "eventId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "communityId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "eventTitle",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "eventType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "startDatetime",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "endDatetime",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "location",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "meetingLink",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "maxAttendees",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "organizerUserId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "CommunityEventAttendee": {
+      "fields": [
+        {
+          "name": "attendeeId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "eventId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "rsvpStatus",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "attended",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "PostAttachment": {
+      "fields": [
+        {
+          "name": "attachmentId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "postId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "fileName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileUrl",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileSizeKb",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "thumbnailUrl",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "PostTag": {
+      "fields": [
+        {
+          "name": "tagId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "tagName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "usageCount",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "PostTagLink": {
+      "fields": [
+        {
+          "name": "linkId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "postId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "tagId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "MarketTrendSkillDemand": {
+      "fields": [
+        {
+          "name": "demandId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "trendId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "skillName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "demandLevel",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "growthRate",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "averageSalaryRange",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "jobOpeningsCount",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "region",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "industry",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "MarketTrendIndustry": {
+      "fields": [
+        {
+          "name": "industryId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "trendId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "industryName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "growthRate",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "marketSize",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "emergingTechnologies",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "MarketTrendLocation": {
+      "fields": [
+        {
+          "name": "locationId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "trendId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "country",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "region",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "city",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "jobMarketHealth",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "unemploymentRate",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "averageSalary",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "costOfLivingIndex",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "topIndustries",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "UserSkillEndorsement": {
+      "fields": [
+        {
+          "name": "endorsementId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "skillId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "endorsedByUserId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "endorsementComment",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "relationship",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "UserRecommendation": {
+      "fields": [
+        {
+          "name": "recommendationId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "recommendedByUserId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "recommendationText",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "relationship",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "positionAtTime",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "isVisible",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "Notification": {
+      "fields": [
+        {
+          "name": "notificationId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "notificationType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "message",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "relatedEntityType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "relatedEntityId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "actionUrl",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "isRead",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "readAt",
+          "type": "LocalDateTime",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "priority",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "CourseJobPostLink": {
+      "fields": [
+        {
+          "name": "linkId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "courseId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "jobPostId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "relevanceScore",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "matchingSkills",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "aiGenerated",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "CourseCommunityLink": {
+      "fields": [
+        {
+          "name": "linkId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "courseId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "communityId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "linkType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "isActive",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "JobPostCommunityLink": {
+      "fields": [
+        {
+          "name": "linkId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "jobPostId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "communityId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "isFeatured",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "postedByUserId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "MarketTrendCourseLink": {
+      "fields": [
+        {
+          "name": "linkId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "trendId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "courseId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "relevanceScore",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "demandLevel",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "recommendationReason",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "aiGenerated",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "MarketTrendJobPostLink": {
+      "fields": [
+        {
+          "name": "linkId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "trendId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "jobPostId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "relevanceScore",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "growthPotential",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "salaryTrend",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "aiGenerated",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "MarketTrendInstitutionLink": {
+      "fields": [
+        {
+          "name": "linkId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "trendId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "institutionId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "relevanceScore",
+          "type": "BigDecimal",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "specializationAreas",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "partnershipOpportunities",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "aiGenerated",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "UserFile": {
+      "fields": [
+        {
+          "name": "fileId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "userId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "fileName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "originalFileName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileExtension",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileLocation",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileSizeBytes",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "mimeType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "comment",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "category",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "isVerified",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "downloadCount",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "thumbnailLocation",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "InstitutionFile": {
+      "fields": [
+        {
+          "name": "fileId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "institutionId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "fileName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "originalFileName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileExtension",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileLocation",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileSizeBytes",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "mimeType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "comment",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "category",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "isVerified",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "downloadCount",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "thumbnailLocation",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "CourseFile": {
+      "fields": [
+        {
+          "name": "fileId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "courseId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "moduleId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "lessonId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "fileName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "originalFileName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileExtension",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileLocation",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileSizeBytes",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "mimeType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "comment",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "category",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "isDownloadable",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "requiresEnrollment",
+          "type": "Byte",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "downloadCount",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "thumbnailLocation",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "durationSeconds",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        }
+      ]
+    },
+    "JobPostFile": {
+      "fields": [
+        {
+          "name": "fileId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "jobPostId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "applicationId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "fileName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "originalFileName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileExtension",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileLocation",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileSizeBytes",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "mimeType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "comment",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "category",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "uploadedByUserId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "downloadCount",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "thumbnailLocation",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "CommunityFile": {
+      "fields": [
+        {
+          "name": "fileId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "communityId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "postId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "eventId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "fileName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "originalFileName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileExtension",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileLocation",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileSizeBytes",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "mimeType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "comment",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "category",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "uploadedByUserId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "downloadCount",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "thumbnailLocation",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    },
+    "MarketTrendFile": {
+      "fields": [
+        {
+          "name": "fileId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "trendId",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "fileName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "originalFileName",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileExtension",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileLocation",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "fileSizeBytes",
+          "type": "Long",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "mimeType",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "comment",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "category",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "source",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        },
+        {
+          "name": "reportDate",
+          "type": "LocalDate",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between"
+          ]
+        },
+        {
+          "name": "downloadCount",
+          "type": "Integer",
+          "operators": [
+            "equals",
+            "greaterThan",
+            "lessThan",
+            "between",
+            "in"
+          ]
+        },
+        {
+          "name": "thumbnailLocation",
+          "type": "String",
+          "operators": [
+            "equals",
+            "contains",
+            "startsWith",
+            "endsWith",
+            "in"
+          ]
+        }
+      ]
+    }
+  },
+  "filterStructure": {
+    "fields": [
+      {
+        "name": "Field name (camelCase)",
+        "type": "Java type (String, Integer, Boolean, LocalDateTime, etc.)",
+        "operators": [
+          "List of supported operators"
+        ]
+      }
+    ]
+  },
+  "supportedOperators": {
+    "equals": "Exact match (field = value)",
+    "contains": "String contains (field LIKE '%value%')",
+    "startsWith": "String starts with (field LIKE 'value%')",
+    "endsWith": "String ends with (field LIKE '%value')",
+    "greaterThan": "Greater than (field > value)",
+    "lessThan": "Less than (field < value)",
+    "between": "Between two values (field BETWEEN value1 AND value2)",
+    "in": "In list (field IN (value1, value2, ...))"
+  },
+  "operatorsByType": {
+    "String": [
+      "equals",
+      "contains",
+      "startsWith",
+      "endsWith",
+      "in"
+    ],
+    "Integer/Long/Short/Byte": [
+      "equals",
+      "greaterThan",
+      "lessThan",
+      "between",
+      "in"
+    ],
+    "BigDecimal/Float/Double": [
+      "equals",
+      "greaterThan",
+      "lessThan",
+      "between",
+      "in"
+    ],
+    "Boolean": [
+      "equals"
+    ],
+    "LocalDate/LocalDateTime/LocalTime": [
+      "equals",
+      "greaterThan",
+      "lessThan",
+      "between"
+    ]
+  },
+  "notes": [
+    "Filters are entity-specific and not reusable across entities",
+    "Filter DTOs are auto-generated based on field definitions",
+    "Each operator generates corresponding DTO fields (e.g., 'usernameContains' for contains operator)",
+    "Filters are applied in custom queries defined in query_layer.json"
+  ]
+}

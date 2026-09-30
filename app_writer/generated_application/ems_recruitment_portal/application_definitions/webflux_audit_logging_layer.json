@@ -1,0 +1,198 @@
+{
+  "layerType": "auditLogging",
+  "description": "Audit logging configuration - tracks user actions and system events",
+  "enabled": true,
+  "auditEvents": {
+    "authentication": {
+      "enabled": true,
+      "events": [
+        {
+          "eventType": "LOGIN_SUCCESS",
+          "logLevel": "INFO",
+          "message": "User {username} logged in successfully from IP {ipAddress}",
+          "includeUserAgent": true,
+          "includeLocation": false
+        },
+        {
+          "eventType": "LOGIN_FAILURE",
+          "logLevel": "WARN",
+          "message": "Failed login attempt for user {username} from IP {ipAddress}",
+          "includeUserAgent": true,
+          "includeLocation": false
+        },
+        {
+          "eventType": "LOGOUT",
+          "logLevel": "INFO",
+          "message": "User {username} logged out",
+          "includeUserAgent": false,
+          "includeLocation": false
+        },
+        {
+          "eventType": "PASSWORD_CHANGE",
+          "logLevel": "INFO",
+          "message": "User {username} changed their password",
+          "includeUserAgent": true,
+          "includeLocation": false
+        }
+      ]
+    },
+    "dataAccess": {
+      "enabled": true,
+      "events": [
+        {
+          "eventType": "CREATE",
+          "logLevel": "INFO",
+          "message": "User {username} created {entityType} with ID {entityId}",
+          "includeEntityData": false,
+          "entities": [
+            "User",
+            "UserPropertyGroup",
+            "UserProperty",
+            "Institution",
+            "InstitutionPropertyGroup",
+            "InstitutionProperty",
+            "CandidateInstituteLink",
+            "UserInstitutePropertyLink",
+            "Course",
+            "CoursePropertyGroup"
+          ]
+        },
+        {
+          "eventType": "READ",
+          "logLevel": "DEBUG",
+          "message": "User {username} accessed {entityType} with ID {entityId}",
+          "includeEntityData": false,
+          "entities": []
+        },
+        {
+          "eventType": "UPDATE",
+          "logLevel": "INFO",
+          "message": "User {username} updated {entityType} with ID {entityId}",
+          "includeEntityData": true,
+          "includeChanges": true,
+          "entities": [
+            "User",
+            "UserPropertyGroup",
+            "UserProperty",
+            "Institution",
+            "InstitutionPropertyGroup",
+            "InstitutionProperty",
+            "CandidateInstituteLink",
+            "UserInstitutePropertyLink",
+            "Course",
+            "CoursePropertyGroup"
+          ]
+        },
+        {
+          "eventType": "DELETE",
+          "logLevel": "WARN",
+          "message": "User {username} deleted {entityType} with ID {entityId}",
+          "includeEntityData": true,
+          "entities": [
+            "User",
+            "UserPropertyGroup",
+            "UserProperty",
+            "Institution",
+            "InstitutionPropertyGroup",
+            "InstitutionProperty",
+            "CandidateInstituteLink",
+            "UserInstitutePropertyLink",
+            "Course",
+            "CoursePropertyGroup"
+          ]
+        }
+      ]
+    },
+    "authorization": {
+      "enabled": true,
+      "events": [
+        {
+          "eventType": "ACCESS_DENIED",
+          "logLevel": "WARN",
+          "message": "User {username} was denied access to {resource}",
+          "includeReason": true
+        },
+        {
+          "eventType": "PERMISSION_CHANGE",
+          "logLevel": "INFO",
+          "message": "User {username} permissions were modified by {modifiedBy}",
+          "includeChanges": true
+        }
+      ]
+    },
+    "systemEvents": {
+      "enabled": true,
+      "events": [
+        {
+          "eventType": "APPLICATION_START",
+          "logLevel": "INFO",
+          "message": "Application started"
+        },
+        {
+          "eventType": "APPLICATION_STOP",
+          "logLevel": "INFO",
+          "message": "Application stopped"
+        },
+        {
+          "eventType": "CONFIGURATION_CHANGE",
+          "logLevel": "WARN",
+          "message": "Configuration changed by {username}",
+          "includeChanges": true
+        }
+      ]
+    }
+  },
+  "storage": {
+    "type": "database",
+    "tableName": "audit_log",
+    "retentionDays": 365,
+    "archiveAfterDays": 90,
+    "archiveLocation": "s3://audit-logs-archive"
+  },
+  "filtering": {
+    "excludeUsers": [
+      "system",
+      "health-check"
+    ],
+    "excludeEndpoints": [
+      "/actuator/health",
+      "/actuator/info"
+    ],
+    "excludeReadOperations": true,
+    "sensitiveFields": [
+      "password",
+      "encryptedPassword",
+      "creditCard",
+      "ssn"
+    ]
+  },
+  "format": {
+    "timestampFormat": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+    "includeRequestId": true,
+    "includeSessionId": true,
+    "includeCorrelationId": true
+  },
+  "alerting": {
+    "enabled": true,
+    "alerts": [
+      {
+        "eventType": "MULTIPLE_LOGIN_FAILURES",
+        "threshold": 5,
+        "timeWindowMinutes": 15,
+        "action": "SEND_EMAIL",
+        "recipients": [
+          "security@example.com"
+        ]
+      },
+      {
+        "eventType": "BULK_DELETE",
+        "threshold": 100,
+        "timeWindowMinutes": 5,
+        "action": "SEND_EMAIL",
+        "recipients": [
+          "admin@example.com"
+        ]
+      }
+    ]
+  }
+}

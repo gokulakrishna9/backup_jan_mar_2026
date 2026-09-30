@@ -1,0 +1,230 @@
+/**
+ * SkeletonWrapper - Enhanced wrapper for PrimeReact Skeleton
+ * Category: Misc
+ * 
+ * Placeholder for loading content
+ * 
+ * This wrapper provides:
+ * - Simplified event handlers for Redux integration
+ * - Validation hooks
+ * - Lifecycle callbacks
+ * - Embedded component metadata for runtime introspection
+ */
+
+import React, { useEffect, useRef } from 'react';
+import { Skeleton } from 'primereact/skeleton';
+
+// Component metadata embedded for runtime access
+export const SkeletonMetadata = {
+  "name": "Skeleton",
+  "import": "Skeleton",
+  "category": "Misc",
+  "metadata": {
+    "description": "Placeholder for loading content",
+    "usageExamples": [
+      "<SkeletonWrapper />",
+      "<SkeletonWrapper width=\"10rem\" height=\"4rem\" />"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "shape",
+        "type": "'rectangle' | 'circle'",
+        "optional": true,
+        "description": "Shape of skeleton",
+        "helpText": "Visual shape",
+        "dataTypes": [
+          "'rectangle' (default)",
+          "'circle'"
+        ],
+        "examples": [
+          "'rectangle'",
+          "'circle'"
+        ]
+      },
+      {
+        "name": "size",
+        "type": "string",
+        "optional": true,
+        "description": "Size for circle",
+        "helpText": "Diameter when shape is circle",
+        "dataTypes": [
+          "string (CSS size)"
+        ],
+        "examples": [
+          "'4rem'",
+          "'50px'"
+        ]
+      },
+      {
+        "name": "width",
+        "type": "string",
+        "optional": true,
+        "description": "Width",
+        "helpText": "Width of skeleton",
+        "dataTypes": [
+          "string (CSS size)"
+        ],
+        "examples": [
+          "'100%'",
+          "'10rem'"
+        ]
+      },
+      {
+        "name": "height",
+        "type": "string",
+        "optional": true,
+        "description": "Height",
+        "helpText": "Height of skeleton",
+        "dataTypes": [
+          "string (CSS size)"
+        ],
+        "examples": [
+          "'4rem'",
+          "'100px'"
+        ]
+      },
+      {
+        "name": "borderRadius",
+        "type": "string",
+        "optional": true,
+        "description": "Border radius",
+        "helpText": "Corner rounding",
+        "dataTypes": [
+          "string (CSS size)"
+        ],
+        "examples": [
+          "'4px'",
+          "'1rem'"
+        ]
+      },
+      {
+        "name": "animation",
+        "type": "'wave' | 'none'",
+        "optional": true,
+        "description": "Animation type",
+        "helpText": "Loading animation style",
+        "dataTypes": [
+          "'wave' (default)",
+          "'none'"
+        ],
+        "examples": [
+          "'wave'",
+          "'none'"
+        ]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes",
+        "helpText": "Supports PrimeFlex utility classes",
+        "examples": [
+          "'mb-2'"
+        ]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles",
+        "helpText": "Standard React inline styles",
+        "examples": [
+          "{ marginBottom: '1rem' }"
+        ]
+      }
+    ],
+    "children": null
+  },
+  "eventHandlers": {
+    "standard": [],
+    "simplified": [],
+    "validation": [],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "description": "Called when component mounts"
+      },
+      {
+        "name": "onUnmount",
+        "type": "() => void",
+        "description": "Called when component unmounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [],
+    "patterns": []
+  },
+  "childComponentInfo": {
+    "allowedChildren": [],
+    "childrenDescription": "This component does not accept children",
+    "hasChildren": false,
+    "examples": []
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<SkeletonWrapper />",
+    "withStyling": "<SkeletonWrapper width=\"10rem\" height=\"4rem\" className=\"mb-2\" />",
+    "withEvents": "N/A",
+    "withRedux": "N/A",
+    "withValidation": "N/A",
+    "withChildren": "N/A"
+  }
+};
+
+const SkeletonWrapper = (props) => {
+  const {
+    shape, size, width, height, borderRadius, animation, className, style, onMount, onUnmount,
+    ...restProps
+  } = props;
+
+  const componentRef = useRef(null);
+
+  // Lifecycle: onMount
+  useEffect(() => {
+    if (onMount) {
+      onMount();
+    }
+  }, []);
+
+  // Lifecycle: onUnmount
+  useEffect(() => {
+    return () => {
+      if (onUnmount) {
+        onUnmount();
+      }
+    };
+  }, []);
+
+  // Build props for underlying PrimeReact component
+  const primeReactProps = {
+    shape,
+    size,
+    width,
+    height,
+    borderRadius,
+    animation,
+    className,
+    style,
+    ref: componentRef,
+    ...restProps
+  };
+
+  return (
+    <Skeleton {...primeReactProps} />
+  );
+};
+
+SkeletonWrapper.displayName = 'SkeletonWrapper';
+
+export default SkeletonWrapper;

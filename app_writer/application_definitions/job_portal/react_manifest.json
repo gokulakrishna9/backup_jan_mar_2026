@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "files": [
+    {"path": "react_routes.json", "concern": "routing"},
+    {"path": "react_form_groupings.json", "concern": "form_groupings"},
+    {"path": "react_component_mappings.json", "concern": "component_mappings"},
+    {"path": "react_page_definitions.json", "concern": "page_definitions"},
+    {"path": "react_layout.json", "concern": "layout"},
+    {"path": "react_auth_config.json", "concern": "authentication"},
+    {"path": "react_api_services.json", "concern": "api_services"},
+    {"path": "react_redux_store.json", "concern": "redux_store"},
+    {"path": "react_theme.json", "concern": "theme"},
+    {"path": "react_env.json", "concern": "env_config"}
+  ]
+}

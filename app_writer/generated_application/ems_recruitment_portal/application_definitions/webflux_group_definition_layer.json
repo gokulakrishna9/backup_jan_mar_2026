@@ -1,0 +1,3669 @@
+{
+  "layerType": "group_definition",
+  "description": "Prepopulated access groups - no runtime group creation API. Groups are inserted into auth database via auth-schema.sql. Admin users can only grant/revoke membership at runtime.",
+  "version": "1.0",
+  "groupManagement": {
+    "allowRuntimeCreation": false,
+    "allowRuntimeDeletion": false,
+    "adminCanGrantMembership": true,
+    "adminCanRevokeMembership": true,
+    "adminGroupName": "Administrators"
+  },
+  "ownerEnrollmentDefaults": {
+    "ownershipCheck": "CREATOR_RECORDS",
+    "maxRecordsPerUser": null,
+    "allowEnroll": false,
+    "allowUnenroll": false
+  },
+  "systemGroups": [
+    {
+      "groupName": "Super Administrators",
+      "description": "Full system access - bypasses all authorization checks",
+      "isSuperGroup": true,
+      "isDefaultGroup": false,
+      "autoAssignToNewUsers": false
+    },
+    {
+      "groupName": "Administrators",
+      "description": "Can grant/revoke group membership",
+      "isSuperGroup": false,
+      "isDefaultGroup": false,
+      "autoAssignToNewUsers": false
+    },
+    {
+      "groupName": "Standard Users",
+      "description": "Default group for new users",
+      "isSuperGroup": false,
+      "isDefaultGroup": true,
+      "autoAssignToNewUsers": true
+    }
+  ],
+  "tableAccessGroups": [
+    {
+      "groupName": "User Users",
+      "description": "User-level access to ems_user table",
+      "tableName": "ems_user",
+      "entityName": "User",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "User Admins",
+      "description": "Admin-level access to ems_user table",
+      "tableName": "ems_user",
+      "entityName": "User",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "UserPropertyGroup Users",
+      "description": "User-level access to ems_user_property_group table",
+      "tableName": "ems_user_property_group",
+      "entityName": "UserPropertyGroup",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "UserPropertyGroup Admins",
+      "description": "Admin-level access to ems_user_property_group table",
+      "tableName": "ems_user_property_group",
+      "entityName": "UserPropertyGroup",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "UserProperty Users",
+      "description": "User-level access to ems_user_property table",
+      "tableName": "ems_user_property",
+      "entityName": "UserProperty",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "UserProperty Admins",
+      "description": "Admin-level access to ems_user_property table",
+      "tableName": "ems_user_property",
+      "entityName": "UserProperty",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "Institution Users",
+      "description": "User-level access to ems_institution table",
+      "tableName": "ems_institution",
+      "entityName": "Institution",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "Institution Admins",
+      "description": "Admin-level access to ems_institution table",
+      "tableName": "ems_institution",
+      "entityName": "Institution",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "InstitutionPropertyGroup Users",
+      "description": "User-level access to ems_institution_property_group table",
+      "tableName": "ems_institution_property_group",
+      "entityName": "InstitutionPropertyGroup",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "InstitutionPropertyGroup Admins",
+      "description": "Admin-level access to ems_institution_property_group table",
+      "tableName": "ems_institution_property_group",
+      "entityName": "InstitutionPropertyGroup",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "InstitutionProperty Users",
+      "description": "User-level access to ems_institution_property table",
+      "tableName": "ems_institution_property",
+      "entityName": "InstitutionProperty",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "InstitutionProperty Admins",
+      "description": "Admin-level access to ems_institution_property table",
+      "tableName": "ems_institution_property",
+      "entityName": "InstitutionProperty",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "CandidateInstituteLink Users",
+      "description": "User-level access to ems_candidate_institute_link table",
+      "tableName": "ems_candidate_institute_link",
+      "entityName": "CandidateInstituteLink",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "CandidateInstituteLink Admins",
+      "description": "Admin-level access to ems_candidate_institute_link table",
+      "tableName": "ems_candidate_institute_link",
+      "entityName": "CandidateInstituteLink",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "UserInstitutePropertyLink Users",
+      "description": "User-level access to ems_user_institute_property_link table",
+      "tableName": "ems_user_institute_property_link",
+      "entityName": "UserInstitutePropertyLink",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "UserInstitutePropertyLink Admins",
+      "description": "Admin-level access to ems_user_institute_property_link table",
+      "tableName": "ems_user_institute_property_link",
+      "entityName": "UserInstitutePropertyLink",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "Course Users",
+      "description": "User-level access to ems_course table",
+      "tableName": "ems_course",
+      "entityName": "Course",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "Course Admins",
+      "description": "Admin-level access to ems_course table",
+      "tableName": "ems_course",
+      "entityName": "Course",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "CoursePropertyGroup Users",
+      "description": "User-level access to ems_course_property_group table",
+      "tableName": "ems_course_property_group",
+      "entityName": "CoursePropertyGroup",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "CoursePropertyGroup Admins",
+      "description": "Admin-level access to ems_course_property_group table",
+      "tableName": "ems_course_property_group",
+      "entityName": "CoursePropertyGroup",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "CourseProperty Users",
+      "description": "User-level access to ems_course_property table",
+      "tableName": "ems_course_property",
+      "entityName": "CourseProperty",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "CourseProperty Admins",
+      "description": "Admin-level access to ems_course_property table",
+      "tableName": "ems_course_property",
+      "entityName": "CourseProperty",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "UserCourseLink Users",
+      "description": "User-level access to ems_user_course_link table",
+      "tableName": "ems_user_course_link",
+      "entityName": "UserCourseLink",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "UserCourseLink Admins",
+      "description": "Admin-level access to ems_user_course_link table",
+      "tableName": "ems_user_course_link",
+      "entityName": "UserCourseLink",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "UserCourseWishlist Users",
+      "description": "User-level access to ems_user_course_wishlist table",
+      "tableName": "ems_user_course_wishlist",
+      "entityName": "UserCourseWishlist",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "UserCourseWishlist Admins",
+      "description": "Admin-level access to ems_user_course_wishlist table",
+      "tableName": "ems_user_course_wishlist",
+      "entityName": "UserCourseWishlist",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "UserCoursePurchase Users",
+      "description": "User-level access to ems_user_course_purchase table",
+      "tableName": "ems_user_course_purchase",
+      "entityName": "UserCoursePurchase",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "UserCoursePurchase Admins",
+      "description": "Admin-level access to ems_user_course_purchase table",
+      "tableName": "ems_user_course_purchase",
+      "entityName": "UserCoursePurchase",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "JobPost Users",
+      "description": "User-level access to ems_job_post table",
+      "tableName": "ems_job_post",
+      "entityName": "JobPost",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "JobPost Admins",
+      "description": "Admin-level access to ems_job_post table",
+      "tableName": "ems_job_post",
+      "entityName": "JobPost",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "JobPostPropertyGroup Users",
+      "description": "User-level access to ems_job_post_property_group table",
+      "tableName": "ems_job_post_property_group",
+      "entityName": "JobPostPropertyGroup",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "JobPostPropertyGroup Admins",
+      "description": "Admin-level access to ems_job_post_property_group table",
+      "tableName": "ems_job_post_property_group",
+      "entityName": "JobPostPropertyGroup",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "JobPostProperty Users",
+      "description": "User-level access to ems_job_post_property table",
+      "tableName": "ems_job_post_property",
+      "entityName": "JobPostProperty",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "JobPostProperty Admins",
+      "description": "Admin-level access to ems_job_post_property table",
+      "tableName": "ems_job_post_property",
+      "entityName": "JobPostProperty",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "UserJobPostBookmark Users",
+      "description": "User-level access to ems_user_job_post_bookmark table",
+      "tableName": "ems_user_job_post_bookmark",
+      "entityName": "UserJobPostBookmark",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "UserJobPostBookmark Admins",
+      "description": "Admin-level access to ems_user_job_post_bookmark table",
+      "tableName": "ems_user_job_post_bookmark",
+      "entityName": "UserJobPostBookmark",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "JobPostUserBookmark Users",
+      "description": "User-level access to ems_job_post_user_bookmark table",
+      "tableName": "ems_job_post_user_bookmark",
+      "entityName": "JobPostUserBookmark",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "JobPostUserBookmark Admins",
+      "description": "Admin-level access to ems_job_post_user_bookmark table",
+      "tableName": "ems_job_post_user_bookmark",
+      "entityName": "JobPostUserBookmark",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "SubscriptionPaymentHistory Users",
+      "description": "User-level access to ems_subscription_payment_history table",
+      "tableName": "ems_subscription_payment_history",
+      "entityName": "SubscriptionPaymentHistory",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "SubscriptionPaymentHistory Admins",
+      "description": "Admin-level access to ems_subscription_payment_history table",
+      "tableName": "ems_subscription_payment_history",
+      "entityName": "SubscriptionPaymentHistory",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "Community Users",
+      "description": "User-level access to ems_community table",
+      "tableName": "ems_community",
+      "entityName": "Community",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "Community Admins",
+      "description": "Admin-level access to ems_community table",
+      "tableName": "ems_community",
+      "entityName": "Community",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "CommunityPropertyGroup Users",
+      "description": "User-level access to ems_community_property_group table",
+      "tableName": "ems_community_property_group",
+      "entityName": "CommunityPropertyGroup",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "CommunityPropertyGroup Admins",
+      "description": "Admin-level access to ems_community_property_group table",
+      "tableName": "ems_community_property_group",
+      "entityName": "CommunityPropertyGroup",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "CommunityProperty Users",
+      "description": "User-level access to ems_community_property table",
+      "tableName": "ems_community_property",
+      "entityName": "CommunityProperty",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "CommunityProperty Admins",
+      "description": "Admin-level access to ems_community_property table",
+      "tableName": "ems_community_property",
+      "entityName": "CommunityProperty",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "CommunityUserLink Users",
+      "description": "User-level access to ems_community_user_link table",
+      "tableName": "ems_community_user_link",
+      "entityName": "CommunityUserLink",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "CommunityUserLink Admins",
+      "description": "Admin-level access to ems_community_user_link table",
+      "tableName": "ems_community_user_link",
+      "entityName": "CommunityUserLink",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "CommunityPropertyUserLink Users",
+      "description": "User-level access to ems_community_property_user_link table",
+      "tableName": "ems_community_property_user_link",
+      "entityName": "CommunityPropertyUserLink",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "CommunityPropertyUserLink Admins",
+      "description": "Admin-level access to ems_community_property_user_link table",
+      "tableName": "ems_community_property_user_link",
+      "entityName": "CommunityPropertyUserLink",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "CommunityUserPost Users",
+      "description": "User-level access to ems_community_user_post table",
+      "tableName": "ems_community_user_post",
+      "entityName": "CommunityUserPost",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "CommunityUserPost Admins",
+      "description": "Admin-level access to ems_community_user_post table",
+      "tableName": "ems_community_user_post",
+      "entityName": "CommunityUserPost",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "CommunityPostLink Users",
+      "description": "User-level access to ems_community_post_link table",
+      "tableName": "ems_community_post_link",
+      "entityName": "CommunityPostLink",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "CommunityPostLink Admins",
+      "description": "Admin-level access to ems_community_post_link table",
+      "tableName": "ems_community_post_link",
+      "entityName": "CommunityPostLink",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "PostEmogi Users",
+      "description": "User-level access to ems_post_emogi table",
+      "tableName": "ems_post_emogi",
+      "entityName": "PostEmogi",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "PostEmogi Admins",
+      "description": "Admin-level access to ems_post_emogi table",
+      "tableName": "ems_post_emogi",
+      "entityName": "PostEmogi",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "EmogiPostUserLink Users",
+      "description": "User-level access to ems_emogi_post_user_link table",
+      "tableName": "ems_emogi_post_user_link",
+      "entityName": "EmogiPostUserLink",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "EmogiPostUserLink Admins",
+      "description": "Admin-level access to ems_emogi_post_user_link table",
+      "tableName": "ems_emogi_post_user_link",
+      "entityName": "EmogiPostUserLink",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "PostFlag Users",
+      "description": "User-level access to ems_post_flag table",
+      "tableName": "ems_post_flag",
+      "entityName": "PostFlag",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "PostFlag Admins",
+      "description": "Admin-level access to ems_post_flag table",
+      "tableName": "ems_post_flag",
+      "entityName": "PostFlag",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "PostComment Users",
+      "description": "User-level access to ems_post_comment table",
+      "tableName": "ems_post_comment",
+      "entityName": "PostComment",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "PostComment Admins",
+      "description": "Admin-level access to ems_post_comment table",
+      "tableName": "ems_post_comment",
+      "entityName": "PostComment",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "PostCommentEmogiLink Users",
+      "description": "User-level access to ems_post_comment_emogi_link table",
+      "tableName": "ems_post_comment_emogi_link",
+      "entityName": "PostCommentEmogiLink",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "PostCommentEmogiLink Admins",
+      "description": "Admin-level access to ems_post_comment_emogi_link table",
+      "tableName": "ems_post_comment_emogi_link",
+      "entityName": "PostCommentEmogiLink",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "AiUserProfileEvaluationParameterGroup Users",
+      "description": "User-level access to ems_ai_user_profile_evaluation_parameter_group table",
+      "tableName": "ems_ai_user_profile_evaluation_parameter_group",
+      "entityName": "AiUserProfileEvaluationParameterGroup",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "AiUserProfileEvaluationParameterGroup Admins",
+      "description": "Admin-level access to ems_ai_user_profile_evaluation_parameter_group table",
+      "tableName": "ems_ai_user_profile_evaluation_parameter_group",
+      "entityName": "AiUserProfileEvaluationParameterGroup",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "AiUserProfileEvaluationParameter Users",
+      "description": "User-level access to ems_ai_user_profile_evaluation_parameter table",
+      "tableName": "ems_ai_user_profile_evaluation_parameter",
+      "entityName": "AiUserProfileEvaluationParameter",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "AiUserProfileEvaluationParameter Admins",
+      "description": "Admin-level access to ems_ai_user_profile_evaluation_parameter table",
+      "tableName": "ems_ai_user_profile_evaluation_parameter",
+      "entityName": "AiUserProfileEvaluationParameter",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "AiUserProfileEvaluation Users",
+      "description": "User-level access to ems_ai_user_profile_evaluation table",
+      "tableName": "ems_ai_user_profile_evaluation",
+      "entityName": "AiUserProfileEvaluation",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "AiUserProfileEvaluation Admins",
+      "description": "Admin-level access to ems_ai_user_profile_evaluation table",
+      "tableName": "ems_ai_user_profile_evaluation",
+      "entityName": "AiUserProfileEvaluation",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "AiEvaluationParameterGroup Users",
+      "description": "User-level access to ems_ai_evaluation_parameter_group table",
+      "tableName": "ems_ai_evaluation_parameter_group",
+      "entityName": "AiEvaluationParameterGroup",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "AiEvaluationParameterGroup Admins",
+      "description": "Admin-level access to ems_ai_evaluation_parameter_group table",
+      "tableName": "ems_ai_evaluation_parameter_group",
+      "entityName": "AiEvaluationParameterGroup",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "AiEvaluationParameter Users",
+      "description": "User-level access to ems_ai_evaluation_parameter table",
+      "tableName": "ems_ai_evaluation_parameter",
+      "entityName": "AiEvaluationParameter",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "AiEvaluationParameter Admins",
+      "description": "Admin-level access to ems_ai_evaluation_parameter table",
+      "tableName": "ems_ai_evaluation_parameter",
+      "entityName": "AiEvaluationParameter",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "AiInstitutionProfileEvaluation Users",
+      "description": "User-level access to ems_ai_institution_profile_evaluation table",
+      "tableName": "ems_ai_institution_profile_evaluation",
+      "entityName": "AiInstitutionProfileEvaluation",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "AiInstitutionProfileEvaluation Admins",
+      "description": "Admin-level access to ems_ai_institution_profile_evaluation table",
+      "tableName": "ems_ai_institution_profile_evaluation",
+      "entityName": "AiInstitutionProfileEvaluation",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "AiJobRecommendation Users",
+      "description": "User-level access to ems_ai_job_recommendation table",
+      "tableName": "ems_ai_job_recommendation",
+      "entityName": "AiJobRecommendation",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "AiJobRecommendation Admins",
+      "description": "Admin-level access to ems_ai_job_recommendation table",
+      "tableName": "ems_ai_job_recommendation",
+      "entityName": "AiJobRecommendation",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "AiCommunityPostEvaluation Users",
+      "description": "User-level access to ems_ai_community_post_evaluation table",
+      "tableName": "ems_ai_community_post_evaluation",
+      "entityName": "AiCommunityPostEvaluation",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "AiCommunityPostEvaluation Admins",
+      "description": "Admin-level access to ems_ai_community_post_evaluation table",
+      "tableName": "ems_ai_community_post_evaluation",
+      "entityName": "AiCommunityPostEvaluation",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "AiMarketTrendParameterGroup Users",
+      "description": "User-level access to ems_ai_market_trend_parameter_group table",
+      "tableName": "ems_ai_market_trend_parameter_group",
+      "entityName": "AiMarketTrendParameterGroup",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "AiMarketTrendParameterGroup Admins",
+      "description": "Admin-level access to ems_ai_market_trend_parameter_group table",
+      "tableName": "ems_ai_market_trend_parameter_group",
+      "entityName": "AiMarketTrendParameterGroup",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "AiMarketTrendParameter Users",
+      "description": "User-level access to ems_ai_market_trend_parameter table",
+      "tableName": "ems_ai_market_trend_parameter",
+      "entityName": "AiMarketTrendParameter",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "AiMarketTrendParameter Admins",
+      "description": "Admin-level access to ems_ai_market_trend_parameter table",
+      "tableName": "ems_ai_market_trend_parameter",
+      "entityName": "AiMarketTrendParameter",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "AiMarketTrendProperty Users",
+      "description": "User-level access to ems_ai_market_trend_property table",
+      "tableName": "ems_ai_market_trend_property",
+      "entityName": "AiMarketTrendProperty",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "AiMarketTrendProperty Admins",
+      "description": "Admin-level access to ems_ai_market_trend_property table",
+      "tableName": "ems_ai_market_trend_property",
+      "entityName": "AiMarketTrendProperty",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "UserProfileDocument Users",
+      "description": "User-level access to ems_user_profile_document table",
+      "tableName": "ems_user_profile_document",
+      "entityName": "UserProfileDocument",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "UserProfileDocument Admins",
+      "description": "Admin-level access to ems_user_profile_document table",
+      "tableName": "ems_user_profile_document",
+      "entityName": "UserProfileDocument",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "InstitutionProfileDocument Users",
+      "description": "User-level access to ems_institution_profile_document table",
+      "tableName": "ems_institution_profile_document",
+      "entityName": "InstitutionProfileDocument",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "InstitutionProfileDocument Admins",
+      "description": "Admin-level access to ems_institution_profile_document table",
+      "tableName": "ems_institution_profile_document",
+      "entityName": "InstitutionProfileDocument",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "CourseDocumentGroup Users",
+      "description": "User-level access to ems_course_document_group table",
+      "tableName": "ems_course_document_group",
+      "entityName": "CourseDocumentGroup",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "CourseDocumentGroup Admins",
+      "description": "Admin-level access to ems_course_document_group table",
+      "tableName": "ems_course_document_group",
+      "entityName": "CourseDocumentGroup",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "CourseDocument Users",
+      "description": "User-level access to ems_course_document table",
+      "tableName": "ems_course_document",
+      "entityName": "CourseDocument",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "CourseDocument Admins",
+      "description": "Admin-level access to ems_course_document table",
+      "tableName": "ems_course_document",
+      "entityName": "CourseDocument",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "MarketTrendDocument Users",
+      "description": "User-level access to ems_market_trend_document table",
+      "tableName": "ems_market_trend_document",
+      "entityName": "MarketTrendDocument",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "MarketTrendDocument Admins",
+      "description": "Admin-level access to ems_market_trend_document table",
+      "tableName": "ems_market_trend_document",
+      "entityName": "MarketTrendDocument",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "JobPostDocument Users",
+      "description": "User-level access to ems_job_post_document table",
+      "tableName": "ems_job_post_document",
+      "entityName": "JobPostDocument",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "JobPostDocument Admins",
+      "description": "Admin-level access to ems_job_post_document table",
+      "tableName": "ems_job_post_document",
+      "entityName": "JobPostDocument",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "UserEducation Users",
+      "description": "User-level access to ems_user_education table",
+      "tableName": "ems_user_education",
+      "entityName": "UserEducation",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "UserEducation Admins",
+      "description": "Admin-level access to ems_user_education table",
+      "tableName": "ems_user_education",
+      "entityName": "UserEducation",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "UserWorkExperience Users",
+      "description": "User-level access to ems_user_work_experience table",
+      "tableName": "ems_user_work_experience",
+      "entityName": "UserWorkExperience",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "UserWorkExperience Admins",
+      "description": "Admin-level access to ems_user_work_experience table",
+      "tableName": "ems_user_work_experience",
+      "entityName": "UserWorkExperience",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "UserSkill Users",
+      "description": "User-level access to ems_user_skill table",
+      "tableName": "ems_user_skill",
+      "entityName": "UserSkill",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "UserSkill Admins",
+      "description": "Admin-level access to ems_user_skill table",
+      "tableName": "ems_user_skill",
+      "entityName": "UserSkill",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "UserCertification Users",
+      "description": "User-level access to ems_user_certification table",
+      "tableName": "ems_user_certification",
+      "entityName": "UserCertification",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "UserCertification Admins",
+      "description": "Admin-level access to ems_user_certification table",
+      "tableName": "ems_user_certification",
+      "entityName": "UserCertification",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "UserLanguage Users",
+      "description": "User-level access to ems_user_language table",
+      "tableName": "ems_user_language",
+      "entityName": "UserLanguage",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "UserLanguage Admins",
+      "description": "Admin-level access to ems_user_language table",
+      "tableName": "ems_user_language",
+      "entityName": "UserLanguage",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "UserAchievement Users",
+      "description": "User-level access to ems_user_achievement table",
+      "tableName": "ems_user_achievement",
+      "entityName": "UserAchievement",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "UserAchievement Admins",
+      "description": "Admin-level access to ems_user_achievement table",
+      "tableName": "ems_user_achievement",
+      "entityName": "UserAchievement",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "UserSocialLink Users",
+      "description": "User-level access to ems_user_social_link table",
+      "tableName": "ems_user_social_link",
+      "entityName": "UserSocialLink",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "UserSocialLink Admins",
+      "description": "Admin-level access to ems_user_social_link table",
+      "tableName": "ems_user_social_link",
+      "entityName": "UserSocialLink",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "InstitutionDepartment Users",
+      "description": "User-level access to ems_institution_department table",
+      "tableName": "ems_institution_department",
+      "entityName": "InstitutionDepartment",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "InstitutionDepartment Admins",
+      "description": "Admin-level access to ems_institution_department table",
+      "tableName": "ems_institution_department",
+      "entityName": "InstitutionDepartment",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "InstitutionLocation Users",
+      "description": "User-level access to ems_institution_location table",
+      "tableName": "ems_institution_location",
+      "entityName": "InstitutionLocation",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "InstitutionLocation Admins",
+      "description": "Admin-level access to ems_institution_location table",
+      "tableName": "ems_institution_location",
+      "entityName": "InstitutionLocation",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "InstitutionAccreditation Users",
+      "description": "User-level access to ems_institution_accreditation table",
+      "tableName": "ems_institution_accreditation",
+      "entityName": "InstitutionAccreditation",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "InstitutionAccreditation Admins",
+      "description": "Admin-level access to ems_institution_accreditation table",
+      "tableName": "ems_institution_accreditation",
+      "entityName": "InstitutionAccreditation",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "InstitutionRanking Users",
+      "description": "User-level access to ems_institution_ranking table",
+      "tableName": "ems_institution_ranking",
+      "entityName": "InstitutionRanking",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "InstitutionRanking Admins",
+      "description": "Admin-level access to ems_institution_ranking table",
+      "tableName": "ems_institution_ranking",
+      "entityName": "InstitutionRanking",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "InstitutionFacility Users",
+      "description": "User-level access to ems_institution_facility table",
+      "tableName": "ems_institution_facility",
+      "entityName": "InstitutionFacility",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "InstitutionFacility Admins",
+      "description": "Admin-level access to ems_institution_facility table",
+      "tableName": "ems_institution_facility",
+      "entityName": "InstitutionFacility",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "CourseModule Users",
+      "description": "User-level access to ems_course_module table",
+      "tableName": "ems_course_module",
+      "entityName": "CourseModule",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "CourseModule Admins",
+      "description": "Admin-level access to ems_course_module table",
+      "tableName": "ems_course_module",
+      "entityName": "CourseModule",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "CourseLesson Users",
+      "description": "User-level access to ems_course_lesson table",
+      "tableName": "ems_course_lesson",
+      "entityName": "CourseLesson",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "CourseLesson Admins",
+      "description": "Admin-level access to ems_course_lesson table",
+      "tableName": "ems_course_lesson",
+      "entityName": "CourseLesson",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "CoursePrerequisite Users",
+      "description": "User-level access to ems_course_prerequisite table",
+      "tableName": "ems_course_prerequisite",
+      "entityName": "CoursePrerequisite",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "CoursePrerequisite Admins",
+      "description": "Admin-level access to ems_course_prerequisite table",
+      "tableName": "ems_course_prerequisite",
+      "entityName": "CoursePrerequisite",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "CourseInstructor Users",
+      "description": "User-level access to ems_course_instructor table",
+      "tableName": "ems_course_instructor",
+      "entityName": "CourseInstructor",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "CourseInstructor Admins",
+      "description": "Admin-level access to ems_course_instructor table",
+      "tableName": "ems_course_instructor",
+      "entityName": "CourseInstructor",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "CourseReview Users",
+      "description": "User-level access to ems_course_review table",
+      "tableName": "ems_course_review",
+      "entityName": "CourseReview",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "CourseReview Admins",
+      "description": "Admin-level access to ems_course_review table",
+      "tableName": "ems_course_review",
+      "entityName": "CourseReview",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "CourseAssignment Users",
+      "description": "User-level access to ems_course_assignment table",
+      "tableName": "ems_course_assignment",
+      "entityName": "CourseAssignment",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "CourseAssignment Admins",
+      "description": "Admin-level access to ems_course_assignment table",
+      "tableName": "ems_course_assignment",
+      "entityName": "CourseAssignment",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "UserCourseProgress Users",
+      "description": "User-level access to ems_user_course_progress table",
+      "tableName": "ems_user_course_progress",
+      "entityName": "UserCourseProgress",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "UserCourseProgress Admins",
+      "description": "Admin-level access to ems_user_course_progress table",
+      "tableName": "ems_user_course_progress",
+      "entityName": "UserCourseProgress",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "UserAssignmentSubmission Users",
+      "description": "User-level access to ems_user_assignment_submission table",
+      "tableName": "ems_user_assignment_submission",
+      "entityName": "UserAssignmentSubmission",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "UserAssignmentSubmission Admins",
+      "description": "Admin-level access to ems_user_assignment_submission table",
+      "tableName": "ems_user_assignment_submission",
+      "entityName": "UserAssignmentSubmission",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "JobPostRequirement Users",
+      "description": "User-level access to ems_job_post_requirement table",
+      "tableName": "ems_job_post_requirement",
+      "entityName": "JobPostRequirement",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "JobPostRequirement Admins",
+      "description": "Admin-level access to ems_job_post_requirement table",
+      "tableName": "ems_job_post_requirement",
+      "entityName": "JobPostRequirement",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "JobPostBenefit Users",
+      "description": "User-level access to ems_job_post_benefit table",
+      "tableName": "ems_job_post_benefit",
+      "entityName": "JobPostBenefit",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "JobPostBenefit Admins",
+      "description": "Admin-level access to ems_job_post_benefit table",
+      "tableName": "ems_job_post_benefit",
+      "entityName": "JobPostBenefit",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "JobApplication Users",
+      "description": "User-level access to ems_job_application table",
+      "tableName": "ems_job_application",
+      "entityName": "JobApplication",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "JobApplication Admins",
+      "description": "Admin-level access to ems_job_application table",
+      "tableName": "ems_job_application",
+      "entityName": "JobApplication",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "JobInterview Users",
+      "description": "User-level access to ems_job_interview table",
+      "tableName": "ems_job_interview",
+      "entityName": "JobInterview",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "JobInterview Admins",
+      "description": "Admin-level access to ems_job_interview table",
+      "tableName": "ems_job_interview",
+      "entityName": "JobInterview",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "JobPostQuestion Users",
+      "description": "User-level access to ems_job_post_question table",
+      "tableName": "ems_job_post_question",
+      "entityName": "JobPostQuestion",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "JobPostQuestion Admins",
+      "description": "Admin-level access to ems_job_post_question table",
+      "tableName": "ems_job_post_question",
+      "entityName": "JobPostQuestion",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "JobApplicationAnswer Users",
+      "description": "User-level access to ems_job_application_answer table",
+      "tableName": "ems_job_application_answer",
+      "entityName": "JobApplicationAnswer",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "JobApplicationAnswer Admins",
+      "description": "Admin-level access to ems_job_application_answer table",
+      "tableName": "ems_job_application_answer",
+      "entityName": "JobApplicationAnswer",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "CommunityCategory Users",
+      "description": "User-level access to ems_community_category table",
+      "tableName": "ems_community_category",
+      "entityName": "CommunityCategory",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "CommunityCategory Admins",
+      "description": "Admin-level access to ems_community_category table",
+      "tableName": "ems_community_category",
+      "entityName": "CommunityCategory",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "CommunityRule Users",
+      "description": "User-level access to ems_community_rule table",
+      "tableName": "ems_community_rule",
+      "entityName": "CommunityRule",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "CommunityRule Admins",
+      "description": "Admin-level access to ems_community_rule table",
+      "tableName": "ems_community_rule",
+      "entityName": "CommunityRule",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "CommunityEvent Users",
+      "description": "User-level access to ems_community_event table",
+      "tableName": "ems_community_event",
+      "entityName": "CommunityEvent",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "CommunityEvent Admins",
+      "description": "Admin-level access to ems_community_event table",
+      "tableName": "ems_community_event",
+      "entityName": "CommunityEvent",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "CommunityEventAttendee Users",
+      "description": "User-level access to ems_community_event_attendee table",
+      "tableName": "ems_community_event_attendee",
+      "entityName": "CommunityEventAttendee",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "CommunityEventAttendee Admins",
+      "description": "Admin-level access to ems_community_event_attendee table",
+      "tableName": "ems_community_event_attendee",
+      "entityName": "CommunityEventAttendee",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "PostAttachment Users",
+      "description": "User-level access to ems_post_attachment table",
+      "tableName": "ems_post_attachment",
+      "entityName": "PostAttachment",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "PostAttachment Admins",
+      "description": "Admin-level access to ems_post_attachment table",
+      "tableName": "ems_post_attachment",
+      "entityName": "PostAttachment",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "PostTag Users",
+      "description": "User-level access to ems_post_tag table",
+      "tableName": "ems_post_tag",
+      "entityName": "PostTag",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "PostTag Admins",
+      "description": "Admin-level access to ems_post_tag table",
+      "tableName": "ems_post_tag",
+      "entityName": "PostTag",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "PostTagLink Users",
+      "description": "User-level access to ems_post_tag_link table",
+      "tableName": "ems_post_tag_link",
+      "entityName": "PostTagLink",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "PostTagLink Admins",
+      "description": "Admin-level access to ems_post_tag_link table",
+      "tableName": "ems_post_tag_link",
+      "entityName": "PostTagLink",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "MarketTrendSkillDemand Users",
+      "description": "User-level access to ems_market_trend_skill_demand table",
+      "tableName": "ems_market_trend_skill_demand",
+      "entityName": "MarketTrendSkillDemand",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "MarketTrendSkillDemand Admins",
+      "description": "Admin-level access to ems_market_trend_skill_demand table",
+      "tableName": "ems_market_trend_skill_demand",
+      "entityName": "MarketTrendSkillDemand",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "MarketTrendIndustry Users",
+      "description": "User-level access to ems_market_trend_industry table",
+      "tableName": "ems_market_trend_industry",
+      "entityName": "MarketTrendIndustry",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "MarketTrendIndustry Admins",
+      "description": "Admin-level access to ems_market_trend_industry table",
+      "tableName": "ems_market_trend_industry",
+      "entityName": "MarketTrendIndustry",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "MarketTrendLocation Users",
+      "description": "User-level access to ems_market_trend_location table",
+      "tableName": "ems_market_trend_location",
+      "entityName": "MarketTrendLocation",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "MarketTrendLocation Admins",
+      "description": "Admin-level access to ems_market_trend_location table",
+      "tableName": "ems_market_trend_location",
+      "entityName": "MarketTrendLocation",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "UserSkillEndorsement Users",
+      "description": "User-level access to ems_user_skill_endorsement table",
+      "tableName": "ems_user_skill_endorsement",
+      "entityName": "UserSkillEndorsement",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "UserSkillEndorsement Admins",
+      "description": "Admin-level access to ems_user_skill_endorsement table",
+      "tableName": "ems_user_skill_endorsement",
+      "entityName": "UserSkillEndorsement",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "UserRecommendation Users",
+      "description": "User-level access to ems_user_recommendation table",
+      "tableName": "ems_user_recommendation",
+      "entityName": "UserRecommendation",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "UserRecommendation Admins",
+      "description": "Admin-level access to ems_user_recommendation table",
+      "tableName": "ems_user_recommendation",
+      "entityName": "UserRecommendation",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "Notification Users",
+      "description": "User-level access to ems_notification table",
+      "tableName": "ems_notification",
+      "entityName": "Notification",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "Notification Admins",
+      "description": "Admin-level access to ems_notification table",
+      "tableName": "ems_notification",
+      "entityName": "Notification",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "CourseJobPostLink Users",
+      "description": "User-level access to ems_course_job_post_link table",
+      "tableName": "ems_course_job_post_link",
+      "entityName": "CourseJobPostLink",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "CourseJobPostLink Admins",
+      "description": "Admin-level access to ems_course_job_post_link table",
+      "tableName": "ems_course_job_post_link",
+      "entityName": "CourseJobPostLink",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "CourseCommunityLink Users",
+      "description": "User-level access to ems_course_community_link table",
+      "tableName": "ems_course_community_link",
+      "entityName": "CourseCommunityLink",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "CourseCommunityLink Admins",
+      "description": "Admin-level access to ems_course_community_link table",
+      "tableName": "ems_course_community_link",
+      "entityName": "CourseCommunityLink",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "JobPostCommunityLink Users",
+      "description": "User-level access to ems_job_post_community_link table",
+      "tableName": "ems_job_post_community_link",
+      "entityName": "JobPostCommunityLink",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "JobPostCommunityLink Admins",
+      "description": "Admin-level access to ems_job_post_community_link table",
+      "tableName": "ems_job_post_community_link",
+      "entityName": "JobPostCommunityLink",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "MarketTrendCourseLink Users",
+      "description": "User-level access to ems_market_trend_course_link table",
+      "tableName": "ems_market_trend_course_link",
+      "entityName": "MarketTrendCourseLink",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "MarketTrendCourseLink Admins",
+      "description": "Admin-level access to ems_market_trend_course_link table",
+      "tableName": "ems_market_trend_course_link",
+      "entityName": "MarketTrendCourseLink",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "MarketTrendJobPostLink Users",
+      "description": "User-level access to ems_market_trend_job_post_link table",
+      "tableName": "ems_market_trend_job_post_link",
+      "entityName": "MarketTrendJobPostLink",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "MarketTrendJobPostLink Admins",
+      "description": "Admin-level access to ems_market_trend_job_post_link table",
+      "tableName": "ems_market_trend_job_post_link",
+      "entityName": "MarketTrendJobPostLink",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "MarketTrendInstitutionLink Users",
+      "description": "User-level access to ems_market_trend_institution_link table",
+      "tableName": "ems_market_trend_institution_link",
+      "entityName": "MarketTrendInstitutionLink",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "MarketTrendInstitutionLink Admins",
+      "description": "Admin-level access to ems_market_trend_institution_link table",
+      "tableName": "ems_market_trend_institution_link",
+      "entityName": "MarketTrendInstitutionLink",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "UserFile Users",
+      "description": "User-level access to ems_user_file table",
+      "tableName": "ems_user_file",
+      "entityName": "UserFile",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "UserFile Admins",
+      "description": "Admin-level access to ems_user_file table",
+      "tableName": "ems_user_file",
+      "entityName": "UserFile",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "InstitutionFile Users",
+      "description": "User-level access to ems_institution_file table",
+      "tableName": "ems_institution_file",
+      "entityName": "InstitutionFile",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "InstitutionFile Admins",
+      "description": "Admin-level access to ems_institution_file table",
+      "tableName": "ems_institution_file",
+      "entityName": "InstitutionFile",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "CourseFile Users",
+      "description": "User-level access to ems_course_file table",
+      "tableName": "ems_course_file",
+      "entityName": "CourseFile",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "CourseFile Admins",
+      "description": "Admin-level access to ems_course_file table",
+      "tableName": "ems_course_file",
+      "entityName": "CourseFile",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "JobPostFile Users",
+      "description": "User-level access to ems_job_post_file table",
+      "tableName": "ems_job_post_file",
+      "entityName": "JobPostFile",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "JobPostFile Admins",
+      "description": "Admin-level access to ems_job_post_file table",
+      "tableName": "ems_job_post_file",
+      "entityName": "JobPostFile",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "CommunityFile Users",
+      "description": "User-level access to ems_community_file table",
+      "tableName": "ems_community_file",
+      "entityName": "CommunityFile",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "CommunityFile Admins",
+      "description": "Admin-level access to ems_community_file table",
+      "tableName": "ems_community_file",
+      "entityName": "CommunityFile",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    },
+    {
+      "groupName": "MarketTrendFile Users",
+      "description": "User-level access to ems_market_trend_file table",
+      "tableName": "ems_market_trend_file",
+      "entityName": "MarketTrendFile",
+      "groupType": "TABLE_USER",
+      "accessLevel": "USER",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": false,
+        "allowUpdate": false,
+        "allowDelete": false,
+        "allowGrantAccess": false,
+        "allowExport": true,
+        "allowShare": false,
+        "allowAudit": false
+      }
+    },
+    {
+      "groupName": "MarketTrendFile Admins",
+      "description": "Admin-level access to ems_market_trend_file table",
+      "tableName": "ems_market_trend_file",
+      "entityName": "MarketTrendFile",
+      "groupType": "TABLE_ADMIN",
+      "accessLevel": "ADMIN",
+      "permissions": {
+        "allowRead": true,
+        "allowCreate": true,
+        "allowUpdate": true,
+        "allowDelete": true,
+        "allowGrantAccess": true,
+        "allowExport": true,
+        "allowShare": true,
+        "allowAudit": true
+      }
+    }
+  ],
+  "queryAccessGroups": [],
+  "queryAccessGroupExample": {
+    "_comment": "Add query access groups here. Example structure:",
+    "groupName": "Active Projects View",
+    "description": "Shared view of active projects",
+    "rootTable": "projects",
+    "groupType": "QUERY_SPECIFIC",
+    "scopeMode": "SPECIFIC_RECORDS",
+    "ownerRecordEnrollment": {
+      "allowEnroll": true,
+      "allowUnenroll": true,
+      "ownershipCheck": "CREATOR_RECORDS",
+      "maxRecordsPerUser": null
+    },
+    "queryDefinition": {
+      "table": "projects",
+      "conditions": [
+        {
+          "field": "status",
+          "operator": "EQUALS",
+          "value": "active"
+        }
+      ],
+      "logic": "AND"
+    }
+  }
+}

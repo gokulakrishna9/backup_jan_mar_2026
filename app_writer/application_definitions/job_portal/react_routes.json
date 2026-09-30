@@ -1,0 +1,192 @@
+[
+  {
+    "path": "/",
+    "pageComponent": "DashboardPage",
+    "pageType": "entity",
+    "pageFolder": "dashboard",
+    "entityName": "Dashboard",
+    "navLabel": "Dashboard",
+    "navGroup": "Dashboard",
+    "requiresAuth": true
+  },
+  {
+    "path": "/my-profile",
+    "pageComponent": "UserProfilePage",
+    "pageType": "entity",
+    "pageFolder": "profiles",
+    "entityName": "UserProfile",
+    "navLabel": "My Profile",
+    "navGroup": "My Profile",
+    "requiresAuth": true
+  },
+  {
+    "path": "/my-resume",
+    "pageComponent": "UserEducationPage",
+    "pageType": "entity",
+    "pageFolder": "resume",
+    "entityName": "UserEducation",
+    "navLabel": "My Resume",
+    "navGroup": "My Resume",
+    "requiresAuth": true
+  },
+  {
+    "path": "/jobs",
+    "pageComponent": "JobPostingPage",
+    "pageType": "entity",
+    "pageFolder": "jobs",
+    "entityName": "JobPosting",
+    "navLabel": "Browse Jobs",
+    "navGroup": "Jobs",
+    "requiresAuth": true
+  },
+  {
+    "path": "/my-applications",
+    "pageComponent": "JobApplicationPage",
+    "pageType": "entity",
+    "pageFolder": "jobs",
+    "entityName": "JobApplication",
+    "navLabel": "My Applications",
+    "navGroup": "Jobs",
+    "requiresAuth": true
+  },
+  {
+    "path": "/training-programs",
+    "pageComponent": "TrainingProgramPage",
+    "pageType": "entity",
+    "pageFolder": "training",
+    "entityName": "TrainingProgram",
+    "navLabel": "Programs",
+    "navGroup": "Training",
+    "requiresAuth": true
+  },
+  {
+    "path": "/exams",
+    "pageComponent": "TrainingExamPage",
+    "pageType": "entity",
+    "pageFolder": "training",
+    "entityName": "TrainingExam",
+    "navLabel": "Exams",
+    "navGroup": "Training",
+    "requiresAuth": true
+  },
+  {
+    "path": "/qa",
+    "pageComponent": "CourseQuestionPage",
+    "pageType": "entity",
+    "pageFolder": "training",
+    "entityName": "CourseQuestion",
+    "navLabel": "Q&A",
+    "navGroup": "Training",
+    "requiresAuth": true
+  },
+  {
+    "path": "/my-enrollments",
+    "pageComponent": "TrainingEnrollmentPage",
+    "pageType": "entity",
+    "pageFolder": "learning",
+    "entityName": "TrainingEnrollment",
+    "navLabel": "Enrollments",
+    "navGroup": "My Learning",
+    "requiresAuth": true
+  },
+  {
+    "path": "/my-certifications",
+    "pageComponent": "TrainingCertificationPage",
+    "pageType": "entity",
+    "pageFolder": "learning",
+    "entityName": "TrainingCertification",
+    "navLabel": "Certifications",
+    "navGroup": "My Learning",
+    "requiresAuth": true
+  },
+  {
+    "path": "/masters/education-levels",
+    "pageComponent": "EducationLevelPage",
+    "pageType": "entity",
+    "pageFolder": "masters",
+    "entityName": "EducationLevel",
+    "navLabel": "Education Levels",
+    "navGroup": "Masters",
+    "requiresAuth": true
+  },
+  {
+    "path": "/masters/fields-of-study",
+    "pageComponent": "FieldOfStudyPage",
+    "pageType": "entity",
+    "pageFolder": "masters",
+    "entityName": "FieldOfStudy",
+    "navLabel": "Fields of Study",
+    "navGroup": "Masters",
+    "requiresAuth": true
+  },
+  {
+    "path": "/masters/institutions",
+    "pageComponent": "InstitutionPage",
+    "pageType": "entity",
+    "pageFolder": "masters",
+    "entityName": "Institution",
+    "navLabel": "Institutions",
+    "navGroup": "Masters",
+    "requiresAuth": true
+  },
+  {
+    "path": "/masters/industries",
+    "pageComponent": "IndustryPage",
+    "pageType": "entity",
+    "pageFolder": "masters",
+    "entityName": "Industry",
+    "navLabel": "Industries",
+    "navGroup": "Masters",
+    "requiresAuth": true
+  },
+  {
+    "path": "/masters/job-titles",
+    "pageComponent": "JobTitlePage",
+    "pageType": "entity",
+    "pageFolder": "masters",
+    "entityName": "JobTitle",
+    "navLabel": "Job Titles",
+    "navGroup": "Masters",
+    "requiresAuth": true
+  },
+  {
+    "path": "/masters/skill-categories",
+    "pageComponent": "SkillCategoryPage",
+    "pageType": "entity",
+    "pageFolder": "masters",
+    "entityName": "SkillCategory",
+    "navLabel": "Skill Categories",
+    "navGroup": "Masters",
+    "requiresAuth": true
+  },
+  {
+    "path": "/masters/skills",
+    "pageComponent": "SkillPage",
+    "pageType": "entity",
+    "pageFolder": "masters",
+    "entityName": "Skill",
+    "navLabel": "Skills",
+    "navGroup": "Masters",
+    "requiresAuth": true
+  },
+  {
+    "path": "/masters/companies",
+    "pageComponent": "CompanyPage",
+    "pageType": "entity",
+    "pageFolder": "masters",
+    "entityName": "Company",
+    "navLabel": "Companies",
+    "navGroup": "Masters",
+    "requiresAuth": true
+  },
+  {
+    "path": "/masters/locations",
+    "pageComponent": "LocationPage",
+    "pageType": "entity",
+    "pageFolder": "masters",
+    "entityName": "Location",
+    "navLabel": "Locations",
+    "navGroup": "Masters",
+    "requiresAuth": true
+  }
+]

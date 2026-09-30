@@ -1,0 +1,214 @@
+/**
+ * CardWrapper - Enhanced wrapper for PrimeReact Card
+ * Category: Panel
+ * 
+ * Flexible container with optional header, footer, and content
+ * 
+ * This wrapper provides:
+ * - Simplified event handlers for Redux integration
+ * - Validation hooks
+ * - Lifecycle callbacks
+ * - Embedded component metadata for runtime introspection
+ */
+
+import React, { useEffect, useRef } from 'react';
+import { Card } from 'primereact/card';
+
+// Component metadata embedded for runtime access
+export const CardMetadata = {
+  "name": "Card",
+  "import": "Card",
+  "category": "Panel",
+  "metadata": {
+    "description": "Flexible container with optional header, footer, and content",
+    "usageExamples": [
+      "<CardWrapper title=\"Simple Card\"><p>Content</p></CardWrapper>",
+      "<CardWrapper header={<img src=\"card.jpg\" />} footer={<Button label=\"Save\" />}><p>Content</p></CardWrapper>"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "title",
+        "type": "string",
+        "optional": true,
+        "description": "Card title",
+        "helpText": "Simple text title for the card",
+        "dataTypes": [
+          "string"
+        ],
+        "examples": [
+          "'User Profile'",
+          "'Dashboard'"
+        ]
+      },
+      {
+        "name": "subTitle",
+        "type": "string",
+        "optional": true,
+        "description": "Card subtitle",
+        "helpText": "Secondary text below title",
+        "dataTypes": [
+          "string"
+        ],
+        "examples": [
+          "'Last updated: Today'",
+          "'Active'"
+        ]
+      },
+      {
+        "name": "header",
+        "type": "React.ReactNode",
+        "optional": true,
+        "description": "Card header",
+        "helpText": "Custom header content (images, components)",
+        "dataTypes": [
+          "React.ReactNode"
+        ],
+        "examples": [
+          "<img src=\"header.jpg\" />",
+          "<CustomHeader />"
+        ]
+      },
+      {
+        "name": "footer",
+        "type": "React.ReactNode",
+        "optional": true,
+        "description": "Card footer",
+        "helpText": "Custom footer content (buttons, actions)",
+        "dataTypes": [
+          "React.ReactNode"
+        ],
+        "examples": [
+          "<Button label=\"Save\" />",
+          "<div>Footer content</div>"
+        ]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes",
+        "helpText": "Supports PrimeFlex utility classes",
+        "examples": [
+          "'shadow-2'",
+          "'mb-3'"
+        ]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles",
+        "helpText": "Standard React inline styles",
+        "examples": [
+          "{ width: '25rem' }"
+        ]
+      }
+    ],
+    "children": {
+      "type": "React.ReactNode",
+      "description": "Card content",
+      "helpText": "Main content area of the card"
+    }
+  },
+  "eventHandlers": {
+    "standard": [],
+    "simplified": [],
+    "validation": [],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "description": "Called when component mounts"
+      },
+      {
+        "name": "onUnmount",
+        "type": "() => void",
+        "description": "Called when component unmounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [],
+    "patterns": [
+      "Call lifecycle methods in useEffect hooks"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": [
+      "Any React component",
+      "Text",
+      "HTML elements"
+    ],
+    "childrenDescription": "Card accepts any React content as children for the main content area",
+    "hasChildren": true,
+    "examples": [
+      "<CardWrapper title=\"Title\"><p>Paragraph content</p></CardWrapper>",
+      "<CardWrapper><div><h3>Custom</h3><p>Content</p></div></CardWrapper>"
+    ]
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<CardWrapper title=\"Simple Card\"><p>Card content</p></CardWrapper>",
+    "withStyling": "<CardWrapper title=\"Styled Card\" className=\"shadow-2 mb-3\" style={{ width: '25rem' }}><p>Content</p></CardWrapper>",
+    "withEvents": "N/A",
+    "withRedux": "N/A",
+    "withValidation": "N/A",
+    "withChildren": "<CardWrapper header={<img src=\"card.jpg\" />} footer={<Button label=\"Save\" />}><p>Rich content</p></CardWrapper>"
+  }
+};
+
+const CardWrapper = (props) => {
+  const {
+    title, subTitle, header, footer, className, style, children, onMount, onUnmount,
+    ...restProps
+  } = props;
+
+  const componentRef = useRef(null);
+
+  // Lifecycle: onMount
+  useEffect(() => {
+    if (onMount) {
+      onMount();
+    }
+  }, []);
+
+  // Lifecycle: onUnmount
+  useEffect(() => {
+    return () => {
+      if (onUnmount) {
+        onUnmount();
+      }
+    };
+  }, []);
+
+  // Build props for underlying PrimeReact component
+  const primeReactProps = {
+    title,
+    subTitle,
+    header,
+    footer,
+    className,
+    style,
+    ref: componentRef,
+    ...restProps
+  };
+
+  return (
+    <Card {...primeReactProps}>
+      {children}
+    </Card>
+  );
+};
+
+CardWrapper.displayName = 'CardWrapper';
+
+export default CardWrapper;

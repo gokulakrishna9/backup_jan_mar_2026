@@ -1,0 +1,309 @@
+/**
+ * TreeTableWrapper - Enhanced wrapper for PrimeReact TreeTable
+ * Category: Data
+ * 
+ * Tree structure in table format
+ * 
+ * This wrapper provides:
+ * - Simplified event handlers for Redux integration
+ * - Validation hooks
+ * - Lifecycle callbacks
+ * - Embedded component metadata for runtime introspection
+ */
+
+import React, { useEffect, useRef } from 'react';
+import { TreeTable } from 'primereact/treetable';
+
+// Component metadata embedded for runtime access
+export const TreeTableMetadata = {
+  "name": "TreeTable",
+  "import": "TreeTable",
+  "category": "Data",
+  "metadata": {
+    "description": "Tree structure in table format",
+    "usageExamples": [
+      "<TreeTableWrapper value={nodes}><Column field=\"name\" header=\"Name\" expander /></TreeTableWrapper>",
+      "<TreeTableWrapper value={treeData} paginator rows={10}><Column field=\"size\" header=\"Size\" /><Column field=\"type\" header=\"Type\" /></TreeTableWrapper>"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "value",
+        "type": "TreeNode[]",
+        "optional": false,
+        "description": "Tree nodes",
+        "helpText": "Array of tree node objects with data and children",
+        "dataTypes": [
+          "TreeNode[] - {key, data, children}"
+        ],
+        "examples": [
+          "[{key: '0', data: {name: 'Root'}, children: [{key: '0-0', data: {name: 'Child'}}]}]"
+        ]
+      },
+      {
+        "name": "expandedKeys",
+        "type": "{ [key: string]: boolean }",
+        "optional": true,
+        "description": "Expanded nodes",
+        "helpText": "Object with node keys as properties",
+        "dataTypes": [
+          "object - {[key]: true}"
+        ],
+        "examples": [
+          "{'0': true, '0-0': true}"
+        ]
+      },
+      {
+        "name": "selectionMode",
+        "type": "'single' | 'multiple' | 'checkbox'",
+        "optional": true,
+        "description": "Selection mode",
+        "helpText": "How rows can be selected",
+        "dataTypes": [
+          "'single'",
+          "'multiple'",
+          "'checkbox'"
+        ],
+        "examples": [
+          "'single'",
+          "'checkbox'"
+        ]
+      },
+      {
+        "name": "selection",
+        "type": "any | any[]",
+        "optional": true,
+        "description": "Selected node(s)",
+        "helpText": "Selected node key(s)",
+        "dataTypes": [
+          "string",
+          "string[]",
+          "object"
+        ],
+        "examples": [
+          "'0-0'",
+          "['0-0', '0-1']"
+        ]
+      },
+      {
+        "name": "paginator",
+        "type": "boolean",
+        "optional": true,
+        "description": "Enable pagination",
+        "helpText": "Shows pagination controls",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "name": "rows",
+        "type": "number",
+        "optional": true,
+        "description": "Rows per page",
+        "helpText": "Number of rows per page",
+        "dataTypes": [
+          "number"
+        ],
+        "examples": [
+          "10",
+          "25",
+          "50"
+        ]
+      },
+      {
+        "name": "loading",
+        "type": "boolean",
+        "optional": true,
+        "description": "Loading state",
+        "helpText": "Shows loading indicator",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "name": "emptyMessage",
+        "type": "string",
+        "optional": true,
+        "description": "Empty message",
+        "helpText": "Text shown when no data",
+        "dataTypes": [
+          "string"
+        ],
+        "examples": [
+          "'No records found'"
+        ]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes",
+        "helpText": "Supports PrimeFlex utility classes",
+        "examples": [
+          "'p-treetable-sm'"
+        ]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles",
+        "helpText": "Standard React inline styles",
+        "examples": [
+          "{ width: '100%' }"
+        ]
+      }
+    ],
+    "children": {
+      "type": "Column[]",
+      "description": "Column components",
+      "helpText": "Must contain Column children to define table structure"
+    }
+  },
+  "eventHandlers": {
+    "standard": [
+      {
+        "name": "onToggle",
+        "type": "(e: { value: { [key: string]: boolean } }) => void",
+        "description": "Callback when node is toggled"
+      },
+      {
+        "name": "onExpand",
+        "type": "(e: { node: TreeNode }) => void",
+        "description": "Callback when node expands"
+      },
+      {
+        "name": "onCollapse",
+        "type": "(e: { node: TreeNode }) => void",
+        "description": "Callback when node collapses"
+      },
+      {
+        "name": "onSelectionChange",
+        "type": "(e: { value: any }) => void",
+        "description": "Callback when selection changes"
+      },
+      {
+        "name": "onPage",
+        "type": "(e: { first: number, rows: number }) => void",
+        "description": "Callback when page changes"
+      }
+    ],
+    "simplified": [],
+    "validation": [],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "description": "Called when component mounts"
+      },
+      {
+        "name": "onUnmount",
+        "type": "() => void",
+        "description": "Called when component unmounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [
+      "handleToggle - Processes onToggle event",
+      "handleExpand - Processes onExpand event",
+      "handleCollapse - Processes onCollapse event",
+      "handleSelectionChange - Processes onSelectionChange event",
+      "handlePage - Processes onPage event"
+    ],
+    "patterns": [
+      "Check if event handler exists before calling"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": [
+      "Column"
+    ],
+    "childrenDescription": "TreeTable must contain Column components to define table structure",
+    "hasChildren": true,
+    "examples": [
+      "<TreeTableWrapper value={nodes}><Column field=\"name\" header=\"Name\" expander /><Column field=\"size\" header=\"Size\" /><Column field=\"type\" header=\"Type\" /></TreeTableWrapper>"
+    ]
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<TreeTableWrapper value={nodes}><Column field=\"name\" header=\"Name\" expander /></TreeTableWrapper>",
+    "withStyling": "<TreeTableWrapper value={treeData} paginator rows={10} className=\"p-treetable-sm\"><Column field=\"name\" header=\"Name\" expander /><Column field=\"size\" header=\"Size\" /></TreeTableWrapper>",
+    "withEvents": "<TreeTableWrapper value={nodes} expandedKeys={expandedKeys} onToggle={(e) => setExpandedKeys(e.value)}><Column field=\"name\" header=\"Name\" expander /></TreeTableWrapper>",
+    "withRedux": "<TreeTableWrapper value={treeNodes} selection={selectedNode} onSelectionChange={(e) => dispatch(setNode(e.value))} selectionMode=\"single\"><Column field=\"name\" header=\"Name\" /></TreeTableWrapper>",
+    "withValidation": "N/A",
+    "withChildren": "<TreeTableWrapper value={fileSystem} paginator rows={10}><Column field=\"name\" header=\"Name\" expander /><Column field=\"size\" header=\"Size\" /><Column field=\"type\" header=\"Type\" /></TreeTableWrapper>"
+  }
+};
+
+const TreeTableWrapper = (props) => {
+  const {
+    value, expandedKeys, selectionMode, selection, paginator, rows, loading, emptyMessage, className, style, children, onToggle, onExpand, onCollapse, onSelectionChange, onPage, onMount, onUnmount,
+    ...restProps
+  } = props;
+
+  const componentRef = useRef(null);
+
+  // Lifecycle: onMount
+  useEffect(() => {
+    if (onMount) {
+      onMount();
+    }
+  }, []);
+
+  // Lifecycle: onUnmount
+  useEffect(() => {
+    return () => {
+      if (onUnmount) {
+        onUnmount();
+      }
+    };
+  }, []);
+
+  // Build props for underlying PrimeReact component
+  const primeReactProps = {
+    value,
+    expandedKeys,
+    selectionMode,
+    selection,
+    paginator,
+    rows,
+    loading,
+    emptyMessage,
+    className,
+    style,
+    onToggle,
+    onExpand,
+    onCollapse,
+    onSelectionChange,
+    onPage,
+    ref: componentRef,
+    ...restProps
+  };
+
+  return (
+    <TreeTable {...primeReactProps}>
+      {children}
+    </TreeTable>
+  );
+};
+
+TreeTableWrapper.displayName = 'TreeTableWrapper';
+
+export default TreeTableWrapper;

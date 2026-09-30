@@ -1,0 +1,362 @@
+/**
+ * MultiSelectWrapper - Enhanced wrapper for PrimeReact MultiSelect
+ * Category: Form
+ * 
+ * Select multiple items from a list
+ * 
+ * This wrapper provides:
+ * - Simplified event handlers for Redux integration
+ * - Validation hooks
+ * - Lifecycle callbacks
+ * - Embedded component metadata for runtime introspection
+ */
+
+import React, { useEffect, useRef } from 'react';
+import { MultiSelect } from 'primereact/multiselect';
+
+// Component metadata embedded for runtime access
+export const MultiSelectMetadata = {
+  "name": "MultiSelect",
+  "import": "MultiSelect",
+  "category": "Form",
+  "metadata": {
+    "description": "Select multiple items from a list",
+    "usageExamples": [
+      "<MultiSelectWrapper value={selected} options={cities} onChange={(e) => setSelected(e.value)} />",
+      "<MultiSelectWrapper value={tags} options={allTags} optionLabel=\"name\" display=\"chip\" />"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "value",
+        "type": "any[]",
+        "optional": true,
+        "description": "Selected values",
+        "helpText": "Array of selected items (controlled component)",
+        "dataTypes": [
+          "any[]"
+        ],
+        "examples": [
+          "['item1', 'item2']",
+          "[1, 2, 3]",
+          "[{id: 1}, {id: 2}]"
+        ]
+      },
+      {
+        "name": "options",
+        "type": "any[]",
+        "optional": false,
+        "description": "Array of options",
+        "helpText": "List of selectable items",
+        "dataTypes": [
+          "string[]",
+          "number[]",
+          "object[]"
+        ],
+        "examples": [
+          "['Option 1', 'Option 2']",
+          "[{label: 'USA', value: 'us'}]"
+        ]
+      },
+      {
+        "name": "optionLabel",
+        "type": "string",
+        "optional": true,
+        "description": "Property name for option label",
+        "helpText": "When options are objects, specifies display property",
+        "dataTypes": [
+          "string (property name)"
+        ],
+        "examples": [
+          "'name'",
+          "'label'",
+          "'title'"
+        ]
+      },
+      {
+        "name": "optionValue",
+        "type": "string",
+        "optional": true,
+        "description": "Property name for option value",
+        "helpText": "When options are objects, specifies value property",
+        "dataTypes": [
+          "string (property name)"
+        ],
+        "examples": [
+          "'code'",
+          "'id'",
+          "'value'"
+        ]
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "optional": true,
+        "description": "Placeholder text",
+        "helpText": "Text shown when no items selected",
+        "dataTypes": [
+          "string"
+        ],
+        "examples": [
+          "'Select items'",
+          "'Choose...'"
+        ]
+      },
+      {
+        "name": "filter",
+        "type": "boolean",
+        "optional": true,
+        "description": "Enable filtering",
+        "helpText": "Shows search input",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "name": "display",
+        "type": "'comma' | 'chip'",
+        "optional": true,
+        "description": "Display mode",
+        "helpText": "How selected items are shown",
+        "dataTypes": [
+          "'comma' (default)",
+          "'chip'"
+        ],
+        "examples": [
+          "'comma'",
+          "'chip'"
+        ]
+      },
+      {
+        "name": "showSelectAll",
+        "type": "boolean",
+        "optional": true,
+        "description": "Show select all checkbox",
+        "helpText": "Displays checkbox to select/deselect all",
+        "dataTypes": [
+          "boolean (default: true)"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "name": "maxSelectedLabels",
+        "type": "number",
+        "optional": true,
+        "description": "Max labels to show",
+        "helpText": "Number of selected items to display before showing count",
+        "dataTypes": [
+          "number"
+        ],
+        "examples": [
+          "3",
+          "5"
+        ]
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "optional": true,
+        "description": "Disabled state",
+        "helpText": "Disables the multiselect",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes",
+        "helpText": "Supports PrimeFlex utility classes",
+        "examples": [
+          "'w-full'"
+        ]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles",
+        "helpText": "Standard React inline styles",
+        "examples": [
+          "{ width: '100%' }"
+        ]
+      }
+    ],
+    "children": null
+  },
+  "eventHandlers": {
+    "standard": [
+      {
+        "name": "onChange",
+        "type": "(e: { value: any[], target: { value: any[] } }) => void",
+        "description": "Callback when selection changes"
+      },
+      {
+        "name": "onFocus",
+        "type": "(e: React.FocusEvent) => void",
+        "description": "Callback when multiselect gains focus"
+      },
+      {
+        "name": "onBlur",
+        "type": "(e: React.FocusEvent) => void",
+        "description": "Callback when multiselect loses focus"
+      },
+      {
+        "name": "onShow",
+        "type": "() => void",
+        "description": "Callback when panel opens"
+      },
+      {
+        "name": "onHide",
+        "type": "() => void",
+        "description": "Callback when panel closes"
+      }
+    ],
+    "simplified": [
+      {
+        "name": "onValueChange",
+        "type": "(value: any[]) => void",
+        "description": "Simplified callback with just the array"
+      }
+    ],
+    "validation": [
+      {
+        "name": "onValidate",
+        "type": "(value: any[]) => boolean | string",
+        "description": "Validation callback"
+      },
+      {
+        "name": "onError",
+        "type": "(error: string) => void",
+        "description": "Called when validation fails"
+      }
+    ],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "description": "Called when component mounts"
+      },
+      {
+        "name": "onUnmount",
+        "type": "() => void",
+        "description": "Called when component unmounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [
+      "handleChange - Processes onChange event, calls onChange, onValueChange, onValidate",
+      "handleFocus - Processes onFocus event",
+      "handleBlur - Processes onBlur event, triggers validation",
+      "handleShow - Processes onShow event",
+      "handleHide - Processes onHide event"
+    ],
+    "patterns": [
+      "Check if event handler exists before calling",
+      "Extract value array from event object",
+      "Run validation on blur and change events"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": [],
+    "childrenDescription": "This component does not accept children",
+    "hasChildren": false,
+    "examples": []
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<MultiSelectWrapper value={selected} options={['Option 1', 'Option 2', 'Option 3']} onChange={(e) => setSelected(e.value)} />",
+    "withStyling": "<MultiSelectWrapper value={tags} options={allTags} display=\"chip\" className=\"w-full\" />",
+    "withEvents": "<MultiSelectWrapper value={selected} options={items} onChange={handleChange} onShow={() => console.log('opened')} />",
+    "withRedux": "<MultiSelectWrapper value={selectedItems} options={items} onValueChange={(val) => dispatch(setSelected(val))} />",
+    "withValidation": "<MultiSelectWrapper value={categories} options={allCategories} onValidate={(val) => val.length > 0 ? true : 'Select at least one'} onError={(err) => setError(err)} />",
+    "withChildren": "N/A"
+  }
+};
+
+const MultiSelectWrapper = (props) => {
+  const {
+    value, options, optionLabel, optionValue, placeholder, filter, display, showSelectAll, maxSelectedLabels, disabled, className, style, onChange, onFocus, onBlur, onShow, onHide, onValueChange, onValidate, onError, onMount, onUnmount,
+    ...restProps
+  } = props;
+
+  const componentRef = useRef(null);
+
+  // Lifecycle: onMount
+  useEffect(() => {
+    if (onMount) {
+      onMount();
+    }
+  }, []);
+
+  // Lifecycle: onUnmount
+  useEffect(() => {
+    return () => {
+      if (onUnmount) {
+        onUnmount();
+      }
+    };
+  }, []);
+
+  // Simplified event handler: onValueChange
+  const handleChange = (e) => {
+    if (onChange) {
+      onChange(e);
+    }
+    if (onValueChange) {
+      onValueChange(e.value || e.data || e);
+    }
+  };
+
+  // Build props for underlying PrimeReact component
+  const primeReactProps = {
+    value,
+    options,
+    optionLabel,
+    optionValue,
+    placeholder,
+    filter,
+    display,
+    showSelectAll,
+    maxSelectedLabels,
+    disabled,
+    className,
+    style,
+    onChange: handleChange,
+    onFocus,
+    onBlur,
+    onShow,
+    onHide,
+    ref: componentRef,
+    ...restProps
+  };
+
+  return (
+    <MultiSelect {...primeReactProps} />
+  );
+};
+
+MultiSelectWrapper.displayName = 'MultiSelectWrapper';
+
+export default MultiSelectWrapper;

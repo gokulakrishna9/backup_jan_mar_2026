@@ -1,0 +1,690 @@
+{
+  "metadata": {
+    "project": "job-portal",
+    "description": "Sample test data for API testing",
+    "generated": "2024-01-01T00:00:00Z"
+  },
+  "entities": {
+    "StudentProfile": [
+      {
+        "resumeUrl": "sample_resume_url",
+        "skills": "sample_skills 1",
+        "educationLevel": "sample_education_level 1"
+      },
+      {
+        "resumeUrl": "sample_resume_url",
+        "skills": "sample_skills 2",
+        "educationLevel": "sample_education_level 2"
+      },
+      {
+        "resumeUrl": "sample_resume_url",
+        "skills": "sample_skills 3",
+        "educationLevel": "sample_education_level 3"
+      }
+    ],
+    "EmployerProfile": [
+      {
+        "companyName": "sample_company_name 1",
+        "industry": "sample_industry 1",
+        "website": "sample_website 1",
+        "logoUrl": "sample_logo_url",
+        "description": "sample_description 1",
+        "contactEmail": "sample_contact_email"
+      },
+      {
+        "companyName": "sample_company_name 2",
+        "industry": "sample_industry 2",
+        "website": "sample_website 2",
+        "logoUrl": "sample_logo_url",
+        "description": "sample_description 2",
+        "contactEmail": "sample_contact_email"
+      },
+      {
+        "companyName": "sample_company_name 3",
+        "industry": "sample_industry 3",
+        "website": "sample_website 3",
+        "logoUrl": "sample_logo_url",
+        "description": "sample_description 3",
+        "contactEmail": "sample_contact_email"
+      }
+    ],
+    "TrainerProfile": [
+      {
+        "specialization": "sample_specialization 1",
+        "certifications": "sample_certifications 1",
+        "hourlyRate": "sample_hourly_rate"
+      },
+      {
+        "specialization": "sample_specialization 2",
+        "certifications": "sample_certifications 2",
+        "hourlyRate": "sample_hourly_rate"
+      },
+      {
+        "specialization": "sample_specialization 3",
+        "certifications": "sample_certifications 3",
+        "hourlyRate": "sample_hourly_rate"
+      }
+    ],
+    "JobPosting": [
+      {
+        "title": "sample_title 1",
+        "description": "sample_description 1",
+        "location": "sample_location 1",
+        "salaryMin": "sample_salary_min 1",
+        "salaryMax": "sample_salary_max 1",
+        "jobType": "sample_job_type 1",
+        "isActive": true
+      },
+      {
+        "title": "sample_title 2",
+        "description": "sample_description 2",
+        "location": "sample_location 2",
+        "salaryMin": "sample_salary_min 2",
+        "salaryMax": "sample_salary_max 2",
+        "jobType": "sample_job_type 2",
+        "isActive": true
+      },
+      {
+        "title": "sample_title 3",
+        "description": "sample_description 3",
+        "location": "sample_location 3",
+        "salaryMin": "sample_salary_min 3",
+        "salaryMax": "sample_salary_max 3",
+        "jobType": "sample_job_type 3",
+        "isActive": true
+      }
+    ],
+    "TrainingProgram": [
+      {
+        "title": "sample_title 1",
+        "description": "sample_description 1",
+        "durationDays": 100,
+        "price": "sample_price 1",
+        "isActive": true
+      },
+      {
+        "title": "sample_title 2",
+        "description": "sample_description 2",
+        "durationDays": 100,
+        "price": "sample_price 2",
+        "isActive": true
+      },
+      {
+        "title": "sample_title 3",
+        "description": "sample_description 3",
+        "durationDays": 100,
+        "price": "sample_price 3",
+        "isActive": true
+      }
+    ],
+    "JobApplication": [
+      {
+        "status": "sample_status 1",
+        "coverLetter": "sample_cover_letter 1",
+        "appliedAt": "2024-01-01T10:00:00 1"
+      },
+      {
+        "status": "sample_status 2",
+        "coverLetter": "sample_cover_letter 2",
+        "appliedAt": "2024-01-01T10:00:00 2"
+      },
+      {
+        "status": "sample_status 3",
+        "coverLetter": "sample_cover_letter 3",
+        "appliedAt": "2024-01-01T10:00:00 3"
+      }
+    ],
+    "TrainingEnrollment": [
+      {
+        "status": "sample_status 1",
+        "progress": 100,
+        "enrolledAt": "2024-01-01T10:00:00 1"
+      },
+      {
+        "status": "sample_status 2",
+        "progress": 100,
+        "enrolledAt": "2024-01-01T10:00:00 2"
+      },
+      {
+        "status": "sample_status 3",
+        "progress": 100,
+        "enrolledAt": "2024-01-01T10:00:00 3"
+      }
+    ],
+    "UserProfile": [
+      {
+        "firstName": "sample_first_name 1",
+        "lastName": "sample_last_name 1",
+        "email": "sample_email",
+        "phone": "sample_phone",
+        "bio": "sample_bio 1"
+      },
+      {
+        "firstName": "sample_first_name 2",
+        "lastName": "sample_last_name 2",
+        "email": "sample_email",
+        "phone": "sample_phone",
+        "bio": "sample_bio 2"
+      },
+      {
+        "firstName": "sample_first_name 3",
+        "lastName": "sample_last_name 3",
+        "email": "sample_email",
+        "phone": "sample_phone",
+        "bio": "sample_bio 3"
+      }
+    ],
+    "EducationLevel": [
+      {
+        "name": "sample_name 1",
+        "description": "sample_description 1",
+        "sortOrder": 100
+      },
+      {
+        "name": "sample_name 2",
+        "description": "sample_description 2",
+        "sortOrder": 100
+      },
+      {
+        "name": "sample_name 3",
+        "description": "sample_description 3",
+        "sortOrder": 100
+      }
+    ],
+    "FieldOfStudy": [
+      {
+        "name": "sample_name 1",
+        "description": "sample_description 1"
+      },
+      {
+        "name": "sample_name 2",
+        "description": "sample_description 2"
+      },
+      {
+        "name": "sample_name 3",
+        "description": "sample_description 3"
+      }
+    ],
+    "Institution": [
+      {
+        "name": "sample_name 1",
+        "country": "sample_country 1",
+        "website": "sample_website 1"
+      },
+      {
+        "name": "sample_name 2",
+        "country": "sample_country 2",
+        "website": "sample_website 2"
+      },
+      {
+        "name": "sample_name 3",
+        "country": "sample_country 3",
+        "website": "sample_website 3"
+      }
+    ],
+    "UserEducation": [
+      {
+        "institutionName": "sample_institution_name 1",
+        "degree": "sample_degree 1",
+        "fieldOfStudy": "sample_field_of_study 1",
+        "startDate": "2024-01-01 1",
+        "endDate": "2024-01-01 1",
+        "grade": "sample_grade 1",
+        "description": "sample_description 1"
+      },
+      {
+        "institutionName": "sample_institution_name 2",
+        "degree": "sample_degree 2",
+        "fieldOfStudy": "sample_field_of_study 2",
+        "startDate": "2024-01-01 2",
+        "endDate": "2024-01-01 2",
+        "grade": "sample_grade 2",
+        "description": "sample_description 2"
+      },
+      {
+        "institutionName": "sample_institution_name 3",
+        "degree": "sample_degree 3",
+        "fieldOfStudy": "sample_field_of_study 3",
+        "startDate": "2024-01-01 3",
+        "endDate": "2024-01-01 3",
+        "grade": "sample_grade 3",
+        "description": "sample_description 3"
+      }
+    ],
+    "Industry": [
+      {
+        "name": "sample_name 1",
+        "description": "sample_description 1"
+      },
+      {
+        "name": "sample_name 2",
+        "description": "sample_description 2"
+      },
+      {
+        "name": "sample_name 3",
+        "description": "sample_description 3"
+      }
+    ],
+    "JobTitle": [
+      {
+        "name": "sample_name 1",
+        "description": "sample_description 1"
+      },
+      {
+        "name": "sample_name 2",
+        "description": "sample_description 2"
+      },
+      {
+        "name": "sample_name 3",
+        "description": "sample_description 3"
+      }
+    ],
+    "UserWorkExperience": [
+      {
+        "companyName": "sample_company_name 1",
+        "jobTitle": "sample_job_title 1",
+        "industry": "sample_industry 1",
+        "location": "sample_location 1",
+        "startDate": "2024-01-01 1",
+        "endDate": "2024-01-01 1",
+        "isCurrent": true,
+        "description": "sample_description 1"
+      },
+      {
+        "companyName": "sample_company_name 2",
+        "jobTitle": "sample_job_title 2",
+        "industry": "sample_industry 2",
+        "location": "sample_location 2",
+        "startDate": "2024-01-01 2",
+        "endDate": "2024-01-01 2",
+        "isCurrent": true,
+        "description": "sample_description 2"
+      },
+      {
+        "companyName": "sample_company_name 3",
+        "jobTitle": "sample_job_title 3",
+        "industry": "sample_industry 3",
+        "location": "sample_location 3",
+        "startDate": "2024-01-01 3",
+        "endDate": "2024-01-01 3",
+        "isCurrent": true,
+        "description": "sample_description 3"
+      }
+    ],
+    "SkillCategory": [
+      {
+        "name": "sample_name 1",
+        "description": "sample_description 1"
+      },
+      {
+        "name": "sample_name 2",
+        "description": "sample_description 2"
+      },
+      {
+        "name": "sample_name 3",
+        "description": "sample_description 3"
+      }
+    ],
+    "Skill": [
+      {
+        "name": "sample_name 1",
+        "category": "sample_category 1",
+        "description": "sample_description 1"
+      },
+      {
+        "name": "sample_name 2",
+        "category": "sample_category 2",
+        "description": "sample_description 2"
+      },
+      {
+        "name": "sample_name 3",
+        "category": "sample_category 3",
+        "description": "sample_description 3"
+      }
+    ],
+    "UserSkill": [
+      {
+        "skillName": "sample_skill_name 1",
+        "proficiencyLevel": "sample_proficiency_level 1",
+        "yearsOfExperience": 2024
+      },
+      {
+        "skillName": "sample_skill_name 2",
+        "proficiencyLevel": "sample_proficiency_level 2",
+        "yearsOfExperience": 2024
+      },
+      {
+        "skillName": "sample_skill_name 3",
+        "proficiencyLevel": "sample_proficiency_level 3",
+        "yearsOfExperience": 2024
+      }
+    ],
+    "TrainingModule": [
+      {
+        "title": "sample_title 1",
+        "description": "sample_description 1",
+        "moduleOrder": 100,
+        "durationMinutes": 100,
+        "contentUrl": "sample_content_url"
+      },
+      {
+        "title": "sample_title 2",
+        "description": "sample_description 2",
+        "moduleOrder": 100,
+        "durationMinutes": 100,
+        "contentUrl": "sample_content_url"
+      },
+      {
+        "title": "sample_title 3",
+        "description": "sample_description 3",
+        "moduleOrder": 100,
+        "durationMinutes": 100,
+        "contentUrl": "sample_content_url"
+      }
+    ],
+    "ModuleProgress": [
+      {
+        "status": "sample_status 1",
+        "completedAt": "2024-01-01T10:00:00 1",
+        "progressPercent": 100
+      },
+      {
+        "status": "sample_status 2",
+        "completedAt": "2024-01-01T10:00:00 2",
+        "progressPercent": 100
+      },
+      {
+        "status": "sample_status 3",
+        "completedAt": "2024-01-01T10:00:00 3",
+        "progressPercent": 100
+      }
+    ],
+    "TrainingExam": [
+      {
+        "title": "sample_title 1",
+        "description": "sample_description 1",
+        "passingScore": 100,
+        "maxScore": 100,
+        "timeLimitMinutes": 100,
+        "maxAttempts": 100
+      },
+      {
+        "title": "sample_title 2",
+        "description": "sample_description 2",
+        "passingScore": 100,
+        "maxScore": 100,
+        "timeLimitMinutes": 100,
+        "maxAttempts": 100
+      },
+      {
+        "title": "sample_title 3",
+        "description": "sample_description 3",
+        "passingScore": 100,
+        "maxScore": 100,
+        "timeLimitMinutes": 100,
+        "maxAttempts": 100
+      }
+    ],
+    "ExamAttempt": [
+      {
+        "score": 100,
+        "passed": true,
+        "startedAt": "2024-01-01T10:00:00 1",
+        "completedAt": "2024-01-01T10:00:00 1",
+        "attemptNumber": 100
+      },
+      {
+        "score": 100,
+        "passed": true,
+        "startedAt": "2024-01-01T10:00:00 2",
+        "completedAt": "2024-01-01T10:00:00 2",
+        "attemptNumber": 100
+      },
+      {
+        "score": 100,
+        "passed": true,
+        "startedAt": "2024-01-01T10:00:00 3",
+        "completedAt": "2024-01-01T10:00:00 3",
+        "attemptNumber": 100
+      }
+    ],
+    "TrainingCertification": [
+      {
+        "certificateNumber": "sample_certificate_number 1",
+        "title": "sample_title 1",
+        "issuedAt": "2024-01-01T10:00:00 1",
+        "expiresAt": "2024-01-01T10:00:00 1",
+        "certificateUrl": "sample_certificate_url",
+        "status": "sample_status 1"
+      },
+      {
+        "certificateNumber": "sample_certificate_number 2",
+        "title": "sample_title 2",
+        "issuedAt": "2024-01-01T10:00:00 2",
+        "expiresAt": "2024-01-01T10:00:00 2",
+        "certificateUrl": "sample_certificate_url",
+        "status": "sample_status 2"
+      },
+      {
+        "certificateNumber": "sample_certificate_number 3",
+        "title": "sample_title 3",
+        "issuedAt": "2024-01-01T10:00:00 3",
+        "expiresAt": "2024-01-01T10:00:00 3",
+        "certificateUrl": "sample_certificate_url",
+        "status": "sample_status 3"
+      }
+    ],
+    "CourseDocument": [
+      {
+        "title": "sample_title 1",
+        "content": "sample_content 1",
+        "sortOrder": 100
+      },
+      {
+        "title": "sample_title 2",
+        "content": "sample_content 2",
+        "sortOrder": 100
+      },
+      {
+        "title": "sample_title 3",
+        "content": "sample_content 3",
+        "sortOrder": 100
+      }
+    ],
+    "CourseVideo": [
+      {
+        "title": "sample_title 1",
+        "description": "sample_description 1",
+        "videoUrl": "sample_video_url",
+        "durationSeconds": 100,
+        "sortOrder": 100
+      },
+      {
+        "title": "sample_title 2",
+        "description": "sample_description 2",
+        "videoUrl": "sample_video_url",
+        "durationSeconds": 100,
+        "sortOrder": 100
+      },
+      {
+        "title": "sample_title 3",
+        "description": "sample_description 3",
+        "videoUrl": "sample_video_url",
+        "durationSeconds": 100,
+        "sortOrder": 100
+      }
+    ],
+    "CourseAudio": [
+      {
+        "title": "sample_title 1",
+        "description": "sample_description 1",
+        "audioUrl": "sample_audio_url",
+        "durationSeconds": 100,
+        "sortOrder": 100
+      },
+      {
+        "title": "sample_title 2",
+        "description": "sample_description 2",
+        "audioUrl": "sample_audio_url",
+        "durationSeconds": 100,
+        "sortOrder": 100
+      },
+      {
+        "title": "sample_title 3",
+        "description": "sample_description 3",
+        "audioUrl": "sample_audio_url",
+        "durationSeconds": 100,
+        "sortOrder": 100
+      }
+    ],
+    "CourseCodeLab": [
+      {
+        "title": "sample_title 1",
+        "description": "sample_description 1",
+        "language": "sample_language 1",
+        "starterCode": "sample_starter_code",
+        "solutionCode": "sample_solution_code",
+        "instructions": "sample_instructions 1",
+        "sortOrder": 100
+      },
+      {
+        "title": "sample_title 2",
+        "description": "sample_description 2",
+        "language": "sample_language 2",
+        "starterCode": "sample_starter_code",
+        "solutionCode": "sample_solution_code",
+        "instructions": "sample_instructions 2",
+        "sortOrder": 100
+      },
+      {
+        "title": "sample_title 3",
+        "description": "sample_description 3",
+        "language": "sample_language 3",
+        "starterCode": "sample_starter_code",
+        "solutionCode": "sample_solution_code",
+        "instructions": "sample_instructions 3",
+        "sortOrder": 100
+      }
+    ],
+    "ExamQuestion": [
+      {
+        "questionText": "sample_question_text 1",
+        "questionCode": "sample_question_code",
+        "questionType": "sample_question_type 1",
+        "points": 100,
+        "sortOrder": 100
+      },
+      {
+        "questionText": "sample_question_text 2",
+        "questionCode": "sample_question_code",
+        "questionType": "sample_question_type 2",
+        "points": 100,
+        "sortOrder": 100
+      },
+      {
+        "questionText": "sample_question_text 3",
+        "questionCode": "sample_question_code",
+        "questionType": "sample_question_type 3",
+        "points": 100,
+        "sortOrder": 100
+      }
+    ],
+    "ExamAnswer": [
+      {
+        "answerText": "sample_answer_text 1",
+        "answerCode": "sample_answer_code",
+        "isCorrect": true,
+        "explanation": "sample_explanation 1",
+        "sortOrder": 100
+      },
+      {
+        "answerText": "sample_answer_text 2",
+        "answerCode": "sample_answer_code",
+        "isCorrect": true,
+        "explanation": "sample_explanation 2",
+        "sortOrder": 100
+      },
+      {
+        "answerText": "sample_answer_text 3",
+        "answerCode": "sample_answer_code",
+        "isCorrect": true,
+        "explanation": "sample_explanation 3",
+        "sortOrder": 100
+      }
+    ],
+    "CourseQuestion": [
+      {
+        "questionText": "sample_question_text 1",
+        "questionCode": "sample_question_code",
+        "sortOrder": 100
+      },
+      {
+        "questionText": "sample_question_text 2",
+        "questionCode": "sample_question_code",
+        "sortOrder": 100
+      },
+      {
+        "questionText": "sample_question_text 3",
+        "questionCode": "sample_question_code",
+        "sortOrder": 100
+      }
+    ],
+    "CourseAnswer": [
+      {
+        "answerText": "sample_answer_text 1",
+        "answerCode": "sample_answer_code",
+        "isAccepted": true,
+        "upvotes": 100
+      },
+      {
+        "answerText": "sample_answer_text 2",
+        "answerCode": "sample_answer_code",
+        "isAccepted": true,
+        "upvotes": 100
+      },
+      {
+        "answerText": "sample_answer_text 3",
+        "answerCode": "sample_answer_code",
+        "isAccepted": true,
+        "upvotes": 100
+      }
+    ],
+    "Company": [
+      {
+        "name": "sample_name 1",
+        "industry": "sample_industry 1",
+        "website": "sample_website 1",
+        "description": "sample_description 1"
+      },
+      {
+        "name": "sample_name 2",
+        "industry": "sample_industry 2",
+        "website": "sample_website 2",
+        "description": "sample_description 2"
+      },
+      {
+        "name": "sample_name 3",
+        "industry": "sample_industry 3",
+        "website": "sample_website 3",
+        "description": "sample_description 3"
+      }
+    ],
+    "Location": [
+      {
+        "city": "sample_city 1",
+        "state": "sample_state 1",
+        "country": "sample_country 1"
+      },
+      {
+        "city": "sample_city 2",
+        "state": "sample_state 2",
+        "country": "sample_country 2"
+      },
+      {
+        "city": "sample_city 3",
+        "state": "sample_state 3",
+        "country": "sample_country 3"
+      }
+    ]
+  }
+}

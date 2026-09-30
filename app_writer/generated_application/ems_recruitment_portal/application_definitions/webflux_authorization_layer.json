@@ -1,0 +1,1270 @@
+{
+  "layerType": "authorization",
+  "description": "Authorization configuration - document-based access control aligned with existing auth schema. User groups and membership settings are defined in group_definition_layer.json.",
+  "enabled": true,
+  "accessControlModel": "document-based",
+  "accessControls": [
+    {
+      "name": "READ",
+      "description": "View document content",
+      "enabled": true
+    },
+    {
+      "name": "CREATE",
+      "description": "Create new documents",
+      "enabled": true
+    },
+    {
+      "name": "UPDATE",
+      "description": "Modify existing documents",
+      "enabled": true
+    },
+    {
+      "name": "DELETE",
+      "description": "Remove documents",
+      "enabled": true
+    },
+    {
+      "name": "GRANT_ACCESS",
+      "description": "Grant access to other users",
+      "enabled": true
+    },
+    {
+      "name": "EXPORT",
+      "description": "Export document data",
+      "enabled": true
+    },
+    {
+      "name": "SHARE",
+      "description": "Share documents temporarily",
+      "enabled": true
+    },
+    {
+      "name": "AUDIT",
+      "description": "View access logs",
+      "enabled": true
+    }
+  ],
+  "documentGroupTypes": [
+    {
+      "name": "SINGLE_RECORD",
+      "description": "Single record in a table",
+      "enabled": true,
+      "requiresTableName": true,
+      "requiresRecordIds": true,
+      "supportsQuery": false
+    },
+    {
+      "name": "MULTIPLE_RECORDS",
+      "description": "Multiple specific records in a table",
+      "enabled": true,
+      "requiresTableName": true,
+      "requiresRecordIds": true,
+      "supportsQuery": false,
+      "recordIdsFormat": "JSON array"
+    },
+    {
+      "name": "ENTIRE_TABLE",
+      "description": "All records in a table",
+      "enabled": true,
+      "requiresTableName": true,
+      "requiresRecordIds": false,
+      "supportsQuery": false
+    },
+    {
+      "name": "MULTIPLE_TABLES",
+      "description": "All records in multiple tables",
+      "enabled": true,
+      "requiresTableName": true,
+      "requiresRecordIds": false,
+      "supportsQuery": false,
+      "tableNameFormat": "Comma-separated list"
+    },
+    {
+      "name": "CUSTOM_QUERY",
+      "description": "Records matching a predefined query (requires explicit record IDs)",
+      "enabled": true,
+      "requiresTableName": true,
+      "requiresRecordIds": true,
+      "supportsQuery": true,
+      "queryFormat": "JSON query definition"
+    },
+    {
+      "name": "CUSTOM_QUERY_ALL",
+      "description": "All records matching a predefined query (ignores record IDs)",
+      "enabled": true,
+      "requiresTableName": true,
+      "requiresRecordIds": false,
+      "supportsQuery": true,
+      "queryFormat": "JSON query definition"
+    }
+  ],
+  "superUserSettings": {
+    "enabled": true,
+    "bypassAllChecks": true,
+    "requireJustificationForDelete": true,
+    "justificationMinLength": 10,
+    "logAllActions": true
+  },
+  "entityAccessControl": [
+    {
+      "entityName": "User",
+      "tableName": "ems_user",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "UserPropertyGroup",
+      "tableName": "ems_user_property_group",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "UserProperty",
+      "tableName": "ems_user_property",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "Institution",
+      "tableName": "ems_institution",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "InstitutionPropertyGroup",
+      "tableName": "ems_institution_property_group",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "InstitutionProperty",
+      "tableName": "ems_institution_property",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "CandidateInstituteLink",
+      "tableName": "ems_candidate_institute_link",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "UserInstitutePropertyLink",
+      "tableName": "ems_user_institute_property_link",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "Course",
+      "tableName": "ems_course",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "CoursePropertyGroup",
+      "tableName": "ems_course_property_group",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "CourseProperty",
+      "tableName": "ems_course_property",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "UserCourseLink",
+      "tableName": "ems_user_course_link",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "UserCourseWishlist",
+      "tableName": "ems_user_course_wishlist",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "UserCoursePurchase",
+      "tableName": "ems_user_course_purchase",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "JobPost",
+      "tableName": "ems_job_post",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "JobPostPropertyGroup",
+      "tableName": "ems_job_post_property_group",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "JobPostProperty",
+      "tableName": "ems_job_post_property",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "UserJobPostBookmark",
+      "tableName": "ems_user_job_post_bookmark",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "JobPostUserBookmark",
+      "tableName": "ems_job_post_user_bookmark",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "SubscriptionPaymentHistory",
+      "tableName": "ems_subscription_payment_history",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "Community",
+      "tableName": "ems_community",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "CommunityPropertyGroup",
+      "tableName": "ems_community_property_group",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "CommunityProperty",
+      "tableName": "ems_community_property",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "CommunityUserLink",
+      "tableName": "ems_community_user_link",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "CommunityPropertyUserLink",
+      "tableName": "ems_community_property_user_link",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "CommunityUserPost",
+      "tableName": "ems_community_user_post",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "CommunityPostLink",
+      "tableName": "ems_community_post_link",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "PostEmogi",
+      "tableName": "ems_post_emogi",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "EmogiPostUserLink",
+      "tableName": "ems_emogi_post_user_link",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "PostFlag",
+      "tableName": "ems_post_flag",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "PostComment",
+      "tableName": "ems_post_comment",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "PostCommentEmogiLink",
+      "tableName": "ems_post_comment_emogi_link",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "AiUserProfileEvaluationParameterGroup",
+      "tableName": "ems_ai_user_profile_evaluation_parameter_group",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "AiUserProfileEvaluationParameter",
+      "tableName": "ems_ai_user_profile_evaluation_parameter",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "AiUserProfileEvaluation",
+      "tableName": "ems_ai_user_profile_evaluation",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "AiEvaluationParameterGroup",
+      "tableName": "ems_ai_evaluation_parameter_group",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "AiEvaluationParameter",
+      "tableName": "ems_ai_evaluation_parameter",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "AiInstitutionProfileEvaluation",
+      "tableName": "ems_ai_institution_profile_evaluation",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "AiJobRecommendation",
+      "tableName": "ems_ai_job_recommendation",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "AiCommunityPostEvaluation",
+      "tableName": "ems_ai_community_post_evaluation",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "AiMarketTrendParameterGroup",
+      "tableName": "ems_ai_market_trend_parameter_group",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "AiMarketTrendParameter",
+      "tableName": "ems_ai_market_trend_parameter",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "AiMarketTrendProperty",
+      "tableName": "ems_ai_market_trend_property",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "UserProfileDocument",
+      "tableName": "ems_user_profile_document",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "InstitutionProfileDocument",
+      "tableName": "ems_institution_profile_document",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "CourseDocumentGroup",
+      "tableName": "ems_course_document_group",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "CourseDocument",
+      "tableName": "ems_course_document",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "MarketTrendDocument",
+      "tableName": "ems_market_trend_document",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "JobPostDocument",
+      "tableName": "ems_job_post_document",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "UserEducation",
+      "tableName": "ems_user_education",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "UserWorkExperience",
+      "tableName": "ems_user_work_experience",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "UserSkill",
+      "tableName": "ems_user_skill",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "UserCertification",
+      "tableName": "ems_user_certification",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "UserLanguage",
+      "tableName": "ems_user_language",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "UserAchievement",
+      "tableName": "ems_user_achievement",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "UserSocialLink",
+      "tableName": "ems_user_social_link",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "InstitutionDepartment",
+      "tableName": "ems_institution_department",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "InstitutionLocation",
+      "tableName": "ems_institution_location",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "InstitutionAccreditation",
+      "tableName": "ems_institution_accreditation",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "InstitutionRanking",
+      "tableName": "ems_institution_ranking",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "InstitutionFacility",
+      "tableName": "ems_institution_facility",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "CourseModule",
+      "tableName": "ems_course_module",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "CourseLesson",
+      "tableName": "ems_course_lesson",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "CoursePrerequisite",
+      "tableName": "ems_course_prerequisite",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "CourseInstructor",
+      "tableName": "ems_course_instructor",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "CourseReview",
+      "tableName": "ems_course_review",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "CourseAssignment",
+      "tableName": "ems_course_assignment",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "UserCourseProgress",
+      "tableName": "ems_user_course_progress",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "UserAssignmentSubmission",
+      "tableName": "ems_user_assignment_submission",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "JobPostRequirement",
+      "tableName": "ems_job_post_requirement",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "JobPostBenefit",
+      "tableName": "ems_job_post_benefit",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "JobApplication",
+      "tableName": "ems_job_application",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "JobInterview",
+      "tableName": "ems_job_interview",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "JobPostQuestion",
+      "tableName": "ems_job_post_question",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "JobApplicationAnswer",
+      "tableName": "ems_job_application_answer",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "CommunityCategory",
+      "tableName": "ems_community_category",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "CommunityRule",
+      "tableName": "ems_community_rule",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "CommunityEvent",
+      "tableName": "ems_community_event",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "CommunityEventAttendee",
+      "tableName": "ems_community_event_attendee",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "PostAttachment",
+      "tableName": "ems_post_attachment",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "PostTag",
+      "tableName": "ems_post_tag",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "PostTagLink",
+      "tableName": "ems_post_tag_link",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "MarketTrendSkillDemand",
+      "tableName": "ems_market_trend_skill_demand",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "MarketTrendIndustry",
+      "tableName": "ems_market_trend_industry",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "MarketTrendLocation",
+      "tableName": "ems_market_trend_location",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "UserSkillEndorsement",
+      "tableName": "ems_user_skill_endorsement",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "UserRecommendation",
+      "tableName": "ems_user_recommendation",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "Notification",
+      "tableName": "ems_notification",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "CourseJobPostLink",
+      "tableName": "ems_course_job_post_link",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "CourseCommunityLink",
+      "tableName": "ems_course_community_link",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "JobPostCommunityLink",
+      "tableName": "ems_job_post_community_link",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "MarketTrendCourseLink",
+      "tableName": "ems_market_trend_course_link",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "MarketTrendJobPostLink",
+      "tableName": "ems_market_trend_job_post_link",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "MarketTrendInstitutionLink",
+      "tableName": "ems_market_trend_institution_link",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "UserFile",
+      "tableName": "ems_user_file",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "InstitutionFile",
+      "tableName": "ems_institution_file",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "CourseFile",
+      "tableName": "ems_course_file",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "JobPostFile",
+      "tableName": "ems_job_post_file",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "CommunityFile",
+      "tableName": "ems_community_file",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    },
+    {
+      "entityName": "MarketTrendFile",
+      "tableName": "ems_market_trend_file",
+      "isRootEntity": true,
+      "enableAccessControl": true,
+      "checkOnCreate": true,
+      "checkOnRead": true,
+      "checkOnUpdate": true,
+      "checkOnDelete": true,
+      "customRules": []
+    }
+  ],
+  "permissionSettings": {
+    "allowUserPermissions": true,
+    "allowGroupPermissions": true,
+    "requireExpirationDate": false,
+    "unionPermissions": true,
+    "mostPermissiveWins": true
+  },
+  "queryDefinitionFormat": {
+    "description": "JSON format for CUSTOM_QUERY and CUSTOM_QUERY_ALL types",
+    "example": {
+      "table": "users",
+      "conditions": [
+        {
+          "field": "status",
+          "operator": "EQUALS",
+          "value": "active"
+        },
+        {
+          "field": "department",
+          "operator": "IN",
+          "value": [
+            "sales",
+            "marketing"
+          ]
+        }
+      ],
+      "logic": "AND"
+    },
+    "supportedOperators": [
+      "EQUALS",
+      "NOT_EQUALS",
+      "GREATER_THAN",
+      "LESS_THAN",
+      "GREATER_THAN_OR_EQUAL",
+      "LESS_THAN_OR_EQUAL",
+      "LIKE",
+      "IN",
+      "NOT_IN"
+    ],
+    "supportedLogic": [
+      "AND",
+      "OR"
+    ]
+  },
+  "accessControlChecks": {
+    "checkOnCreate": true,
+    "checkOnRead": true,
+    "checkOnUpdate": true,
+    "checkOnDelete": true,
+    "checkOnList": true,
+    "createUsesRecordIdZero": true
+  },
+  "denialHandling": {
+    "throwExceptionOnDenial": true,
+    "exceptionType": "RuntimeException",
+    "exceptionMessage": "Access denied",
+    "logDenials": true,
+    "includeDenialReason": true
+  }
+}

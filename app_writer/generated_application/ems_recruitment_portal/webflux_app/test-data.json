@@ -1,0 +1,2636 @@
+{
+  "metadata": {
+    "project": "ems-recruitment-portal",
+    "description": "Sample test data for API testing",
+    "generated": "2024-01-01T00:00:00Z"
+  },
+  "entities": {
+    "EmsUser": [
+      {
+        "firstName": "sample_first_name 1",
+        "lastName": "sample_last_name 1",
+        "gender": "sample_gender 1",
+        "dateOfBirth": "2024-01-01 1",
+        "emailAddress": "sample_email_address",
+        "userName": "sample_user_name 1",
+        "encryptedPassword": "sample_encrypted_password 1",
+        "phoneNumber": "sample_phone_number",
+        "profilePhoto": "sample_profile_photo 1",
+        "isActive": true,
+        "isEntity": true
+      },
+      {
+        "firstName": "sample_first_name 2",
+        "lastName": "sample_last_name 2",
+        "gender": "sample_gender 2",
+        "dateOfBirth": "2024-01-01 2",
+        "emailAddress": "sample_email_address",
+        "userName": "sample_user_name 2",
+        "encryptedPassword": "sample_encrypted_password 2",
+        "phoneNumber": "sample_phone_number",
+        "profilePhoto": "sample_profile_photo 2",
+        "isActive": true,
+        "isEntity": true
+      },
+      {
+        "firstName": "sample_first_name 3",
+        "lastName": "sample_last_name 3",
+        "gender": "sample_gender 3",
+        "dateOfBirth": "2024-01-01 3",
+        "emailAddress": "sample_email_address",
+        "userName": "sample_user_name 3",
+        "encryptedPassword": "sample_encrypted_password 3",
+        "phoneNumber": "sample_phone_number",
+        "profilePhoto": "sample_profile_photo 3",
+        "isActive": true,
+        "isEntity": true
+      }
+    ],
+    "EmsUserPropertyGroup": [
+      {
+        "groupName": "sample_group_name 1",
+        "groupDescription": "Sample description text 1",
+        "userId": "sample_user_id 1",
+        "isActive": true
+      },
+      {
+        "groupName": "sample_group_name 2",
+        "groupDescription": "Sample description text 2",
+        "userId": "sample_user_id 2",
+        "isActive": true
+      },
+      {
+        "groupName": "sample_group_name 3",
+        "groupDescription": "Sample description text 3",
+        "userId": "sample_user_id 3",
+        "isActive": true
+      }
+    ],
+    "EmsUserProperty": [
+      {
+        "propertyName": "sample_property_name 1",
+        "propertyValue": "Sample property_value 1",
+        "propertyType": "sample_property_type 1",
+        "propertyDescription": "Sample description text 1",
+        "groupId": "sample_group_id 1",
+        "userId": "sample_user_id 1"
+      },
+      {
+        "propertyName": "sample_property_name 2",
+        "propertyValue": "Sample property_value 2",
+        "propertyType": "sample_property_type 2",
+        "propertyDescription": "Sample description text 2",
+        "groupId": "sample_group_id 2",
+        "userId": "sample_user_id 2"
+      },
+      {
+        "propertyName": "sample_property_name 3",
+        "propertyValue": "Sample property_value 3",
+        "propertyType": "sample_property_type 3",
+        "propertyDescription": "Sample description text 3",
+        "groupId": "sample_group_id 3",
+        "userId": "sample_user_id 3"
+      }
+    ],
+    "EmsInstitution": [
+      {
+        "name": "sample_name 1",
+        "description": "Sample description text 1",
+        "moto": "sample_moto 1",
+        "institutionTypeId": 1,
+        "website": "sample_website 1",
+        "contactEmail": "sample_contact_email",
+        "contactPhone": "sample_contact_phone",
+        "isActive": true,
+        "isEntity": true
+      },
+      {
+        "name": "sample_name 2",
+        "description": "Sample description text 2",
+        "moto": "sample_moto 2",
+        "institutionTypeId": 1,
+        "website": "sample_website 2",
+        "contactEmail": "sample_contact_email",
+        "contactPhone": "sample_contact_phone",
+        "isActive": true,
+        "isEntity": true
+      },
+      {
+        "name": "sample_name 3",
+        "description": "Sample description text 3",
+        "moto": "sample_moto 3",
+        "institutionTypeId": 1,
+        "website": "sample_website 3",
+        "contactEmail": "sample_contact_email",
+        "contactPhone": "sample_contact_phone",
+        "isActive": true,
+        "isEntity": true
+      }
+    ],
+    "EmsInstitutionPropertyGroup": [
+      {
+        "groupName": "sample_group_name 1",
+        "groupDescription": "Sample description text 1",
+        "institutionId": "sample_institution_id 1",
+        "isActive": true
+      },
+      {
+        "groupName": "sample_group_name 2",
+        "groupDescription": "Sample description text 2",
+        "institutionId": "sample_institution_id 2",
+        "isActive": true
+      },
+      {
+        "groupName": "sample_group_name 3",
+        "groupDescription": "Sample description text 3",
+        "institutionId": "sample_institution_id 3",
+        "isActive": true
+      }
+    ],
+    "EmsInstitutionProperty": [
+      {
+        "propertyName": "sample_property_name 1",
+        "propertyValue": "Sample property_value 1",
+        "propertyType": "sample_property_type 1",
+        "propertyDescription": "Sample description text 1",
+        "groupId": "sample_group_id 1",
+        "institutionId": "sample_institution_id 1"
+      },
+      {
+        "propertyName": "sample_property_name 2",
+        "propertyValue": "Sample property_value 2",
+        "propertyType": "sample_property_type 2",
+        "propertyDescription": "Sample description text 2",
+        "groupId": "sample_group_id 2",
+        "institutionId": "sample_institution_id 2"
+      },
+      {
+        "propertyName": "sample_property_name 3",
+        "propertyValue": "Sample property_value 3",
+        "propertyType": "sample_property_type 3",
+        "propertyDescription": "Sample description text 3",
+        "groupId": "sample_group_id 3",
+        "institutionId": "sample_institution_id 3"
+      }
+    ],
+    "EmsCandidateInstituteLink": [
+      {
+        "userId": "sample_user_id 1",
+        "institutionId": "sample_institution_id 1",
+        "comment": "Sample comment 1",
+        "status": "sample_status 1"
+      },
+      {
+        "userId": "sample_user_id 2",
+        "institutionId": "sample_institution_id 2",
+        "comment": "Sample comment 2",
+        "status": "sample_status 2"
+      },
+      {
+        "userId": "sample_user_id 3",
+        "institutionId": "sample_institution_id 3",
+        "comment": "Sample comment 3",
+        "status": "sample_status 3"
+      }
+    ],
+    "EmsUserInstitutePropertyLink": [
+      {
+        "userId": "sample_user_id 1",
+        "propertyId": "sample_property_id 1",
+        "comment": "Sample comment 1"
+      },
+      {
+        "userId": "sample_user_id 2",
+        "propertyId": "sample_property_id 2",
+        "comment": "Sample comment 2"
+      },
+      {
+        "userId": "sample_user_id 3",
+        "propertyId": "sample_property_id 3",
+        "comment": "Sample comment 3"
+      }
+    ],
+    "EmsCourse": [
+      {
+        "courseName": "sample_course_name 1",
+        "description": "Sample description text 1",
+        "outcomes": "Sample outcomes 1",
+        "courseTypeId": 1,
+        "isPublished": true,
+        "price": "sample_price 1",
+        "durationWeeks": 100,
+        "institutionId": "sample_institution_id 1",
+        "isEntity": true
+      },
+      {
+        "courseName": "sample_course_name 2",
+        "description": "Sample description text 2",
+        "outcomes": "Sample outcomes 2",
+        "courseTypeId": 1,
+        "isPublished": true,
+        "price": "sample_price 2",
+        "durationWeeks": 100,
+        "institutionId": "sample_institution_id 2",
+        "isEntity": true
+      },
+      {
+        "courseName": "sample_course_name 3",
+        "description": "Sample description text 3",
+        "outcomes": "Sample outcomes 3",
+        "courseTypeId": 1,
+        "isPublished": true,
+        "price": "sample_price 3",
+        "durationWeeks": 100,
+        "institutionId": "sample_institution_id 3",
+        "isEntity": true
+      }
+    ],
+    "EmsCoursePropertyGroup": [
+      {
+        "groupName": "sample_group_name 1",
+        "groupDescription": "Sample description text 1",
+        "courseId": "sample_course_id 1",
+        "isActive": true
+      },
+      {
+        "groupName": "sample_group_name 2",
+        "groupDescription": "Sample description text 2",
+        "courseId": "sample_course_id 2",
+        "isActive": true
+      },
+      {
+        "groupName": "sample_group_name 3",
+        "groupDescription": "Sample description text 3",
+        "courseId": "sample_course_id 3",
+        "isActive": true
+      }
+    ],
+    "EmsCourseProperty": [
+      {
+        "propertyName": "sample_property_name 1",
+        "propertyValue": "Sample property_value 1",
+        "propertyType": "sample_property_type 1",
+        "propertyDescription": "Sample description text 1",
+        "groupId": "sample_group_id 1",
+        "courseId": "sample_course_id 1"
+      },
+      {
+        "propertyName": "sample_property_name 2",
+        "propertyValue": "Sample property_value 2",
+        "propertyType": "sample_property_type 2",
+        "propertyDescription": "Sample description text 2",
+        "groupId": "sample_group_id 2",
+        "courseId": "sample_course_id 2"
+      },
+      {
+        "propertyName": "sample_property_name 3",
+        "propertyValue": "Sample property_value 3",
+        "propertyType": "sample_property_type 3",
+        "propertyDescription": "Sample description text 3",
+        "groupId": "sample_group_id 3",
+        "courseId": "sample_course_id 3"
+      }
+    ],
+    "EmsUserCourseLink": [
+      {
+        "userId": "sample_user_id 1",
+        "courseId": "sample_course_id 1",
+        "role": "sample_role 1"
+      },
+      {
+        "userId": "sample_user_id 2",
+        "courseId": "sample_course_id 2",
+        "role": "sample_role 2"
+      },
+      {
+        "userId": "sample_user_id 3",
+        "courseId": "sample_course_id 3",
+        "role": "sample_role 3"
+      }
+    ],
+    "EmsUserCourseWishlist": [
+      {
+        "userId": "sample_user_id 1",
+        "courseId": "sample_course_id 1",
+        "comment": "Sample comment 1"
+      },
+      {
+        "userId": "sample_user_id 2",
+        "courseId": "sample_course_id 2",
+        "comment": "Sample comment 2"
+      },
+      {
+        "userId": "sample_user_id 3",
+        "courseId": "sample_course_id 3",
+        "comment": "Sample comment 3"
+      }
+    ],
+    "EmsUserCoursePurchase": [
+      {
+        "userId": "sample_user_id 1",
+        "courseId": "sample_course_id 1",
+        "comment": "Sample comment 1",
+        "amount": "sample_amount 1",
+        "transactionId": "sample_transaction_id 1",
+        "purchasedOn": "2024-01-01T10:00:00 1"
+      },
+      {
+        "userId": "sample_user_id 2",
+        "courseId": "sample_course_id 2",
+        "comment": "Sample comment 2",
+        "amount": "sample_amount 2",
+        "transactionId": "sample_transaction_id 2",
+        "purchasedOn": "2024-01-01T10:00:00 2"
+      },
+      {
+        "userId": "sample_user_id 3",
+        "courseId": "sample_course_id 3",
+        "comment": "Sample comment 3",
+        "amount": "sample_amount 3",
+        "transactionId": "sample_transaction_id 3",
+        "purchasedOn": "2024-01-01T10:00:00 3"
+      }
+    ],
+    "EmsJobPost": [
+      {
+        "jobPostSubject": "sample_job_post_subject 1",
+        "jobPostDescription": "Sample description text 1",
+        "institutionId": "sample_institution_id 1",
+        "location": "sample_location 1",
+        "salaryRange": "sample_salary_range 1",
+        "postedOn": "2024-01-01T10:00:00 1",
+        "expiresOn": "2024-01-01T10:00:00 1",
+        "isActive": true,
+        "isEntity": true
+      },
+      {
+        "jobPostSubject": "sample_job_post_subject 2",
+        "jobPostDescription": "Sample description text 2",
+        "institutionId": "sample_institution_id 2",
+        "location": "sample_location 2",
+        "salaryRange": "sample_salary_range 2",
+        "postedOn": "2024-01-01T10:00:00 2",
+        "expiresOn": "2024-01-01T10:00:00 2",
+        "isActive": true,
+        "isEntity": true
+      },
+      {
+        "jobPostSubject": "sample_job_post_subject 3",
+        "jobPostDescription": "Sample description text 3",
+        "institutionId": "sample_institution_id 3",
+        "location": "sample_location 3",
+        "salaryRange": "sample_salary_range 3",
+        "postedOn": "2024-01-01T10:00:00 3",
+        "expiresOn": "2024-01-01T10:00:00 3",
+        "isActive": true,
+        "isEntity": true
+      }
+    ],
+    "EmsJobPostPropertyGroup": [
+      {
+        "groupName": "sample_group_name 1",
+        "groupDescription": "Sample description text 1",
+        "jobPostId": "sample_job_post_id 1"
+      },
+      {
+        "groupName": "sample_group_name 2",
+        "groupDescription": "Sample description text 2",
+        "jobPostId": "sample_job_post_id 2"
+      },
+      {
+        "groupName": "sample_group_name 3",
+        "groupDescription": "Sample description text 3",
+        "jobPostId": "sample_job_post_id 3"
+      }
+    ],
+    "EmsJobPostProperty": [
+      {
+        "propertyName": "sample_property_name 1",
+        "propertyValue": "Sample property_value 1",
+        "propertyType": "sample_property_type 1",
+        "propertyDescription": "Sample description text 1",
+        "groupId": "sample_group_id 1",
+        "jobPostId": "sample_job_post_id 1"
+      },
+      {
+        "propertyName": "sample_property_name 2",
+        "propertyValue": "Sample property_value 2",
+        "propertyType": "sample_property_type 2",
+        "propertyDescription": "Sample description text 2",
+        "groupId": "sample_group_id 2",
+        "jobPostId": "sample_job_post_id 2"
+      },
+      {
+        "propertyName": "sample_property_name 3",
+        "propertyValue": "Sample property_value 3",
+        "propertyType": "sample_property_type 3",
+        "propertyDescription": "Sample description text 3",
+        "groupId": "sample_group_id 3",
+        "jobPostId": "sample_job_post_id 3"
+      }
+    ],
+    "EmsUserJobPostBookmark": [
+      {
+        "userId": "sample_user_id 1",
+        "jobPostId": "sample_job_post_id 1",
+        "comment": "Sample comment 1"
+      },
+      {
+        "userId": "sample_user_id 2",
+        "jobPostId": "sample_job_post_id 2",
+        "comment": "Sample comment 2"
+      },
+      {
+        "userId": "sample_user_id 3",
+        "jobPostId": "sample_job_post_id 3",
+        "comment": "Sample comment 3"
+      }
+    ],
+    "EmsJobPostUserBookmark": [
+      {
+        "jobPostId": "sample_job_post_id 1",
+        "userId": "sample_user_id 1",
+        "comment": "Sample comment 1"
+      },
+      {
+        "jobPostId": "sample_job_post_id 2",
+        "userId": "sample_user_id 2",
+        "comment": "Sample comment 2"
+      },
+      {
+        "jobPostId": "sample_job_post_id 3",
+        "userId": "sample_user_id 3",
+        "comment": "Sample comment 3"
+      }
+    ],
+    "EmsSubscriptionPaymentHistory": [
+      {
+        "userId": "sample_user_id 1",
+        "amount": "sample_amount 1",
+        "subscriptionType": "sample_subscription_type 1",
+        "transactionDetails": {},
+        "transactionReference": "sample_transaction_reference 1",
+        "paymentOn": "2024-01-01T10:00:00 1"
+      },
+      {
+        "userId": "sample_user_id 2",
+        "amount": "sample_amount 2",
+        "subscriptionType": "sample_subscription_type 2",
+        "transactionDetails": {},
+        "transactionReference": "sample_transaction_reference 2",
+        "paymentOn": "2024-01-01T10:00:00 2"
+      },
+      {
+        "userId": "sample_user_id 3",
+        "amount": "sample_amount 3",
+        "subscriptionType": "sample_subscription_type 3",
+        "transactionDetails": {},
+        "transactionReference": "sample_transaction_reference 3",
+        "paymentOn": "2024-01-01T10:00:00 3"
+      }
+    ],
+    "EmsCommunity": [
+      {
+        "instituteId": "sample_institute_id 1",
+        "name": "sample_name 1",
+        "description": "Sample description text 1",
+        "groupOwnerUserId": "sample_group_owner_user_id 1",
+        "isEntity": true
+      },
+      {
+        "instituteId": "sample_institute_id 2",
+        "name": "sample_name 2",
+        "description": "Sample description text 2",
+        "groupOwnerUserId": "sample_group_owner_user_id 2",
+        "isEntity": true
+      },
+      {
+        "instituteId": "sample_institute_id 3",
+        "name": "sample_name 3",
+        "description": "Sample description text 3",
+        "groupOwnerUserId": "sample_group_owner_user_id 3",
+        "isEntity": true
+      }
+    ],
+    "EmsCommunityPropertyGroup": [
+      {
+        "groupName": "sample_group_name 1",
+        "groupDescription": "Sample description text 1",
+        "communityId": "sample_community_id 1"
+      },
+      {
+        "groupName": "sample_group_name 2",
+        "groupDescription": "Sample description text 2",
+        "communityId": "sample_community_id 2"
+      },
+      {
+        "groupName": "sample_group_name 3",
+        "groupDescription": "Sample description text 3",
+        "communityId": "sample_community_id 3"
+      }
+    ],
+    "EmsCommunityProperty": [
+      {
+        "propertyName": "sample_property_name 1",
+        "propertyValue": "Sample property_value 1",
+        "propertyType": "sample_property_type 1",
+        "propertyDescription": "Sample description text 1",
+        "groupId": "sample_group_id 1",
+        "communityId": "sample_community_id 1"
+      },
+      {
+        "propertyName": "sample_property_name 2",
+        "propertyValue": "Sample property_value 2",
+        "propertyType": "sample_property_type 2",
+        "propertyDescription": "Sample description text 2",
+        "groupId": "sample_group_id 2",
+        "communityId": "sample_community_id 2"
+      },
+      {
+        "propertyName": "sample_property_name 3",
+        "propertyValue": "Sample property_value 3",
+        "propertyType": "sample_property_type 3",
+        "propertyDescription": "Sample description text 3",
+        "groupId": "sample_group_id 3",
+        "communityId": "sample_community_id 3"
+      }
+    ],
+    "EmsCommunityUserLink": [
+      {
+        "communityId": "sample_community_id 1",
+        "userId": "sample_user_id 1",
+        "role": "sample_role 1",
+        "comment": "Sample comment 1"
+      },
+      {
+        "communityId": "sample_community_id 2",
+        "userId": "sample_user_id 2",
+        "role": "sample_role 2",
+        "comment": "Sample comment 2"
+      },
+      {
+        "communityId": "sample_community_id 3",
+        "userId": "sample_user_id 3",
+        "role": "sample_role 3",
+        "comment": "Sample comment 3"
+      }
+    ],
+    "EmsCommunityPropertyUserLink": [
+      {
+        "communityPropertyId": "sample_community_property_id 1",
+        "userId": "sample_user_id 1",
+        "comment": "Sample comment 1"
+      },
+      {
+        "communityPropertyId": "sample_community_property_id 2",
+        "userId": "sample_user_id 2",
+        "comment": "Sample comment 2"
+      },
+      {
+        "communityPropertyId": "sample_community_property_id 3",
+        "userId": "sample_user_id 3",
+        "comment": "Sample comment 3"
+      }
+    ],
+    "EmsCommunityUserPost": [
+      {
+        "communityId": "sample_community_id 1",
+        "userId": "sample_user_id 1",
+        "post": {}
+      },
+      {
+        "communityId": "sample_community_id 2",
+        "userId": "sample_user_id 2",
+        "post": {}
+      },
+      {
+        "communityId": "sample_community_id 3",
+        "userId": "sample_user_id 3",
+        "post": {}
+      }
+    ],
+    "EmsCommunityPostLink": [
+      {
+        "postId": "sample_post_id 1",
+        "communityId": "sample_community_id 1"
+      },
+      {
+        "postId": "sample_post_id 2",
+        "communityId": "sample_community_id 2"
+      },
+      {
+        "postId": "sample_post_id 3",
+        "communityId": "sample_community_id 3"
+      }
+    ],
+    "EmsPostEmogi": [
+      {
+        "name": "sample_name 1",
+        "description": "Sample description text 1",
+        "fileLocation": "sample_file_location 1"
+      },
+      {
+        "name": "sample_name 2",
+        "description": "Sample description text 2",
+        "fileLocation": "sample_file_location 2"
+      },
+      {
+        "name": "sample_name 3",
+        "description": "Sample description text 3",
+        "fileLocation": "sample_file_location 3"
+      }
+    ],
+    "EmsEmogiPostUserLink": [
+      {
+        "emogiId": "sample_emogi_id 1",
+        "postId": "sample_post_id 1",
+        "userId": "sample_user_id 1"
+      },
+      {
+        "emogiId": "sample_emogi_id 2",
+        "postId": "sample_post_id 2",
+        "userId": "sample_user_id 2"
+      },
+      {
+        "emogiId": "sample_emogi_id 3",
+        "postId": "sample_post_id 3",
+        "userId": "sample_user_id 3"
+      }
+    ],
+    "EmsPostFlag": [
+      {
+        "type": "sample_type 1",
+        "userId": "sample_user_id 1",
+        "postId": "sample_post_id 1",
+        "reason": "Sample reason 1",
+        "flaggedOn": "2024-01-01T10:00:00 1"
+      },
+      {
+        "type": "sample_type 2",
+        "userId": "sample_user_id 2",
+        "postId": "sample_post_id 2",
+        "reason": "Sample reason 2",
+        "flaggedOn": "2024-01-01T10:00:00 2"
+      },
+      {
+        "type": "sample_type 3",
+        "userId": "sample_user_id 3",
+        "postId": "sample_post_id 3",
+        "reason": "Sample reason 3",
+        "flaggedOn": "2024-01-01T10:00:00 3"
+      }
+    ],
+    "EmsPostComment": [
+      {
+        "postId": "sample_post_id 1",
+        "comment": "Sample comment 1",
+        "userId": "sample_user_id 1"
+      },
+      {
+        "postId": "sample_post_id 2",
+        "comment": "Sample comment 2",
+        "userId": "sample_user_id 2"
+      },
+      {
+        "postId": "sample_post_id 3",
+        "comment": "Sample comment 3",
+        "userId": "sample_user_id 3"
+      }
+    ],
+    "EmsPostCommentEmogiLink": [
+      {
+        "commentId": "sample_comment_id 1",
+        "emogiId": "sample_emogi_id 1",
+        "userId": "sample_user_id 1"
+      },
+      {
+        "commentId": "sample_comment_id 2",
+        "emogiId": "sample_emogi_id 2",
+        "userId": "sample_user_id 2"
+      },
+      {
+        "commentId": "sample_comment_id 3",
+        "emogiId": "sample_emogi_id 3",
+        "userId": "sample_user_id 3"
+      }
+    ],
+    "EmsAiUserProfileEvaluationParameterGroup": [
+      {
+        "groupName": "sample_group_name 1",
+        "description": "Sample description text 1"
+      },
+      {
+        "groupName": "sample_group_name 2",
+        "description": "Sample description text 2"
+      },
+      {
+        "groupName": "sample_group_name 3",
+        "description": "Sample description text 3"
+      }
+    ],
+    "EmsAiUserProfileEvaluationParameter": [
+      {
+        "parameterName": "sample_parameter_name 1",
+        "groupId": "sample_group_id 1",
+        "parameterValue": {}
+      },
+      {
+        "parameterName": "sample_parameter_name 2",
+        "groupId": "sample_group_id 2",
+        "parameterValue": {}
+      },
+      {
+        "parameterName": "sample_parameter_name 3",
+        "groupId": "sample_group_id 3",
+        "parameterValue": {}
+      }
+    ],
+    "EmsAiUserProfileEvaluation": [
+      {
+        "userId": "sample_user_id 1",
+        "propertyId": "sample_property_id 1",
+        "evaluationSummary": {},
+        "rating": "sample_rating 1"
+      },
+      {
+        "userId": "sample_user_id 2",
+        "propertyId": "sample_property_id 2",
+        "evaluationSummary": {},
+        "rating": "sample_rating 2"
+      },
+      {
+        "userId": "sample_user_id 3",
+        "propertyId": "sample_property_id 3",
+        "evaluationSummary": {},
+        "rating": "sample_rating 3"
+      }
+    ],
+    "EmsAiEvaluationParameterGroup": [
+      {
+        "groupName": "sample_group_name 1",
+        "description": "Sample description text 1"
+      },
+      {
+        "groupName": "sample_group_name 2",
+        "description": "Sample description text 2"
+      },
+      {
+        "groupName": "sample_group_name 3",
+        "description": "Sample description text 3"
+      }
+    ],
+    "EmsAiEvaluationParameter": [
+      {
+        "parameterName": "sample_parameter_name 1",
+        "parameterGroupId": "sample_parameter_group_id 1",
+        "parameterValue": {}
+      },
+      {
+        "parameterName": "sample_parameter_name 2",
+        "parameterGroupId": "sample_parameter_group_id 2",
+        "parameterValue": {}
+      },
+      {
+        "parameterName": "sample_parameter_name 3",
+        "parameterGroupId": "sample_parameter_group_id 3",
+        "parameterValue": {}
+      }
+    ],
+    "EmsAiInstitutionProfileEvaluation": [
+      {
+        "institutionId": "sample_institution_id 1",
+        "evaluationSummary": {},
+        "rating": "sample_rating 1"
+      },
+      {
+        "institutionId": "sample_institution_id 2",
+        "evaluationSummary": {},
+        "rating": "sample_rating 2"
+      },
+      {
+        "institutionId": "sample_institution_id 3",
+        "evaluationSummary": {},
+        "rating": "sample_rating 3"
+      }
+    ],
+    "EmsAiJobRecommendation": [
+      {
+        "jobPostId": "sample_job_post_id 1",
+        "profileId": "sample_profile_id 1",
+        "preferenceRating": "sample_preference_rating 1",
+        "recommendationSummary": {}
+      },
+      {
+        "jobPostId": "sample_job_post_id 2",
+        "profileId": "sample_profile_id 2",
+        "preferenceRating": "sample_preference_rating 2",
+        "recommendationSummary": {}
+      },
+      {
+        "jobPostId": "sample_job_post_id 3",
+        "profileId": "sample_profile_id 3",
+        "preferenceRating": "sample_preference_rating 3",
+        "recommendationSummary": {}
+      }
+    ],
+    "EmsAiCommunityPostEvaluation": [
+      {
+        "postId": "sample_post_id 1",
+        "evaluationSummary": {},
+        "rating": "sample_rating 1"
+      },
+      {
+        "postId": "sample_post_id 2",
+        "evaluationSummary": {},
+        "rating": "sample_rating 2"
+      },
+      {
+        "postId": "sample_post_id 3",
+        "evaluationSummary": {},
+        "rating": "sample_rating 3"
+      }
+    ],
+    "EmsAiMarketTrendParameterGroup": [
+      {
+        "groupName": "sample_group_name 1",
+        "description": "Sample description text 1",
+        "trendId": "sample_trend_id 1"
+      },
+      {
+        "groupName": "sample_group_name 2",
+        "description": "Sample description text 2",
+        "trendId": "sample_trend_id 2"
+      },
+      {
+        "groupName": "sample_group_name 3",
+        "description": "Sample description text 3",
+        "trendId": "sample_trend_id 3"
+      }
+    ],
+    "EmsAiMarketTrendParameter": [
+      {
+        "parameterName": "sample_parameter_name 1",
+        "parameterValue": {},
+        "groupId": "sample_group_id 1"
+      },
+      {
+        "parameterName": "sample_parameter_name 2",
+        "parameterValue": {},
+        "groupId": "sample_group_id 2"
+      },
+      {
+        "parameterName": "sample_parameter_name 3",
+        "parameterValue": {},
+        "groupId": "sample_group_id 3"
+      }
+    ],
+    "EmsAiMarketTrendProperty": [
+      {
+        "trendName": "sample_trend_name 1",
+        "trendDescription": "Sample description text 1"
+      },
+      {
+        "trendName": "sample_trend_name 2",
+        "trendDescription": "Sample description text 2"
+      },
+      {
+        "trendName": "sample_trend_name 3",
+        "trendDescription": "Sample description text 3"
+      }
+    ],
+    "EmsUserProfileDocument": [
+      {
+        "userId": "sample_user_id 1",
+        "title": "sample_title 1",
+        "document": {},
+        "documentType": "sample_document_type 1"
+      },
+      {
+        "userId": "sample_user_id 2",
+        "title": "sample_title 2",
+        "document": {},
+        "documentType": "sample_document_type 2"
+      },
+      {
+        "userId": "sample_user_id 3",
+        "title": "sample_title 3",
+        "document": {},
+        "documentType": "sample_document_type 3"
+      }
+    ],
+    "EmsInstitutionProfileDocument": [
+      {
+        "institutionId": "sample_institution_id 1",
+        "title": "sample_title 1",
+        "document": {},
+        "documentType": "sample_document_type 1"
+      },
+      {
+        "institutionId": "sample_institution_id 2",
+        "title": "sample_title 2",
+        "document": {},
+        "documentType": "sample_document_type 2"
+      },
+      {
+        "institutionId": "sample_institution_id 3",
+        "title": "sample_title 3",
+        "document": {},
+        "documentType": "sample_document_type 3"
+      }
+    ],
+    "EmsCourseDocumentGroup": [
+      {
+        "groupName": "sample_group_name 1",
+        "groupDescription": "Sample description text 1",
+        "courseId": "sample_course_id 1",
+        "isActive": true
+      },
+      {
+        "groupName": "sample_group_name 2",
+        "groupDescription": "Sample description text 2",
+        "courseId": "sample_course_id 2",
+        "isActive": true
+      },
+      {
+        "groupName": "sample_group_name 3",
+        "groupDescription": "Sample description text 3",
+        "courseId": "sample_course_id 3",
+        "isActive": true
+      }
+    ],
+    "EmsCourseDocument": [
+      {
+        "courseId": "sample_course_id 1",
+        "groupId": "sample_group_id 1",
+        "title": "sample_title 1",
+        "document": {},
+        "documentType": "sample_document_type 1",
+        "fileName": "sample_file_name 1"
+      },
+      {
+        "courseId": "sample_course_id 2",
+        "groupId": "sample_group_id 2",
+        "title": "sample_title 2",
+        "document": {},
+        "documentType": "sample_document_type 2",
+        "fileName": "sample_file_name 2"
+      },
+      {
+        "courseId": "sample_course_id 3",
+        "groupId": "sample_group_id 3",
+        "title": "sample_title 3",
+        "document": {},
+        "documentType": "sample_document_type 3",
+        "fileName": "sample_file_name 3"
+      }
+    ],
+    "EmsMarketTrendDocument": [
+      {
+        "trendId": "sample_trend_id 1",
+        "title": "sample_title 1",
+        "document": {},
+        "documentType": "sample_document_type 1"
+      },
+      {
+        "trendId": "sample_trend_id 2",
+        "title": "sample_title 2",
+        "document": {},
+        "documentType": "sample_document_type 2"
+      },
+      {
+        "trendId": "sample_trend_id 3",
+        "title": "sample_title 3",
+        "document": {},
+        "documentType": "sample_document_type 3"
+      }
+    ],
+    "EmsJobPostDocument": [
+      {
+        "jobPostId": "sample_job_post_id 1",
+        "title": "sample_title 1",
+        "document": {},
+        "documentType": "sample_document_type 1",
+        "fileName": "sample_file_name 1"
+      },
+      {
+        "jobPostId": "sample_job_post_id 2",
+        "title": "sample_title 2",
+        "document": {},
+        "documentType": "sample_document_type 2",
+        "fileName": "sample_file_name 2"
+      },
+      {
+        "jobPostId": "sample_job_post_id 3",
+        "title": "sample_title 3",
+        "document": {},
+        "documentType": "sample_document_type 3",
+        "fileName": "sample_file_name 3"
+      }
+    ],
+    "EmsUserEducation": [
+      {
+        "userId": "sample_user_id 1",
+        "institutionId": "sample_institution_id 1",
+        "degreeType": "sample_degree_type 1",
+        "fieldOfStudy": "sample_field_of_study 1",
+        "specialization": "sample_specialization 1",
+        "startDate": "2024-01-01 1",
+        "endDate": "2024-01-01 1",
+        "gradeGpa": "sample_grade_gpa 1",
+        "isVerified": true,
+        "certificateDocumentId": "sample_certificate_document_id 1"
+      },
+      {
+        "userId": "sample_user_id 2",
+        "institutionId": "sample_institution_id 2",
+        "degreeType": "sample_degree_type 2",
+        "fieldOfStudy": "sample_field_of_study 2",
+        "specialization": "sample_specialization 2",
+        "startDate": "2024-01-01 2",
+        "endDate": "2024-01-01 2",
+        "gradeGpa": "sample_grade_gpa 2",
+        "isVerified": true,
+        "certificateDocumentId": "sample_certificate_document_id 2"
+      },
+      {
+        "userId": "sample_user_id 3",
+        "institutionId": "sample_institution_id 3",
+        "degreeType": "sample_degree_type 3",
+        "fieldOfStudy": "sample_field_of_study 3",
+        "specialization": "sample_specialization 3",
+        "startDate": "2024-01-01 3",
+        "endDate": "2024-01-01 3",
+        "gradeGpa": "sample_grade_gpa 3",
+        "isVerified": true,
+        "certificateDocumentId": "sample_certificate_document_id 3"
+      }
+    ],
+    "EmsUserWorkExperience": [
+      {
+        "userId": "sample_user_id 1",
+        "institutionId": "sample_institution_id 1",
+        "jobTitle": "sample_job_title 1",
+        "companyName": "sample_company_name 1",
+        "employmentType": "sample_employment_type 1",
+        "location": "sample_location 1",
+        "startDate": "2024-01-01 1",
+        "endDate": "2024-01-01 1",
+        "isCurrent": true,
+        "responsibilities": "Sample responsibilities 1",
+        "achievements": "Sample achievements 1",
+        "skillsUsed": {}
+      },
+      {
+        "userId": "sample_user_id 2",
+        "institutionId": "sample_institution_id 2",
+        "jobTitle": "sample_job_title 2",
+        "companyName": "sample_company_name 2",
+        "employmentType": "sample_employment_type 2",
+        "location": "sample_location 2",
+        "startDate": "2024-01-01 2",
+        "endDate": "2024-01-01 2",
+        "isCurrent": true,
+        "responsibilities": "Sample responsibilities 2",
+        "achievements": "Sample achievements 2",
+        "skillsUsed": {}
+      },
+      {
+        "userId": "sample_user_id 3",
+        "institutionId": "sample_institution_id 3",
+        "jobTitle": "sample_job_title 3",
+        "companyName": "sample_company_name 3",
+        "employmentType": "sample_employment_type 3",
+        "location": "sample_location 3",
+        "startDate": "2024-01-01 3",
+        "endDate": "2024-01-01 3",
+        "isCurrent": true,
+        "responsibilities": "Sample responsibilities 3",
+        "achievements": "Sample achievements 3",
+        "skillsUsed": {}
+      }
+    ],
+    "EmsUserSkill": [
+      {
+        "userId": "sample_user_id 1",
+        "skillName": "sample_skill_name 1",
+        "skillCategory": "sample_skill_category 1",
+        "proficiencyLevel": "sample_proficiency_level 1",
+        "yearsOfExperience": 2024,
+        "isVerified": true,
+        "verifiedByInstitutionId": "sample_verified_by_institution_id 1",
+        "endorsementCount": 10
+      },
+      {
+        "userId": "sample_user_id 2",
+        "skillName": "sample_skill_name 2",
+        "skillCategory": "sample_skill_category 2",
+        "proficiencyLevel": "sample_proficiency_level 2",
+        "yearsOfExperience": 2024,
+        "isVerified": true,
+        "verifiedByInstitutionId": "sample_verified_by_institution_id 2",
+        "endorsementCount": 10
+      },
+      {
+        "userId": "sample_user_id 3",
+        "skillName": "sample_skill_name 3",
+        "skillCategory": "sample_skill_category 3",
+        "proficiencyLevel": "sample_proficiency_level 3",
+        "yearsOfExperience": 2024,
+        "isVerified": true,
+        "verifiedByInstitutionId": "sample_verified_by_institution_id 3",
+        "endorsementCount": 10
+      }
+    ],
+    "EmsUserCertification": [
+      {
+        "userId": "sample_user_id 1",
+        "certificationName": "sample_certification_name 1",
+        "issuingOrganization": "sample_issuing_organization 1",
+        "institutionId": "sample_institution_id 1",
+        "issueDate": "2024-01-01 1",
+        "expiryDate": "2024-01-01 1",
+        "credentialId": "sample_credential_id 1",
+        "credentialUrl": "sample_credential_url",
+        "certificateDocumentId": "sample_certificate_document_id 1",
+        "isVerified": true
+      },
+      {
+        "userId": "sample_user_id 2",
+        "certificationName": "sample_certification_name 2",
+        "issuingOrganization": "sample_issuing_organization 2",
+        "institutionId": "sample_institution_id 2",
+        "issueDate": "2024-01-01 2",
+        "expiryDate": "2024-01-01 2",
+        "credentialId": "sample_credential_id 2",
+        "credentialUrl": "sample_credential_url",
+        "certificateDocumentId": "sample_certificate_document_id 2",
+        "isVerified": true
+      },
+      {
+        "userId": "sample_user_id 3",
+        "certificationName": "sample_certification_name 3",
+        "issuingOrganization": "sample_issuing_organization 3",
+        "institutionId": "sample_institution_id 3",
+        "issueDate": "2024-01-01 3",
+        "expiryDate": "2024-01-01 3",
+        "credentialId": "sample_credential_id 3",
+        "credentialUrl": "sample_credential_url",
+        "certificateDocumentId": "sample_certificate_document_id 3",
+        "isVerified": true
+      }
+    ],
+    "EmsUserLanguage": [
+      {
+        "userId": "sample_user_id 1",
+        "languageName": "sample_language_name 1",
+        "proficiencyLevel": "sample_proficiency_level 1",
+        "canRead": true,
+        "canWrite": true,
+        "canSpeak": true
+      },
+      {
+        "userId": "sample_user_id 2",
+        "languageName": "sample_language_name 2",
+        "proficiencyLevel": "sample_proficiency_level 2",
+        "canRead": true,
+        "canWrite": true,
+        "canSpeak": true
+      },
+      {
+        "userId": "sample_user_id 3",
+        "languageName": "sample_language_name 3",
+        "proficiencyLevel": "sample_proficiency_level 3",
+        "canRead": true,
+        "canWrite": true,
+        "canSpeak": true
+      }
+    ],
+    "EmsUserAchievement": [
+      {
+        "userId": "sample_user_id 1",
+        "title": "sample_title 1",
+        "description": "Sample description text 1",
+        "achievementType": "sample_achievement_type 1",
+        "issuer": "sample_issuer 1",
+        "dateAchieved": "2024-01-01 1",
+        "url": "sample_url",
+        "documentId": "sample_document_id 1"
+      },
+      {
+        "userId": "sample_user_id 2",
+        "title": "sample_title 2",
+        "description": "Sample description text 2",
+        "achievementType": "sample_achievement_type 2",
+        "issuer": "sample_issuer 2",
+        "dateAchieved": "2024-01-01 2",
+        "url": "sample_url",
+        "documentId": "sample_document_id 2"
+      },
+      {
+        "userId": "sample_user_id 3",
+        "title": "sample_title 3",
+        "description": "Sample description text 3",
+        "achievementType": "sample_achievement_type 3",
+        "issuer": "sample_issuer 3",
+        "dateAchieved": "2024-01-01 3",
+        "url": "sample_url",
+        "documentId": "sample_document_id 3"
+      }
+    ],
+    "EmsUserSocialLink": [
+      {
+        "userId": "sample_user_id 1",
+        "platform": "sample_platform 1",
+        "profileUrl": "sample_profile_url",
+        "isVerified": true
+      },
+      {
+        "userId": "sample_user_id 2",
+        "platform": "sample_platform 2",
+        "profileUrl": "sample_profile_url",
+        "isVerified": true
+      },
+      {
+        "userId": "sample_user_id 3",
+        "platform": "sample_platform 3",
+        "profileUrl": "sample_profile_url",
+        "isVerified": true
+      }
+    ],
+    "EmsInstitutionDepartment": [
+      {
+        "institutionId": "sample_institution_id 1",
+        "departmentName": "sample_department_name 1",
+        "description": "Sample description text 1",
+        "headOfDepartmentUserId": "sample_head_of_department_user_id 1",
+        "contactEmail": "sample_contact_email",
+        "contactPhone": "sample_contact_phone",
+        "isActive": true
+      },
+      {
+        "institutionId": "sample_institution_id 2",
+        "departmentName": "sample_department_name 2",
+        "description": "Sample description text 2",
+        "headOfDepartmentUserId": "sample_head_of_department_user_id 2",
+        "contactEmail": "sample_contact_email",
+        "contactPhone": "sample_contact_phone",
+        "isActive": true
+      },
+      {
+        "institutionId": "sample_institution_id 3",
+        "departmentName": "sample_department_name 3",
+        "description": "Sample description text 3",
+        "headOfDepartmentUserId": "sample_head_of_department_user_id 3",
+        "contactEmail": "sample_contact_email",
+        "contactPhone": "sample_contact_phone",
+        "isActive": true
+      }
+    ],
+    "EmsInstitutionLocation": [
+      {
+        "institutionId": "sample_institution_id 1",
+        "locationType": "sample_location_type 1",
+        "addressLine1": "sample_address_line1 1",
+        "addressLine2": "sample_address_line2 1",
+        "city": "sample_city 1",
+        "stateProvince": "sample_state_province 1",
+        "country": "sample_country 1",
+        "postalCode": "sample_postal_code",
+        "latitude": "sample_latitude 1",
+        "longitude": "sample_longitude 1",
+        "isPrimary": true
+      },
+      {
+        "institutionId": "sample_institution_id 2",
+        "locationType": "sample_location_type 2",
+        "addressLine1": "sample_address_line1 2",
+        "addressLine2": "sample_address_line2 2",
+        "city": "sample_city 2",
+        "stateProvince": "sample_state_province 2",
+        "country": "sample_country 2",
+        "postalCode": "sample_postal_code",
+        "latitude": "sample_latitude 2",
+        "longitude": "sample_longitude 2",
+        "isPrimary": true
+      },
+      {
+        "institutionId": "sample_institution_id 3",
+        "locationType": "sample_location_type 3",
+        "addressLine1": "sample_address_line1 3",
+        "addressLine2": "sample_address_line2 3",
+        "city": "sample_city 3",
+        "stateProvince": "sample_state_province 3",
+        "country": "sample_country 3",
+        "postalCode": "sample_postal_code",
+        "latitude": "sample_latitude 3",
+        "longitude": "sample_longitude 3",
+        "isPrimary": true
+      }
+    ],
+    "EmsInstitutionAccreditation": [
+      {
+        "institutionId": "sample_institution_id 1",
+        "accreditingBody": "sample_accrediting_body 1",
+        "accreditationType": "sample_accreditation_type 1",
+        "accreditationLevel": "sample_accreditation_level 1",
+        "issueDate": "2024-01-01 1",
+        "expiryDate": "2024-01-01 1",
+        "certificateDocumentId": "sample_certificate_document_id 1",
+        "isActive": true
+      },
+      {
+        "institutionId": "sample_institution_id 2",
+        "accreditingBody": "sample_accrediting_body 2",
+        "accreditationType": "sample_accreditation_type 2",
+        "accreditationLevel": "sample_accreditation_level 2",
+        "issueDate": "2024-01-01 2",
+        "expiryDate": "2024-01-01 2",
+        "certificateDocumentId": "sample_certificate_document_id 2",
+        "isActive": true
+      },
+      {
+        "institutionId": "sample_institution_id 3",
+        "accreditingBody": "sample_accrediting_body 3",
+        "accreditationType": "sample_accreditation_type 3",
+        "accreditationLevel": "sample_accreditation_level 3",
+        "issueDate": "2024-01-01 3",
+        "expiryDate": "2024-01-01 3",
+        "certificateDocumentId": "sample_certificate_document_id 3",
+        "isActive": true
+      }
+    ],
+    "EmsInstitutionRanking": [
+      {
+        "institutionId": "sample_institution_id 1",
+        "rankingOrganization": "sample_ranking_organization 1",
+        "rankingYear": 2024,
+        "overallRank": 100,
+        "countryRank": 10,
+        "category": "sample_category 1",
+        "categoryRank": 100,
+        "score": "sample_score 1"
+      },
+      {
+        "institutionId": "sample_institution_id 2",
+        "rankingOrganization": "sample_ranking_organization 2",
+        "rankingYear": 2024,
+        "overallRank": 100,
+        "countryRank": 10,
+        "category": "sample_category 2",
+        "categoryRank": 100,
+        "score": "sample_score 2"
+      },
+      {
+        "institutionId": "sample_institution_id 3",
+        "rankingOrganization": "sample_ranking_organization 3",
+        "rankingYear": 2024,
+        "overallRank": 100,
+        "countryRank": 10,
+        "category": "sample_category 3",
+        "categoryRank": 100,
+        "score": "sample_score 3"
+      }
+    ],
+    "EmsInstitutionFacility": [
+      {
+        "institutionId": "sample_institution_id 1",
+        "facilityName": "sample_facility_name 1",
+        "facilityType": "sample_facility_type 1",
+        "description": "Sample description text 1",
+        "capacity": 100,
+        "locationId": "sample_location_id 1",
+        "isAvailable": true
+      },
+      {
+        "institutionId": "sample_institution_id 2",
+        "facilityName": "sample_facility_name 2",
+        "facilityType": "sample_facility_type 2",
+        "description": "Sample description text 2",
+        "capacity": 100,
+        "locationId": "sample_location_id 2",
+        "isAvailable": true
+      },
+      {
+        "institutionId": "sample_institution_id 3",
+        "facilityName": "sample_facility_name 3",
+        "facilityType": "sample_facility_type 3",
+        "description": "Sample description text 3",
+        "capacity": 100,
+        "locationId": "sample_location_id 3",
+        "isAvailable": true
+      }
+    ],
+    "EmsCourseModule": [
+      {
+        "courseId": "sample_course_id 1",
+        "moduleName": "sample_module_name 1",
+        "moduleNumber": 100,
+        "description": "Sample description text 1",
+        "durationHours": 100,
+        "learningObjectives": "Sample learning_objectives 1",
+        "isMandatory": true,
+        "orderSequence": 100
+      },
+      {
+        "courseId": "sample_course_id 2",
+        "moduleName": "sample_module_name 2",
+        "moduleNumber": 100,
+        "description": "Sample description text 2",
+        "durationHours": 100,
+        "learningObjectives": "Sample learning_objectives 2",
+        "isMandatory": true,
+        "orderSequence": 100
+      },
+      {
+        "courseId": "sample_course_id 3",
+        "moduleName": "sample_module_name 3",
+        "moduleNumber": 100,
+        "description": "Sample description text 3",
+        "durationHours": 100,
+        "learningObjectives": "Sample learning_objectives 3",
+        "isMandatory": true,
+        "orderSequence": 100
+      }
+    ],
+    "EmsCourseLesson": [
+      {
+        "moduleId": "sample_module_id 1",
+        "courseId": "sample_course_id 1",
+        "lessonTitle": "sample_lesson_title 1",
+        "lessonNumber": 100,
+        "contentType": "sample_content_type 1",
+        "contentUrl": "sample_content_url",
+        "durationMinutes": 100,
+        "isPreviewAvailable": true,
+        "orderSequence": 100
+      },
+      {
+        "moduleId": "sample_module_id 2",
+        "courseId": "sample_course_id 2",
+        "lessonTitle": "sample_lesson_title 2",
+        "lessonNumber": 100,
+        "contentType": "sample_content_type 2",
+        "contentUrl": "sample_content_url",
+        "durationMinutes": 100,
+        "isPreviewAvailable": true,
+        "orderSequence": 100
+      },
+      {
+        "moduleId": "sample_module_id 3",
+        "courseId": "sample_course_id 3",
+        "lessonTitle": "sample_lesson_title 3",
+        "lessonNumber": 100,
+        "contentType": "sample_content_type 3",
+        "contentUrl": "sample_content_url",
+        "durationMinutes": 100,
+        "isPreviewAvailable": true,
+        "orderSequence": 100
+      }
+    ],
+    "EmsCoursePrerequisite": [
+      {
+        "courseId": "sample_course_id 1",
+        "prerequisiteCourseId": "sample_prerequisite_course_id 1",
+        "prerequisiteType": "sample_prerequisite_type 1",
+        "prerequisiteDescription": "Sample description text 1",
+        "isMandatory": true
+      },
+      {
+        "courseId": "sample_course_id 2",
+        "prerequisiteCourseId": "sample_prerequisite_course_id 2",
+        "prerequisiteType": "sample_prerequisite_type 2",
+        "prerequisiteDescription": "Sample description text 2",
+        "isMandatory": true
+      },
+      {
+        "courseId": "sample_course_id 3",
+        "prerequisiteCourseId": "sample_prerequisite_course_id 3",
+        "prerequisiteType": "sample_prerequisite_type 3",
+        "prerequisiteDescription": "Sample description text 3",
+        "isMandatory": true
+      }
+    ],
+    "EmsCourseInstructor": [
+      {
+        "courseId": "sample_course_id 1",
+        "userId": "sample_user_id 1",
+        "role": "sample_role 1",
+        "bio": "Sample bio 1",
+        "specialization": "sample_specialization 1"
+      },
+      {
+        "courseId": "sample_course_id 2",
+        "userId": "sample_user_id 2",
+        "role": "sample_role 2",
+        "bio": "Sample bio 2",
+        "specialization": "sample_specialization 2"
+      },
+      {
+        "courseId": "sample_course_id 3",
+        "userId": "sample_user_id 3",
+        "role": "sample_role 3",
+        "bio": "Sample bio 3",
+        "specialization": "sample_specialization 3"
+      }
+    ],
+    "EmsCourseReview": [
+      {
+        "courseId": "sample_course_id 1",
+        "userId": "sample_user_id 1",
+        "rating": "sample_rating 1",
+        "reviewTitle": "sample_review_title 1",
+        "reviewText": "Sample review_text 1",
+        "helpfulCount": 10,
+        "isVerifiedPurchase": true
+      },
+      {
+        "courseId": "sample_course_id 2",
+        "userId": "sample_user_id 2",
+        "rating": "sample_rating 2",
+        "reviewTitle": "sample_review_title 2",
+        "reviewText": "Sample review_text 2",
+        "helpfulCount": 10,
+        "isVerifiedPurchase": true
+      },
+      {
+        "courseId": "sample_course_id 3",
+        "userId": "sample_user_id 3",
+        "rating": "sample_rating 3",
+        "reviewTitle": "sample_review_title 3",
+        "reviewText": "Sample review_text 3",
+        "helpfulCount": 10,
+        "isVerifiedPurchase": true
+      }
+    ],
+    "EmsCourseAssignment": [
+      {
+        "courseId": "sample_course_id 1",
+        "moduleId": "sample_module_id 1",
+        "title": "sample_title 1",
+        "description": "Sample description text 1",
+        "assignmentType": "sample_assignment_type 1",
+        "maxScore": 100,
+        "passingScore": 100,
+        "dueDate": "2024-01-01T10:00:00 1",
+        "durationMinutes": 100,
+        "isMandatory": true
+      },
+      {
+        "courseId": "sample_course_id 2",
+        "moduleId": "sample_module_id 2",
+        "title": "sample_title 2",
+        "description": "Sample description text 2",
+        "assignmentType": "sample_assignment_type 2",
+        "maxScore": 100,
+        "passingScore": 100,
+        "dueDate": "2024-01-01T10:00:00 2",
+        "durationMinutes": 100,
+        "isMandatory": true
+      },
+      {
+        "courseId": "sample_course_id 3",
+        "moduleId": "sample_module_id 3",
+        "title": "sample_title 3",
+        "description": "Sample description text 3",
+        "assignmentType": "sample_assignment_type 3",
+        "maxScore": 100,
+        "passingScore": 100,
+        "dueDate": "2024-01-01T10:00:00 3",
+        "durationMinutes": 100,
+        "isMandatory": true
+      }
+    ],
+    "EmsUserCourseProgress": [
+      {
+        "userId": "sample_user_id 1",
+        "courseId": "sample_course_id 1",
+        "lessonId": "sample_lesson_id 1",
+        "completionPercentage": "sample_completion_percentage 1",
+        "lastAccessedAt": "2024-01-01T10:00:00 1",
+        "timeSpentMinutes": 100,
+        "status": "sample_status 1"
+      },
+      {
+        "userId": "sample_user_id 2",
+        "courseId": "sample_course_id 2",
+        "lessonId": "sample_lesson_id 2",
+        "completionPercentage": "sample_completion_percentage 2",
+        "lastAccessedAt": "2024-01-01T10:00:00 2",
+        "timeSpentMinutes": 100,
+        "status": "sample_status 2"
+      },
+      {
+        "userId": "sample_user_id 3",
+        "courseId": "sample_course_id 3",
+        "lessonId": "sample_lesson_id 3",
+        "completionPercentage": "sample_completion_percentage 3",
+        "lastAccessedAt": "2024-01-01T10:00:00 3",
+        "timeSpentMinutes": 100,
+        "status": "sample_status 3"
+      }
+    ],
+    "EmsUserAssignmentSubmission": [
+      {
+        "assignmentId": "sample_assignment_id 1",
+        "userId": "sample_user_id 1",
+        "submissionContent": "Sample submission_content 1",
+        "submissionFileId": "sample_submission_file_id 1",
+        "submittedAt": "2024-01-01T10:00:00 1",
+        "score": 100,
+        "feedback": "Sample feedback 1",
+        "gradedByUserId": "sample_graded_by_user_id 1",
+        "gradedAt": "2024-01-01T10:00:00 1",
+        "status": "sample_status 1"
+      },
+      {
+        "assignmentId": "sample_assignment_id 2",
+        "userId": "sample_user_id 2",
+        "submissionContent": "Sample submission_content 2",
+        "submissionFileId": "sample_submission_file_id 2",
+        "submittedAt": "2024-01-01T10:00:00 2",
+        "score": 100,
+        "feedback": "Sample feedback 2",
+        "gradedByUserId": "sample_graded_by_user_id 2",
+        "gradedAt": "2024-01-01T10:00:00 2",
+        "status": "sample_status 2"
+      },
+      {
+        "assignmentId": "sample_assignment_id 3",
+        "userId": "sample_user_id 3",
+        "submissionContent": "Sample submission_content 3",
+        "submissionFileId": "sample_submission_file_id 3",
+        "submittedAt": "2024-01-01T10:00:00 3",
+        "score": 100,
+        "feedback": "Sample feedback 3",
+        "gradedByUserId": "sample_graded_by_user_id 3",
+        "gradedAt": "2024-01-01T10:00:00 3",
+        "status": "sample_status 3"
+      }
+    ],
+    "EmsJobPostRequirement": [
+      {
+        "jobPostId": "sample_job_post_id 1",
+        "requirementType": "sample_requirement_type 1",
+        "requirementDescription": "Sample description text 1",
+        "isMandatory": true,
+        "minimumYears": 2024,
+        "proficiencyLevel": "sample_proficiency_level 1"
+      },
+      {
+        "jobPostId": "sample_job_post_id 2",
+        "requirementType": "sample_requirement_type 2",
+        "requirementDescription": "Sample description text 2",
+        "isMandatory": true,
+        "minimumYears": 2024,
+        "proficiencyLevel": "sample_proficiency_level 2"
+      },
+      {
+        "jobPostId": "sample_job_post_id 3",
+        "requirementType": "sample_requirement_type 3",
+        "requirementDescription": "Sample description text 3",
+        "isMandatory": true,
+        "minimumYears": 2024,
+        "proficiencyLevel": "sample_proficiency_level 3"
+      }
+    ],
+    "EmsJobPostBenefit": [
+      {
+        "jobPostId": "sample_job_post_id 1",
+        "benefitType": "sample_benefit_type 1",
+        "benefitDescription": "Sample description text 1"
+      },
+      {
+        "jobPostId": "sample_job_post_id 2",
+        "benefitType": "sample_benefit_type 2",
+        "benefitDescription": "Sample description text 2"
+      },
+      {
+        "jobPostId": "sample_job_post_id 3",
+        "benefitType": "sample_benefit_type 3",
+        "benefitDescription": "Sample description text 3"
+      }
+    ],
+    "EmsJobApplication": [
+      {
+        "jobPostId": "sample_job_post_id 1",
+        "userId": "sample_user_id 1",
+        "coverLetter": "Sample cover_letter 1",
+        "resumeDocumentId": "sample_resume_document_id 1",
+        "applicationStatus": "sample_application_status 1",
+        "appliedAt": "2024-01-01T10:00:00 1",
+        "statusUpdatedAt": "2024-01-01T10:00:00 1",
+        "statusUpdatedByUserId": "sample_status_updated_by_user_id 1",
+        "notes": "Sample notes 1"
+      },
+      {
+        "jobPostId": "sample_job_post_id 2",
+        "userId": "sample_user_id 2",
+        "coverLetter": "Sample cover_letter 2",
+        "resumeDocumentId": "sample_resume_document_id 2",
+        "applicationStatus": "sample_application_status 2",
+        "appliedAt": "2024-01-01T10:00:00 2",
+        "statusUpdatedAt": "2024-01-01T10:00:00 2",
+        "statusUpdatedByUserId": "sample_status_updated_by_user_id 2",
+        "notes": "Sample notes 2"
+      },
+      {
+        "jobPostId": "sample_job_post_id 3",
+        "userId": "sample_user_id 3",
+        "coverLetter": "Sample cover_letter 3",
+        "resumeDocumentId": "sample_resume_document_id 3",
+        "applicationStatus": "sample_application_status 3",
+        "appliedAt": "2024-01-01T10:00:00 3",
+        "statusUpdatedAt": "2024-01-01T10:00:00 3",
+        "statusUpdatedByUserId": "sample_status_updated_by_user_id 3",
+        "notes": "Sample notes 3"
+      }
+    ],
+    "EmsJobInterview": [
+      {
+        "applicationId": "sample_application_id 1",
+        "interviewType": "sample_interview_type 1",
+        "interviewRound": 100,
+        "scheduledAt": "2024-01-01T10:00:00 1",
+        "durationMinutes": 100,
+        "location": "sample_location 1",
+        "meetingLink": "sample_meeting_link 1",
+        "interviewerUserId": "sample_interviewer_user_id 1",
+        "status": "sample_status 1",
+        "feedback": "Sample feedback 1",
+        "rating": "sample_rating 1"
+      },
+      {
+        "applicationId": "sample_application_id 2",
+        "interviewType": "sample_interview_type 2",
+        "interviewRound": 100,
+        "scheduledAt": "2024-01-01T10:00:00 2",
+        "durationMinutes": 100,
+        "location": "sample_location 2",
+        "meetingLink": "sample_meeting_link 2",
+        "interviewerUserId": "sample_interviewer_user_id 2",
+        "status": "sample_status 2",
+        "feedback": "Sample feedback 2",
+        "rating": "sample_rating 2"
+      },
+      {
+        "applicationId": "sample_application_id 3",
+        "interviewType": "sample_interview_type 3",
+        "interviewRound": 100,
+        "scheduledAt": "2024-01-01T10:00:00 3",
+        "durationMinutes": 100,
+        "location": "sample_location 3",
+        "meetingLink": "sample_meeting_link 3",
+        "interviewerUserId": "sample_interviewer_user_id 3",
+        "status": "sample_status 3",
+        "feedback": "Sample feedback 3",
+        "rating": "sample_rating 3"
+      }
+    ],
+    "EmsJobPostQuestion": [
+      {
+        "jobPostId": "sample_job_post_id 1",
+        "questionText": "Sample question_text 1",
+        "questionType": "sample_question_type 1",
+        "isRequired": true,
+        "orderSequence": 100
+      },
+      {
+        "jobPostId": "sample_job_post_id 2",
+        "questionText": "Sample question_text 2",
+        "questionType": "sample_question_type 2",
+        "isRequired": true,
+        "orderSequence": 100
+      },
+      {
+        "jobPostId": "sample_job_post_id 3",
+        "questionText": "Sample question_text 3",
+        "questionType": "sample_question_type 3",
+        "isRequired": true,
+        "orderSequence": 100
+      }
+    ],
+    "EmsJobApplicationAnswer": [
+      {
+        "applicationId": "sample_application_id 1",
+        "questionId": "sample_question_id 1",
+        "answerText": "Sample answer_text 1",
+        "answerFileId": "sample_answer_file_id 1"
+      },
+      {
+        "applicationId": "sample_application_id 2",
+        "questionId": "sample_question_id 2",
+        "answerText": "Sample answer_text 2",
+        "answerFileId": "sample_answer_file_id 2"
+      },
+      {
+        "applicationId": "sample_application_id 3",
+        "questionId": "sample_question_id 3",
+        "answerText": "Sample answer_text 3",
+        "answerFileId": "sample_answer_file_id 3"
+      }
+    ],
+    "EmsCommunityCategory": [
+      {
+        "communityId": "sample_community_id 1",
+        "categoryName": "sample_category_name 1",
+        "description": "Sample description text 1",
+        "icon": "sample_icon 1",
+        "color": "sample_color 1",
+        "orderSequence": 100
+      },
+      {
+        "communityId": "sample_community_id 2",
+        "categoryName": "sample_category_name 2",
+        "description": "Sample description text 2",
+        "icon": "sample_icon 2",
+        "color": "sample_color 2",
+        "orderSequence": 100
+      },
+      {
+        "communityId": "sample_community_id 3",
+        "categoryName": "sample_category_name 3",
+        "description": "Sample description text 3",
+        "icon": "sample_icon 3",
+        "color": "sample_color 3",
+        "orderSequence": 100
+      }
+    ],
+    "EmsCommunityRule": [
+      {
+        "communityId": "sample_community_id 1",
+        "ruleTitle": "sample_rule_title 1",
+        "ruleDescription": "Sample description text 1",
+        "orderSequence": 100
+      },
+      {
+        "communityId": "sample_community_id 2",
+        "ruleTitle": "sample_rule_title 2",
+        "ruleDescription": "Sample description text 2",
+        "orderSequence": 100
+      },
+      {
+        "communityId": "sample_community_id 3",
+        "ruleTitle": "sample_rule_title 3",
+        "ruleDescription": "Sample description text 3",
+        "orderSequence": 100
+      }
+    ],
+    "EmsCommunityEvent": [
+      {
+        "communityId": "sample_community_id 1",
+        "eventTitle": "sample_event_title 1",
+        "description": "Sample description text 1",
+        "eventType": "sample_event_type 1",
+        "startDatetime": "2024-01-01T10:00:00 1",
+        "endDatetime": "2024-01-01T10:00:00 1",
+        "location": "sample_location 1",
+        "meetingLink": "sample_meeting_link 1",
+        "maxAttendees": 100,
+        "organizerUserId": "sample_organizer_user_id 1"
+      },
+      {
+        "communityId": "sample_community_id 2",
+        "eventTitle": "sample_event_title 2",
+        "description": "Sample description text 2",
+        "eventType": "sample_event_type 2",
+        "startDatetime": "2024-01-01T10:00:00 2",
+        "endDatetime": "2024-01-01T10:00:00 2",
+        "location": "sample_location 2",
+        "meetingLink": "sample_meeting_link 2",
+        "maxAttendees": 100,
+        "organizerUserId": "sample_organizer_user_id 2"
+      },
+      {
+        "communityId": "sample_community_id 3",
+        "eventTitle": "sample_event_title 3",
+        "description": "Sample description text 3",
+        "eventType": "sample_event_type 3",
+        "startDatetime": "2024-01-01T10:00:00 3",
+        "endDatetime": "2024-01-01T10:00:00 3",
+        "location": "sample_location 3",
+        "meetingLink": "sample_meeting_link 3",
+        "maxAttendees": 100,
+        "organizerUserId": "sample_organizer_user_id 3"
+      }
+    ],
+    "EmsCommunityEventAttendee": [
+      {
+        "eventId": "sample_event_id 1",
+        "userId": "sample_user_id 1",
+        "rsvpStatus": "sample_rsvp_status 1",
+        "attended": true
+      },
+      {
+        "eventId": "sample_event_id 2",
+        "userId": "sample_user_id 2",
+        "rsvpStatus": "sample_rsvp_status 2",
+        "attended": true
+      },
+      {
+        "eventId": "sample_event_id 3",
+        "userId": "sample_user_id 3",
+        "rsvpStatus": "sample_rsvp_status 3",
+        "attended": true
+      }
+    ],
+    "EmsPostAttachment": [
+      {
+        "postId": "sample_post_id 1",
+        "fileName": "sample_file_name 1",
+        "fileType": "sample_file_type 1",
+        "fileUrl": "sample_file_url",
+        "fileSizeKb": 100,
+        "thumbnailUrl": "sample_thumbnail_url"
+      },
+      {
+        "postId": "sample_post_id 2",
+        "fileName": "sample_file_name 2",
+        "fileType": "sample_file_type 2",
+        "fileUrl": "sample_file_url",
+        "fileSizeKb": 100,
+        "thumbnailUrl": "sample_thumbnail_url"
+      },
+      {
+        "postId": "sample_post_id 3",
+        "fileName": "sample_file_name 3",
+        "fileType": "sample_file_type 3",
+        "fileUrl": "sample_file_url",
+        "fileSizeKb": 100,
+        "thumbnailUrl": "sample_thumbnail_url"
+      }
+    ],
+    "EmsPostTag": [
+      {
+        "tagName": "sample_tag_name 1",
+        "description": "Sample description text 1",
+        "usageCount": 10
+      },
+      {
+        "tagName": "sample_tag_name 2",
+        "description": "Sample description text 2",
+        "usageCount": 10
+      },
+      {
+        "tagName": "sample_tag_name 3",
+        "description": "Sample description text 3",
+        "usageCount": 10
+      }
+    ],
+    "EmsPostTagLink": [
+      {
+        "postId": "sample_post_id 1",
+        "tagId": "sample_tag_id 1"
+      },
+      {
+        "postId": "sample_post_id 2",
+        "tagId": "sample_tag_id 2"
+      },
+      {
+        "postId": "sample_post_id 3",
+        "tagId": "sample_tag_id 3"
+      }
+    ],
+    "EmsMarketTrendSkillDemand": [
+      {
+        "trendId": "sample_trend_id 1",
+        "skillName": "sample_skill_name 1",
+        "demandLevel": "sample_demand_level 1",
+        "growthRate": "sample_growth_rate 1",
+        "averageSalaryRange": "sample_average_salary_range 1",
+        "jobOpeningsCount": 10,
+        "region": "sample_region 1",
+        "industry": "sample_industry 1"
+      },
+      {
+        "trendId": "sample_trend_id 2",
+        "skillName": "sample_skill_name 2",
+        "demandLevel": "sample_demand_level 2",
+        "growthRate": "sample_growth_rate 2",
+        "averageSalaryRange": "sample_average_salary_range 2",
+        "jobOpeningsCount": 10,
+        "region": "sample_region 2",
+        "industry": "sample_industry 2"
+      },
+      {
+        "trendId": "sample_trend_id 3",
+        "skillName": "sample_skill_name 3",
+        "demandLevel": "sample_demand_level 3",
+        "growthRate": "sample_growth_rate 3",
+        "averageSalaryRange": "sample_average_salary_range 3",
+        "jobOpeningsCount": 10,
+        "region": "sample_region 3",
+        "industry": "sample_industry 3"
+      }
+    ],
+    "EmsMarketTrendIndustry": [
+      {
+        "trendId": "sample_trend_id 1",
+        "industryName": "sample_industry_name 1",
+        "description": "Sample description text 1",
+        "growthRate": "sample_growth_rate 1",
+        "marketSize": "sample_market_size 1",
+        "emergingTechnologies": "Sample emerging_technologies 1"
+      },
+      {
+        "trendId": "sample_trend_id 2",
+        "industryName": "sample_industry_name 2",
+        "description": "Sample description text 2",
+        "growthRate": "sample_growth_rate 2",
+        "marketSize": "sample_market_size 2",
+        "emergingTechnologies": "Sample emerging_technologies 2"
+      },
+      {
+        "trendId": "sample_trend_id 3",
+        "industryName": "sample_industry_name 3",
+        "description": "Sample description text 3",
+        "growthRate": "sample_growth_rate 3",
+        "marketSize": "sample_market_size 3",
+        "emergingTechnologies": "Sample emerging_technologies 3"
+      }
+    ],
+    "EmsMarketTrendLocation": [
+      {
+        "trendId": "sample_trend_id 1",
+        "country": "sample_country 1",
+        "region": "sample_region 1",
+        "city": "sample_city 1",
+        "jobMarketHealth": "sample_job_market_health 1",
+        "unemploymentRate": "sample_unemployment_rate 1",
+        "averageSalary": "sample_average_salary 1",
+        "costOfLivingIndex": "sample_cost_of_living_index 1",
+        "topIndustries": "Sample top_industries 1"
+      },
+      {
+        "trendId": "sample_trend_id 2",
+        "country": "sample_country 2",
+        "region": "sample_region 2",
+        "city": "sample_city 2",
+        "jobMarketHealth": "sample_job_market_health 2",
+        "unemploymentRate": "sample_unemployment_rate 2",
+        "averageSalary": "sample_average_salary 2",
+        "costOfLivingIndex": "sample_cost_of_living_index 2",
+        "topIndustries": "Sample top_industries 2"
+      },
+      {
+        "trendId": "sample_trend_id 3",
+        "country": "sample_country 3",
+        "region": "sample_region 3",
+        "city": "sample_city 3",
+        "jobMarketHealth": "sample_job_market_health 3",
+        "unemploymentRate": "sample_unemployment_rate 3",
+        "averageSalary": "sample_average_salary 3",
+        "costOfLivingIndex": "sample_cost_of_living_index 3",
+        "topIndustries": "Sample top_industries 3"
+      }
+    ],
+    "EmsUserSkillEndorsement": [
+      {
+        "skillId": "sample_skill_id 1",
+        "endorsedByUserId": "sample_endorsed_by_user_id 1",
+        "endorsementComment": "Sample endorsement_comment 1",
+        "relationship": "sample_relationship 1"
+      },
+      {
+        "skillId": "sample_skill_id 2",
+        "endorsedByUserId": "sample_endorsed_by_user_id 2",
+        "endorsementComment": "Sample endorsement_comment 2",
+        "relationship": "sample_relationship 2"
+      },
+      {
+        "skillId": "sample_skill_id 3",
+        "endorsedByUserId": "sample_endorsed_by_user_id 3",
+        "endorsementComment": "Sample endorsement_comment 3",
+        "relationship": "sample_relationship 3"
+      }
+    ],
+    "EmsUserRecommendation": [
+      {
+        "userId": "sample_user_id 1",
+        "recommendedByUserId": "sample_recommended_by_user_id 1",
+        "recommendationText": "Sample recommendation_text 1",
+        "relationship": "sample_relationship 1",
+        "positionAtTime": "sample_position_at_time 1",
+        "isVisible": true
+      },
+      {
+        "userId": "sample_user_id 2",
+        "recommendedByUserId": "sample_recommended_by_user_id 2",
+        "recommendationText": "Sample recommendation_text 2",
+        "relationship": "sample_relationship 2",
+        "positionAtTime": "sample_position_at_time 2",
+        "isVisible": true
+      },
+      {
+        "userId": "sample_user_id 3",
+        "recommendedByUserId": "sample_recommended_by_user_id 3",
+        "recommendationText": "Sample recommendation_text 3",
+        "relationship": "sample_relationship 3",
+        "positionAtTime": "sample_position_at_time 3",
+        "isVisible": true
+      }
+    ],
+    "EmsNotification": [
+      {
+        "userId": "sample_user_id 1",
+        "notificationType": "sample_notification_type 1",
+        "title": "sample_title 1",
+        "message": "Sample message 1",
+        "relatedEntityType": "sample_related_entity_type 1",
+        "relatedEntityId": "sample_related_entity_id 1",
+        "actionUrl": "sample_action_url",
+        "isRead": true,
+        "readAt": "2024-01-01T10:00:00 1",
+        "priority": "sample_priority 1"
+      },
+      {
+        "userId": "sample_user_id 2",
+        "notificationType": "sample_notification_type 2",
+        "title": "sample_title 2",
+        "message": "Sample message 2",
+        "relatedEntityType": "sample_related_entity_type 2",
+        "relatedEntityId": "sample_related_entity_id 2",
+        "actionUrl": "sample_action_url",
+        "isRead": true,
+        "readAt": "2024-01-01T10:00:00 2",
+        "priority": "sample_priority 2"
+      },
+      {
+        "userId": "sample_user_id 3",
+        "notificationType": "sample_notification_type 3",
+        "title": "sample_title 3",
+        "message": "Sample message 3",
+        "relatedEntityType": "sample_related_entity_type 3",
+        "relatedEntityId": "sample_related_entity_id 3",
+        "actionUrl": "sample_action_url",
+        "isRead": true,
+        "readAt": "2024-01-01T10:00:00 3",
+        "priority": "sample_priority 3"
+      }
+    ],
+    "EmsCourseJobPostLink": [
+      {
+        "courseId": "sample_course_id 1",
+        "jobPostId": "sample_job_post_id 1",
+        "relevanceScore": "sample_relevance_score 1",
+        "matchingSkills": {},
+        "aiGenerated": true
+      },
+      {
+        "courseId": "sample_course_id 2",
+        "jobPostId": "sample_job_post_id 2",
+        "relevanceScore": "sample_relevance_score 2",
+        "matchingSkills": {},
+        "aiGenerated": true
+      },
+      {
+        "courseId": "sample_course_id 3",
+        "jobPostId": "sample_job_post_id 3",
+        "relevanceScore": "sample_relevance_score 3",
+        "matchingSkills": {},
+        "aiGenerated": true
+      }
+    ],
+    "EmsCourseCommunityLink": [
+      {
+        "courseId": "sample_course_id 1",
+        "communityId": "sample_community_id 1",
+        "linkType": "sample_link_type 1",
+        "isActive": true
+      },
+      {
+        "courseId": "sample_course_id 2",
+        "communityId": "sample_community_id 2",
+        "linkType": "sample_link_type 2",
+        "isActive": true
+      },
+      {
+        "courseId": "sample_course_id 3",
+        "communityId": "sample_community_id 3",
+        "linkType": "sample_link_type 3",
+        "isActive": true
+      }
+    ],
+    "EmsJobPostCommunityLink": [
+      {
+        "jobPostId": "sample_job_post_id 1",
+        "communityId": "sample_community_id 1",
+        "isFeatured": true,
+        "postedByUserId": "sample_posted_by_user_id 1"
+      },
+      {
+        "jobPostId": "sample_job_post_id 2",
+        "communityId": "sample_community_id 2",
+        "isFeatured": true,
+        "postedByUserId": "sample_posted_by_user_id 2"
+      },
+      {
+        "jobPostId": "sample_job_post_id 3",
+        "communityId": "sample_community_id 3",
+        "isFeatured": true,
+        "postedByUserId": "sample_posted_by_user_id 3"
+      }
+    ],
+    "EmsMarketTrendCourseLink": [
+      {
+        "trendId": "sample_trend_id 1",
+        "courseId": "sample_course_id 1",
+        "relevanceScore": "sample_relevance_score 1",
+        "demandLevel": "sample_demand_level 1",
+        "recommendationReason": "Sample recommendation_reason 1",
+        "aiGenerated": true
+      },
+      {
+        "trendId": "sample_trend_id 2",
+        "courseId": "sample_course_id 2",
+        "relevanceScore": "sample_relevance_score 2",
+        "demandLevel": "sample_demand_level 2",
+        "recommendationReason": "Sample recommendation_reason 2",
+        "aiGenerated": true
+      },
+      {
+        "trendId": "sample_trend_id 3",
+        "courseId": "sample_course_id 3",
+        "relevanceScore": "sample_relevance_score 3",
+        "demandLevel": "sample_demand_level 3",
+        "recommendationReason": "Sample recommendation_reason 3",
+        "aiGenerated": true
+      }
+    ],
+    "EmsMarketTrendJobPostLink": [
+      {
+        "trendId": "sample_trend_id 1",
+        "jobPostId": "sample_job_post_id 1",
+        "relevanceScore": "sample_relevance_score 1",
+        "growthPotential": "sample_growth_potential 1",
+        "salaryTrend": "sample_salary_trend 1",
+        "aiGenerated": true
+      },
+      {
+        "trendId": "sample_trend_id 2",
+        "jobPostId": "sample_job_post_id 2",
+        "relevanceScore": "sample_relevance_score 2",
+        "growthPotential": "sample_growth_potential 2",
+        "salaryTrend": "sample_salary_trend 2",
+        "aiGenerated": true
+      },
+      {
+        "trendId": "sample_trend_id 3",
+        "jobPostId": "sample_job_post_id 3",
+        "relevanceScore": "sample_relevance_score 3",
+        "growthPotential": "sample_growth_potential 3",
+        "salaryTrend": "sample_salary_trend 3",
+        "aiGenerated": true
+      }
+    ],
+    "EmsMarketTrendInstitutionLink": [
+      {
+        "trendId": "sample_trend_id 1",
+        "institutionId": "sample_institution_id 1",
+        "relevanceScore": "sample_relevance_score 1",
+        "specializationAreas": "Sample specialization_areas 1",
+        "partnershipOpportunities": "Sample partnership_opportunities 1",
+        "aiGenerated": true
+      },
+      {
+        "trendId": "sample_trend_id 2",
+        "institutionId": "sample_institution_id 2",
+        "relevanceScore": "sample_relevance_score 2",
+        "specializationAreas": "Sample specialization_areas 2",
+        "partnershipOpportunities": "Sample partnership_opportunities 2",
+        "aiGenerated": true
+      },
+      {
+        "trendId": "sample_trend_id 3",
+        "institutionId": "sample_institution_id 3",
+        "relevanceScore": "sample_relevance_score 3",
+        "specializationAreas": "Sample specialization_areas 3",
+        "partnershipOpportunities": "Sample partnership_opportunities 3",
+        "aiGenerated": true
+      }
+    ],
+    "EmsUserFile": [
+      {
+        "userId": "sample_user_id 1",
+        "fileName": "sample_file_name 1",
+        "originalFileName": "sample_original_file_name 1",
+        "fileType": "sample_file_type 1",
+        "fileExtension": "sample_file_extension 1",
+        "fileLocation": "sample_file_location 1",
+        "fileSizeBytes": 100,
+        "mimeType": "sample_mime_type 1",
+        "description": "Sample description text 1",
+        "comment": "Sample comment 1",
+        "category": "sample_category 1",
+        "isVerified": true,
+        "downloadCount": 10,
+        "thumbnailLocation": "sample_thumbnail_location 1"
+      },
+      {
+        "userId": "sample_user_id 2",
+        "fileName": "sample_file_name 2",
+        "originalFileName": "sample_original_file_name 2",
+        "fileType": "sample_file_type 2",
+        "fileExtension": "sample_file_extension 2",
+        "fileLocation": "sample_file_location 2",
+        "fileSizeBytes": 100,
+        "mimeType": "sample_mime_type 2",
+        "description": "Sample description text 2",
+        "comment": "Sample comment 2",
+        "category": "sample_category 2",
+        "isVerified": true,
+        "downloadCount": 10,
+        "thumbnailLocation": "sample_thumbnail_location 2"
+      },
+      {
+        "userId": "sample_user_id 3",
+        "fileName": "sample_file_name 3",
+        "originalFileName": "sample_original_file_name 3",
+        "fileType": "sample_file_type 3",
+        "fileExtension": "sample_file_extension 3",
+        "fileLocation": "sample_file_location 3",
+        "fileSizeBytes": 100,
+        "mimeType": "sample_mime_type 3",
+        "description": "Sample description text 3",
+        "comment": "Sample comment 3",
+        "category": "sample_category 3",
+        "isVerified": true,
+        "downloadCount": 10,
+        "thumbnailLocation": "sample_thumbnail_location 3"
+      }
+    ],
+    "EmsInstitutionFile": [
+      {
+        "institutionId": "sample_institution_id 1",
+        "fileName": "sample_file_name 1",
+        "originalFileName": "sample_original_file_name 1",
+        "fileType": "sample_file_type 1",
+        "fileExtension": "sample_file_extension 1",
+        "fileLocation": "sample_file_location 1",
+        "fileSizeBytes": 100,
+        "mimeType": "sample_mime_type 1",
+        "description": "Sample description text 1",
+        "comment": "Sample comment 1",
+        "category": "sample_category 1",
+        "isVerified": true,
+        "downloadCount": 10,
+        "thumbnailLocation": "sample_thumbnail_location 1"
+      },
+      {
+        "institutionId": "sample_institution_id 2",
+        "fileName": "sample_file_name 2",
+        "originalFileName": "sample_original_file_name 2",
+        "fileType": "sample_file_type 2",
+        "fileExtension": "sample_file_extension 2",
+        "fileLocation": "sample_file_location 2",
+        "fileSizeBytes": 100,
+        "mimeType": "sample_mime_type 2",
+        "description": "Sample description text 2",
+        "comment": "Sample comment 2",
+        "category": "sample_category 2",
+        "isVerified": true,
+        "downloadCount": 10,
+        "thumbnailLocation": "sample_thumbnail_location 2"
+      },
+      {
+        "institutionId": "sample_institution_id 3",
+        "fileName": "sample_file_name 3",
+        "originalFileName": "sample_original_file_name 3",
+        "fileType": "sample_file_type 3",
+        "fileExtension": "sample_file_extension 3",
+        "fileLocation": "sample_file_location 3",
+        "fileSizeBytes": 100,
+        "mimeType": "sample_mime_type 3",
+        "description": "Sample description text 3",
+        "comment": "Sample comment 3",
+        "category": "sample_category 3",
+        "isVerified": true,
+        "downloadCount": 10,
+        "thumbnailLocation": "sample_thumbnail_location 3"
+      }
+    ],
+    "EmsCourseFile": [
+      {
+        "courseId": "sample_course_id 1",
+        "moduleId": "sample_module_id 1",
+        "lessonId": "sample_lesson_id 1",
+        "fileName": "sample_file_name 1",
+        "originalFileName": "sample_original_file_name 1",
+        "fileType": "sample_file_type 1",
+        "fileExtension": "sample_file_extension 1",
+        "fileLocation": "sample_file_location 1",
+        "fileSizeBytes": 100,
+        "mimeType": "sample_mime_type 1",
+        "description": "Sample description text 1",
+        "comment": "Sample comment 1",
+        "category": "sample_category 1",
+        "isDownloadable": true,
+        "requiresEnrollment": true,
+        "downloadCount": 10,
+        "thumbnailLocation": "sample_thumbnail_location 1",
+        "durationSeconds": 100
+      },
+      {
+        "courseId": "sample_course_id 2",
+        "moduleId": "sample_module_id 2",
+        "lessonId": "sample_lesson_id 2",
+        "fileName": "sample_file_name 2",
+        "originalFileName": "sample_original_file_name 2",
+        "fileType": "sample_file_type 2",
+        "fileExtension": "sample_file_extension 2",
+        "fileLocation": "sample_file_location 2",
+        "fileSizeBytes": 100,
+        "mimeType": "sample_mime_type 2",
+        "description": "Sample description text 2",
+        "comment": "Sample comment 2",
+        "category": "sample_category 2",
+        "isDownloadable": true,
+        "requiresEnrollment": true,
+        "downloadCount": 10,
+        "thumbnailLocation": "sample_thumbnail_location 2",
+        "durationSeconds": 100
+      },
+      {
+        "courseId": "sample_course_id 3",
+        "moduleId": "sample_module_id 3",
+        "lessonId": "sample_lesson_id 3",
+        "fileName": "sample_file_name 3",
+        "originalFileName": "sample_original_file_name 3",
+        "fileType": "sample_file_type 3",
+        "fileExtension": "sample_file_extension 3",
+        "fileLocation": "sample_file_location 3",
+        "fileSizeBytes": 100,
+        "mimeType": "sample_mime_type 3",
+        "description": "Sample description text 3",
+        "comment": "Sample comment 3",
+        "category": "sample_category 3",
+        "isDownloadable": true,
+        "requiresEnrollment": true,
+        "downloadCount": 10,
+        "thumbnailLocation": "sample_thumbnail_location 3",
+        "durationSeconds": 100
+      }
+    ],
+    "EmsJobPostFile": [
+      {
+        "jobPostId": "sample_job_post_id 1",
+        "applicationId": "sample_application_id 1",
+        "fileName": "sample_file_name 1",
+        "originalFileName": "sample_original_file_name 1",
+        "fileType": "sample_file_type 1",
+        "fileExtension": "sample_file_extension 1",
+        "fileLocation": "sample_file_location 1",
+        "fileSizeBytes": 100,
+        "mimeType": "sample_mime_type 1",
+        "description": "Sample description text 1",
+        "comment": "Sample comment 1",
+        "category": "sample_category 1",
+        "uploadedByUserId": "sample_uploaded_by_user_id 1",
+        "downloadCount": 10,
+        "thumbnailLocation": "sample_thumbnail_location 1"
+      },
+      {
+        "jobPostId": "sample_job_post_id 2",
+        "applicationId": "sample_application_id 2",
+        "fileName": "sample_file_name 2",
+        "originalFileName": "sample_original_file_name 2",
+        "fileType": "sample_file_type 2",
+        "fileExtension": "sample_file_extension 2",
+        "fileLocation": "sample_file_location 2",
+        "fileSizeBytes": 100,
+        "mimeType": "sample_mime_type 2",
+        "description": "Sample description text 2",
+        "comment": "Sample comment 2",
+        "category": "sample_category 2",
+        "uploadedByUserId": "sample_uploaded_by_user_id 2",
+        "downloadCount": 10,
+        "thumbnailLocation": "sample_thumbnail_location 2"
+      },
+      {
+        "jobPostId": "sample_job_post_id 3",
+        "applicationId": "sample_application_id 3",
+        "fileName": "sample_file_name 3",
+        "originalFileName": "sample_original_file_name 3",
+        "fileType": "sample_file_type 3",
+        "fileExtension": "sample_file_extension 3",
+        "fileLocation": "sample_file_location 3",
+        "fileSizeBytes": 100,
+        "mimeType": "sample_mime_type 3",
+        "description": "Sample description text 3",
+        "comment": "Sample comment 3",
+        "category": "sample_category 3",
+        "uploadedByUserId": "sample_uploaded_by_user_id 3",
+        "downloadCount": 10,
+        "thumbnailLocation": "sample_thumbnail_location 3"
+      }
+    ],
+    "EmsCommunityFile": [
+      {
+        "communityId": "sample_community_id 1",
+        "postId": "sample_post_id 1",
+        "eventId": "sample_event_id 1",
+        "fileName": "sample_file_name 1",
+        "originalFileName": "sample_original_file_name 1",
+        "fileType": "sample_file_type 1",
+        "fileExtension": "sample_file_extension 1",
+        "fileLocation": "sample_file_location 1",
+        "fileSizeBytes": 100,
+        "mimeType": "sample_mime_type 1",
+        "description": "Sample description text 1",
+        "comment": "Sample comment 1",
+        "category": "sample_category 1",
+        "uploadedByUserId": "sample_uploaded_by_user_id 1",
+        "downloadCount": 10,
+        "thumbnailLocation": "sample_thumbnail_location 1"
+      },
+      {
+        "communityId": "sample_community_id 2",
+        "postId": "sample_post_id 2",
+        "eventId": "sample_event_id 2",
+        "fileName": "sample_file_name 2",
+        "originalFileName": "sample_original_file_name 2",
+        "fileType": "sample_file_type 2",
+        "fileExtension": "sample_file_extension 2",
+        "fileLocation": "sample_file_location 2",
+        "fileSizeBytes": 100,
+        "mimeType": "sample_mime_type 2",
+        "description": "Sample description text 2",
+        "comment": "Sample comment 2",
+        "category": "sample_category 2",
+        "uploadedByUserId": "sample_uploaded_by_user_id 2",
+        "downloadCount": 10,
+        "thumbnailLocation": "sample_thumbnail_location 2"
+      },
+      {
+        "communityId": "sample_community_id 3",
+        "postId": "sample_post_id 3",
+        "eventId": "sample_event_id 3",
+        "fileName": "sample_file_name 3",
+        "originalFileName": "sample_original_file_name 3",
+        "fileType": "sample_file_type 3",
+        "fileExtension": "sample_file_extension 3",
+        "fileLocation": "sample_file_location 3",
+        "fileSizeBytes": 100,
+        "mimeType": "sample_mime_type 3",
+        "description": "Sample description text 3",
+        "comment": "Sample comment 3",
+        "category": "sample_category 3",
+        "uploadedByUserId": "sample_uploaded_by_user_id 3",
+        "downloadCount": 10,
+        "thumbnailLocation": "sample_thumbnail_location 3"
+      }
+    ],
+    "EmsMarketTrendFile": [
+      {
+        "trendId": "sample_trend_id 1",
+        "fileName": "sample_file_name 1",
+        "originalFileName": "sample_original_file_name 1",
+        "fileType": "sample_file_type 1",
+        "fileExtension": "sample_file_extension 1",
+        "fileLocation": "sample_file_location 1",
+        "fileSizeBytes": 100,
+        "mimeType": "sample_mime_type 1",
+        "description": "Sample description text 1",
+        "comment": "Sample comment 1",
+        "category": "sample_category 1",
+        "source": "sample_source 1",
+        "reportDate": "2024-01-01 1",
+        "downloadCount": 10,
+        "thumbnailLocation": "sample_thumbnail_location 1"
+      },
+      {
+        "trendId": "sample_trend_id 2",
+        "fileName": "sample_file_name 2",
+        "originalFileName": "sample_original_file_name 2",
+        "fileType": "sample_file_type 2",
+        "fileExtension": "sample_file_extension 2",
+        "fileLocation": "sample_file_location 2",
+        "fileSizeBytes": 100,
+        "mimeType": "sample_mime_type 2",
+        "description": "Sample description text 2",
+        "comment": "Sample comment 2",
+        "category": "sample_category 2",
+        "source": "sample_source 2",
+        "reportDate": "2024-01-01 2",
+        "downloadCount": 10,
+        "thumbnailLocation": "sample_thumbnail_location 2"
+      },
+      {
+        "trendId": "sample_trend_id 3",
+        "fileName": "sample_file_name 3",
+        "originalFileName": "sample_original_file_name 3",
+        "fileType": "sample_file_type 3",
+        "fileExtension": "sample_file_extension 3",
+        "fileLocation": "sample_file_location 3",
+        "fileSizeBytes": 100,
+        "mimeType": "sample_mime_type 3",
+        "description": "Sample description text 3",
+        "comment": "Sample comment 3",
+        "category": "sample_category 3",
+        "source": "sample_source 3",
+        "reportDate": "2024-01-01 3",
+        "downloadCount": 10,
+        "thumbnailLocation": "sample_thumbnail_location 3"
+      }
+    ]
+  }
+}

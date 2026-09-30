@@ -1,0 +1,2102 @@
+[
+  {
+    "entityName": "User",
+    "pkField": "userId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "UserPropertyGroup",
+    "pkField": "groupId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "UserProperty",
+    "pkField": "propertyId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "Institution",
+    "pkField": "institutionId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "InstitutionPropertyGroup",
+    "pkField": "groupId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "InstitutionProperty",
+    "pkField": "propertyId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CandidateInstituteLink",
+    "pkField": "linkId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "UserInstitutePropertyLink",
+    "pkField": "linkId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "Course",
+    "pkField": "courseId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CoursePropertyGroup",
+    "pkField": "groupId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CourseProperty",
+    "pkField": "propertyId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "UserCourseLink",
+    "pkField": "linkId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "UserCourseWishlist",
+    "pkField": "wishId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "UserCoursePurchase",
+    "pkField": "purchaseId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "JobPost",
+    "pkField": "jobPostId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "JobPostPropertyGroup",
+    "pkField": "groupId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "JobPostProperty",
+    "pkField": "propertyId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "UserJobPostBookmark",
+    "pkField": "bookmarkId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "JobPostUserBookmark",
+    "pkField": "bookmarkId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "SubscriptionPaymentHistory",
+    "pkField": "paymentId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "Community",
+    "pkField": "communityId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CommunityPropertyGroup",
+    "pkField": "groupId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CommunityProperty",
+    "pkField": "propertyId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CommunityUserLink",
+    "pkField": "linkId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CommunityPropertyUserLink",
+    "pkField": "linkId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CommunityUserPost",
+    "pkField": "postId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CommunityPostLink",
+    "pkField": "linkId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "PostEmogi",
+    "pkField": "emogiId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "EmogiPostUserLink",
+    "pkField": "linkId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "PostFlag",
+    "pkField": "flagId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "PostComment",
+    "pkField": "commentId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "PostCommentEmogiLink",
+    "pkField": "linkId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "AiUserProfileEvaluationParameterGroup",
+    "pkField": "groupId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "AiUserProfileEvaluationParameter",
+    "pkField": "parameterId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "AiUserProfileEvaluation",
+    "pkField": "evaluationId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "AiEvaluationParameterGroup",
+    "pkField": "groupId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "AiEvaluationParameter",
+    "pkField": "parameterId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "AiInstitutionProfileEvaluation",
+    "pkField": "evaluationId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "AiJobRecommendation",
+    "pkField": "preferenceId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "AiCommunityPostEvaluation",
+    "pkField": "evaluationId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "AiMarketTrendParameterGroup",
+    "pkField": "groupId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "AiMarketTrendParameter",
+    "pkField": "parameterId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "AiMarketTrendProperty",
+    "pkField": "trendId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "UserProfileDocument",
+    "pkField": "documentId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "InstitutionProfileDocument",
+    "pkField": "documentId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CourseDocumentGroup",
+    "pkField": "groupId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CourseDocument",
+    "pkField": "documentId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "MarketTrendDocument",
+    "pkField": "documentId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "JobPostDocument",
+    "pkField": "documentId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "UserEducation",
+    "pkField": "educationId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "UserWorkExperience",
+    "pkField": "experienceId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "UserSkill",
+    "pkField": "skillId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "UserCertification",
+    "pkField": "certificationId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "UserLanguage",
+    "pkField": "languageId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "UserAchievement",
+    "pkField": "achievementId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "UserSocialLink",
+    "pkField": "linkId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "InstitutionDepartment",
+    "pkField": "departmentId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "InstitutionLocation",
+    "pkField": "locationId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "InstitutionAccreditation",
+    "pkField": "accreditationId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "InstitutionRanking",
+    "pkField": "rankingId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "InstitutionFacility",
+    "pkField": "facilityId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CourseModule",
+    "pkField": "moduleId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CourseLesson",
+    "pkField": "lessonId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CoursePrerequisite",
+    "pkField": "prerequisiteId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CourseInstructor",
+    "pkField": "instructorLinkId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CourseReview",
+    "pkField": "reviewId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CourseAssignment",
+    "pkField": "assignmentId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "UserCourseProgress",
+    "pkField": "progressId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "UserAssignmentSubmission",
+    "pkField": "submissionId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "JobPostRequirement",
+    "pkField": "requirementId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "JobPostBenefit",
+    "pkField": "benefitId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "JobApplication",
+    "pkField": "applicationId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "JobInterview",
+    "pkField": "interviewId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "JobPostQuestion",
+    "pkField": "questionId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "JobApplicationAnswer",
+    "pkField": "answerId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CommunityCategory",
+    "pkField": "categoryId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CommunityRule",
+    "pkField": "ruleId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CommunityEvent",
+    "pkField": "eventId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CommunityEventAttendee",
+    "pkField": "attendeeId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "PostAttachment",
+    "pkField": "attachmentId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "PostTag",
+    "pkField": "tagId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "PostTagLink",
+    "pkField": "linkId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "MarketTrendSkillDemand",
+    "pkField": "demandId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "MarketTrendIndustry",
+    "pkField": "industryId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "MarketTrendLocation",
+    "pkField": "locationId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "UserSkillEndorsement",
+    "pkField": "endorsementId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "UserRecommendation",
+    "pkField": "recommendationId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "Notification",
+    "pkField": "notificationId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CourseJobPostLink",
+    "pkField": "linkId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CourseCommunityLink",
+    "pkField": "linkId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "JobPostCommunityLink",
+    "pkField": "linkId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "MarketTrendCourseLink",
+    "pkField": "linkId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "MarketTrendJobPostLink",
+    "pkField": "linkId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "MarketTrendInstitutionLink",
+    "pkField": "linkId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "UserFile",
+    "pkField": "fileId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "InstitutionFile",
+    "pkField": "fileId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CourseFile",
+    "pkField": "fileId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "JobPostFile",
+    "pkField": "fileId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "CommunityFile",
+    "pkField": "fileId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  },
+  {
+    "entityName": "MarketTrendFile",
+    "pkField": "fileId",
+    "thunks": {
+      "create": true,
+      "fetchById": true,
+      "fetchAll": true,
+      "update": true,
+      "delete": true
+    },
+    "stateShape": {
+      "listState": true,
+      "singleItemState": true,
+      "mutationState": true
+    },
+    "pagination": {
+      "currentPage": 0,
+      "pageSize": 20,
+      "totalCount": 0
+    }
+  }
+]

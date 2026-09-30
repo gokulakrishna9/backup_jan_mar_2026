@@ -1,0 +1,207 @@
+package com.example.service;
+
+import com.example.entity.CourseDocument;
+import com.example.dto.CourseDocumentInputDTO;
+import com.example.dto.CourseDocumentOutputDTO;
+import com.example.repository.CourseDocumentRepository;
+import com.example.exception.EntityNotFoundException;
+import com.example.dto.PageResponse;
+import com.example.repository.RecordOwnerRepository;
+import com.example.repository.QueryGroupRecordRepository;
+import com.example.repository.QueryGroupMemberRepository;
+import com.example.entity.RecordOwner;
+import com.example.security.SecurityContextHolder;
+import com.example.service.ActivityTrackingService;
+import org.springframework.web.server.ServerWebExchange;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import reactor.core.publisher.Mono;
+import reactor.core.publisher.Flux;
+import lombok.RequiredArgsConstructor;
+import java.time.LocalDateTime;
+import java.util.List;
+
+/**
+ * Service class for CourseDocument business logic.
+ */
+@Service
+@RequiredArgsConstructor
+public class CourseDocumentService {
+    
+    private final CourseDocumentRepository repository;
+    private final RecordOwnerRepository recordOwnerRepository;
+    private final QueryGroupRecordRepository queryGroupRecordRepository;
+    private final QueryGroupMemberRepository queryGroupMemberRepository;
+    private final ActivityTrackingService activityTrackingService;
+    
+    /**
+     * Create new CourseDocument
+     */
+    @Transactional
+    public Mono<CourseDocumentOutputDTO> create(CourseDocumentInputDTO inputDTO, ServerWebExchange exchange) {
+        return SecurityContextHolder.getCurrentUser()
+            .flatMap(user -> {
+                CourseDocument entity = CourseDocument.builder()
+                    .courseId(inputDTO.getCourseId())
+                    .groupId(inputDTO.getGroupId())
+                    .title(inputDTO.getTitle())
+                    .document(inputDTO.getDocument())
+                    .documentType(inputDTO.getDocumentType())
+                    .fileName(inputDTO.getFileName())
+                    .build();
+                
+                return repository.save(entity)
+                    .flatMap(saved -> {
+                        RecordOwner recordOwner = RecordOwner.builder()
+                            .authUserId(user.getAuthUserId())
+                            .tableName("course_document")
+                            .recordId(saved.getDocumentId())
+                            .createdAt(LocalDateTime.now())
+                            .build();
+                        return recordOwnerRepository.save(recordOwner)
+                            .thenReturn(saved);
+                    })
+                    .flatMap(saved -> activityTrackingService.logCreate(
+                            user.getAuthUserId(), user.getUsername(),
+                            "CourseDocument", saved.getDocumentId(),
+                            activityTrackingService.getIpAddress(exchange),
+                            activityTrackingService.getUserAgent(exchange))
+                        .thenReturn(saved))
+                    .map(this::toOutputDTO);
+            });
+    }
+    
+    /**
+     * Find CourseDocument by ID
+     */
+    public Mono<CourseDocumentOutputDTO> findById(Long id) {
+        return repository.findById(id)
+            .switchIfEmpty(Mono.error(new EntityNotFoundException("CourseDocument", id)))
+            .map(this::toOutputDTO);
+    }
+    
+    /**
+     * Find all CourseDocuments
+     */
+    public Flux<CourseDocumentOutputDTO> findAll() {
+        return repository.findAll()
+            .map(this::toOutputDTO);
+    }
+    
+    /**
+     * Find CourseDocuments with pagination (all filtering done in SQL)
+     */
+    public Mono<PageResponse<CourseDocumentOutputDTO>> findAllPaged(int page, int size) {
+        long offset = (long) page * size;
+        return SecurityContextHolder.getCurrentUser()
+            .flatMap(user -> {
+                List<String> roles = user.getRoles();
+                boolean isAdmin = roles.contains("SUPER_ADMIN") || roles.contains("TABLE_ADMIN");
+                
+                if (isAdmin) {
+                    Mono<Long> countMono = repository.countAll();
+                    Flux<CourseDocument> dataMono = repository.findAllPaged(size, offset);
+                    return countMono.flatMap(total ->
+                        dataMono.map(this::toOutputDTO)
+                            .collectList()
+                            .map(content -> PageResponse.of(content, total, page, size))
+                    );
+                } else {
+                    Long authUserId = user.getAuthUserId();
+                    // USER role: filter by ownership (record_owner) OR query group sharing (query_group_record)
+                    return queryGroupMemberRepository.findByAuthUserId(authUserId)
+                        .map(member -> member.getQueryGroupId())
+                        .collectList()
+                        .flatMap(groupIds -> {
+                            Mono<Long> countMono = repository.countOwnedOrShared(authUserId, "course_document", groupIds);
+                            Flux<CourseDocument> dataMono = repository.findAllPagedOwnedOrShared(authUserId, "course_document", groupIds, size, offset);
+                            return countMono.flatMap(total ->
+                                dataMono.map(this::toOutputDTO)
+                                    .collectList()
+                                    .map(content -> PageResponse.of(content, total, page, size))
+                            );
+                        });
+                }
+            });
+    }
+    
+    /**
+     * Update CourseDocument
+     */
+    @Transactional
+    public Mono<CourseDocumentOutputDTO> update(Long id, CourseDocumentInputDTO inputDTO, ServerWebExchange exchange) {
+        return SecurityContextHolder.getCurrentUser()
+            .flatMap(user -> 
+                repository.findById(id)
+                    .switchIfEmpty(Mono.error(new EntityNotFoundException("CourseDocument", id)))
+                    .flatMap(existing -> {
+                        existing.setCourseId(inputDTO.getCourseId());
+                        existing.setGroupId(inputDTO.getGroupId());
+                        existing.setTitle(inputDTO.getTitle());
+                        existing.setDocument(inputDTO.getDocument());
+                        existing.setDocumentType(inputDTO.getDocumentType());
+                        existing.setFileName(inputDTO.getFileName());
+                        return repository.save(existing);
+                    })
+                    .flatMap(saved -> activityTrackingService.logUpdate(
+                            user.getAuthUserId(), user.getUsername(),
+                            "CourseDocument", saved.getDocumentId(),
+                            null,
+                            activityTrackingService.getIpAddress(exchange),
+                            activityTrackingService.getUserAgent(exchange))
+                        .thenReturn(saved))
+                    .map(this::toOutputDTO)
+            );
+    }
+    
+    /**
+     * Delete CourseDocument
+     */
+    @Transactional
+    public Mono<Void> delete(Long id, ServerWebExchange exchange) {
+        return SecurityContextHolder.getCurrentUser()
+            .flatMap(user -> 
+                repository.findById(id)
+                    .switchIfEmpty(Mono.error(new EntityNotFoundException("CourseDocument", id)))
+                    .flatMap(entity -> activityTrackingService.logDelete(
+                            user.getAuthUserId(), user.getUsername(),
+                            "CourseDocument", id, entity,
+                            activityTrackingService.getIpAddress(exchange), null)
+                        .then(repository.deleteById(id)))
+                    .then(recordOwnerRepository.deleteByTableNameAndRecordId("course_document", id))
+            );
+    }
+    
+    /**
+     * Delete CourseDocument with justification (for audit purposes)
+     */
+    @Transactional
+    public Mono<Void> deleteWithJustification(Long id, String justification, ServerWebExchange exchange) {
+        return SecurityContextHolder.getCurrentUser()
+            .flatMap(user -> 
+                repository.findById(id)
+                    .switchIfEmpty(Mono.error(new EntityNotFoundException("CourseDocument", id)))
+                    .flatMap(entity -> activityTrackingService.logDelete(
+                            user.getAuthUserId(), user.getUsername(),
+                            "CourseDocument", id, entity,
+                            activityTrackingService.getIpAddress(exchange), justification)
+                        .then(repository.deleteById(id)))
+                    .then(recordOwnerRepository.deleteByTableNameAndRecordId("course_document", id))
+            );
+    }
+    
+    /**
+     * Convert entity to output DTO
+     */
+    private CourseDocumentOutputDTO toOutputDTO(CourseDocument entity) {
+        return CourseDocumentOutputDTO.builder()
+            .documentId(entity.getDocumentId())
+            .courseId(entity.getCourseId())
+            .groupId(entity.getGroupId())
+            .title(entity.getTitle())
+            .document(entity.getDocument())
+            .documentType(entity.getDocumentType())
+            .fileName(entity.getFileName())
+            .build();
+    }
+}

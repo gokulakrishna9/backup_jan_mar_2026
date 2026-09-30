@@ -1,0 +1,963 @@
+{
+  "layerType": "service",
+  "description": "Service layer configuration - controls business logic and authorization",
+  "services": [
+    {
+      "entityName": "StudentProfile",
+      "className": "StudentProfileService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "StudentProfileRepository",
+      "isRootEntity": true,
+      "hasAuthorization": true,
+      "singleRecordPerUser": true,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "EmployerProfile",
+      "className": "EmployerProfileService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "EmployerProfileRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": true,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "TrainerProfile",
+      "className": "TrainerProfileService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "TrainerProfileRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": true,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "JobPosting",
+      "className": "JobPostingService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "JobPostingRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "TrainingProgram",
+      "className": "TrainingProgramService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "TrainingProgramRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "JobApplication",
+      "className": "JobApplicationService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "JobApplicationRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "TrainingEnrollment",
+      "className": "TrainingEnrollmentService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "TrainingEnrollmentRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "UserProfile",
+      "className": "UserProfileService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "UserProfileRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": true,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "EducationLevel",
+      "className": "EducationLevelService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "EducationLevelRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "FieldOfStudy",
+      "className": "FieldOfStudyService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "FieldOfStudyRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "Institution",
+      "className": "InstitutionService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "InstitutionRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "UserEducation",
+      "className": "UserEducationService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "UserEducationRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "Industry",
+      "className": "IndustryService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "IndustryRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "JobTitle",
+      "className": "JobTitleService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "JobTitleRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "UserWorkExperience",
+      "className": "UserWorkExperienceService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "UserWorkExperienceRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "SkillCategory",
+      "className": "SkillCategoryService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "SkillCategoryRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "Skill",
+      "className": "SkillService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "SkillRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "UserSkill",
+      "className": "UserSkillService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "UserSkillRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "TrainingModule",
+      "className": "TrainingModuleService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "TrainingModuleRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "ModuleProgress",
+      "className": "ModuleProgressService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "ModuleProgressRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "TrainingExam",
+      "className": "TrainingExamService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "TrainingExamRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "ExamAttempt",
+      "className": "ExamAttemptService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "ExamAttemptRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "TrainingCertification",
+      "className": "TrainingCertificationService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "TrainingCertificationRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CourseDocument",
+      "className": "CourseDocumentService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "CourseDocumentRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CourseVideo",
+      "className": "CourseVideoService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "CourseVideoRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CourseAudio",
+      "className": "CourseAudioService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "CourseAudioRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CourseCodeLab",
+      "className": "CourseCodeLabService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "CourseCodeLabRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "ExamQuestion",
+      "className": "ExamQuestionService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "ExamQuestionRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "ExamAnswer",
+      "className": "ExamAnswerService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "ExamAnswerRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CourseQuestion",
+      "className": "CourseQuestionService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "CourseQuestionRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CourseAnswer",
+      "className": "CourseAnswerService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "CourseAnswerRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "Company",
+      "className": "CompanyService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "CompanyRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "Location",
+      "className": "LocationService",
+      "packageName": "com.jobportal.service",
+      "repositoryName": "LocationRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "singleRecordPerUser": false,
+      "authorizationConfig": {
+        "checkOnCreate": false,
+        "checkOnRead": false,
+        "checkOnUpdate": false,
+        "checkOnDelete": false,
+        "allowPublicRead": false,
+        "requireOwnership": false
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    }
+  ]
+}

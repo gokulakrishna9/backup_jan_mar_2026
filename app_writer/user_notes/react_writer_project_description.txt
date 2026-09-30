@@ -1,0 +1,59 @@
+#.  21 March 2026
+1## Component Wrapper
+1.  Resizable.
+2.  Transparent.
+3.  Containing interface to redux actions.
+4.  Containing interface to which we can add event handlers for events on the component.
+5.  Map redux actions to events and vice versa.
+2## Grid Functionality
+1.  Transparent
+2.  Collapsible rows and columns.
+3.  Fixed header, fixed footer, fixed leftnav. All collapsible based on user action.
++.  When a row or column is collapsed the remining grid animates to fill the empty space.
+4.  Grid for the entire page, meaning all page components go in a grid.
+3## Components
+1.  Forms
+2.  Tabs
+3.  Modals
+4.  Tables
+5.  Buttons
+6.  Alerts
+7.  Rich Text Editor
+8.  Code Editor
+9.  Video recorder
+10. Audio recorder
+11. Charts
+4## Redux Actions
+1.
+5## Component Redux Mapping
+1.
+
+##  Prompts
+1## Updates -- Done
+1.  Call this application as soon as web flux application is written.
+2.  All API requests will be made with JWT token.
+3.  All forms will be view only by default, there will be an edit button that is enabled or disabled based on user authorization level for that entity.
+4.  There will be grouped forms, may be as tabs in UI, with root form and child forms, in this case the child forms can be enabled if a parent record is already selected, the parent ID is gotten from the selection made and is not available in the form.
+5.  In case a form has a link to a parent table, the selection box is always an AJAX powered autocomplete, in case of link master, or child it will be AJAX autocomplete with multiselect.
+6.  Permissions are shared with UI as allowed API calls in JSON, I think we have to make this change in backend, add an endpoint that lists out API endpoints user can access.
+2## Updates -- Done
+1.  Each page contains a form for updating a record and a list of records user has access to as a table.
+2.  Each component is generated separately and grouped into a page in application definition.
+3.  From groups are organized into pages.
+4.  A page can contain a filter and a query as well.
+5.  Form has its own grid, need not be collapsible on column or row.
+3## Updates -- Done
+1.  For all components use lite and gentle colors.
+2.  Have components animate with user actions, use outline animation or other mild animations, not jump out or too attention grabbing, just an acknowledgement.
+3.  These should be updatable in application definition.
+4## Updates -- Done
+1.  Definitions in separate files, one file per layer.
+5## Updates -- 2D Charts
+1.  Have as many as possible 2D Charts in the library, that can be used along with query table in a page.
+2.  Have logic within react application that maps the right kind of table data to the right kind of chart.
+3.  Use an open source charting library like apache echarts or d3.
+6## Updates -- Done
+1.  The table under the forms table should have buttons to view, update, delete a record.
+2.  To add any record to a query the grant access button must be on root table form.
+7## Updates
+1.  

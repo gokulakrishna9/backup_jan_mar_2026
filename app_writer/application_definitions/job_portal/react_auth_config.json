@@ -1,0 +1,22 @@
+{
+  "jwtEnabled": true,
+  "oauth2Enabled": false,
+  "oauth2Providers": [],
+  "refreshTokenEnabled": true,
+  "protectedRoutes": [
+    "/my-profile",
+    "/my-resume",
+    "/jobs",
+    "/my-applications",
+    "/training-programs",
+    "/exams",
+    "/qa",
+    "/my-enrollments",
+    "/my-certifications",
+    "/masters"
+  ],
+  "permissionsEndpoint": "/api/auth/permissions",
+  "loginEndpoint": "/api/auth/login",
+  "registerEndpoint": "/api/auth/register",
+  "registerEnabled": true
+}

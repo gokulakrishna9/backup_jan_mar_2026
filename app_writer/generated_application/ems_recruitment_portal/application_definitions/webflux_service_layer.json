@@ -1,0 +1,2811 @@
+{
+  "layerType": "service",
+  "description": "Service layer configuration - controls business logic and authorization",
+  "services": [
+    {
+      "entityName": "User",
+      "className": "UserService",
+      "packageName": "com.example.service",
+      "repositoryName": "UserRepository",
+      "isRootEntity": true,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "UserPropertyGroup",
+      "className": "UserPropertyGroupService",
+      "packageName": "com.example.service",
+      "repositoryName": "UserPropertyGroupRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "UserProperty",
+      "className": "UserPropertyService",
+      "packageName": "com.example.service",
+      "repositoryName": "UserPropertyRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "Institution",
+      "className": "InstitutionService",
+      "packageName": "com.example.service",
+      "repositoryName": "InstitutionRepository",
+      "isRootEntity": true,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "InstitutionPropertyGroup",
+      "className": "InstitutionPropertyGroupService",
+      "packageName": "com.example.service",
+      "repositoryName": "InstitutionPropertyGroupRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "InstitutionProperty",
+      "className": "InstitutionPropertyService",
+      "packageName": "com.example.service",
+      "repositoryName": "InstitutionPropertyRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CandidateInstituteLink",
+      "className": "CandidateInstituteLinkService",
+      "packageName": "com.example.service",
+      "repositoryName": "CandidateInstituteLinkRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "UserInstitutePropertyLink",
+      "className": "UserInstitutePropertyLinkService",
+      "packageName": "com.example.service",
+      "repositoryName": "UserInstitutePropertyLinkRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "Course",
+      "className": "CourseService",
+      "packageName": "com.example.service",
+      "repositoryName": "CourseRepository",
+      "isRootEntity": true,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CoursePropertyGroup",
+      "className": "CoursePropertyGroupService",
+      "packageName": "com.example.service",
+      "repositoryName": "CoursePropertyGroupRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CourseProperty",
+      "className": "CoursePropertyService",
+      "packageName": "com.example.service",
+      "repositoryName": "CoursePropertyRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "UserCourseLink",
+      "className": "UserCourseLinkService",
+      "packageName": "com.example.service",
+      "repositoryName": "UserCourseLinkRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "UserCourseWishlist",
+      "className": "UserCourseWishlistService",
+      "packageName": "com.example.service",
+      "repositoryName": "UserCourseWishlistRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "UserCoursePurchase",
+      "className": "UserCoursePurchaseService",
+      "packageName": "com.example.service",
+      "repositoryName": "UserCoursePurchaseRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "JobPost",
+      "className": "JobPostService",
+      "packageName": "com.example.service",
+      "repositoryName": "JobPostRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "JobPostPropertyGroup",
+      "className": "JobPostPropertyGroupService",
+      "packageName": "com.example.service",
+      "repositoryName": "JobPostPropertyGroupRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "JobPostProperty",
+      "className": "JobPostPropertyService",
+      "packageName": "com.example.service",
+      "repositoryName": "JobPostPropertyRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "UserJobPostBookmark",
+      "className": "UserJobPostBookmarkService",
+      "packageName": "com.example.service",
+      "repositoryName": "UserJobPostBookmarkRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "JobPostUserBookmark",
+      "className": "JobPostUserBookmarkService",
+      "packageName": "com.example.service",
+      "repositoryName": "JobPostUserBookmarkRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "SubscriptionPaymentHistory",
+      "className": "SubscriptionPaymentHistoryService",
+      "packageName": "com.example.service",
+      "repositoryName": "SubscriptionPaymentHistoryRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "Community",
+      "className": "CommunityService",
+      "packageName": "com.example.service",
+      "repositoryName": "CommunityRepository",
+      "isRootEntity": true,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CommunityPropertyGroup",
+      "className": "CommunityPropertyGroupService",
+      "packageName": "com.example.service",
+      "repositoryName": "CommunityPropertyGroupRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CommunityProperty",
+      "className": "CommunityPropertyService",
+      "packageName": "com.example.service",
+      "repositoryName": "CommunityPropertyRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CommunityUserLink",
+      "className": "CommunityUserLinkService",
+      "packageName": "com.example.service",
+      "repositoryName": "CommunityUserLinkRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CommunityPropertyUserLink",
+      "className": "CommunityPropertyUserLinkService",
+      "packageName": "com.example.service",
+      "repositoryName": "CommunityPropertyUserLinkRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CommunityUserPost",
+      "className": "CommunityUserPostService",
+      "packageName": "com.example.service",
+      "repositoryName": "CommunityUserPostRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CommunityPostLink",
+      "className": "CommunityPostLinkService",
+      "packageName": "com.example.service",
+      "repositoryName": "CommunityPostLinkRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "PostEmogi",
+      "className": "PostEmogiService",
+      "packageName": "com.example.service",
+      "repositoryName": "PostEmogiRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "EmogiPostUserLink",
+      "className": "EmogiPostUserLinkService",
+      "packageName": "com.example.service",
+      "repositoryName": "EmogiPostUserLinkRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "PostFlag",
+      "className": "PostFlagService",
+      "packageName": "com.example.service",
+      "repositoryName": "PostFlagRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "PostComment",
+      "className": "PostCommentService",
+      "packageName": "com.example.service",
+      "repositoryName": "PostCommentRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "PostCommentEmogiLink",
+      "className": "PostCommentEmogiLinkService",
+      "packageName": "com.example.service",
+      "repositoryName": "PostCommentEmogiLinkRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "AiUserProfileEvaluationParameterGroup",
+      "className": "AiUserProfileEvaluationParameterGroupService",
+      "packageName": "com.example.service",
+      "repositoryName": "AiUserProfileEvaluationParameterGroupRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "AiUserProfileEvaluationParameter",
+      "className": "AiUserProfileEvaluationParameterService",
+      "packageName": "com.example.service",
+      "repositoryName": "AiUserProfileEvaluationParameterRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "AiUserProfileEvaluation",
+      "className": "AiUserProfileEvaluationService",
+      "packageName": "com.example.service",
+      "repositoryName": "AiUserProfileEvaluationRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "AiEvaluationParameterGroup",
+      "className": "AiEvaluationParameterGroupService",
+      "packageName": "com.example.service",
+      "repositoryName": "AiEvaluationParameterGroupRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "AiEvaluationParameter",
+      "className": "AiEvaluationParameterService",
+      "packageName": "com.example.service",
+      "repositoryName": "AiEvaluationParameterRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "AiInstitutionProfileEvaluation",
+      "className": "AiInstitutionProfileEvaluationService",
+      "packageName": "com.example.service",
+      "repositoryName": "AiInstitutionProfileEvaluationRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "AiJobRecommendation",
+      "className": "AiJobRecommendationService",
+      "packageName": "com.example.service",
+      "repositoryName": "AiJobRecommendationRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "AiCommunityPostEvaluation",
+      "className": "AiCommunityPostEvaluationService",
+      "packageName": "com.example.service",
+      "repositoryName": "AiCommunityPostEvaluationRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "AiMarketTrendParameterGroup",
+      "className": "AiMarketTrendParameterGroupService",
+      "packageName": "com.example.service",
+      "repositoryName": "AiMarketTrendParameterGroupRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "AiMarketTrendParameter",
+      "className": "AiMarketTrendParameterService",
+      "packageName": "com.example.service",
+      "repositoryName": "AiMarketTrendParameterRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "AiMarketTrendProperty",
+      "className": "AiMarketTrendPropertyService",
+      "packageName": "com.example.service",
+      "repositoryName": "AiMarketTrendPropertyRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "UserProfileDocument",
+      "className": "UserProfileDocumentService",
+      "packageName": "com.example.service",
+      "repositoryName": "UserProfileDocumentRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "InstitutionProfileDocument",
+      "className": "InstitutionProfileDocumentService",
+      "packageName": "com.example.service",
+      "repositoryName": "InstitutionProfileDocumentRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CourseDocumentGroup",
+      "className": "CourseDocumentGroupService",
+      "packageName": "com.example.service",
+      "repositoryName": "CourseDocumentGroupRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CourseDocument",
+      "className": "CourseDocumentService",
+      "packageName": "com.example.service",
+      "repositoryName": "CourseDocumentRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "MarketTrendDocument",
+      "className": "MarketTrendDocumentService",
+      "packageName": "com.example.service",
+      "repositoryName": "MarketTrendDocumentRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "JobPostDocument",
+      "className": "JobPostDocumentService",
+      "packageName": "com.example.service",
+      "repositoryName": "JobPostDocumentRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "UserEducation",
+      "className": "UserEducationService",
+      "packageName": "com.example.service",
+      "repositoryName": "UserEducationRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "UserWorkExperience",
+      "className": "UserWorkExperienceService",
+      "packageName": "com.example.service",
+      "repositoryName": "UserWorkExperienceRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "UserSkill",
+      "className": "UserSkillService",
+      "packageName": "com.example.service",
+      "repositoryName": "UserSkillRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "UserCertification",
+      "className": "UserCertificationService",
+      "packageName": "com.example.service",
+      "repositoryName": "UserCertificationRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "UserLanguage",
+      "className": "UserLanguageService",
+      "packageName": "com.example.service",
+      "repositoryName": "UserLanguageRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "UserAchievement",
+      "className": "UserAchievementService",
+      "packageName": "com.example.service",
+      "repositoryName": "UserAchievementRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "UserSocialLink",
+      "className": "UserSocialLinkService",
+      "packageName": "com.example.service",
+      "repositoryName": "UserSocialLinkRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "InstitutionDepartment",
+      "className": "InstitutionDepartmentService",
+      "packageName": "com.example.service",
+      "repositoryName": "InstitutionDepartmentRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "InstitutionLocation",
+      "className": "InstitutionLocationService",
+      "packageName": "com.example.service",
+      "repositoryName": "InstitutionLocationRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "InstitutionAccreditation",
+      "className": "InstitutionAccreditationService",
+      "packageName": "com.example.service",
+      "repositoryName": "InstitutionAccreditationRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "InstitutionRanking",
+      "className": "InstitutionRankingService",
+      "packageName": "com.example.service",
+      "repositoryName": "InstitutionRankingRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "InstitutionFacility",
+      "className": "InstitutionFacilityService",
+      "packageName": "com.example.service",
+      "repositoryName": "InstitutionFacilityRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CourseModule",
+      "className": "CourseModuleService",
+      "packageName": "com.example.service",
+      "repositoryName": "CourseModuleRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CourseLesson",
+      "className": "CourseLessonService",
+      "packageName": "com.example.service",
+      "repositoryName": "CourseLessonRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CoursePrerequisite",
+      "className": "CoursePrerequisiteService",
+      "packageName": "com.example.service",
+      "repositoryName": "CoursePrerequisiteRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CourseInstructor",
+      "className": "CourseInstructorService",
+      "packageName": "com.example.service",
+      "repositoryName": "CourseInstructorRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CourseReview",
+      "className": "CourseReviewService",
+      "packageName": "com.example.service",
+      "repositoryName": "CourseReviewRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CourseAssignment",
+      "className": "CourseAssignmentService",
+      "packageName": "com.example.service",
+      "repositoryName": "CourseAssignmentRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "UserCourseProgress",
+      "className": "UserCourseProgressService",
+      "packageName": "com.example.service",
+      "repositoryName": "UserCourseProgressRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "UserAssignmentSubmission",
+      "className": "UserAssignmentSubmissionService",
+      "packageName": "com.example.service",
+      "repositoryName": "UserAssignmentSubmissionRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "JobPostRequirement",
+      "className": "JobPostRequirementService",
+      "packageName": "com.example.service",
+      "repositoryName": "JobPostRequirementRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "JobPostBenefit",
+      "className": "JobPostBenefitService",
+      "packageName": "com.example.service",
+      "repositoryName": "JobPostBenefitRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "JobApplication",
+      "className": "JobApplicationService",
+      "packageName": "com.example.service",
+      "repositoryName": "JobApplicationRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "JobInterview",
+      "className": "JobInterviewService",
+      "packageName": "com.example.service",
+      "repositoryName": "JobInterviewRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "JobPostQuestion",
+      "className": "JobPostQuestionService",
+      "packageName": "com.example.service",
+      "repositoryName": "JobPostQuestionRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "JobApplicationAnswer",
+      "className": "JobApplicationAnswerService",
+      "packageName": "com.example.service",
+      "repositoryName": "JobApplicationAnswerRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CommunityCategory",
+      "className": "CommunityCategoryService",
+      "packageName": "com.example.service",
+      "repositoryName": "CommunityCategoryRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CommunityRule",
+      "className": "CommunityRuleService",
+      "packageName": "com.example.service",
+      "repositoryName": "CommunityRuleRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CommunityEvent",
+      "className": "CommunityEventService",
+      "packageName": "com.example.service",
+      "repositoryName": "CommunityEventRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CommunityEventAttendee",
+      "className": "CommunityEventAttendeeService",
+      "packageName": "com.example.service",
+      "repositoryName": "CommunityEventAttendeeRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "PostAttachment",
+      "className": "PostAttachmentService",
+      "packageName": "com.example.service",
+      "repositoryName": "PostAttachmentRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "PostTag",
+      "className": "PostTagService",
+      "packageName": "com.example.service",
+      "repositoryName": "PostTagRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "PostTagLink",
+      "className": "PostTagLinkService",
+      "packageName": "com.example.service",
+      "repositoryName": "PostTagLinkRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "MarketTrendSkillDemand",
+      "className": "MarketTrendSkillDemandService",
+      "packageName": "com.example.service",
+      "repositoryName": "MarketTrendSkillDemandRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "MarketTrendIndustry",
+      "className": "MarketTrendIndustryService",
+      "packageName": "com.example.service",
+      "repositoryName": "MarketTrendIndustryRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "MarketTrendLocation",
+      "className": "MarketTrendLocationService",
+      "packageName": "com.example.service",
+      "repositoryName": "MarketTrendLocationRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "UserSkillEndorsement",
+      "className": "UserSkillEndorsementService",
+      "packageName": "com.example.service",
+      "repositoryName": "UserSkillEndorsementRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "UserRecommendation",
+      "className": "UserRecommendationService",
+      "packageName": "com.example.service",
+      "repositoryName": "UserRecommendationRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "Notification",
+      "className": "NotificationService",
+      "packageName": "com.example.service",
+      "repositoryName": "NotificationRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CourseJobPostLink",
+      "className": "CourseJobPostLinkService",
+      "packageName": "com.example.service",
+      "repositoryName": "CourseJobPostLinkRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CourseCommunityLink",
+      "className": "CourseCommunityLinkService",
+      "packageName": "com.example.service",
+      "repositoryName": "CourseCommunityLinkRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "JobPostCommunityLink",
+      "className": "JobPostCommunityLinkService",
+      "packageName": "com.example.service",
+      "repositoryName": "JobPostCommunityLinkRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "MarketTrendCourseLink",
+      "className": "MarketTrendCourseLinkService",
+      "packageName": "com.example.service",
+      "repositoryName": "MarketTrendCourseLinkRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "MarketTrendJobPostLink",
+      "className": "MarketTrendJobPostLinkService",
+      "packageName": "com.example.service",
+      "repositoryName": "MarketTrendJobPostLinkRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "MarketTrendInstitutionLink",
+      "className": "MarketTrendInstitutionLinkService",
+      "packageName": "com.example.service",
+      "repositoryName": "MarketTrendInstitutionLinkRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "UserFile",
+      "className": "UserFileService",
+      "packageName": "com.example.service",
+      "repositoryName": "UserFileRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "InstitutionFile",
+      "className": "InstitutionFileService",
+      "packageName": "com.example.service",
+      "repositoryName": "InstitutionFileRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CourseFile",
+      "className": "CourseFileService",
+      "packageName": "com.example.service",
+      "repositoryName": "CourseFileRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "JobPostFile",
+      "className": "JobPostFileService",
+      "packageName": "com.example.service",
+      "repositoryName": "JobPostFileRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "CommunityFile",
+      "className": "CommunityFileService",
+      "packageName": "com.example.service",
+      "repositoryName": "CommunityFileRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    },
+    {
+      "entityName": "MarketTrendFile",
+      "className": "MarketTrendFileService",
+      "packageName": "com.example.service",
+      "repositoryName": "MarketTrendFileRepository",
+      "isRootEntity": false,
+      "hasAuthorization": true,
+      "authorizationConfig": {
+        "checkOnCreate": true,
+        "checkOnRead": true,
+        "checkOnUpdate": true,
+        "checkOnDelete": true,
+        "allowPublicRead": false,
+        "requireOwnership": true
+      },
+      "transactionManagement": {
+        "enabled": true,
+        "propagation": "REQUIRED",
+        "isolation": "DEFAULT",
+        "timeout": 30
+      },
+      "customMethods": [],
+      "validationRules": {
+        "onCreate": [],
+        "onUpdate": [],
+        "onDelete": []
+      }
+    }
+  ],
+  "globalSettings": {
+    "defaultAuthorizationEnabled": true,
+    "defaultTransactionEnabled": true,
+    "auditServiceCalls": true
+  }
+}

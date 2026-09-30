@@ -1,0 +1,103 @@
+/* PrimeReact theme overrides using CSS custom properties */
+
+/* ── Global ── */
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: var(--text-primary, #495057);
+  background: var(--background-primary, #f8f9fa);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight);
+}
+
+/* ── Buttons ── */
+.p-button {
+  background: var(--accent, #6366f1);
+  border-color: var(--accent, #6366f1);
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  padding: var(--spacing-medium) var(--spacing-large);
+  transition: background var(--transition-duration) var(--easing-function),
+              border-color var(--transition-duration) var(--easing-function),
+              transform var(--transition-duration) var(--easing-function);
+}
+
+.p-button:hover {
+  filter: brightness(1.1);
+}
+
+.p-button:active {
+  transform: scale(0.97);
+}
+
+
+/* ── Inputs ── */
+.p-inputtext,
+.p-inputnumber-input,
+.p-inputtextarea {
+  border-color: var(--border-color, #dee2e6);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-medium) var(--spacing-medium);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  transition: border-color var(--transition-duration) var(--easing-function),
+              box-shadow var(--transition-duration) var(--easing-function);
+}
+
+.p-inputtext:focus,
+.p-inputnumber-input:focus,
+.p-inputtextarea:focus {
+  box-shadow: 0 0 0 2px var(--accent, #a5b4fc);
+}
+
+
+/* ── DataTable ── */
+.p-datatable .p-datatable-thead > tr > th {
+  background: var(--surface, #f8f9fa);
+  color: var(--text-primary, #495057);
+  font-weight: var(--heading-font-weight);
+}
+
+.p-datatable .p-datatable-tbody > tr {
+  transition: background var(--transition-duration) var(--easing-function);
+}
+
+.p-datatable .p-datatable-tbody > tr:hover {
+  background: var(--surface, #e9ecef);
+}
+
+.p-datatable .p-datatable-tbody > tr.p-highlight {
+  background: var(--accent, #a5b4fc);
+  opacity: 0.9;
+}
+
+
+/* ── Card ── */
+.p-card {
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow-small);
+}
+
+/* ── Sidebar / Navigation ── */
+
+
+/* ── TabView ── */
+.p-tabview .p-tabview-nav li .p-tabview-nav-link {
+  transition: border-color var(--transition-duration) var(--easing-function),
+              color var(--transition-duration) var(--easing-function);
+}
+
+/* ── Dialog ── */
+.p-dialog {
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow-large);
+}
+
+/* ── Toast ── */
+.p-toast .p-toast-message {
+  border-radius: var(--border-radius);
+}

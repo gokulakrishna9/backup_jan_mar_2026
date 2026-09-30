@@ -1,0 +1,104 @@
+{
+  "layerType": "security",
+  "description": "Security configuration - JWT, OAuth2, password policies, CORS",
+  "jwt": {
+    "enabled": true,
+    "secret": "your-secret-key-change-in-production-min-256-bits",
+    "expiration": 86400000,
+    "expirationUnit": "milliseconds",
+    "issuer": "ems-recruitment-portal",
+    "audience": "ems-recruitment-portal-users",
+    "algorithm": "HS256",
+    "refreshToken": {
+      "enabled": true,
+      "expiration": 604800000,
+      "expirationUnit": "milliseconds"
+    }
+  },
+  "oauth2": {
+    "enabled": false,
+    "providers": [
+      {
+        "name": "google",
+        "clientId": "${GOOGLE_CLIENT_ID}",
+        "clientSecret": "${GOOGLE_CLIENT_SECRET}",
+        "redirectUri": "http://localhost:8081/login/oauth2/code/google",
+        "scope": [
+          "email",
+          "profile"
+        ]
+      },
+      {
+        "name": "github",
+        "clientId": "${GITHUB_CLIENT_ID}",
+        "clientSecret": "${GITHUB_CLIENT_SECRET}",
+        "redirectUri": "http://localhost:8081/login/oauth2/code/github",
+        "scope": [
+          "user:email"
+        ]
+      }
+    ]
+  },
+  "passwordPolicy": {
+    "minLength": 8,
+    "maxLength": 128,
+    "requireUppercase": true,
+    "requireLowercase": true,
+    "requireDigit": true,
+    "requireSpecialChar": true,
+    "specialChars": "!@#$%^&*()_+-=[]{}|;:,.<>?",
+    "preventCommonPasswords": true,
+    "passwordExpirationDays": 90,
+    "passwordHistoryCount": 5
+  },
+  "sessionManagement": {
+    "maxConcurrentSessions": 3,
+    "sessionTimeout": 1800,
+    "sessionTimeoutUnit": "seconds"
+  },
+  "cors": {
+    "enabled": true,
+    "allowedOrigins": [
+      "http://localhost:3000",
+      "http://localhost:4200"
+    ],
+    "allowedMethods": [
+      "GET",
+      "POST",
+      "PUT",
+      "DELETE",
+      "OPTIONS"
+    ],
+    "allowedHeaders": [
+      "Authorization",
+      "Content-Type",
+      "X-Requested-With"
+    ],
+    "exposedHeaders": [
+      "Authorization"
+    ],
+    "allowCredentials": true,
+    "maxAge": 3600
+  },
+  "csrf": {
+    "enabled": false,
+    "cookieName": "XSRF-TOKEN",
+    "headerName": "X-XSRF-TOKEN"
+  },
+  "rateLimiting": {
+    "enabled": true,
+    "defaultLimitPerMinute": 60,
+    "loginAttempts": {
+      "maxAttempts": 5,
+      "lockoutDurationMinutes": 15
+    }
+  },
+  "publicEndpoints": [
+    "/api/auth/login",
+    "/api/auth/register",
+    "/api/auth/forgot-password",
+    "/swagger-ui.html",
+    "/swagger-ui/**",
+    "/v3/api-docs/**"
+  ]
+}

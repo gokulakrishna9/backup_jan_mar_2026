@@ -1,0 +1,152 @@
+{
+  "name": "Image",
+  "import": "Image",
+  "category": "Media",
+  "metadata": {
+    "description": "Image component with preview and error handling",
+    "usageExamples": [
+      "<ImageWrapper src=\"image.jpg\" alt=\"Description\" />",
+      "<ImageWrapper src=\"photo.jpg\" preview width=\"250\" />"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "src",
+        "type": "string",
+        "optional": false,
+        "description": "Image source URL",
+        "helpText": "Path or URL to image",
+        "dataTypes": ["string (URL)"],
+        "examples": ["'image.jpg'", "'/assets/photo.png'", "'https://example.com/img.jpg'"]
+      },
+      {
+        "name": "alt",
+        "type": "string",
+        "optional": true,
+        "description": "Alt text",
+        "helpText": "Alternative text for accessibility",
+        "dataTypes": ["string"],
+        "examples": ["'User avatar'", "'Product photo'"]
+      },
+      {
+        "name": "width",
+        "type": "string",
+        "optional": true,
+        "description": "Image width",
+        "helpText": "Width in CSS units",
+        "dataTypes": ["string (CSS size)"],
+        "examples": ["'250'", "'100%'", "'20rem'"]
+      },
+      {
+        "name": "height",
+        "type": "string",
+        "optional": true,
+        "description": "Image height",
+        "helpText": "Height in CSS units",
+        "dataTypes": ["string (CSS size)"],
+        "examples": ["'250'", "'auto'", "'15rem'"]
+      },
+      {
+        "name": "preview",
+        "type": "boolean",
+        "optional": true,
+        "description": "Enable preview mode",
+        "helpText": "Click to view full-size preview",
+        "dataTypes": ["boolean"],
+        "examples": ["true", "false"]
+      },
+      {
+        "name": "imageClassName",
+        "type": "string",
+        "optional": true,
+        "description": "CSS class for img element",
+        "helpText": "Applied to the actual img tag",
+        "dataTypes": ["string"],
+        "examples": ["'border-round'", "'shadow-2'"]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes",
+        "helpText": "Supports PrimeFlex utility classes",
+        "examples": ["'mb-3'"]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles",
+        "helpText": "Standard React inline styles",
+        "examples": ["{ marginBottom: '1rem' }"]
+      }
+    ],
+    "children": null
+  },
+  "eventHandlers": {
+    "standard": [
+      {
+        "name": "onShow",
+        "type": "() => void",
+        "description": "Callback when preview is shown"
+      },
+      {
+        "name": "onHide",
+        "type": "() => void",
+        "description": "Callback when preview is hidden"
+      },
+      {
+        "name": "onError",
+        "type": "(e: React.SyntheticEvent) => void",
+        "description": "Callback when image fails to load"
+      }
+    ],
+    "simplified": [],
+    "validation": [],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "description": "Called when component mounts"
+      },
+      {
+        "name": "onUnmount",
+        "type": "() => void",
+        "description": "Called when component unmounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [
+      "handleShow - Processes onShow event",
+      "handleHide - Processes onHide event",
+      "handleError - Processes onError event"
+    ],
+    "patterns": [
+      "Check if event handler exists before calling"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": [],
+    "childrenDescription": "This component does not accept children",
+    "hasChildren": false,
+    "examples": []
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<ImageWrapper src=\"image.jpg\" alt=\"Description\" />",
+    "withStyling": "<ImageWrapper src=\"photo.jpg\" width=\"250\" imageClassName=\"border-round shadow-2\" />",
+    "withEvents": "<ImageWrapper src=\"image.jpg\" preview onShow={() => console.log('preview shown')} onError={handleError} />",
+    "withRedux": "<ImageWrapper src={userAvatar} alt={userName} />",
+    "withValidation": "N/A",
+    "withChildren": "N/A"
+  }
+}

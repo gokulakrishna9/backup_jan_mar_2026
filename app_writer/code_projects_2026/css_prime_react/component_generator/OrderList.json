@@ -1,0 +1,138 @@
+{
+  "name": "OrderList",
+  "import": "OrderList",
+  "category": "Data",
+  "metadata": {
+    "description": "Reorderable list with move buttons",
+    "usageExamples": [
+      "<OrderListWrapper value={products} itemTemplate={itemTemplate} onChange={(e) => setProducts(e.value)} />",
+      "<OrderListWrapper value={items} header=\"Items\" dragdrop />"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "value",
+        "type": "any[]",
+        "optional": false,
+        "description": "Items array",
+        "helpText": "Array of items to display",
+        "dataTypes": ["any[]"],
+        "examples": ["[{id: 1, name: 'Item 1'}]", "products"]
+      },
+      {
+        "name": "itemTemplate",
+        "type": "(item: any) => React.ReactNode",
+        "optional": true,
+        "description": "Item template",
+        "helpText": "Function to render each item",
+        "dataTypes": ["function"],
+        "examples": ["(item) => <div>{item.name}</div>"]
+      },
+      {
+        "name": "header",
+        "type": "string | React.ReactNode",
+        "optional": true,
+        "description": "List header",
+        "helpText": "Header content",
+        "dataTypes": ["string", "React.ReactNode"],
+        "examples": ["'Products'", "<h3>Items</h3>"]
+      },
+      {
+        "name": "dragdrop",
+        "type": "boolean",
+        "optional": true,
+        "description": "Enable drag and drop",
+        "helpText": "Allows reordering via drag and drop",
+        "dataTypes": ["boolean"],
+        "examples": ["true", "false"]
+      },
+      {
+        "name": "dataKey",
+        "type": "string",
+        "optional": true,
+        "description": "Unique item identifier",
+        "helpText": "Property name for unique ID",
+        "dataTypes": ["string (property name)"],
+        "examples": ["'id'", "'code'"]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes",
+        "helpText": "Supports PrimeFlex utility classes",
+        "examples": ["'w-full'"]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles",
+        "helpText": "Standard React inline styles",
+        "examples": ["{ width: '100%' }"]
+      }
+    ],
+    "children": null
+  },
+  "eventHandlers": {
+    "standard": [
+      {
+        "name": "onChange",
+        "type": "(e: { value: any[] }) => void",
+        "description": "Callback when order changes"
+      }
+    ],
+    "simplified": [
+      {
+        "name": "onValueChange",
+        "type": "(value: any[]) => void",
+        "description": "Simplified callback with just the array"
+      }
+    ],
+    "validation": [],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "description": "Called when component mounts"
+      },
+      {
+        "name": "onUnmount",
+        "type": "() => void",
+        "description": "Called when component unmounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [
+      "handleChange - Processes onChange event, calls onChange and onValueChange"
+    ],
+    "patterns": [
+      "Check if event handler exists before calling",
+      "Extract value array from event object"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": [],
+    "childrenDescription": "This component does not accept children - items defined via value prop and itemTemplate",
+    "hasChildren": false,
+    "examples": []
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<OrderListWrapper value={products} itemTemplate={(item) => <div>{item.name}</div>} onChange={(e) => setProducts(e.value)} />",
+    "withStyling": "<OrderListWrapper value={items} header=\"Items\" dragdrop className=\"w-full\" />",
+    "withEvents": "<OrderListWrapper value={list} onChange={handleChange} />",
+    "withRedux": "<OrderListWrapper value={orderedItems} onValueChange={(val) => dispatch(setItems(val))} />",
+    "withValidation": "N/A",
+    "withChildren": "N/A"
+  }
+}

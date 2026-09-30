@@ -1,0 +1,47 @@
+package com.jobportal.repository;
+
+import com.jobportal.entity.EmployerProfile;
+import org.springframework.data.r2dbc.repository.Query;
+import org.springframework.data.r2dbc.repository.R2dbcRepository;
+import org.springframework.stereotype.Repository;
+import reactor.core.publisher.Mono;
+import reactor.core.publisher.Flux;
+import java.util.List;
+
+/**
+ * Repository interface for EmployerProfile entity.
+ */
+@Repository
+public interface EmployerProfileRepository extends R2dbcRepository<EmployerProfile, Long> {
+
+    @Query("SELECT * FROM employer_profile ORDER BY employer_profile_id LIMIT :size OFFSET :offset")
+    Flux<EmployerProfile> findAllPaged(int size, long offset);
+
+    @Query("SELECT COUNT(*) FROM employer_profile")
+    Mono<Long> countAll();
+
+    @Query("SELECT DISTINCT t.* FROM employer_profile t WHERE (SELECT is_super_user FROM auth_user WHERE auth_user_id=:authUserId) = true OR EXISTS (SELECT 1 FROM user_group_membership JOIN user_group ON user_group.group_id=user_group_membership.group_id WHERE user_group_membership.auth_user_id=:authUserId AND (user_group_membership.expires_at IS NULL OR user_group_membership.expires_at > NOW()) AND user_group.is_super_group=true) OR EXISTS (SELECT 1 FROM document_group_table_scope JOIN document_group_membership ON document_group_membership.document_group_id=document_group_table_scope.document_group_id WHERE document_group_table_scope.table_name='employer_profile' AND document_group_table_scope.allow_read=true AND (document_group_membership.expires_at IS NULL OR document_group_membership.expires_at > NOW()) AND (document_group_membership.auth_user_id=:authUserId OR document_group_membership.user_group_id IN (SELECT group_id FROM user_group_membership WHERE auth_user_id=:authUserId AND (user_group_membership.expires_at IS NULL OR user_group_membership.expires_at > NOW())))) OR EXISTS (SELECT 1 FROM document_group_table_record_scope JOIN document_group_membership ON document_group_membership.document_group_id=document_group_table_record_scope.document_group_id WHERE document_group_table_record_scope.table_name='employer_profile' AND document_group_table_record_scope.record_id = t.employer_profile_id AND document_group_table_record_scope.allow_read=true AND (document_group_membership.expires_at IS NULL OR document_group_membership.expires_at > NOW()) AND (document_group_membership.auth_user_id=:authUserId OR document_group_membership.user_group_id IN (SELECT group_id FROM user_group_membership WHERE auth_user_id=:authUserId AND (user_group_membership.expires_at IS NULL OR user_group_membership.expires_at > NOW())))) ORDER BY t.employer_profile_id LIMIT :size OFFSET :offset")
+    Flux<EmployerProfile> findAllPagedAuthorized(Long authUserId, int size, long offset);
+
+    @Query("SELECT COUNT(DISTINCT t.employer_profile_id) FROM employer_profile t WHERE (SELECT is_super_user FROM auth_user WHERE auth_user_id=:authUserId) = true OR EXISTS (SELECT 1 FROM user_group_membership JOIN user_group ON user_group.group_id=user_group_membership.group_id WHERE user_group_membership.auth_user_id=:authUserId AND (user_group_membership.expires_at IS NULL OR user_group_membership.expires_at > NOW()) AND user_group.is_super_group=true) OR EXISTS (SELECT 1 FROM document_group_table_scope JOIN document_group_membership ON document_group_membership.document_group_id=document_group_table_scope.document_group_id WHERE document_group_table_scope.table_name='employer_profile' AND document_group_table_scope.allow_read=true AND (document_group_membership.expires_at IS NULL OR document_group_membership.expires_at > NOW()) AND (document_group_membership.auth_user_id=:authUserId OR document_group_membership.user_group_id IN (SELECT group_id FROM user_group_membership WHERE auth_user_id=:authUserId AND (user_group_membership.expires_at IS NULL OR user_group_membership.expires_at > NOW())))) OR EXISTS (SELECT 1 FROM document_group_table_record_scope JOIN document_group_membership ON document_group_membership.document_group_id=document_group_table_record_scope.document_group_id WHERE document_group_table_record_scope.table_name='employer_profile' AND document_group_table_record_scope.record_id = t.employer_profile_id AND document_group_table_record_scope.allow_read=true AND (document_group_membership.expires_at IS NULL OR document_group_membership.expires_at > NOW()) AND (document_group_membership.auth_user_id=:authUserId OR document_group_membership.user_group_id IN (SELECT group_id FROM user_group_membership WHERE auth_user_id=:authUserId AND (user_group_membership.expires_at IS NULL OR user_group_membership.expires_at > NOW()))))")
+    Mono<Long> countAuthorized(Long authUserId);
+
+    @Query("SELECT COUNT(DISTINCT e.employer_profile_id) FROM employer_profile e " +
+           "LEFT JOIN record_owner ro ON ro.table_name = :tableName AND ro.record_id = e.employer_profile_id " +
+           "LEFT JOIN query_group_record qgr ON qgr.table_name = :tableName AND qgr.record_id = e.employer_profile_id " +
+           "WHERE ro.auth_user_id = :authUserId OR qgr.query_group_id IN (:groupIds)")
+    Mono<Long> countOwnedOrShared(Long authUserId, String tableName, List<Long> groupIds);
+
+    @Query("SELECT DISTINCT e.* FROM employer_profile e " +
+           "LEFT JOIN record_owner ro ON ro.table_name = :tableName AND ro.record_id = e.employer_profile_id " +
+           "LEFT JOIN query_group_record qgr ON qgr.table_name = :tableName AND qgr.record_id = e.employer_profile_id " +
+           "WHERE ro.auth_user_id = :authUserId OR qgr.query_group_id IN (:groupIds) " +
+           "LIMIT :limit OFFSET :offset")
+    Flux<EmployerProfile> findAllPagedOwnedOrShared(Long authUserId, String tableName, List<Long> groupIds, int limit, long offset);
+
+
+    @Query("SELECT * FROM employer_profile WHERE employer_profile_id IN " +
+           "(SELECT record_id FROM record_owner WHERE table_name = 'employer_profile' AND auth_user_id = :authUserId)")
+    Mono<EmployerProfile> findByOwnerUserId(Long authUserId);
+
+}

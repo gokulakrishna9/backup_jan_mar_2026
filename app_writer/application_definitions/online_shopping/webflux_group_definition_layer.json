@@ -1,0 +1,42 @@
+{
+  "layerType": "group_definition",
+  "description": "Access group definitions",
+  "version": "1.0",
+  "groupManagement": {
+    "allowRuntimeCreation": false,
+    "allowRuntimeDeletion": false,
+    "adminCanGrantMembership": true,
+    "adminCanRevokeMembership": true,
+    "adminGroupName": "Administrators"
+  },
+  "ownerEnrollmentDefaults": {
+    "ownershipCheck": "CREATOR_RECORDS",
+    "maxRecordsPerUser": null,
+    "allowEnroll": false,
+    "allowUnenroll": false
+  },
+  "systemGroups": [
+    {
+      "groupName": "Super Administrators",
+      "description": "Full system access",
+      "isSuperGroup": true,
+      "isDefaultGroup": false,
+      "autoAssignToNewUsers": false
+    },
+    {
+      "groupName": "Administrators",
+      "description": "Can manage users and groups",
+      "isSuperGroup": false,
+      "isDefaultGroup": false,
+      "autoAssignToNewUsers": false
+    },
+    {
+      "groupName": "Users",
+      "description": "Default user group",
+      "isSuperGroup": false,
+      "isDefaultGroup": true,
+      "autoAssignToNewUsers": true
+    }
+  ],
+  "entityAccess": {}
+}

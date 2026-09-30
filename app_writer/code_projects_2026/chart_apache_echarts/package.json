@@ -1,0 +1,20 @@
+{
+  "name": "apache-echarts-react-wrappers",
+  "version": "1.0.0",
+  "description": "React wrapper components for Apache ECharts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["echarts", "react", "charts", "visualization"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "echarts": "^5.5.0",
+    "echarts-gl": "^2.0.9",
+    "react": "^18.2.0"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0"
+  }
+}

@@ -1,0 +1,174 @@
+/**
+ * MenuWrapper - Enhanced wrapper for PrimeReact Menu
+ * Category: Menu
+ * 
+ * Navigation menu with nested items
+ * 
+ * This wrapper provides:
+ * - Simplified event handlers for Redux integration
+ * - Validation hooks
+ * - Lifecycle callbacks
+ * - Embedded component metadata for runtime introspection
+ */
+
+import React, { useEffect, useRef } from 'react';
+import { Menu } from 'primereact/menu';
+
+// Component metadata embedded for runtime access
+export const MenuMetadata = {
+  "name": "Menu",
+  "import": "Menu",
+  "category": "Menu",
+  "metadata": {
+    "description": "Navigation menu with nested items",
+    "usageExamples": [
+      "<MenuWrapper model={items} />",
+      "<MenuWrapper model={menuItems} popup ref={menuRef} />"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "model",
+        "type": "MenuItem[]",
+        "optional": false,
+        "description": "Menu items",
+        "helpText": "Array of menu item objects",
+        "dataTypes": [
+          "MenuItem[] - {label, icon, command, url, items, separator}"
+        ],
+        "examples": [
+          "[{label: 'New', icon: 'pi pi-plus', command: () => {}}]"
+        ]
+      },
+      {
+        "name": "popup",
+        "type": "boolean",
+        "optional": true,
+        "description": "Popup mode",
+        "helpText": "Menu appears as overlay (use with ref)",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes",
+        "helpText": "Supports PrimeFlex utility classes",
+        "examples": [
+          "'w-full'"
+        ]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles",
+        "helpText": "Standard React inline styles",
+        "examples": [
+          "{ width: '15rem' }"
+        ]
+      }
+    ],
+    "children": null
+  },
+  "eventHandlers": {
+    "standard": [],
+    "simplified": [],
+    "validation": [],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "description": "Called when component mounts"
+      },
+      {
+        "name": "onUnmount",
+        "type": "() => void",
+        "description": "Called when component unmounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [
+      "show - Method to display popup menu (when popup=true)",
+      "hide - Method to hide popup menu",
+      "toggle - Method to toggle popup menu"
+    ],
+    "patterns": [
+      "Use ref to access menu methods",
+      "Menu items have their own command callbacks"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": [],
+    "childrenDescription": "This component does not accept children - items defined via model prop",
+    "hasChildren": false,
+    "examples": []
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<MenuWrapper model={[{label: 'New', icon: 'pi pi-plus', command: () => {}}]} />",
+    "withStyling": "<MenuWrapper model={items} className=\"w-full\" style={{ width: '15rem' }} />",
+    "withEvents": "const menu = useRef(null); <MenuWrapper model={items} popup ref={menu} />; menu.current.toggle(event);",
+    "withRedux": "<MenuWrapper model={[{label: 'Save', command: () => dispatch(saveData())}]} />",
+    "withValidation": "N/A",
+    "withChildren": "N/A"
+  }
+};
+
+const MenuWrapper = (props) => {
+  const {
+    model, popup, className, style, onMount, onUnmount,
+    ...restProps
+  } = props;
+
+  const componentRef = useRef(null);
+
+  // Lifecycle: onMount
+  useEffect(() => {
+    if (onMount) {
+      onMount();
+    }
+  }, []);
+
+  // Lifecycle: onUnmount
+  useEffect(() => {
+    return () => {
+      if (onUnmount) {
+        onUnmount();
+      }
+    };
+  }, []);
+
+  // Build props for underlying PrimeReact component
+  const primeReactProps = {
+    model,
+    popup,
+    className,
+    style,
+    ref: componentRef,
+    ...restProps
+  };
+
+  return (
+    <Menu {...primeReactProps} />
+  );
+};
+
+MenuWrapper.displayName = 'MenuWrapper';
+
+export default MenuWrapper;

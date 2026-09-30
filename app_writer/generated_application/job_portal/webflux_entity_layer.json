@@ -1,0 +1,2207 @@
+{
+  "layerType": "entity",
+  "description": "Entity layer configuration - controls JPA entity generation with R2DBC support",
+  "entities": [
+    {
+      "tableName": "student_profile",
+      "className": "StudentProfile",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "student_profile_id",
+          "fieldName": "studentProfileId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "resume_url",
+          "fieldName": "resumeurl",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "skills",
+          "fieldName": "skills",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "education_level",
+          "fieldName": "educationlevel",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "employer_profile",
+      "className": "EmployerProfile",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "employer_profile_id",
+          "fieldName": "employerProfileId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "company_name",
+          "fieldName": "companyname",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "industry",
+          "fieldName": "industry",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "website",
+          "fieldName": "website",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "logo_url",
+          "fieldName": "logourl",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "description",
+          "fieldName": "description",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "contact_email",
+          "fieldName": "contactemail",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "trainer_profile",
+      "className": "TrainerProfile",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "trainer_profile_id",
+          "fieldName": "trainerProfileId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "specialization",
+          "fieldName": "specialization",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "certifications",
+          "fieldName": "certifications",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "hourly_rate",
+          "fieldName": "hourlyrate",
+          "javaType": "BigDecimal",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "DECIMAL(19,4)"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "job_posting",
+      "className": "JobPosting",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "job_posting_id",
+          "fieldName": "jobPostingId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "title",
+          "fieldName": "title",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "description",
+          "fieldName": "description",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "location",
+          "fieldName": "location",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "salary_min",
+          "fieldName": "salarymin",
+          "javaType": "BigDecimal",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "DECIMAL(19,4)"
+        },
+        {
+          "columnName": "salary_max",
+          "fieldName": "salarymax",
+          "javaType": "BigDecimal",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "DECIMAL(19,4)"
+        },
+        {
+          "columnName": "job_type",
+          "fieldName": "jobtype",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "is_active",
+          "fieldName": "isactive",
+          "javaType": "Boolean",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "BOOLEAN"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "training_program",
+      "className": "TrainingProgram",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "training_program_id",
+          "fieldName": "trainingProgramId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "title",
+          "fieldName": "title",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "description",
+          "fieldName": "description",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "duration_days",
+          "fieldName": "durationdays",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "price",
+          "fieldName": "price",
+          "javaType": "BigDecimal",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "DECIMAL(19,4)"
+        },
+        {
+          "columnName": "is_active",
+          "fieldName": "isactive",
+          "javaType": "Boolean",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "BOOLEAN"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "job_application",
+      "className": "JobApplication",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "job_application_id",
+          "fieldName": "jobApplicationId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "status",
+          "fieldName": "status",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "cover_letter",
+          "fieldName": "coverletter",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "applied_at",
+          "fieldName": "appliedat",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "training_enrollment",
+      "className": "TrainingEnrollment",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "training_enrollment_id",
+          "fieldName": "trainingEnrollmentId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "status",
+          "fieldName": "status",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "progress",
+          "fieldName": "progress",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "enrolled_at",
+          "fieldName": "enrolledat",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "user_profile",
+      "className": "UserProfile",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "user_profile_id",
+          "fieldName": "userProfileId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "first_name",
+          "fieldName": "firstname",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "last_name",
+          "fieldName": "lastname",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "email",
+          "fieldName": "email",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "phone",
+          "fieldName": "phone",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "bio",
+          "fieldName": "bio",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "education_level",
+      "className": "EducationLevel",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "education_level_id",
+          "fieldName": "educationLevelId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "name",
+          "fieldName": "name",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "description",
+          "fieldName": "description",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "sort_order",
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "field_of_study",
+      "className": "FieldOfStudy",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "field_of_study_id",
+          "fieldName": "fieldOfStudyId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "name",
+          "fieldName": "name",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "description",
+          "fieldName": "description",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "institution",
+      "className": "Institution",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "institution_id",
+          "fieldName": "institutionId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "name",
+          "fieldName": "name",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "country",
+          "fieldName": "country",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "website",
+          "fieldName": "website",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "user_education",
+      "className": "UserEducation",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "user_education_id",
+          "fieldName": "userEducationId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "institution_name",
+          "fieldName": "institutionname",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "degree",
+          "fieldName": "degree",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "field_of_study",
+          "fieldName": "fieldofstudy",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "start_date",
+          "fieldName": "startdate",
+          "javaType": "LocalDate",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "DATE"
+        },
+        {
+          "columnName": "end_date",
+          "fieldName": "enddate",
+          "javaType": "LocalDate",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "DATE"
+        },
+        {
+          "columnName": "grade",
+          "fieldName": "grade",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "description",
+          "fieldName": "description",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "industry",
+      "className": "Industry",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "industry_id",
+          "fieldName": "industryId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "name",
+          "fieldName": "name",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "description",
+          "fieldName": "description",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "job_title",
+      "className": "JobTitle",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "job_title_id",
+          "fieldName": "jobTitleId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "name",
+          "fieldName": "name",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "description",
+          "fieldName": "description",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "user_work_experience",
+      "className": "UserWorkExperience",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "user_work_experience_id",
+          "fieldName": "userWorkExperienceId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "company_name",
+          "fieldName": "companyname",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "job_title",
+          "fieldName": "jobtitle",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "industry",
+          "fieldName": "industry",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "location",
+          "fieldName": "location",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "start_date",
+          "fieldName": "startdate",
+          "javaType": "LocalDate",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "DATE"
+        },
+        {
+          "columnName": "end_date",
+          "fieldName": "enddate",
+          "javaType": "LocalDate",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "DATE"
+        },
+        {
+          "columnName": "is_current",
+          "fieldName": "iscurrent",
+          "javaType": "Boolean",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "BOOLEAN"
+        },
+        {
+          "columnName": "description",
+          "fieldName": "description",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "skill_category",
+      "className": "SkillCategory",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "skill_category_id",
+          "fieldName": "skillCategoryId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "name",
+          "fieldName": "name",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "description",
+          "fieldName": "description",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "skill",
+      "className": "Skill",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "skill_id",
+          "fieldName": "skillId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "name",
+          "fieldName": "name",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "category",
+          "fieldName": "category",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "description",
+          "fieldName": "description",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "user_skill",
+      "className": "UserSkill",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "user_skill_id",
+          "fieldName": "userSkillId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "skill_name",
+          "fieldName": "skillname",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "proficiency_level",
+          "fieldName": "proficiencylevel",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "years_of_experience",
+          "fieldName": "yearsofexperience",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "training_module",
+      "className": "TrainingModule",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "training_module_id",
+          "fieldName": "trainingModuleId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "title",
+          "fieldName": "title",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "description",
+          "fieldName": "description",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "module_order",
+          "fieldName": "moduleorder",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "duration_minutes",
+          "fieldName": "durationminutes",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "content_url",
+          "fieldName": "contenturl",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "module_progress",
+      "className": "ModuleProgress",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "module_progress_id",
+          "fieldName": "moduleProgressId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "status",
+          "fieldName": "status",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "completed_at",
+          "fieldName": "completedat",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "progress_percent",
+          "fieldName": "progresspercent",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "training_exam",
+      "className": "TrainingExam",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "training_exam_id",
+          "fieldName": "trainingExamId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "title",
+          "fieldName": "title",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "description",
+          "fieldName": "description",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "passing_score",
+          "fieldName": "passingscore",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "max_score",
+          "fieldName": "maxscore",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "time_limit_minutes",
+          "fieldName": "timelimitminutes",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "max_attempts",
+          "fieldName": "maxattempts",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "exam_attempt",
+      "className": "ExamAttempt",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "exam_attempt_id",
+          "fieldName": "examAttemptId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "score",
+          "fieldName": "score",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "passed",
+          "fieldName": "passed",
+          "javaType": "Boolean",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "BOOLEAN"
+        },
+        {
+          "columnName": "started_at",
+          "fieldName": "startedat",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "completed_at",
+          "fieldName": "completedat",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "attempt_number",
+          "fieldName": "attemptnumber",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "training_certification",
+      "className": "TrainingCertification",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "training_certification_id",
+          "fieldName": "trainingCertificationId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "certificate_number",
+          "fieldName": "certificatenumber",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "title",
+          "fieldName": "title",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "issued_at",
+          "fieldName": "issuedat",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "expires_at",
+          "fieldName": "expiresat",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "certificate_url",
+          "fieldName": "certificateurl",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "status",
+          "fieldName": "status",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "course_document",
+      "className": "CourseDocument",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "course_document_id",
+          "fieldName": "courseDocumentId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "title",
+          "fieldName": "title",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "content",
+          "fieldName": "content",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "sort_order",
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "course_video",
+      "className": "CourseVideo",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "course_video_id",
+          "fieldName": "courseVideoId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "title",
+          "fieldName": "title",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "description",
+          "fieldName": "description",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "video_url",
+          "fieldName": "videourl",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "duration_seconds",
+          "fieldName": "durationseconds",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "sort_order",
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "course_audio",
+      "className": "CourseAudio",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "course_audio_id",
+          "fieldName": "courseAudioId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "title",
+          "fieldName": "title",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "description",
+          "fieldName": "description",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "audio_url",
+          "fieldName": "audiourl",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "duration_seconds",
+          "fieldName": "durationseconds",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "sort_order",
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "course_code_lab",
+      "className": "CourseCodeLab",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "course_code_lab_id",
+          "fieldName": "courseCodeLabId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "title",
+          "fieldName": "title",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "description",
+          "fieldName": "description",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "language",
+          "fieldName": "language",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "starter_code",
+          "fieldName": "startercode",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "solution_code",
+          "fieldName": "solutioncode",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "instructions",
+          "fieldName": "instructions",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "sort_order",
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "exam_question",
+      "className": "ExamQuestion",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "exam_question_id",
+          "fieldName": "examQuestionId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "question_text",
+          "fieldName": "questiontext",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "question_code",
+          "fieldName": "questioncode",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "question_type",
+          "fieldName": "questiontype",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "points",
+          "fieldName": "points",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "sort_order",
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "exam_answer",
+      "className": "ExamAnswer",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "exam_answer_id",
+          "fieldName": "examAnswerId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "answer_text",
+          "fieldName": "answertext",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "answer_code",
+          "fieldName": "answercode",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "is_correct",
+          "fieldName": "iscorrect",
+          "javaType": "Boolean",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "BOOLEAN"
+        },
+        {
+          "columnName": "explanation",
+          "fieldName": "explanation",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "sort_order",
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "course_question",
+      "className": "CourseQuestion",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "course_question_id",
+          "fieldName": "courseQuestionId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "question_text",
+          "fieldName": "questiontext",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "question_code",
+          "fieldName": "questioncode",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "sort_order",
+          "fieldName": "sortorder",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "course_answer",
+      "className": "CourseAnswer",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "course_answer_id",
+          "fieldName": "courseAnswerId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "answer_text",
+          "fieldName": "answertext",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "answer_code",
+          "fieldName": "answercode",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "is_accepted",
+          "fieldName": "isaccepted",
+          "javaType": "Boolean",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "BOOLEAN"
+        },
+        {
+          "columnName": "upvotes",
+          "fieldName": "upvotes",
+          "javaType": "Integer",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "INT"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "company",
+      "className": "Company",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "company_id",
+          "fieldName": "companyId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "name",
+          "fieldName": "name",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "industry",
+          "fieldName": "industry",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "website",
+          "fieldName": "website",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "description",
+          "fieldName": "description",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    },
+    {
+      "tableName": "location",
+      "className": "Location",
+      "packageName": "com.jobportal.entity",
+      "fields": [
+        {
+          "columnName": "location_id",
+          "fieldName": "locationId",
+          "javaType": "Long",
+          "isPrimaryKey": true,
+          "isNullable": false,
+          "columnDefinition": "BIGINT UNSIGNED"
+        },
+        {
+          "columnName": "city",
+          "fieldName": "city",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "state",
+          "fieldName": "state",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "country",
+          "fieldName": "country",
+          "javaType": "String",
+          "isPrimaryKey": false,
+          "isNullable": true,
+          "columnDefinition": "VARCHAR(255)"
+        },
+        {
+          "columnName": "created_at",
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        },
+        {
+          "columnName": "updated_at",
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "isPrimaryKey": false,
+          "isNullable": false,
+          "columnDefinition": "TIMESTAMP"
+        }
+      ],
+      "hasAuditFields": true,
+      "hasSoftDelete": true
+    }
+  ]
+}

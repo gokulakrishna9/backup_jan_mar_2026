@@ -1,0 +1,510 @@
+{
+  "chartTypes": [
+    {
+      "typeId": "bar",
+      "enabled": true,
+      "defaultOption": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category"
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "type": "bar"
+          }
+        ]
+      }
+    },
+    {
+      "typeId": "line",
+      "enabled": true,
+      "defaultOption": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category"
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "type": "line",
+            "smooth": true
+          }
+        ]
+      }
+    },
+    {
+      "typeId": "area",
+      "enabled": true,
+      "defaultOption": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category"
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "type": "line",
+            "areaStyle": {},
+            "smooth": true
+          }
+        ]
+      }
+    },
+    {
+      "typeId": "pie",
+      "enabled": true,
+      "defaultOption": {
+        "tooltip": {
+          "trigger": "item"
+        },
+        "series": [
+          {
+            "type": "pie",
+            "radius": "60%"
+          }
+        ]
+      }
+    },
+    {
+      "typeId": "donut",
+      "enabled": true,
+      "defaultOption": {
+        "tooltip": {
+          "trigger": "item"
+        },
+        "series": [
+          {
+            "type": "pie",
+            "radius": [
+              "40%",
+              "70%"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "typeId": "scatter",
+      "enabled": true,
+      "defaultOption": {
+        "tooltip": {
+          "trigger": "item"
+        },
+        "xAxis": {
+          "type": "value"
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "type": "scatter"
+          }
+        ]
+      }
+    },
+    {
+      "typeId": "bubble",
+      "enabled": true,
+      "defaultOption": {
+        "tooltip": {
+          "trigger": "item"
+        },
+        "xAxis": {
+          "type": "value"
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "type": "scatter",
+            "symbolSize": "function(val){return val[2]*2;}"
+          }
+        ]
+      }
+    },
+    {
+      "typeId": "radar",
+      "enabled": true,
+      "defaultOption": {
+        "tooltip": {},
+        "radar": {
+          "indicator": []
+        },
+        "series": [
+          {
+            "type": "radar"
+          }
+        ]
+      }
+    },
+    {
+      "typeId": "heatmap",
+      "enabled": true,
+      "defaultOption": {
+        "tooltip": {
+          "position": "top"
+        },
+        "xAxis": {
+          "type": "category"
+        },
+        "yAxis": {
+          "type": "category"
+        },
+        "visualMap": {
+          "min": 0,
+          "max": 100
+        },
+        "series": [
+          {
+            "type": "heatmap"
+          }
+        ]
+      }
+    },
+    {
+      "typeId": "treemap",
+      "enabled": true,
+      "defaultOption": {
+        "tooltip": {},
+        "series": [
+          {
+            "type": "treemap"
+          }
+        ]
+      }
+    },
+    {
+      "typeId": "funnel",
+      "enabled": true,
+      "defaultOption": {
+        "tooltip": {
+          "trigger": "item"
+        },
+        "series": [
+          {
+            "type": "funnel",
+            "left": "10%",
+            "width": "80%"
+          }
+        ]
+      }
+    },
+    {
+      "typeId": "gauge",
+      "enabled": true,
+      "defaultOption": {
+        "tooltip": {},
+        "series": [
+          {
+            "type": "gauge"
+          }
+        ]
+      }
+    },
+    {
+      "typeId": "candlestick",
+      "enabled": true,
+      "defaultOption": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category"
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "type": "candlestick"
+          }
+        ]
+      }
+    },
+    {
+      "typeId": "boxplot",
+      "enabled": true,
+      "defaultOption": {
+        "tooltip": {
+          "trigger": "item"
+        },
+        "xAxis": {
+          "type": "category"
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "type": "boxplot"
+          }
+        ]
+      }
+    },
+    {
+      "typeId": "sankey",
+      "enabled": true,
+      "defaultOption": {
+        "tooltip": {},
+        "series": [
+          {
+            "type": "sankey",
+            "layout": "none"
+          }
+        ]
+      }
+    },
+    {
+      "typeId": "sunburst",
+      "enabled": true,
+      "defaultOption": {
+        "tooltip": {},
+        "series": [
+          {
+            "type": "sunburst"
+          }
+        ]
+      }
+    },
+    {
+      "typeId": "histogram",
+      "enabled": true,
+      "defaultOption": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category"
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "type": "bar",
+            "barWidth": "99%"
+          }
+        ]
+      }
+    },
+    {
+      "typeId": "parallel",
+      "enabled": true,
+      "defaultOption": {
+        "parallelAxis": [],
+        "series": [
+          {
+            "type": "parallel"
+          }
+        ]
+      }
+    },
+    {
+      "typeId": "pictorialBar",
+      "enabled": true,
+      "defaultOption": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category"
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "type": "pictorialBar"
+          }
+        ]
+      }
+    }
+  ],
+  "mappingRules": [
+    {
+      "ruleId": "ohlc_candlestick",
+      "chartType": "candlestick",
+      "conditions": {
+        "hasColumns": [
+          "open",
+          "high",
+          "low",
+          "close"
+        ]
+      },
+      "priority": 5
+    },
+    {
+      "ruleId": "time_series_line",
+      "chartType": "line",
+      "conditions": {
+        "hasDateColumn": true,
+        "numericColumnCount": {
+          "min": 1
+        }
+      },
+      "priority": 10
+    },
+    {
+      "ruleId": "time_series_area",
+      "chartType": "area",
+      "conditions": {
+        "hasDateColumn": true,
+        "numericColumnCount": {
+          "min": 2
+        }
+      },
+      "priority": 12
+    },
+    {
+      "ruleId": "categorical_bar",
+      "chartType": "bar",
+      "conditions": {
+        "categoricalColumnCount": 1,
+        "numericColumnCount": 1,
+        "hasDateColumn": false
+      },
+      "priority": 20
+    },
+    {
+      "ruleId": "categorical_pie",
+      "chartType": "pie",
+      "conditions": {
+        "categoricalColumnCount": 1,
+        "numericColumnCount": 1,
+        "rowCount": {
+          "max": 20
+        }
+      },
+      "priority": 25
+    },
+    {
+      "ruleId": "two_numeric_scatter",
+      "chartType": "scatter",
+      "conditions": {
+        "numericColumnCount": 2,
+        "hasDateColumn": false
+      },
+      "priority": 30
+    },
+    {
+      "ruleId": "three_numeric_bubble",
+      "chartType": "bubble",
+      "conditions": {
+        "numericColumnCount": {
+          "min": 3
+        },
+        "hasDateColumn": false
+      },
+      "priority": 32
+    },
+    {
+      "ruleId": "hierarchical_treemap",
+      "chartType": "treemap",
+      "conditions": {
+        "hasHierarchicalData": true
+      },
+      "priority": 35
+    },
+    {
+      "ruleId": "hierarchical_sunburst",
+      "chartType": "sunburst",
+      "conditions": {
+        "hasHierarchicalData": true,
+        "depthLevels": {
+          "min": 3
+        }
+      },
+      "priority": 36
+    },
+    {
+      "ruleId": "flow_sankey",
+      "chartType": "sankey",
+      "conditions": {
+        "hasColumns": [
+          "source",
+          "target",
+          "value"
+        ]
+      },
+      "priority": 38
+    },
+    {
+      "ruleId": "statistical_boxplot",
+      "chartType": "boxplot",
+      "conditions": {
+        "hasStatisticalData": true
+      },
+      "priority": 40
+    },
+    {
+      "ruleId": "distribution_histogram",
+      "chartType": "histogram",
+      "conditions": {
+        "numericColumnCount": 1,
+        "categoricalColumnCount": 0,
+        "rowCount": {
+          "min": 20
+        }
+      },
+      "priority": 42
+    },
+    {
+      "ruleId": "multi_dimension_radar",
+      "chartType": "radar",
+      "conditions": {
+        "numericColumnCount": {
+          "min": 3
+        },
+        "categoricalColumnCount": 1
+      },
+      "priority": 45
+    },
+    {
+      "ruleId": "multi_dimension_parallel",
+      "chartType": "parallel",
+      "conditions": {
+        "numericColumnCount": {
+          "min": 4
+        }
+      },
+      "priority": 48
+    },
+    {
+      "ruleId": "single_value_gauge",
+      "chartType": "gauge",
+      "conditions": {
+        "numericColumnCount": 1,
+        "rowCount": {
+          "max": 1
+        }
+      },
+      "priority": 50
+    },
+    {
+      "ruleId": "funnel_stages",
+      "chartType": "funnel",
+      "conditions": {
+        "categoricalColumnCount": 1,
+        "numericColumnCount": 1,
+        "isOrdered": true
+      },
+      "priority": 52
+    }
+  ]
+}

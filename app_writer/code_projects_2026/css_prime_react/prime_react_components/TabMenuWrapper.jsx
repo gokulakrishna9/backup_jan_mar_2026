@@ -1,0 +1,176 @@
+/**
+ * TabMenuWrapper - Enhanced wrapper for PrimeReact TabMenu
+ * Category: Menu
+ * 
+ * Tab-based menu navigation for section switching
+ * 
+ * This wrapper provides:
+ * - Simplified event handlers for Redux integration
+ * - Validation hooks
+ * - Lifecycle callbacks
+ * - Embedded component metadata for runtime introspection
+ */
+
+import React, { useEffect, useRef } from 'react';
+import { TabMenu } from 'primereact/tabmenu';
+
+// Component metadata embedded for runtime access
+export const TabMenuMetadata = {
+  "name": "TabMenu",
+  "import": "TabMenu",
+  "category": "Menu",
+  "metadata": {
+    "description": "Tab-based menu navigation for section switching",
+    "usageExamples": [
+      "<TabMenuWrapper model={tabItems} />",
+      "<TabMenuWrapper model={items} activeIndex={activeTab} onTabChange={(e) => setActiveTab(e.index)} />"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "model",
+        "type": "MenuItem[]",
+        "optional": false,
+        "description": "Array of menu items",
+        "helpText": "Tab items with label, icon, command properties",
+        "dataTypes": [
+          "MenuItem[] - { label: string, icon?: string, command?: () => void, disabled?: boolean }"
+        ],
+        "examples": [
+          "[{ label: 'Home', icon: 'pi pi-home' }, { label: 'Profile', icon: 'pi pi-user' }]"
+        ]
+      },
+      {
+        "name": "activeIndex",
+        "type": "number",
+        "optional": true,
+        "description": "Index of active tab",
+        "helpText": "Zero-based index of currently active tab",
+        "dataTypes": [
+          "number (0, 1, 2, ...)"
+        ],
+        "examples": [
+          "0",
+          "1",
+          "2"
+        ]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes for custom styling",
+        "helpText": "Supports PrimeFlex utility classes and custom CSS",
+        "examples": [
+          "'w-full'",
+          "'mb-3'"
+        ]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles object",
+        "helpText": "Standard React inline styles",
+        "examples": [
+          "{ width: '100%' }"
+        ]
+      }
+    ],
+    "children": null
+  },
+  "eventHandlers": {
+    "standard": [
+      {
+        "name": "onTabChange",
+        "type": "(e: { originalEvent: Event, value: MenuItem, index: number }) => void",
+        "optional": true,
+        "description": "Callback when active tab changes"
+      }
+    ],
+    "simplified": [
+      {
+        "name": "onTabIndexChange",
+        "type": "(index: number) => void",
+        "optional": true,
+        "description": "Simplified callback with just the tab index"
+      }
+    ],
+    "validation": [],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "optional": true,
+        "description": "Callback when component mounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [
+      "handleTabChange(e): Processes tab change and calls onTabIndexChange if provided"
+    ],
+    "patterns": [
+      "For Redux: Use onTabIndexChange to dispatch tab navigation actions",
+      "Use command property in menu items for additional click handlers"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": [],
+    "childrenDescription": "This component does not accept children. Use model prop to define tabs.",
+    "hasChildren": false,
+    "examples": []
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<TabMenuWrapper model={tabItems} />",
+    "withStyling": "<TabMenuWrapper model={items} className=\"w-full mb-3\" />",
+    "withEvents": "<TabMenuWrapper model={items} activeIndex={activeTab} onTabChange={(e) => setActiveTab(e.index)} />",
+    "withRedux": "<TabMenuWrapper model={items} activeIndex={currentTab} onTabIndexChange={(index) => dispatch(setActiveTab(index))} />",
+    "withValidation": "N/A",
+    "withChildren": "N/A"
+  }
+};
+
+const TabMenuWrapper = (props) => {
+  const {
+    model, activeIndex, className, style, onTabChange, onTabIndexChange, onMount,
+    ...restProps
+  } = props;
+
+  const componentRef = useRef(null);
+
+  // Lifecycle: onMount
+  useEffect(() => {
+    if (onMount) {
+      onMount();
+    }
+  }, []);
+
+  // Build props for underlying PrimeReact component
+  const primeReactProps = {
+    model,
+    activeIndex,
+    className,
+    style,
+    onTabChange,
+    ref: componentRef,
+    ...restProps
+  };
+
+  return (
+    <TabMenu {...primeReactProps} />
+  );
+};
+
+TabMenuWrapper.displayName = 'TabMenuWrapper';
+
+export default TabMenuWrapper;

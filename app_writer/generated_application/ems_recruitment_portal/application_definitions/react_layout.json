@@ -1,0 +1,431 @@
+{
+  "applicationName": "Ems Recruitment Portal",
+  "apiPort": 8081,
+  "header": {
+    "visible": true,
+    "collapsible": true,
+    "defaultCollapsed": false
+  },
+  "footer": {
+    "visible": true,
+    "collapsible": true,
+    "defaultCollapsed": false
+  },
+  "leftNav": {
+    "visible": true,
+    "collapsible": true,
+    "defaultCollapsed": false
+  },
+  "content": {
+    "visible": true,
+    "collapsible": false,
+    "defaultCollapsed": false
+  },
+  "navGroups": [
+    {
+      "groupName": "Ems",
+      "entities": [
+        {
+          "label": "Ai Community Post Evaluation",
+          "path": "/ai-community-post-evaluation"
+        },
+        {
+          "label": "Ai Evaluation Parameter",
+          "path": "/ai-evaluation-parameter"
+        },
+        {
+          "label": "Ai Evaluation Parameter Group",
+          "path": "/ai-evaluation-parameter-group"
+        },
+        {
+          "label": "Ai Institution Profile Evaluation",
+          "path": "/ai-institution-profile-evaluation"
+        },
+        {
+          "label": "Ai Job Recommendation",
+          "path": "/ai-job-recommendation"
+        },
+        {
+          "label": "Ai Market Trend Parameter",
+          "path": "/ai-market-trend-parameter"
+        },
+        {
+          "label": "Ai Market Trend Parameter Group",
+          "path": "/ai-market-trend-parameter-group"
+        },
+        {
+          "label": "Ai Market Trend Property",
+          "path": "/ai-market-trend-property"
+        },
+        {
+          "label": "Ai User Profile Evaluation",
+          "path": "/ai-user-profile-evaluation"
+        },
+        {
+          "label": "Ai User Profile Evaluation Parameter",
+          "path": "/ai-user-profile-evaluation-parameter"
+        },
+        {
+          "label": "Ai User Profile Evaluation Parameter Group",
+          "path": "/ai-user-profile-evaluation-parameter-group"
+        },
+        {
+          "label": "Candidate Institute Link",
+          "path": "/candidate-institute-link"
+        },
+        {
+          "label": "Community",
+          "path": "/community"
+        },
+        {
+          "label": "Community Category",
+          "path": "/community-category"
+        },
+        {
+          "label": "Community Event",
+          "path": "/community-event"
+        },
+        {
+          "label": "Community Event Attendee",
+          "path": "/community-event-attendee"
+        },
+        {
+          "label": "Community File",
+          "path": "/community-file"
+        },
+        {
+          "label": "Community Post Link",
+          "path": "/community-post-link"
+        },
+        {
+          "label": "Community Property",
+          "path": "/community-property"
+        },
+        {
+          "label": "Community Property Group",
+          "path": "/community-property-group"
+        },
+        {
+          "label": "Community Property User Link",
+          "path": "/community-property-user-link"
+        },
+        {
+          "label": "Community Rule",
+          "path": "/community-rule"
+        },
+        {
+          "label": "Community User Link",
+          "path": "/community-user-link"
+        },
+        {
+          "label": "Community User Post",
+          "path": "/community-user-post"
+        },
+        {
+          "label": "Course",
+          "path": "/course"
+        },
+        {
+          "label": "Course Assignment",
+          "path": "/course-assignment"
+        },
+        {
+          "label": "Course Community Link",
+          "path": "/course-community-link"
+        },
+        {
+          "label": "Course Document",
+          "path": "/course-document"
+        },
+        {
+          "label": "Course Document Group",
+          "path": "/course-document-group"
+        },
+        {
+          "label": "Course File",
+          "path": "/course-file"
+        },
+        {
+          "label": "Course Instructor",
+          "path": "/course-instructor"
+        },
+        {
+          "label": "Course Job Post Link",
+          "path": "/course-job-post-link"
+        },
+        {
+          "label": "Course Lesson",
+          "path": "/course-lesson"
+        },
+        {
+          "label": "Course Module",
+          "path": "/course-module"
+        },
+        {
+          "label": "Course Prerequisite",
+          "path": "/course-prerequisite"
+        },
+        {
+          "label": "Course Property",
+          "path": "/course-property"
+        },
+        {
+          "label": "Course Property Group",
+          "path": "/course-property-group"
+        },
+        {
+          "label": "Course Review",
+          "path": "/course-review"
+        },
+        {
+          "label": "Emogi Post User Link",
+          "path": "/emogi-post-user-link"
+        },
+        {
+          "label": "Institution",
+          "path": "/institution"
+        },
+        {
+          "label": "Institution Accreditation",
+          "path": "/institution-accreditation"
+        },
+        {
+          "label": "Institution Department",
+          "path": "/institution-department"
+        },
+        {
+          "label": "Institution Facility",
+          "path": "/institution-facility"
+        },
+        {
+          "label": "Institution File",
+          "path": "/institution-file"
+        },
+        {
+          "label": "Institution Location",
+          "path": "/institution-location"
+        },
+        {
+          "label": "Institution Profile Document",
+          "path": "/institution-profile-document"
+        },
+        {
+          "label": "Institution Property",
+          "path": "/institution-property"
+        },
+        {
+          "label": "Institution Property Group",
+          "path": "/institution-property-group"
+        },
+        {
+          "label": "Institution Ranking",
+          "path": "/institution-ranking"
+        },
+        {
+          "label": "Job Application",
+          "path": "/job-application"
+        },
+        {
+          "label": "Job Application Answer",
+          "path": "/job-application-answer"
+        },
+        {
+          "label": "Job Interview",
+          "path": "/job-interview"
+        },
+        {
+          "label": "Job Post",
+          "path": "/job-post"
+        },
+        {
+          "label": "Job Post Benefit",
+          "path": "/job-post-benefit"
+        },
+        {
+          "label": "Job Post Community Link",
+          "path": "/job-post-community-link"
+        },
+        {
+          "label": "Job Post Document",
+          "path": "/job-post-document"
+        },
+        {
+          "label": "Job Post File",
+          "path": "/job-post-file"
+        },
+        {
+          "label": "Job Post Property",
+          "path": "/job-post-property"
+        },
+        {
+          "label": "Job Post Property Group",
+          "path": "/job-post-property-group"
+        },
+        {
+          "label": "Job Post Question",
+          "path": "/job-post-question"
+        },
+        {
+          "label": "Job Post Requirement",
+          "path": "/job-post-requirement"
+        },
+        {
+          "label": "Job Post User Bookmark",
+          "path": "/job-post-user-bookmark"
+        },
+        {
+          "label": "Market Trend Course Link",
+          "path": "/market-trend-course-link"
+        },
+        {
+          "label": "Market Trend Document",
+          "path": "/market-trend-document"
+        },
+        {
+          "label": "Market Trend File",
+          "path": "/market-trend-file"
+        },
+        {
+          "label": "Market Trend Industry",
+          "path": "/market-trend-industry"
+        },
+        {
+          "label": "Market Trend Institution Link",
+          "path": "/market-trend-institution-link"
+        },
+        {
+          "label": "Market Trend Job Post Link",
+          "path": "/market-trend-job-post-link"
+        },
+        {
+          "label": "Market Trend Location",
+          "path": "/market-trend-location"
+        },
+        {
+          "label": "Market Trend Skill Demand",
+          "path": "/market-trend-skill-demand"
+        },
+        {
+          "label": "Notification",
+          "path": "/notification"
+        },
+        {
+          "label": "Post Attachment",
+          "path": "/post-attachment"
+        },
+        {
+          "label": "Post Comment",
+          "path": "/post-comment"
+        },
+        {
+          "label": "Post Comment Emogi Link",
+          "path": "/post-comment-emogi-link"
+        },
+        {
+          "label": "Post Emogi",
+          "path": "/post-emogi"
+        },
+        {
+          "label": "Post Flag",
+          "path": "/post-flag"
+        },
+        {
+          "label": "Post Tag",
+          "path": "/post-tag"
+        },
+        {
+          "label": "Post Tag Link",
+          "path": "/post-tag-link"
+        },
+        {
+          "label": "Subscription Payment History",
+          "path": "/subscription-payment-history"
+        },
+        {
+          "label": "User",
+          "path": "/user"
+        },
+        {
+          "label": "User Achievement",
+          "path": "/user-achievement"
+        },
+        {
+          "label": "User Assignment Submission",
+          "path": "/user-assignment-submission"
+        },
+        {
+          "label": "User Certification",
+          "path": "/user-certification"
+        },
+        {
+          "label": "User Course Link",
+          "path": "/user-course-link"
+        },
+        {
+          "label": "User Course Progress",
+          "path": "/user-course-progress"
+        },
+        {
+          "label": "User Course Purchase",
+          "path": "/user-course-purchase"
+        },
+        {
+          "label": "User Course Wishlist",
+          "path": "/user-course-wishlist"
+        },
+        {
+          "label": "User Education",
+          "path": "/user-education"
+        },
+        {
+          "label": "User File",
+          "path": "/user-file"
+        },
+        {
+          "label": "User Institute Property Link",
+          "path": "/user-institute-property-link"
+        },
+        {
+          "label": "User Job Post Bookmark",
+          "path": "/user-job-post-bookmark"
+        },
+        {
+          "label": "User Language",
+          "path": "/user-language"
+        },
+        {
+          "label": "User Profile Document",
+          "path": "/user-profile-document"
+        },
+        {
+          "label": "User Property",
+          "path": "/user-property"
+        },
+        {
+          "label": "User Property Group",
+          "path": "/user-property-group"
+        },
+        {
+          "label": "User Recommendation",
+          "path": "/user-recommendation"
+        },
+        {
+          "label": "User Skill",
+          "path": "/user-skill"
+        },
+        {
+          "label": "User Skill Endorsement",
+          "path": "/user-skill-endorsement"
+        },
+        {
+          "label": "User Social Link",
+          "path": "/user-social-link"
+        },
+        {
+          "label": "User Work Experience",
+          "path": "/user-work-experience"
+        }
+      ]
+    }
+  ]
+}

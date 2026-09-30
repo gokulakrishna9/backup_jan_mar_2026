@@ -1,0 +1,127 @@
+{
+  "name": "Panel",
+  "import": "Panel",
+  "category": "Panel",
+  "metadata": {
+    "description": "Collapsible panel container",
+    "usageExamples": [
+      "<PanelWrapper header=\"Header\"><p>Content</p></PanelWrapper>",
+      "<PanelWrapper header=\"Collapsible\" toggleable collapsed><p>Content</p></PanelWrapper>"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "header",
+        "type": "string | React.ReactNode",
+        "optional": true,
+        "description": "Panel header",
+        "helpText": "Title or custom header content",
+        "dataTypes": ["string", "React.ReactNode"],
+        "examples": ["'Panel Title'", "<CustomHeader />"]
+      },
+      {
+        "name": "toggleable",
+        "type": "boolean",
+        "optional": true,
+        "description": "Enable collapse/expand",
+        "helpText": "Makes panel collapsible",
+        "dataTypes": ["boolean"],
+        "examples": ["true", "false"]
+      },
+      {
+        "name": "collapsed",
+        "type": "boolean",
+        "optional": true,
+        "description": "Collapsed state",
+        "helpText": "Controls collapsed state (controlled component)",
+        "dataTypes": ["boolean"],
+        "examples": ["true", "false"]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes",
+        "helpText": "Supports PrimeFlex utility classes",
+        "examples": ["'mb-3'", "'shadow-2'"]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles",
+        "helpText": "Standard React inline styles",
+        "examples": ["{ width: '100%' }"]
+      }
+    ],
+    "children": {
+      "type": "React.ReactNode",
+      "description": "Panel content",
+      "helpText": "Main content area"
+    }
+  },
+  "eventHandlers": {
+    "standard": [
+      {
+        "name": "onToggle",
+        "type": "(e: { value: boolean }) => void",
+        "description": "Callback when panel is toggled"
+      }
+    ],
+    "simplified": [
+      {
+        "name": "onCollapsedChange",
+        "type": "(collapsed: boolean) => void",
+        "description": "Simplified callback with collapsed state"
+      }
+    ],
+    "validation": [],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "description": "Called when component mounts"
+      },
+      {
+        "name": "onUnmount",
+        "type": "() => void",
+        "description": "Called when component unmounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [
+      "handleToggle - Processes onToggle event, calls onToggle and onCollapsedChange"
+    ],
+    "patterns": [
+      "Check if event handler exists before calling",
+      "Call lifecycle methods in useEffect hooks"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": ["Any React component", "Text", "HTML elements"],
+    "childrenDescription": "Panel accepts any React content as children",
+    "hasChildren": true,
+    "examples": [
+      "<PanelWrapper header=\"Title\"><p>Content</p></PanelWrapper>",
+      "<PanelWrapper header=\"Form\"><InputText /></PanelWrapper>"
+    ]
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<PanelWrapper header=\"Header\"><p>Content</p></PanelWrapper>",
+    "withStyling": "<PanelWrapper header=\"Styled\" className=\"mb-3 shadow-2\"><p>Content</p></PanelWrapper>",
+    "withEvents": "<PanelWrapper header=\"Collapsible\" toggleable onToggle={handleToggle}><p>Content</p></PanelWrapper>",
+    "withRedux": "<PanelWrapper header=\"Panel\" toggleable collapsed={isCollapsed} onCollapsedChange={(val) => dispatch(setCollapsed(val))}><p>Content</p></PanelWrapper>",
+    "withValidation": "N/A",
+    "withChildren": "<PanelWrapper header=\"Form Panel\"><InputText /><Button label=\"Submit\" /></PanelWrapper>"
+  }
+}

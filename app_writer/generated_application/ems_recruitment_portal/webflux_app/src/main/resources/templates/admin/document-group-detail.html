@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Group Details</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; background: #f5f5f5; }
+        .header { background: #2c3e50; color: white; padding: 1rem 2rem; }
+        .header h1 { font-size: 1.5rem; display: inline-block; }
+        .header a { color: white; text-decoration: none; float: right; margin-top: 0.3rem; }
+        .container { max-width: 1200px; margin: 2rem auto; padding: 0 2rem; }
+        .card { background: white; border-radius: 8px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .card h2 { margin-bottom: 1rem; color: #2c3e50; }
+        .info-grid { display: grid; grid-template-columns: 150px 1fr; gap: 0.5rem; margin-bottom: 1rem; }
+        .info-label { font-weight: 600; }
+        .btn { display: inline-block; padding: 0.5rem 1rem; background: #3498db; color: white; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; }
+        .btn:hover { background: #2980b9; }
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: #f8f9fa; font-weight: 600; }
+        .form-inline { display: flex; gap: 0.5rem; align-items: flex-end; margin-top: 1rem; flex-wrap: wrap; }
+        .form-group-inline { display: flex; flex-direction: column; }
+        .form-group-inline label { font-size: 0.85rem; margin-bottom: 0.25rem; }
+        input[type="text"], select, textarea { padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; }
+        textarea { min-width: 300px; min-height: 60px; }
+        .alert { padding: 1rem; margin-bottom: 1rem; border-radius: 4px; }
+        .alert-success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        code { background: #f4f4f4; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Document Group Details</h1>
+        <a href="/admin/document-groups">← Back to Document Groups</a>
+    </div>
+    
+    <div class="container">
+        <div th:if="${param.success}" class="alert alert-success">
+            <span th:if="${param.success[0] == 'permission_granted'}">Permission granted successfully!</span>
+        </div>
+        
+        <div class="card">
+            <h2>Group Information</h2>
+            <p style="color: #666; margin-bottom: 1rem;">
+                <span style="display: inline-block; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.85rem; background: #3498db; color: white;">System-Managed</span>
+                This group was prepopulated during application setup.
+            </p>
+            <div class="info-grid">
+                <div class="info-label">Group Name:</div>
+                <div th:text="${documentGroup.groupName}">Group Name</div>
+                
+                <div class="info-label">Description:</div>
+                <div th:text="${documentGroup.description}">Description</div>
+                
+                <div class="info-label">Type ID:</div>
+                <div th:text="${documentGroup.groupTypeId}">Type</div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Document Definitions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Table Name</th>
+                        <th>Record IDs</th>
+                        <th>Query Definition</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="def : ${definitions}">
+                        <td th:text="${def.tableName}">table_name</td>
+                        <td><code th:text="${def.recordIds}">1,2,3</code></td>
+                        <td><code th:text="${def.queryDefinition}">query</code></td>
+                    </tr>
+                    <tr th:if="${#lists.isEmpty(definitions)}">
+                        <td colspan="3" style="text-align: center; color: #999;">No definitions</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p style="color: #999; margin-top: 1rem; font-size: 0.9rem;">
+                Document definitions are prepopulated during application setup. To modify, update <code>group_definition_layer.json</code> and regenerate.
+            </p>
+        </div>
+        
+        <div class="card">
+            <h2>Permissions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>User/Group</th>
+                        <th>Access Control</th>
+                        <th>Valid Until</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="perm : ${permissions}">
+                        <td>
+                            <span th:if="${perm.authUserId != null}">User ID: <span th:text="${perm.authUserId}">1</span></span>
+                            <span th:if="${perm.userGroupId != null}">Group ID: <span th:text="${perm.userGroupId}">1</span></span>
+                        </td>
+                        <td th:text="${perm.accessControlId}">Control</td>
+                        <td th:text="${perm.validUntil != null ? #temporals.format(perm.validUntil, 'yyyy-MM-dd') : 'Permanent'}">Permanent</td>
+                    </tr>
+                    <tr th:if="${#lists.isEmpty(permissions)}">
+                        <td colspan="3" style="text-align: center; color: #999;">No permissions</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <form class="form-inline" th:action="@{/admin/document-groups/{id}/permissions(id=${documentGroup.documentGroupId})}" method="post">
+                <div class="form-group-inline">
+                    <label>User Group</label>
+                    <select name="userGroupId">
+                        <option value="">Select group...</option>
+                        <option th:each="group : ${userGroups}" th:value="${group.groupId}" th:text="${group.groupName}">Group</option>
+                    </select>
+                </div>
+                <div class="form-group-inline">
+                    <label>Access Control *</label>
+                    <select name="accessControlId" required>
+                        <option value="">Select control...</option>
+                        <option th:each="control : ${accessControls}" th:value="${control.controlId}" th:text="${control.controlName}">Control</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Grant Permission</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

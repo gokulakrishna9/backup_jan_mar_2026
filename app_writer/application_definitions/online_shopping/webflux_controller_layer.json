@@ -1,0 +1,826 @@
+{
+  "layerType": "controller",
+  "description": "Controller layer configuration - controls REST endpoint generation",
+  "controllers": [
+    {
+      "entityName": "User",
+      "className": "UserController",
+      "packageName": "com.onlineshopping.controller",
+      "serviceName": "UserService",
+      "basePath": "/api/users",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ]
+      },
+      "hasAuthorization": true
+    },
+    {
+      "entityName": "Category",
+      "className": "CategoryController",
+      "packageName": "com.onlineshopping.controller",
+      "serviceName": "CategoryService",
+      "basePath": "/api/categorys",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ]
+      },
+      "hasAuthorization": true
+    },
+    {
+      "entityName": "Product",
+      "className": "ProductController",
+      "packageName": "com.onlineshopping.controller",
+      "serviceName": "ProductService",
+      "basePath": "/api/products",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ]
+      },
+      "hasAuthorization": true
+    },
+    {
+      "entityName": "Cart",
+      "className": "CartController",
+      "packageName": "com.onlineshopping.controller",
+      "serviceName": "CartService",
+      "basePath": "/api/carts",
+      "isRootEntity": false,
+      "singleRecordPerUser": true,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ]
+      },
+      "hasAuthorization": true
+    },
+    {
+      "entityName": "CartItem",
+      "className": "CartItemController",
+      "packageName": "com.onlineshopping.controller",
+      "serviceName": "CartItemService",
+      "basePath": "/api/cart_items",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ]
+      },
+      "hasAuthorization": true
+    },
+    {
+      "entityName": "Address",
+      "className": "AddressController",
+      "packageName": "com.onlineshopping.controller",
+      "serviceName": "AddressService",
+      "basePath": "/api/addresss",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ]
+      },
+      "hasAuthorization": true
+    },
+    {
+      "entityName": "Order",
+      "className": "OrderController",
+      "packageName": "com.onlineshopping.controller",
+      "serviceName": "OrderService",
+      "basePath": "/api/orders",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ]
+      },
+      "hasAuthorization": true
+    },
+    {
+      "entityName": "OrderItem",
+      "className": "OrderItemController",
+      "packageName": "com.onlineshopping.controller",
+      "serviceName": "OrderItemService",
+      "basePath": "/api/order_items",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ]
+      },
+      "hasAuthorization": true
+    },
+    {
+      "entityName": "Payment",
+      "className": "PaymentController",
+      "packageName": "com.onlineshopping.controller",
+      "serviceName": "PaymentService",
+      "basePath": "/api/payments",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ]
+      },
+      "hasAuthorization": true
+    },
+    {
+      "entityName": "Review",
+      "className": "ReviewController",
+      "packageName": "com.onlineshopping.controller",
+      "serviceName": "ReviewService",
+      "basePath": "/api/reviews",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ]
+      },
+      "hasAuthorization": true
+    }
+  ]
+}

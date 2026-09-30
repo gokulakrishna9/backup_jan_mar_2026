@@ -1,0 +1,1311 @@
+{
+  "layerType": "dto",
+  "description": "DTO layer configuration - controls Data Transfer Object generation with validation",
+  "dtos": [
+    {
+      "entityName": "User",
+      "dtoType": "Input",
+      "className": "UserInputDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "username",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "encryptedpassword",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "email",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "firstname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "lastname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "phone",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "role",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": true
+    },
+    {
+      "entityName": "User",
+      "dtoType": "Output",
+      "className": "UserOutputDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "userId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "username",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "encryptedpassword",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "email",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "firstname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "lastname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "phone",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "role",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": true
+    },
+    {
+      "entityName": "User",
+      "dtoType": "Filter",
+      "className": "UserFilterDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "username",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "encryptedpassword",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "email",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "firstname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "lastname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "phone",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "role",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": true
+    },
+    {
+      "entityName": "Category",
+      "dtoType": "Input",
+      "className": "CategoryInputDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "categoryname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "imageurl",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "parentcategoryid",
+          "javaType": "Long",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "Category",
+      "dtoType": "Output",
+      "className": "CategoryOutputDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "categoryId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "categoryname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "imageurl",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "parentcategoryid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "Category",
+      "dtoType": "Filter",
+      "className": "CategoryFilterDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "categoryname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "imageurl",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "parentcategoryid",
+          "javaType": "Long",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "Product",
+      "dtoType": "Input",
+      "className": "ProductInputDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "productname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "price",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "stockquantity",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "imageurl",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sku",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "isactive",
+          "javaType": "Boolean",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "categoryid",
+          "javaType": "Long",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "Product",
+      "dtoType": "Output",
+      "className": "ProductOutputDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "productId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "productname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "price",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "stockquantity",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "imageurl",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sku",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "isactive",
+          "javaType": "Boolean",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "categoryid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "Product",
+      "dtoType": "Filter",
+      "className": "ProductFilterDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "productname",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "description",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "price",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "stockquantity",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "imageurl",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "sku",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "isactive",
+          "javaType": "Boolean",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "categoryid",
+          "javaType": "Long",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "Cart",
+      "dtoType": "Input",
+      "className": "CartInputDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "userid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "totalamount",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "itemcount",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "Cart",
+      "dtoType": "Output",
+      "className": "CartOutputDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "cartId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "userid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "totalamount",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "itemcount",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "Cart",
+      "dtoType": "Filter",
+      "className": "CartFilterDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "userid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "totalamount",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "itemcount",
+          "javaType": "Integer",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "CartItem",
+      "dtoType": "Input",
+      "className": "CartItemInputDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "cartid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "productid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "quantity",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "unitprice",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "subtotal",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "CartItem",
+      "dtoType": "Output",
+      "className": "CartItemOutputDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "cartItemId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "cartid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "productid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "quantity",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "unitprice",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "subtotal",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "CartItem",
+      "dtoType": "Filter",
+      "className": "CartItemFilterDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "cartid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "productid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "quantity",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "unitprice",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "subtotal",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "Address",
+      "dtoType": "Input",
+      "className": "AddressInputDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "userid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "addressline1",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "addressline2",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "city",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "state",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "postalcode",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "country",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "isdefault",
+          "javaType": "Boolean",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "Address",
+      "dtoType": "Output",
+      "className": "AddressOutputDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "addressId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "userid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "addressline1",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "addressline2",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "city",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "state",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "postalcode",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "country",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "isdefault",
+          "javaType": "Boolean",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "Address",
+      "dtoType": "Filter",
+      "className": "AddressFilterDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "userid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "addressline1",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "addressline2",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "city",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "state",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "postalcode",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "country",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "isdefault",
+          "javaType": "Boolean",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "Order",
+      "dtoType": "Input",
+      "className": "OrderInputDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "userid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "orderdate",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "status",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "totalamount",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "shippingaddressid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "trackingnumber",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "notes",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "Order",
+      "dtoType": "Output",
+      "className": "OrderOutputDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "orderId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "userid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "orderdate",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "status",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "totalamount",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "shippingaddressid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "trackingnumber",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "notes",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "Order",
+      "dtoType": "Filter",
+      "className": "OrderFilterDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "userid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "orderdate",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "status",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "totalamount",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "shippingaddressid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "trackingnumber",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "notes",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "OrderItem",
+      "dtoType": "Input",
+      "className": "OrderItemInputDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "orderid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "productid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "quantity",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "unitprice",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "subtotal",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "OrderItem",
+      "dtoType": "Output",
+      "className": "OrderItemOutputDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "orderItemId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "orderid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "productid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "quantity",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "unitprice",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "subtotal",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "OrderItem",
+      "dtoType": "Filter",
+      "className": "OrderItemFilterDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "orderid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "productid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "quantity",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "unitprice",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "subtotal",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "Payment",
+      "dtoType": "Input",
+      "className": "PaymentInputDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "orderid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "paymentmethod",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "amount",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "paymentdate",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "transactionid",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "status",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "Payment",
+      "dtoType": "Output",
+      "className": "PaymentOutputDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "paymentId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "orderid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "paymentmethod",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "amount",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "paymentdate",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "transactionid",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "status",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "Payment",
+      "dtoType": "Filter",
+      "className": "PaymentFilterDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "orderid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "paymentmethod",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "amount",
+          "javaType": "BigDecimal",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "paymentdate",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "transactionid",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "status",
+          "javaType": "String",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "Review",
+      "dtoType": "Input",
+      "className": "ReviewInputDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "userid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "productid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "rating",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "comment",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "reviewdate",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "Review",
+      "dtoType": "Output",
+      "className": "ReviewOutputDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "reviewId",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "userid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "productid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "rating",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "comment",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "reviewdate",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "createdAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "updatedAt",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    },
+    {
+      "entityName": "Review",
+      "dtoType": "Filter",
+      "className": "ReviewFilterDTO",
+      "packageName": "com.onlineshopping.dto",
+      "fields": [
+        {
+          "fieldName": "userid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "productid",
+          "javaType": "Long",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "rating",
+          "javaType": "Integer",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "title",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "comment",
+          "javaType": "String",
+          "includeInDTO": true
+        },
+        {
+          "fieldName": "reviewdate",
+          "javaType": "LocalDateTime",
+          "includeInDTO": true
+        }
+      ],
+      "isRootEntity": false
+    }
+  ]
+}

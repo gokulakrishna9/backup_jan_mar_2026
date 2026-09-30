@@ -1,0 +1,124 @@
+{
+  "layerType": "config",
+  "description": "Application configuration - database, server, logging, features",
+  "project": {
+    "name": "ems-recruitment-portal",
+    "displayName": "Ems Recruitment Portal",
+    "groupId": "com.example",
+    "artifactId": "ems-recruitment-portal",
+    "version": "1.0.0",
+    "packageName": "com.example",
+    "javaVersion": "17",
+    "springBootVersion": "3.2.0"
+  },
+  "server": {
+    "port": 8081,
+    "contextPath": "/",
+    "compression": {
+      "enabled": true,
+      "mimeTypes": [
+        "application/json",
+        "application/xml",
+        "text/html",
+        "text/xml",
+        "text/plain"
+      ]
+    },
+    "http2": {
+      "enabled": true
+    },
+    "ssl": {
+      "enabled": false,
+      "keyStore": "${SSL_KEY_STORE}",
+      "keyStorePassword": "${SSL_KEY_STORE_PASSWORD}",
+      "keyStoreType": "PKCS12"
+    }
+  },
+  "database": {
+    "type": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "name": "ems_recruitment_portal",
+    "username": "root",
+    "password": "password",
+    "r2dbc": {
+      "pool": {
+        "initialSize": 10,
+        "maxSize": 50,
+        "maxIdleTime": "30m",
+        "maxLifeTime": "60m",
+        "maxAcquireTime": "3s",
+        "maxCreateConnectionTime": "3s"
+      }
+    },
+    "showSql": false,
+    "formatSql": true
+  },
+  "logging": {
+    "level": {
+      "root": "INFO",
+      "application": "DEBUG",
+      "springframework": "INFO",
+      "hibernate": "WARN"
+    },
+    "pattern": {
+      "console": "%d{yyyy-MM-dd HH:mm:ss} - %msg%n",
+      "file": "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    },
+    "file": {
+      "enabled": true,
+      "name": "logs/application.log",
+      "maxSize": "10MB",
+      "maxHistory": 30,
+      "totalSizeCap": "1GB"
+    }
+  },
+  "features": {
+    "swagger": {
+      "enabled": true,
+      "title": "Ems Recruitment Portal API",
+      "description": "API documentation for Ems Recruitment Portal",
+      "version": "1.0.0",
+      "contactName": "API Support",
+      "contactEmail": "support@example.com"
+    },
+    "actuator": {
+      "enabled": true,
+      "basePath": "/actuator",
+      "endpoints": [
+        "health",
+        "info",
+        "metrics",
+        "prometheus"
+      ]
+    },
+    "caching": {
+      "enabled": false,
+      "type": "redis",
+      "redis": {
+        "host": "localhost",
+        "port": 6379,
+        "password": "",
+        "database": 0
+      },
+      "ttl": 3600
+    },
+    "email": {
+      "enabled": false,
+      "host": "smtp.gmail.com",
+      "port": 587,
+      "username": "${EMAIL_USERNAME}",
+      "password": "${EMAIL_PASSWORD}",
+      "from": "noreply@example.com",
+      "tls": true
+    }
+  },
+  "profiles": {
+    "active": "dev",
+    "available": [
+      "dev",
+      "test",
+      "prod"
+    ]
+  }
+}

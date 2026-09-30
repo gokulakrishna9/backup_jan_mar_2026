@@ -1,0 +1,408 @@
+/**
+ * DataTableWrapper - Enhanced wrapper for PrimeReact DataTable
+ * Category: Data
+ * 
+ * Advanced data table with sorting, filtering, pagination
+ * 
+ * This wrapper provides:
+ * - Simplified event handlers for Redux integration
+ * - Validation hooks
+ * - Lifecycle callbacks
+ * - Embedded component metadata for runtime introspection
+ */
+
+import React, { useEffect, useRef } from 'react';
+import { DataTable } from 'primereact/datatable';
+
+// Component metadata embedded for runtime access
+export const DataTableMetadata = {
+  "name": "DataTable",
+  "import": "DataTable",
+  "category": "Data",
+  "metadata": {
+    "description": "Advanced data table with sorting, filtering, pagination",
+    "usageExamples": [
+      "<DataTableWrapper value={products}><Column field=\"name\" header=\"Name\" /></DataTableWrapper>",
+      "<DataTableWrapper value={data} paginator rows={10} sortField=\"name\" sortOrder={1}><Column field=\"id\" /><Column field=\"name\" /></DataTableWrapper>"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "value",
+        "type": "any[]",
+        "optional": false,
+        "description": "Data array",
+        "helpText": "Array of objects to display",
+        "dataTypes": [
+          "object[]"
+        ],
+        "examples": [
+          "[{id: 1, name: 'Item'}]",
+          "products",
+          "users"
+        ]
+      },
+      {
+        "name": "paginator",
+        "type": "boolean",
+        "optional": true,
+        "description": "Enable pagination",
+        "helpText": "Shows pagination controls",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "name": "rows",
+        "type": "number",
+        "optional": true,
+        "description": "Rows per page",
+        "helpText": "Number of rows to display per page",
+        "dataTypes": [
+          "number"
+        ],
+        "examples": [
+          "10",
+          "25",
+          "50"
+        ]
+      },
+      {
+        "name": "first",
+        "type": "number",
+        "optional": true,
+        "description": "First row index",
+        "helpText": "Index of first row (for controlled pagination)",
+        "dataTypes": [
+          "number"
+        ],
+        "examples": [
+          "0",
+          "10",
+          "20"
+        ]
+      },
+      {
+        "name": "sortField",
+        "type": "string",
+        "optional": true,
+        "description": "Sort field",
+        "helpText": "Field name to sort by",
+        "dataTypes": [
+          "string (field name)"
+        ],
+        "examples": [
+          "'name'",
+          "'date'",
+          "'price'"
+        ]
+      },
+      {
+        "name": "sortOrder",
+        "type": "1 | -1 | 0",
+        "optional": true,
+        "description": "Sort order",
+        "helpText": "1=ascending, -1=descending, 0=none",
+        "dataTypes": [
+          "1",
+          "-1",
+          "0"
+        ],
+        "examples": [
+          "1",
+          "-1"
+        ]
+      },
+      {
+        "name": "selection",
+        "type": "any | any[]",
+        "optional": true,
+        "description": "Selected row(s)",
+        "helpText": "Single row or array for multiple selection",
+        "dataTypes": [
+          "object",
+          "object[]"
+        ],
+        "examples": [
+          "selectedRow",
+          "[row1, row2]"
+        ]
+      },
+      {
+        "name": "selectionMode",
+        "type": "'single' | 'multiple'",
+        "optional": true,
+        "description": "Selection mode",
+        "helpText": "How rows can be selected",
+        "dataTypes": [
+          "'single'",
+          "'multiple'"
+        ],
+        "examples": [
+          "'single'",
+          "'multiple'"
+        ]
+      },
+      {
+        "name": "dataKey",
+        "type": "string",
+        "optional": true,
+        "description": "Unique row identifier",
+        "helpText": "Field name for unique row ID",
+        "dataTypes": [
+          "string (field name)"
+        ],
+        "examples": [
+          "'id'",
+          "'code'",
+          "'key'"
+        ]
+      },
+      {
+        "name": "loading",
+        "type": "boolean",
+        "optional": true,
+        "description": "Loading state",
+        "helpText": "Shows loading indicator",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "name": "emptyMessage",
+        "type": "string",
+        "optional": true,
+        "description": "Empty message",
+        "helpText": "Text shown when no data",
+        "dataTypes": [
+          "string"
+        ],
+        "examples": [
+          "'No records found'",
+          "'No data available'"
+        ]
+      },
+      {
+        "name": "responsiveLayout",
+        "type": "'scroll' | 'stack'",
+        "optional": true,
+        "description": "Responsive layout",
+        "helpText": "How table adapts to small screens",
+        "dataTypes": [
+          "'scroll'",
+          "'stack'"
+        ],
+        "examples": [
+          "'scroll'",
+          "'stack'"
+        ]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes",
+        "helpText": "Supports PrimeFlex utility classes",
+        "examples": [
+          "'p-datatable-sm'"
+        ]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles",
+        "helpText": "Standard React inline styles",
+        "examples": [
+          "{ width: '100%' }"
+        ]
+      }
+    ],
+    "children": {
+      "type": "Column[]",
+      "description": "Column components",
+      "helpText": "Must contain Column children to define table structure"
+    }
+  },
+  "eventHandlers": {
+    "standard": [
+      {
+        "name": "onSelectionChange",
+        "type": "(e: { value: any | any[] }) => void",
+        "description": "Callback when selection changes"
+      },
+      {
+        "name": "onRowClick",
+        "type": "(e: { data: any, index: number }) => void",
+        "description": "Callback when row is clicked"
+      },
+      {
+        "name": "onRowSelect",
+        "type": "(e: { data: any, index: number }) => void",
+        "description": "Callback when row is selected"
+      },
+      {
+        "name": "onRowUnselect",
+        "type": "(e: { data: any, index: number }) => void",
+        "description": "Callback when row is unselected"
+      },
+      {
+        "name": "onPage",
+        "type": "(e: { first: number, rows: number, page: number }) => void",
+        "description": "Callback when page changes"
+      },
+      {
+        "name": "onSort",
+        "type": "(e: { sortField: string, sortOrder: number }) => void",
+        "description": "Callback when sort changes"
+      },
+      {
+        "name": "onFilter",
+        "type": "(e: { filters: any }) => void",
+        "description": "Callback when filters change"
+      }
+    ],
+    "simplified": [
+      {
+        "name": "onSelectionUpdate",
+        "type": "(selection: any | any[]) => void",
+        "description": "Simplified selection callback"
+      }
+    ],
+    "validation": [],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "description": "Called when component mounts"
+      },
+      {
+        "name": "onUnmount",
+        "type": "() => void",
+        "description": "Called when component unmounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [
+      "handleSelectionChange - Processes onSelectionChange event",
+      "handleRowClick - Processes onRowClick event",
+      "handleRowSelect - Processes onRowSelect event",
+      "handleRowUnselect - Processes onRowUnselect event",
+      "handlePage - Processes onPage event",
+      "handleSort - Processes onSort event",
+      "handleFilter - Processes onFilter event"
+    ],
+    "patterns": [
+      "Check if event handler exists before calling",
+      "Extract data from event objects"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": [
+      "Column"
+    ],
+    "childrenDescription": "DataTable must contain Column components to define table structure",
+    "hasChildren": true,
+    "examples": [
+      "<DataTableWrapper value={products}><Column field=\"id\" header=\"ID\" /><Column field=\"name\" header=\"Name\" /><Column field=\"price\" header=\"Price\" /></DataTableWrapper>"
+    ]
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<DataTableWrapper value={products}><Column field=\"name\" header=\"Name\" /></DataTableWrapper>",
+    "withStyling": "<DataTableWrapper value={data} paginator rows={10} className=\"p-datatable-sm\"><Column field=\"id\" /><Column field=\"name\" /></DataTableWrapper>",
+    "withEvents": "<DataTableWrapper value={users} selection={selected} onSelectionChange={(e) => setSelected(e.value)} selectionMode=\"single\"><Column field=\"name\" /></DataTableWrapper>",
+    "withRedux": "<DataTableWrapper value={tableData} selection={selectedRows} onSelectionUpdate={(val) => dispatch(setSelection(val))}><Column field=\"id\" /></DataTableWrapper>",
+    "withValidation": "N/A",
+    "withChildren": "<DataTableWrapper value={products} paginator rows={10}><Column field=\"id\" header=\"ID\" sortable /><Column field=\"name\" header=\"Name\" filter /><Column field=\"price\" header=\"Price\" /></DataTableWrapper>"
+  }
+};
+
+const DataTableWrapper = (props) => {
+  const {
+    value, paginator, rows, first, sortField, sortOrder, selection, selectionMode, dataKey, loading, emptyMessage, responsiveLayout, className, style, children, onSelectionChange, onRowClick, onRowSelect, onRowUnselect, onPage, onSort, onFilter, onSelectionUpdate, onMount, onUnmount,
+    ...restProps
+  } = props;
+
+  const componentRef = useRef(null);
+
+  // Lifecycle: onMount
+  useEffect(() => {
+    if (onMount) {
+      onMount();
+    }
+  }, []);
+
+  // Lifecycle: onUnmount
+  useEffect(() => {
+    return () => {
+      if (onUnmount) {
+        onUnmount();
+      }
+    };
+  }, []);
+
+  // Simplified event handler: onSelectionUpdate
+  const handleSelectionChange = (e) => {
+    if (onSelectionChange) {
+      onSelectionChange(e);
+    }
+    if (onSelectionUpdate) {
+      onSelectionUpdate(e.value || e.data || e);
+    }
+  };
+
+  // Build props for underlying PrimeReact component
+  const primeReactProps = {
+    value,
+    paginator,
+    rows,
+    first,
+    sortField,
+    sortOrder,
+    selection,
+    selectionMode,
+    dataKey,
+    loading,
+    emptyMessage,
+    responsiveLayout,
+    className,
+    style,
+    onSelectionChange: handleSelectionChange,
+    onRowClick,
+    onRowSelect,
+    onRowUnselect,
+    onPage,
+    onSort,
+    onFilter,
+    ref: componentRef,
+    ...restProps
+  };
+
+  return (
+    <DataTable {...primeReactProps}>
+      {children}
+    </DataTable>
+  );
+};
+
+DataTableWrapper.displayName = 'DataTableWrapper';
+
+export default DataTableWrapper;

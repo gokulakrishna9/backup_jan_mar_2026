@@ -1,0 +1,67 @@
+{
+  "app_name": "job_portal",
+  "schema_version": "1.0",
+  "files": {
+    "webflux_manifest.json": {
+      "status": "clean",
+      "last_modified": "2026-04-12T10:09:59Z",
+      "last_generated": "2026-04-12T10:55:18Z",
+      "content_hash": "sha256:a17827efcfe7666887538d06c21ea6be5d0b9fcf6a718137c2521e0bd8b5d6e7"
+    },
+    "webflux_project_metadata.json": {
+      "status": "clean",
+      "last_modified": "2026-04-12T10:09:59Z",
+      "last_generated": "2026-04-12T10:55:18Z",
+      "content_hash": "sha256:b4362fd97b64506ce328c7453fcad753d777d4b22139c132dd418603bc3ac7b6"
+    },
+    "webflux_entity_layer.json": {
+      "status": "clean",
+      "last_modified": "2026-04-12T10:09:59Z",
+      "last_generated": "2026-04-12T10:55:18Z",
+      "content_hash": "sha256:286c29d6bae6b065d080ba822058d7d221aa5c3109cf33f995c5023334ed0526"
+    },
+    "webflux_entities.json": {
+      "status": "clean",
+      "last_modified": "2026-04-12T10:09:59Z",
+      "last_generated": "2026-04-12T10:55:18Z",
+      "content_hash": "sha256:dd563787fe76fd19a03755f4972450ab33090be708bad52ff5f74a7d3887cc92"
+    },
+    "webflux_relationships.json": {
+      "status": "clean",
+      "last_modified": "2026-04-12T10:09:59Z",
+      "last_generated": "2026-04-12T10:55:18Z",
+      "content_hash": "sha256:47a5a3149886100fc452a02de50184f0f462d19bdeda48594edbda5f5593c118"
+    },
+    "webflux_repository_layer.json": {
+      "status": "clean",
+      "last_modified": "2026-04-12T10:09:59Z",
+      "last_generated": "2026-04-12T10:55:18Z",
+      "content_hash": "sha256:637cd3b86ed33fee154dbf72b112910aa372153bf978b902704349029640994e"
+    },
+    "webflux_service_layer.json": {
+      "status": "clean",
+      "last_modified": "2026-04-12T10:09:59Z",
+      "last_generated": "2026-04-12T10:55:18Z",
+      "content_hash": "sha256:ff1baa61528f48b5979298b47a52c3483421088c6636c1f85f74595065107c9f"
+    },
+    "webflux_controller_layer.json": {
+      "status": "clean",
+      "last_modified": "2026-04-12T10:09:59Z",
+      "last_generated": "2026-04-12T10:55:18Z",
+      "content_hash": "sha256:d7875f159f98ef4e210e7f7dc9f2b88d2c05d82fc323b3a1259ee1732ed7a993"
+    },
+    "webflux_dto_layer.json": {
+      "status": "clean",
+      "last_modified": "2026-04-12T10:09:59Z",
+      "last_generated": "2026-04-12T10:55:18Z",
+      "content_hash": "sha256:248209292217a706c37535a3d81712882732682036678db6d954c99c78cc4498"
+    },
+    "webflux_document_storage_layer.json": {
+      "status": "clean",
+      "last_modified": "2026-04-12T10:09:59Z",
+      "last_generated": "2026-04-12T10:55:18Z",
+      "content_hash": "sha256:63eba013852c323926a02df1c5d234a2059c9ca8091054dd3c18af845e2a25ec"
+    }
+  },
+  "last_full_generation": null
+}

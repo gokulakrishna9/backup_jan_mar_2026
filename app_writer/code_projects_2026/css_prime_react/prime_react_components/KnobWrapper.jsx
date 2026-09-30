@@ -1,0 +1,332 @@
+/**
+ * KnobWrapper - Enhanced wrapper for PrimeReact Knob
+ * Category: Form
+ * 
+ * Circular dial input
+ * 
+ * This wrapper provides:
+ * - Simplified event handlers for Redux integration
+ * - Validation hooks
+ * - Lifecycle callbacks
+ * - Embedded component metadata for runtime introspection
+ */
+
+import React, { useEffect, useRef } from 'react';
+import { Knob } from 'primereact/knob';
+
+// Component metadata embedded for runtime access
+export const KnobMetadata = {
+  "name": "Knob",
+  "import": "Knob",
+  "category": "Form",
+  "metadata": {
+    "description": "Circular dial input",
+    "usageExamples": [
+      "<KnobWrapper value={value} onChange={(e) => setValue(e.value)} />",
+      "<KnobWrapper value={volume} min={0} max={100} step={10} />"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "value",
+        "type": "number",
+        "optional": true,
+        "description": "Knob value",
+        "helpText": "Current value (controlled component)",
+        "dataTypes": [
+          "number"
+        ],
+        "examples": [
+          "50",
+          "75",
+          "0"
+        ]
+      },
+      {
+        "name": "min",
+        "type": "number",
+        "optional": true,
+        "description": "Minimum value",
+        "helpText": "Lowest value (default: 0)",
+        "dataTypes": [
+          "number"
+        ],
+        "examples": [
+          "0",
+          "-100"
+        ]
+      },
+      {
+        "name": "max",
+        "type": "number",
+        "optional": true,
+        "description": "Maximum value",
+        "helpText": "Highest value (default: 100)",
+        "dataTypes": [
+          "number"
+        ],
+        "examples": [
+          "100",
+          "1000"
+        ]
+      },
+      {
+        "name": "step",
+        "type": "number",
+        "optional": true,
+        "description": "Step increment",
+        "helpText": "Value increment (default: 1)",
+        "dataTypes": [
+          "number"
+        ],
+        "examples": [
+          "1",
+          "5",
+          "10"
+        ]
+      },
+      {
+        "name": "size",
+        "type": "number",
+        "optional": true,
+        "description": "Knob size",
+        "helpText": "Diameter in pixels (default: 100)",
+        "dataTypes": [
+          "number"
+        ],
+        "examples": [
+          "100",
+          "150",
+          "200"
+        ]
+      },
+      {
+        "name": "strokeWidth",
+        "type": "number",
+        "optional": true,
+        "description": "Stroke width",
+        "helpText": "Width of knob ring (default: 14)",
+        "dataTypes": [
+          "number"
+        ],
+        "examples": [
+          "10",
+          "14",
+          "20"
+        ]
+      },
+      {
+        "name": "showValue",
+        "type": "boolean",
+        "optional": true,
+        "description": "Show value text",
+        "helpText": "Displays value in center (default: true)",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "name": "valueTemplate",
+        "type": "string",
+        "optional": true,
+        "description": "Value template",
+        "helpText": "Format string for value display",
+        "dataTypes": [
+          "string"
+        ],
+        "examples": [
+          "'{value}%'",
+          "'{value} units'"
+        ]
+      },
+      {
+        "name": "readOnly",
+        "type": "boolean",
+        "optional": true,
+        "description": "Read-only mode",
+        "helpText": "Display only, no interaction",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "optional": true,
+        "description": "Disabled state",
+        "helpText": "Disables the knob",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes",
+        "helpText": "Supports PrimeFlex utility classes",
+        "examples": [
+          "'mb-3'"
+        ]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles",
+        "helpText": "Standard React inline styles",
+        "examples": [
+          "{ marginBottom: '1rem' }"
+        ]
+      }
+    ],
+    "children": null
+  },
+  "eventHandlers": {
+    "standard": [
+      {
+        "name": "onChange",
+        "type": "(e: { value: number }) => void",
+        "description": "Callback when value changes"
+      }
+    ],
+    "simplified": [
+      {
+        "name": "onValueChange",
+        "type": "(value: number) => void",
+        "description": "Simplified callback with just the value"
+      }
+    ],
+    "validation": [
+      {
+        "name": "onValidate",
+        "type": "(value: number) => boolean | string",
+        "description": "Validation callback"
+      },
+      {
+        "name": "onError",
+        "type": "(error: string) => void",
+        "description": "Called when validation fails"
+      }
+    ],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "description": "Called when component mounts"
+      },
+      {
+        "name": "onUnmount",
+        "type": "() => void",
+        "description": "Called when component unmounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [
+      "handleChange - Processes onChange event, calls onChange, onValueChange, onValidate"
+    ],
+    "patterns": [
+      "Check if event handler exists before calling",
+      "Extract value from event object",
+      "Run validation on change"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": [],
+    "childrenDescription": "This component does not accept children",
+    "hasChildren": false,
+    "examples": []
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<KnobWrapper value={value} onChange={(e) => setValue(e.value)} />",
+    "withStyling": "<KnobWrapper value={volume} min={0} max={100} size={150} valueTemplate=\"{value}%\" className=\"mb-3\" />",
+    "withEvents": "<KnobWrapper value={brightness} onChange={handleChange} />",
+    "withRedux": "<KnobWrapper value={setting} onValueChange={(val) => dispatch(setSetting(val))} />",
+    "withValidation": "<KnobWrapper value={value} min={0} max={100} onValidate={(val) => val >= 0 ? true : 'Must be positive'} onError={(err) => setError(err)} />",
+    "withChildren": "N/A"
+  }
+};
+
+const KnobWrapper = (props) => {
+  const {
+    value, min, max, step, size, strokeWidth, showValue, valueTemplate, readOnly, disabled, className, style, onChange, onValueChange, onValidate, onError, onMount, onUnmount,
+    ...restProps
+  } = props;
+
+  const componentRef = useRef(null);
+
+  // Lifecycle: onMount
+  useEffect(() => {
+    if (onMount) {
+      onMount();
+    }
+  }, []);
+
+  // Lifecycle: onUnmount
+  useEffect(() => {
+    return () => {
+      if (onUnmount) {
+        onUnmount();
+      }
+    };
+  }, []);
+
+  // Simplified event handler: onValueChange
+  const handleChange = (e) => {
+    if (onChange) {
+      onChange(e);
+    }
+    if (onValueChange) {
+      onValueChange(e.value || e.data || e);
+    }
+  };
+
+  // Build props for underlying PrimeReact component
+  const primeReactProps = {
+    value,
+    min,
+    max,
+    step,
+    size,
+    strokeWidth,
+    showValue,
+    valueTemplate,
+    readOnly,
+    disabled,
+    className,
+    style,
+    onChange: handleChange,
+    ref: componentRef,
+    ...restProps
+  };
+
+  return (
+    <Knob {...primeReactProps} />
+  );
+};
+
+KnobWrapper.displayName = 'KnobWrapper';
+
+export default KnobWrapper;

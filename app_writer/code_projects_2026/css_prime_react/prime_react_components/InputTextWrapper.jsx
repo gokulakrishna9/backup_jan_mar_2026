@@ -1,0 +1,299 @@
+/**
+ * InputTextWrapper - Enhanced wrapper for PrimeReact InputText
+ * Category: Form
+ * 
+ * Standard text input field
+ * 
+ * This wrapper provides:
+ * - Simplified event handlers for Redux integration
+ * - Validation hooks
+ * - Lifecycle callbacks
+ * - Embedded component metadata for runtime introspection
+ */
+
+import React, { useEffect, useRef } from 'react';
+import { InputText } from 'primereact/inputtext';
+
+// Component metadata embedded for runtime access
+export const InputTextMetadata = {
+  "name": "InputText",
+  "import": "InputText",
+  "category": "Form",
+  "metadata": {
+    "description": "Standard text input field",
+    "usageExamples": [
+      "<InputTextWrapper value={name} onChange={(e) => setName(e.target.value)} placeholder=\"Enter name\" />",
+      "<InputTextWrapper value={email} type=\"email\" disabled={isLoading} />"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "value",
+        "type": "string",
+        "optional": true,
+        "description": "Input value",
+        "helpText": "Controlled input value",
+        "dataTypes": [
+          "string"
+        ],
+        "examples": [
+          "name",
+          "email",
+          "username"
+        ]
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "optional": true,
+        "description": "Placeholder text",
+        "helpText": "Text shown when input is empty",
+        "dataTypes": [
+          "string"
+        ],
+        "examples": [
+          "'Enter name'",
+          "'Email address'",
+          "'Search...'"
+        ]
+      },
+      {
+        "name": "type",
+        "type": "string",
+        "optional": true,
+        "description": "Input type",
+        "helpText": "HTML input type attribute",
+        "dataTypes": [
+          "'text' (default)",
+          "'email'",
+          "'password'",
+          "'number'",
+          "'tel'",
+          "'url'"
+        ],
+        "examples": [
+          "'text'",
+          "'email'",
+          "'password'"
+        ]
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "optional": true,
+        "description": "Disabled state",
+        "helpText": "Disables input interaction",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false",
+          "isLoading"
+        ]
+      },
+      {
+        "name": "readOnly",
+        "type": "boolean",
+        "optional": true,
+        "description": "Read-only state",
+        "helpText": "Makes input read-only",
+        "dataTypes": [
+          "boolean"
+        ],
+        "examples": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "name": "maxLength",
+        "type": "number",
+        "optional": true,
+        "description": "Maximum length",
+        "helpText": "Maximum number of characters",
+        "dataTypes": [
+          "number"
+        ],
+        "examples": [
+          "50",
+          "100",
+          "255"
+        ]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes",
+        "helpText": "Supports PrimeFlex utility classes",
+        "examples": [
+          "'w-full'",
+          "'p-invalid'"
+        ]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles",
+        "helpText": "Standard React inline styles",
+        "examples": [
+          "{ width: '100%' }"
+        ]
+      }
+    ],
+    "children": null
+  },
+  "eventHandlers": {
+    "standard": [
+      {
+        "name": "onChange",
+        "type": "(e: React.ChangeEvent<HTMLInputElement>) => void",
+        "optional": true,
+        "description": "Change callback",
+        "helpText": "Called when input value changes",
+        "examples": [
+          "(e) => setValue(e.target.value)",
+          "(e) => dispatch(updateField(e.target.value))"
+        ]
+      },
+      {
+        "name": "onBlur",
+        "type": "(e: React.FocusEvent<HTMLInputElement>) => void",
+        "optional": true,
+        "description": "Blur callback",
+        "helpText": "Called when input loses focus",
+        "examples": [
+          "(e) => validateField()"
+        ]
+      },
+      {
+        "name": "onFocus",
+        "type": "(e: React.FocusEvent<HTMLInputElement>) => void",
+        "optional": true,
+        "description": "Focus callback",
+        "helpText": "Called when input gains focus",
+        "examples": [
+          "(e) => setFocused(true)"
+        ]
+      }
+    ],
+    "simplified": [
+      {
+        "name": "onValueChange",
+        "type": "(value: string) => void",
+        "optional": true,
+        "description": "Simplified value change callback",
+        "helpText": "Receives only the value, not the event",
+        "examples": [
+          "(value) => dispatch(updateName(value))"
+        ]
+      }
+    ],
+    "validation": [
+      {
+        "name": "onValidate",
+        "type": "(value: string) => boolean | string",
+        "optional": true,
+        "description": "Validation callback",
+        "helpText": "Return true if valid, error message if invalid",
+        "examples": [
+          "(value) => value.length > 0 || 'Required'"
+        ]
+      },
+      {
+        "name": "onError",
+        "type": "(error: string) => void",
+        "optional": true,
+        "description": "Error callback",
+        "helpText": "Called when validation fails",
+        "examples": [
+          "(error) => setError(error)"
+        ]
+      }
+    ],
+    "lifecycle": []
+  },
+  "eventHandlerMethods": {
+    "internal": [
+      "handleChange",
+      "handleBlur",
+      "handleFocus",
+      "handleValidation"
+    ],
+    "patterns": [
+      "Standard onChange",
+      "Simplified onValueChange",
+      "Validation with onValidate",
+      "Redux dispatch"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": [],
+    "childrenDescription": "This component does not accept children",
+    "hasChildren": false,
+    "examples": []
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<InputTextWrapper value={name} onChange={(e) => setName(e.target.value)} />",
+    "withStyling": "<InputTextWrapper value={email} className=\"w-full\" placeholder=\"Email\" />",
+    "withEvents": "<InputTextWrapper value={name} onChange={(e) => setName(e.target.value)} onBlur={validateName} />",
+    "withRedux": "<InputTextWrapper value={name} onValueChange={(value) => dispatch(updateName(value))} />",
+    "withValidation": "<InputTextWrapper value={email} onValidate={(v) => v.includes('@') || 'Invalid email'} onError={setError} />",
+    "withChildren": "N/A"
+  }
+};
+
+const InputTextWrapper = (props) => {
+  const {
+    value, placeholder, type, disabled, readOnly, maxLength, className, style, onChange, onBlur, onFocus, onValueChange, onValidate, onError,
+    ...restProps
+  } = props;
+
+  const componentRef = useRef(null);
+
+  // Simplified event handler: onValueChange
+  const handleChange = (e) => {
+    if (onChange) {
+      onChange(e);
+    }
+    if (onValueChange) {
+      onValueChange(e.value || e.data || e);
+    }
+  };
+
+  // Build props for underlying PrimeReact component
+  const primeReactProps = {
+    value,
+    placeholder,
+    type,
+    disabled,
+    readOnly,
+    maxLength,
+    className,
+    style,
+    onChange: handleChange,
+    onBlur,
+    onFocus,
+    ref: componentRef,
+    ...restProps
+  };
+
+  return (
+    <InputText {...primeReactProps} />
+  );
+};
+
+InputTextWrapper.displayName = 'InputTextWrapper';
+
+export default InputTextWrapper;

@@ -1,0 +1,234 @@
+-- =============================================================
+-- AI Layer DDL — conditionally generated tables
+-- =============================================================
+
+{% if has_chat %}
+-- ---------------------------------------------------------
+-- Chat tables (Req 16.1)
+-- ---------------------------------------------------------
+CREATE TABLE IF NOT EXISTS ai_chat_session (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    user_id BIGINT NOT NULL,
+    entity_type VARCHAR(100),
+    entity_id BIGINT,
+    standalone_operation_name VARCHAR(200),
+    assistant_name VARCHAR(200),
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    last_message_at DATETIME,
+    INDEX idx_chat_session_user_entity (user_id, entity_type, entity_id),
+    INDEX idx_chat_session_user_standalone (user_id, standalone_operation_name)
+);
+
+CREATE TABLE IF NOT EXISTS ai_chat_message (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    session_id BIGINT NOT NULL,
+    role VARCHAR(50) NOT NULL,
+    content TEXT NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    INDEX idx_chat_message_session_created (session_id, created_at),
+    CONSTRAINT fk_chat_message_session
+        FOREIGN KEY (session_id) REFERENCES ai_chat_session(id)
+        ON DELETE CASCADE
+);
+
+{% endif %}
+{% if has_rag %}
+-- ---------------------------------------------------------
+-- RAG document chunk table (Req 16.4)
+-- ---------------------------------------------------------
+CREATE TABLE IF NOT EXISTS ai_document_chunk (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    source_name VARCHAR(200) NOT NULL,
+    entity_type VARCHAR(100),
+    entity_id BIGINT,
+    field_name VARCHAR(200),
+    chunk_index INT NOT NULL DEFAULT 0,
+    chunk_text TEXT NOT NULL,
+    metadata JSON,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    INDEX idx_doc_chunk_source_entity (source_name, entity_type, entity_id),
+    FULLTEXT INDEX ft_doc_chunk_text (chunk_text)
+);
+
+{% endif %}
+{% if has_evaluators %}
+-- ---------------------------------------------------------
+-- Evaluation result table (Req 16.6)
+-- ---------------------------------------------------------
+CREATE TABLE IF NOT EXISTS ai_evaluation_result (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    user_id BIGINT NOT NULL,
+    operation_name VARCHAR(200) NOT NULL,
+    evaluator_name VARCHAR(200) NOT NULL,
+    evaluator_type VARCHAR(50) NOT NULL,
+    scoring_mechanism VARCHAR(50) NOT NULL,
+    score DOUBLE,
+    category VARCHAR(200),
+    status VARCHAR(50) NOT NULL,
+    input_text TEXT,
+    output_text TEXT,
+    evaluation_response TEXT,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    INDEX idx_eval_user_operation (user_id, operation_name),
+    INDEX idx_eval_evaluator_created (evaluator_name, created_at),
+    INDEX idx_eval_op_evaluator_created (operation_name, evaluator_name, created_at)
+);
+
+{% endif %}
+{% if has_ingestion %}
+-- ---------------------------------------------------------
+-- Document ingestion table (Req 11.10)
+-- ---------------------------------------------------------
+CREATE TABLE IF NOT EXISTS ai_ingested_document (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    user_id BIGINT NOT NULL,
+    filename VARCHAR(500) NOT NULL,
+    mime_type VARCHAR(200) NOT NULL,
+    file_size_bytes BIGINT NOT NULL,
+    upload_source VARCHAR(50) NOT NULL,
+    source_name VARCHAR(200),
+    extracted_text LONGTEXT,
+    extraction_status VARCHAR(50) NOT NULL DEFAULT 'pending',
+    extraction_error TEXT,
+    metadata JSON,
+    rag_source_name VARCHAR(200),
+    rag_indexed TINYINT(1) NOT NULL DEFAULT 0,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    INDEX idx_ingested_user_source (user_id, upload_source),
+    INDEX idx_ingested_status (extraction_status),
+    INDEX idx_ingested_rag (rag_source_name, rag_indexed)
+);
+
+{% endif %}
+{% if has_processing %}
+-- ---------------------------------------------------------
+-- Document task result table (Req 11.22)
+-- ---------------------------------------------------------
+CREATE TABLE IF NOT EXISTS ai_document_task_result (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    document_id BIGINT NOT NULL,
+    user_id BIGINT NOT NULL,
+    task_name VARCHAR(200) NOT NULL,
+    task_type VARCHAR(100) NOT NULL,
+    provider_name VARCHAR(200) NOT NULL,
+    input_text LONGTEXT,
+    input_section VARCHAR(200),
+    output_text LONGTEXT,
+    status VARCHAR(50) NOT NULL DEFAULT 'pending',
+    error_message TEXT,
+    execution_duration_ms BIGINT,
+    prompt_tokens INT,
+    completion_tokens INT,
+    chained_from_result_id BIGINT,
+    metadata JSON,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    INDEX idx_task_doc_name (document_id, task_name),
+    INDEX idx_task_user_type (user_id, task_type),
+    INDEX idx_task_status (status),
+    INDEX idx_task_doc_created (document_id, created_at),
+    CONSTRAINT fk_task_result_document
+        FOREIGN KEY (document_id) REFERENCES ai_ingested_document(id)
+        ON DELETE CASCADE
+);
+
+{% endif %}
+{% if has_token_budget %}
+-- ---------------------------------------------------------
+-- Token usage table (Req 15.24)
+-- ---------------------------------------------------------
+CREATE TABLE IF NOT EXISTS ai_token_usage (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    user_id BIGINT NOT NULL,
+    provider_name VARCHAR(200) NOT NULL,
+    operation_name VARCHAR(200) NOT NULL,
+    prompt_tokens INT NOT NULL DEFAULT 0,
+    completion_tokens INT NOT NULL DEFAULT 0,
+    total_tokens INT NOT NULL DEFAULT 0,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    INDEX idx_token_user_provider_created (user_id, provider_name, created_at),
+    INDEX idx_token_user_created (user_id, created_at)
+);
+
+{% endif %}
+{% if has_audit_log %}
+-- ---------------------------------------------------------
+-- Audit log table (Req 15.37)
+-- ---------------------------------------------------------
+CREATE TABLE IF NOT EXISTS ai_audit_log (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    event_type VARCHAR(50) NOT NULL,
+    user_id BIGINT NOT NULL,
+    provider_name VARCHAR(100),
+    operation_name VARCHAR(200),
+    tool_name VARCHAR(200),
+    request_summary TEXT,
+    response_summary TEXT,
+    duration_ms BIGINT,
+    status VARCHAR(20) NOT NULL,
+    details JSON,
+    ip_address VARCHAR(45),
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    INDEX idx_audit_event_created (event_type, created_at),
+    INDEX idx_audit_user_created (user_id, created_at),
+    INDEX idx_audit_user_event (user_id, event_type),
+    INDEX idx_audit_created (created_at)
+);
+
+{% endif %}
+{% if has_topics %}
+-- ---------------------------------------------------------
+-- Topic tables (Req 4.18)
+-- ---------------------------------------------------------
+CREATE TABLE IF NOT EXISTS ai_topic (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE INDEX uq_topic_name (name)
+);
+
+CREATE TABLE IF NOT EXISTS ai_user_topic_hit (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    user_id BIGINT NOT NULL,
+    topic_id BIGINT NOT NULL,
+    hit_count INT NOT NULL DEFAULT 0,
+    first_seen_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    last_seen_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE INDEX uq_user_topic (user_id, topic_id),
+    INDEX idx_user_topic_hits (user_id, hit_count DESC),
+    CONSTRAINT fk_user_topic_hit_topic
+        FOREIGN KEY (topic_id) REFERENCES ai_topic(id)
+        ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS ai_global_topic_hit (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    topic_id BIGINT NOT NULL,
+    hit_count INT NOT NULL DEFAULT 0,
+    first_seen_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    last_seen_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE INDEX uq_global_topic (topic_id),
+    INDEX idx_global_topic_hits (hit_count DESC),
+    CONSTRAINT fk_global_topic_hit_topic
+        FOREIGN KEY (topic_id) REFERENCES ai_topic(id)
+        ON DELETE CASCADE
+);
+
+{% endif %}
+{% for st in state_tables %}
+-- ---------------------------------------------------------
+-- Standalone state table: {{ st.table_name }} (Req 16.3)
+-- ---------------------------------------------------------
+CREATE TABLE IF NOT EXISTS {{ st.table_name }} (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    user_id BIGINT NOT NULL,
+{% for col in st.columns %}
+    {{ col.name }} {{ col.full_type }}{% if not col.nullable %} NOT NULL{% endif %}{% if col.default_value is not none %} DEFAULT {{ col.default_value }}{% endif %},
+{% endfor %}
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    INDEX idx_{{ st.table_name }}_user (user_id)
+);
+
+{% endfor %}

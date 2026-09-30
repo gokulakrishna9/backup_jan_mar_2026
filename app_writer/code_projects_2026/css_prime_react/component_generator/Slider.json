@@ -1,0 +1,174 @@
+{
+  "name": "Slider",
+  "import": "Slider",
+  "category": "Form",
+  "metadata": {
+    "description": "Slider input for numeric values",
+    "usageExamples": [
+      "<SliderWrapper value={value} onChange={(e) => setValue(e.value)} />",
+      "<SliderWrapper value={range} range min={0} max={100} />"
+    ]
+  },
+  "propsInterface": {
+    "componentSpecific": [
+      {
+        "name": "value",
+        "type": "number | number[]",
+        "optional": true,
+        "description": "Slider value",
+        "helpText": "Single number or array for range",
+        "dataTypes": ["number", "number[] (for range)"],
+        "examples": ["50", "[20, 80]"]
+      },
+      {
+        "name": "min",
+        "type": "number",
+        "optional": true,
+        "description": "Minimum value",
+        "helpText": "Lowest value (default: 0)",
+        "dataTypes": ["number"],
+        "examples": ["0", "1", "-100"]
+      },
+      {
+        "name": "max",
+        "type": "number",
+        "optional": true,
+        "description": "Maximum value",
+        "helpText": "Highest value (default: 100)",
+        "dataTypes": ["number"],
+        "examples": ["100", "1000"]
+      },
+      {
+        "name": "step",
+        "type": "number",
+        "optional": true,
+        "description": "Step increment",
+        "helpText": "Value increment (default: 1)",
+        "dataTypes": ["number"],
+        "examples": ["1", "5", "0.1"]
+      },
+      {
+        "name": "orientation",
+        "type": "'horizontal' | 'vertical'",
+        "optional": true,
+        "description": "Slider orientation",
+        "helpText": "Direction of slider",
+        "dataTypes": ["'horizontal' (default)", "'vertical'"],
+        "examples": ["'horizontal'", "'vertical'"]
+      },
+      {
+        "name": "range",
+        "type": "boolean",
+        "optional": true,
+        "description": "Range mode",
+        "helpText": "Enables two handles for range selection",
+        "dataTypes": ["boolean"],
+        "examples": ["true", "false"]
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "optional": true,
+        "description": "Disabled state",
+        "helpText": "Disables the slider",
+        "dataTypes": ["boolean"],
+        "examples": ["true", "false"]
+      }
+    ],
+    "styling": [
+      {
+        "name": "className",
+        "type": "string",
+        "optional": true,
+        "description": "Additional CSS classes",
+        "helpText": "Supports PrimeFlex utility classes",
+        "examples": ["'w-full'"]
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties",
+        "optional": true,
+        "description": "Inline styles",
+        "helpText": "Standard React inline styles",
+        "examples": ["{ width: '100%' }"]
+      }
+    ],
+    "children": null
+  },
+  "eventHandlers": {
+    "standard": [
+      {
+        "name": "onChange",
+        "type": "(e: { value: number | number[] }) => void",
+        "description": "Callback when value changes"
+      },
+      {
+        "name": "onSlideEnd",
+        "type": "(e: { value: number | number[] }) => void",
+        "description": "Callback when sliding ends"
+      }
+    ],
+    "simplified": [
+      {
+        "name": "onValueChange",
+        "type": "(value: number | number[]) => void",
+        "description": "Simplified callback with just the value"
+      }
+    ],
+    "validation": [
+      {
+        "name": "onValidate",
+        "type": "(value: number | number[]) => boolean | string",
+        "description": "Validation callback"
+      },
+      {
+        "name": "onError",
+        "type": "(error: string) => void",
+        "description": "Called when validation fails"
+      }
+    ],
+    "lifecycle": [
+      {
+        "name": "onMount",
+        "type": "() => void",
+        "description": "Called when component mounts"
+      },
+      {
+        "name": "onUnmount",
+        "type": "() => void",
+        "description": "Called when component unmounts"
+      }
+    ]
+  },
+  "eventHandlerMethods": {
+    "internal": [
+      "handleChange - Processes onChange event, calls onChange, onValueChange, onValidate",
+      "handleSlideEnd - Processes onSlideEnd event"
+    ],
+    "patterns": [
+      "Check if event handler exists before calling",
+      "Extract value from event object",
+      "Run validation on slide end"
+    ]
+  },
+  "childComponentInfo": {
+    "allowedChildren": [],
+    "childrenDescription": "This component does not accept children",
+    "hasChildren": false,
+    "examples": []
+  },
+  "stylingSupport": {
+    "primeFlex": true,
+    "responsive": true,
+    "customCSS": true,
+    "styleMerging": false
+  },
+  "usageExamples": {
+    "basic": "<SliderWrapper value={value} onChange={(e) => setValue(e.value)} />",
+    "withStyling": "<SliderWrapper value={volume} min={0} max={100} className=\"w-full\" />",
+    "withEvents": "<SliderWrapper value={brightness} onChange={handleChange} onSlideEnd={handleSlideEnd} />",
+    "withRedux": "<SliderWrapper value={setting} onValueChange={(val) => dispatch(setSetting(val))} />",
+    "withValidation": "<SliderWrapper value={age} min={18} max={100} onValidate={(val) => val >= 18 ? true : 'Must be 18+'} onError={(err) => setError(err)} />",
+    "withChildren": "N/A"
+  }
+}

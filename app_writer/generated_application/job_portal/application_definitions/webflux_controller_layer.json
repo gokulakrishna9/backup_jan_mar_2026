@@ -1,0 +1,2718 @@
+{
+  "layerType": "controller",
+  "description": "Controller layer configuration - controls REST endpoint generation",
+  "controllers": [
+    {
+      "entityName": "StudentProfile",
+      "className": "StudentProfileController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "StudentProfileService",
+      "basePath": "/api/student_profiles",
+      "isRootEntity": true,
+      "singleRecordPerUser": true,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "EmployerProfile",
+      "className": "EmployerProfileController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "EmployerProfileService",
+      "basePath": "/api/employer_profiles",
+      "isRootEntity": false,
+      "singleRecordPerUser": true,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "TrainerProfile",
+      "className": "TrainerProfileController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "TrainerProfileService",
+      "basePath": "/api/trainer_profiles",
+      "isRootEntity": false,
+      "singleRecordPerUser": true,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "JobPosting",
+      "className": "JobPostingController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "JobPostingService",
+      "basePath": "/api/job_postings",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "TrainingProgram",
+      "className": "TrainingProgramController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "TrainingProgramService",
+      "basePath": "/api/training_programs",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "JobApplication",
+      "className": "JobApplicationController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "JobApplicationService",
+      "basePath": "/api/job_applications",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "TrainingEnrollment",
+      "className": "TrainingEnrollmentController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "TrainingEnrollmentService",
+      "basePath": "/api/training_enrollments",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "UserProfile",
+      "className": "UserProfileController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "UserProfileService",
+      "basePath": "/api/user_profiles",
+      "isRootEntity": false,
+      "singleRecordPerUser": true,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "EducationLevel",
+      "className": "EducationLevelController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "EducationLevelService",
+      "basePath": "/api/education_levels",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "FieldOfStudy",
+      "className": "FieldOfStudyController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "FieldOfStudyService",
+      "basePath": "/api/field_of_studys",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "Institution",
+      "className": "InstitutionController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "InstitutionService",
+      "basePath": "/api/institutions",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "UserEducation",
+      "className": "UserEducationController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "UserEducationService",
+      "basePath": "/api/user_educations",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "Industry",
+      "className": "IndustryController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "IndustryService",
+      "basePath": "/api/industrys",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "JobTitle",
+      "className": "JobTitleController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "JobTitleService",
+      "basePath": "/api/job_titles",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "UserWorkExperience",
+      "className": "UserWorkExperienceController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "UserWorkExperienceService",
+      "basePath": "/api/user_work_experiences",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "SkillCategory",
+      "className": "SkillCategoryController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "SkillCategoryService",
+      "basePath": "/api/skill_categorys",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "Skill",
+      "className": "SkillController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "SkillService",
+      "basePath": "/api/skills",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "UserSkill",
+      "className": "UserSkillController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "UserSkillService",
+      "basePath": "/api/user_skills",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "TrainingModule",
+      "className": "TrainingModuleController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "TrainingModuleService",
+      "basePath": "/api/training_modules",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "ModuleProgress",
+      "className": "ModuleProgressController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "ModuleProgressService",
+      "basePath": "/api/module_progresss",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "TrainingExam",
+      "className": "TrainingExamController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "TrainingExamService",
+      "basePath": "/api/training_exams",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "ExamAttempt",
+      "className": "ExamAttemptController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "ExamAttemptService",
+      "basePath": "/api/exam_attempts",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "TrainingCertification",
+      "className": "TrainingCertificationController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "TrainingCertificationService",
+      "basePath": "/api/training_certifications",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "CourseDocument",
+      "className": "CourseDocumentController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "CourseDocumentService",
+      "basePath": "/api/course_documents",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "CourseVideo",
+      "className": "CourseVideoController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "CourseVideoService",
+      "basePath": "/api/course_videos",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "CourseAudio",
+      "className": "CourseAudioController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "CourseAudioService",
+      "basePath": "/api/course_audios",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "CourseCodeLab",
+      "className": "CourseCodeLabController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "CourseCodeLabService",
+      "basePath": "/api/course_code_labs",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      }
+    },
+    {
+      "entityName": "ExamQuestion",
+      "className": "ExamQuestionController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "ExamQuestionService",
+      "basePath": "/api/exam_questions",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      },
+      "hasAuthorization": true
+    },
+    {
+      "entityName": "ExamAnswer",
+      "className": "ExamAnswerController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "ExamAnswerService",
+      "basePath": "/api/exam_answers",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      },
+      "hasAuthorization": true
+    },
+    {
+      "entityName": "CourseQuestion",
+      "className": "CourseQuestionController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "CourseQuestionService",
+      "basePath": "/api/course_questions",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      },
+      "hasAuthorization": true
+    },
+    {
+      "entityName": "CourseAnswer",
+      "className": "CourseAnswerController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "CourseAnswerService",
+      "basePath": "/api/course_answers",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      },
+      "hasAuthorization": true
+    },
+    {
+      "entityName": "Company",
+      "className": "CompanyController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "CompanyService",
+      "basePath": "/api/companys",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      },
+      "hasAuthorization": true
+    },
+    {
+      "entityName": "Location",
+      "className": "LocationController",
+      "packageName": "com.jobportal.controller",
+      "serviceName": "LocationService",
+      "basePath": "/api/locations",
+      "isRootEntity": false,
+      "singleRecordPerUser": false,
+      "endpoints": {
+        "create": {
+          "enabled": true,
+          "path": "",
+          "method": "POST",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "getById": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 60
+        },
+        "getAll": {
+          "enabled": true,
+          "path": "",
+          "method": "GET",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 30,
+          "defaultPageSize": 20,
+          "supportsPagination": true,
+          "supportsFiltering": true,
+          "supportsSorting": true
+        },
+        "update": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "PUT",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 10
+        },
+        "delete": {
+          "enabled": true,
+          "path": "/{id}",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "roles": [
+            "USER"
+          ],
+          "rateLimitPerMinute": 5
+        }
+      },
+      "customEndpoints": [],
+      "corsConfig": {
+        "enabled": true,
+        "allowedOrigins": [
+          "*"
+        ],
+        "allowedMethods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "allowedHeaders": [
+          "*"
+        ],
+        "maxAge": 3600
+      },
+      "hasAuthorization": true
+    }
+  ]
+}

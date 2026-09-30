@@ -1,0 +1,1469 @@
+[
+  {
+    "entityName": "StudentProfile",
+    "fields": [
+      {
+        "fieldName": "resumeurl",
+        "fieldLabel": "Resumeurl",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "skills",
+        "fieldLabel": "Skills",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "educationlevel",
+        "fieldLabel": "Educationlevel",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": [],
+    "singleRecordPerUser": true
+  },
+  {
+    "entityName": "EmployerProfile",
+    "fields": [
+      {
+        "fieldName": "companyname",
+        "fieldLabel": "Companyname",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "industry",
+        "fieldLabel": "Industry",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "website",
+        "fieldLabel": "Website",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "logourl",
+        "fieldLabel": "Logourl",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "description",
+        "fieldLabel": "Description",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "contactemail",
+        "fieldLabel": "Contactemail",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": [],
+    "singleRecordPerUser": true
+  },
+  {
+    "entityName": "TrainerProfile",
+    "fields": [
+      {
+        "fieldName": "specialization",
+        "fieldLabel": "Specialization",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "certifications",
+        "fieldLabel": "Certifications",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "hourlyrate",
+        "fieldLabel": "Hourlyrate",
+        "componentType": "InputNumber",
+        "javaType": "BigDecimal",
+        "columnDefinition": "DECIMAL(19,4)",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": [],
+    "singleRecordPerUser": true
+  },
+  {
+    "entityName": "JobPosting",
+    "fields": [
+      {
+        "fieldName": "title",
+        "fieldLabel": "Title",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "description",
+        "fieldLabel": "Description",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "location",
+        "fieldLabel": "Location",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "salarymin",
+        "fieldLabel": "Salarymin",
+        "componentType": "InputNumber",
+        "javaType": "BigDecimal",
+        "columnDefinition": "DECIMAL(19,4)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "salarymax",
+        "fieldLabel": "Salarymax",
+        "componentType": "InputNumber",
+        "javaType": "BigDecimal",
+        "columnDefinition": "DECIMAL(19,4)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "jobtype",
+        "fieldLabel": "Jobtype",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "isactive",
+        "fieldLabel": "Isactive",
+        "componentType": "Checkbox",
+        "javaType": "Boolean",
+        "columnDefinition": "BOOLEAN",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "TrainingProgram",
+    "fields": [
+      {
+        "fieldName": "title",
+        "fieldLabel": "Title",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "description",
+        "fieldLabel": "Description",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "durationdays",
+        "fieldLabel": "Durationdays",
+        "componentType": "InputNumber",
+        "javaType": "Integer",
+        "columnDefinition": "INT",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "price",
+        "fieldLabel": "Price",
+        "componentType": "InputNumber",
+        "javaType": "BigDecimal",
+        "columnDefinition": "DECIMAL(19,4)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "isactive",
+        "fieldLabel": "Isactive",
+        "componentType": "Checkbox",
+        "javaType": "Boolean",
+        "columnDefinition": "BOOLEAN",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "JobApplication",
+    "fields": [
+      {
+        "fieldName": "status",
+        "fieldLabel": "Status",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "coverletter",
+        "fieldLabel": "Coverletter",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "appliedat",
+        "fieldLabel": "Appliedat",
+        "componentType": "Calendar",
+        "javaType": "LocalDateTime",
+        "columnDefinition": "TIMESTAMP",
+        "props": {
+          "mode": "datetime"
+        },
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "TrainingEnrollment",
+    "fields": [
+      {
+        "fieldName": "status",
+        "fieldLabel": "Status",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "progress",
+        "fieldLabel": "Progress",
+        "componentType": "InputNumber",
+        "javaType": "Integer",
+        "columnDefinition": "INT",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "enrolledat",
+        "fieldLabel": "Enrolledat",
+        "componentType": "Calendar",
+        "javaType": "LocalDateTime",
+        "columnDefinition": "TIMESTAMP",
+        "props": {
+          "mode": "datetime"
+        },
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "UserProfile",
+    "fields": [
+      {
+        "fieldName": "firstname",
+        "fieldLabel": "Firstname",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "lastname",
+        "fieldLabel": "Lastname",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "email",
+        "fieldLabel": "Email",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "phone",
+        "fieldLabel": "Phone",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "bio",
+        "fieldLabel": "Bio",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": [],
+    "singleRecordPerUser": true
+  },
+  {
+    "entityName": "EducationLevel",
+    "fields": [
+      {
+        "fieldName": "name",
+        "fieldLabel": "Name",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "description",
+        "fieldLabel": "Description",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "sortorder",
+        "fieldLabel": "Sortorder",
+        "componentType": "InputNumber",
+        "javaType": "Integer",
+        "columnDefinition": "INT",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "FieldOfStudy",
+    "fields": [
+      {
+        "fieldName": "name",
+        "fieldLabel": "Name",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "description",
+        "fieldLabel": "Description",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "Institution",
+    "fields": [
+      {
+        "fieldName": "name",
+        "fieldLabel": "Name",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "country",
+        "fieldLabel": "Country",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "website",
+        "fieldLabel": "Website",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "UserEducation",
+    "fields": [
+      {
+        "fieldName": "institutionname",
+        "fieldLabel": "Institutionname",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "degree",
+        "fieldLabel": "Degree",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "fieldofstudy",
+        "fieldLabel": "Fieldofstudy",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "startdate",
+        "fieldLabel": "Startdate",
+        "componentType": "Calendar",
+        "javaType": "LocalDate",
+        "columnDefinition": "DATE",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "enddate",
+        "fieldLabel": "Enddate",
+        "componentType": "Calendar",
+        "javaType": "LocalDate",
+        "columnDefinition": "DATE",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "grade",
+        "fieldLabel": "Grade",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "description",
+        "fieldLabel": "Description",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "Industry",
+    "fields": [
+      {
+        "fieldName": "name",
+        "fieldLabel": "Name",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "description",
+        "fieldLabel": "Description",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "JobTitle",
+    "fields": [
+      {
+        "fieldName": "name",
+        "fieldLabel": "Name",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "description",
+        "fieldLabel": "Description",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "UserWorkExperience",
+    "fields": [
+      {
+        "fieldName": "companyname",
+        "fieldLabel": "Companyname",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "jobtitle",
+        "fieldLabel": "Jobtitle",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "industry",
+        "fieldLabel": "Industry",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "location",
+        "fieldLabel": "Location",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "startdate",
+        "fieldLabel": "Startdate",
+        "componentType": "Calendar",
+        "javaType": "LocalDate",
+        "columnDefinition": "DATE",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "enddate",
+        "fieldLabel": "Enddate",
+        "componentType": "Calendar",
+        "javaType": "LocalDate",
+        "columnDefinition": "DATE",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "iscurrent",
+        "fieldLabel": "Iscurrent",
+        "componentType": "Checkbox",
+        "javaType": "Boolean",
+        "columnDefinition": "BOOLEAN",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "description",
+        "fieldLabel": "Description",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "SkillCategory",
+    "fields": [
+      {
+        "fieldName": "name",
+        "fieldLabel": "Name",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "description",
+        "fieldLabel": "Description",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "Skill",
+    "fields": [
+      {
+        "fieldName": "name",
+        "fieldLabel": "Name",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "category",
+        "fieldLabel": "Category",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "description",
+        "fieldLabel": "Description",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "UserSkill",
+    "fields": [
+      {
+        "fieldName": "skillname",
+        "fieldLabel": "Skillname",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "proficiencylevel",
+        "fieldLabel": "Proficiencylevel",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "yearsofexperience",
+        "fieldLabel": "Yearsofexperience",
+        "componentType": "InputNumber",
+        "javaType": "Integer",
+        "columnDefinition": "INT",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "TrainingModule",
+    "fields": [
+      {
+        "fieldName": "title",
+        "fieldLabel": "Title",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "description",
+        "fieldLabel": "Description",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "moduleorder",
+        "fieldLabel": "Moduleorder",
+        "componentType": "InputNumber",
+        "javaType": "Integer",
+        "columnDefinition": "INT",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "durationminutes",
+        "fieldLabel": "Durationminutes",
+        "componentType": "InputNumber",
+        "javaType": "Integer",
+        "columnDefinition": "INT",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "contenturl",
+        "fieldLabel": "Contenturl",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "ModuleProgress",
+    "fields": [
+      {
+        "fieldName": "status",
+        "fieldLabel": "Status",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "completedat",
+        "fieldLabel": "Completedat",
+        "componentType": "Calendar",
+        "javaType": "LocalDateTime",
+        "columnDefinition": "TIMESTAMP",
+        "props": {
+          "mode": "datetime"
+        },
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "progresspercent",
+        "fieldLabel": "Progresspercent",
+        "componentType": "InputNumber",
+        "javaType": "Integer",
+        "columnDefinition": "INT",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "TrainingExam",
+    "fields": [
+      {
+        "fieldName": "title",
+        "fieldLabel": "Title",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "description",
+        "fieldLabel": "Description",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "passingscore",
+        "fieldLabel": "Passingscore",
+        "componentType": "InputNumber",
+        "javaType": "Integer",
+        "columnDefinition": "INT",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "maxscore",
+        "fieldLabel": "Maxscore",
+        "componentType": "InputNumber",
+        "javaType": "Integer",
+        "columnDefinition": "INT",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "timelimitminutes",
+        "fieldLabel": "Timelimitminutes",
+        "componentType": "InputNumber",
+        "javaType": "Integer",
+        "columnDefinition": "INT",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "maxattempts",
+        "fieldLabel": "Maxattempts",
+        "componentType": "InputNumber",
+        "javaType": "Integer",
+        "columnDefinition": "INT",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "ExamAttempt",
+    "fields": [
+      {
+        "fieldName": "score",
+        "fieldLabel": "Score",
+        "componentType": "InputNumber",
+        "javaType": "Integer",
+        "columnDefinition": "INT",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "passed",
+        "fieldLabel": "Passed",
+        "componentType": "Checkbox",
+        "javaType": "Boolean",
+        "columnDefinition": "BOOLEAN",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "startedat",
+        "fieldLabel": "Startedat",
+        "componentType": "Calendar",
+        "javaType": "LocalDateTime",
+        "columnDefinition": "TIMESTAMP",
+        "props": {
+          "mode": "datetime"
+        },
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "completedat",
+        "fieldLabel": "Completedat",
+        "componentType": "Calendar",
+        "javaType": "LocalDateTime",
+        "columnDefinition": "TIMESTAMP",
+        "props": {
+          "mode": "datetime"
+        },
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "attemptnumber",
+        "fieldLabel": "Attemptnumber",
+        "componentType": "InputNumber",
+        "javaType": "Integer",
+        "columnDefinition": "INT",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "TrainingCertification",
+    "fields": [
+      {
+        "fieldName": "certificatenumber",
+        "fieldLabel": "Certificatenumber",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "title",
+        "fieldLabel": "Title",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "issuedat",
+        "fieldLabel": "Issuedat",
+        "componentType": "Calendar",
+        "javaType": "LocalDateTime",
+        "columnDefinition": "TIMESTAMP",
+        "props": {
+          "mode": "datetime"
+        },
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "expiresat",
+        "fieldLabel": "Expiresat",
+        "componentType": "Calendar",
+        "javaType": "LocalDateTime",
+        "columnDefinition": "TIMESTAMP",
+        "props": {
+          "mode": "datetime"
+        },
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "certificateurl",
+        "fieldLabel": "Certificateurl",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "status",
+        "fieldLabel": "Status",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "CourseDocument",
+    "fields": [
+      {
+        "fieldName": "title",
+        "fieldLabel": "Title",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "content",
+        "fieldLabel": "Content",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "sortorder",
+        "fieldLabel": "Sortorder",
+        "componentType": "InputNumber",
+        "javaType": "Integer",
+        "columnDefinition": "INT",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "CourseVideo",
+    "fields": [
+      {
+        "fieldName": "title",
+        "fieldLabel": "Title",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "description",
+        "fieldLabel": "Description",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "videourl",
+        "fieldLabel": "Videourl",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "durationseconds",
+        "fieldLabel": "Durationseconds",
+        "componentType": "InputNumber",
+        "javaType": "Integer",
+        "columnDefinition": "INT",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "sortorder",
+        "fieldLabel": "Sortorder",
+        "componentType": "InputNumber",
+        "javaType": "Integer",
+        "columnDefinition": "INT",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "CourseAudio",
+    "fields": [
+      {
+        "fieldName": "title",
+        "fieldLabel": "Title",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "description",
+        "fieldLabel": "Description",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "audiourl",
+        "fieldLabel": "Audiourl",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "durationseconds",
+        "fieldLabel": "Durationseconds",
+        "componentType": "InputNumber",
+        "javaType": "Integer",
+        "columnDefinition": "INT",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "sortorder",
+        "fieldLabel": "Sortorder",
+        "componentType": "InputNumber",
+        "javaType": "Integer",
+        "columnDefinition": "INT",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "CourseCodeLab",
+    "fields": [
+      {
+        "fieldName": "title",
+        "fieldLabel": "Title",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "description",
+        "fieldLabel": "Description",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "language",
+        "fieldLabel": "Language",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "startercode",
+        "fieldLabel": "Startercode",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "solutioncode",
+        "fieldLabel": "Solutioncode",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "instructions",
+        "fieldLabel": "Instructions",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "sortorder",
+        "fieldLabel": "Sortorder",
+        "componentType": "InputNumber",
+        "javaType": "Integer",
+        "columnDefinition": "INT",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "ExamQuestion",
+    "fields": [
+      {
+        "fieldName": "questiontext",
+        "fieldLabel": "Questiontext",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "questioncode",
+        "fieldLabel": "Questioncode",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "questiontype",
+        "fieldLabel": "Questiontype",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "points",
+        "fieldLabel": "Points",
+        "componentType": "InputNumber",
+        "javaType": "Integer",
+        "columnDefinition": "INT",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "sortorder",
+        "fieldLabel": "Sortorder",
+        "componentType": "InputNumber",
+        "javaType": "Integer",
+        "columnDefinition": "INT",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "ExamAnswer",
+    "fields": [
+      {
+        "fieldName": "answertext",
+        "fieldLabel": "Answertext",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "answercode",
+        "fieldLabel": "Answercode",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "iscorrect",
+        "fieldLabel": "Iscorrect",
+        "componentType": "Checkbox",
+        "javaType": "Boolean",
+        "columnDefinition": "BOOLEAN",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "explanation",
+        "fieldLabel": "Explanation",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "sortorder",
+        "fieldLabel": "Sortorder",
+        "componentType": "InputNumber",
+        "javaType": "Integer",
+        "columnDefinition": "INT",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "CourseQuestion",
+    "fields": [
+      {
+        "fieldName": "questiontext",
+        "fieldLabel": "Questiontext",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "questioncode",
+        "fieldLabel": "Questioncode",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "sortorder",
+        "fieldLabel": "Sortorder",
+        "componentType": "InputNumber",
+        "javaType": "Integer",
+        "columnDefinition": "INT",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "CourseAnswer",
+    "fields": [
+      {
+        "fieldName": "answertext",
+        "fieldLabel": "Answertext",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "answercode",
+        "fieldLabel": "Answercode",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "isaccepted",
+        "fieldLabel": "Isaccepted",
+        "componentType": "Checkbox",
+        "javaType": "Boolean",
+        "columnDefinition": "BOOLEAN",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "upvotes",
+        "fieldLabel": "Upvotes",
+        "componentType": "InputNumber",
+        "javaType": "Integer",
+        "columnDefinition": "INT",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "Company",
+    "fields": [
+      {
+        "fieldName": "name",
+        "fieldLabel": "Name",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "industry",
+        "fieldLabel": "Industry",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "website",
+        "fieldLabel": "Website",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "description",
+        "fieldLabel": "Description",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  },
+  {
+    "entityName": "Location",
+    "fields": [
+      {
+        "fieldName": "city",
+        "fieldLabel": "City",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "state",
+        "fieldLabel": "State",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      },
+      {
+        "fieldName": "country",
+        "fieldLabel": "Country",
+        "componentType": "InputText",
+        "javaType": "String",
+        "columnDefinition": "VARCHAR(255)",
+        "props": {},
+        "includeInDTO": true
+      }
+    ],
+    "excludeSensitiveFields": []
+  }
+]

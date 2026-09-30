@@ -1,0 +1,137 @@
+{
+  "applicationName": "Job Portal",
+  "apiPort": 8081,
+  "header": {
+    "visible": true,
+    "collapsible": false,
+    "defaultCollapsed": false
+  },
+  "footer": {
+    "visible": true,
+    "collapsible": false,
+    "defaultCollapsed": false
+  },
+  "leftNav": {
+    "visible": true,
+    "collapsible": true,
+    "defaultCollapsed": false
+  },
+  "content": {
+    "visible": true,
+    "collapsible": false,
+    "defaultCollapsed": false
+  },
+  "navGroups": [
+    {
+      "groupName": "Dashboard",
+      "entities": [
+        {
+          "label": "Dashboard",
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "groupName": "My Profile",
+      "entities": [
+        {
+          "label": "My Profile",
+          "path": "/my-profile"
+        }
+      ]
+    },
+    {
+      "groupName": "My Resume",
+      "entities": [
+        {
+          "label": "My Resume",
+          "path": "/my-resume"
+        }
+      ]
+    },
+    {
+      "groupName": "Jobs",
+      "entities": [
+        {
+          "label": "Browse Jobs",
+          "path": "/jobs"
+        },
+        {
+          "label": "My Applications",
+          "path": "/my-applications"
+        }
+      ]
+    },
+    {
+      "groupName": "Training",
+      "entities": [
+        {
+          "label": "Programs",
+          "path": "/training-programs"
+        },
+        {
+          "label": "Exams",
+          "path": "/exams"
+        },
+        {
+          "label": "Q&A",
+          "path": "/qa"
+        }
+      ]
+    },
+    {
+      "groupName": "My Learning",
+      "entities": [
+        {
+          "label": "Enrollments",
+          "path": "/my-enrollments"
+        },
+        {
+          "label": "Certifications",
+          "path": "/my-certifications"
+        }
+      ]
+    },
+    {
+      "groupName": "Masters",
+      "entities": [
+        {
+          "label": "Education Levels",
+          "path": "/masters/education-levels"
+        },
+        {
+          "label": "Fields of Study",
+          "path": "/masters/fields-of-study"
+        },
+        {
+          "label": "Institutions",
+          "path": "/masters/institutions"
+        },
+        {
+          "label": "Industries",
+          "path": "/masters/industries"
+        },
+        {
+          "label": "Job Titles",
+          "path": "/masters/job-titles"
+        },
+        {
+          "label": "Skill Categories",
+          "path": "/masters/skill-categories"
+        },
+        {
+          "label": "Skills",
+          "path": "/masters/skills"
+        },
+        {
+          "label": "Companies",
+          "path": "/masters/companies"
+        },
+        {
+          "label": "Locations",
+          "path": "/masters/locations"
+        }
+      ]
+    }
+  ]
+}
